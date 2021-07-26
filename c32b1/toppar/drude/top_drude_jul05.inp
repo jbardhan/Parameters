@@ -1,0 +1,599 @@
+*>>>>>>>> All-hydrogen topology for alkanes for the <<<<<<<<<<<<<<
+*>>> development of the Drude polarizable force field <<<<<<<<<<<<
+*>>>>>>>>>>>>>>>>>>>  all-hydrogen parameters <<<<<<<<<<<<<<<<<<<<
+*>>>>>>>>>>>>>>>>>>>>>>> March 2005 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+*>>>>>>>> Direct comments to Alexander D. MacKerell Jr. <<<<<<<<<<
+*>>>>>>>>>>>>>>>  Charmm forum: www.charmm.org <<<<<<<<<<<<<<<<<<<
+*
+32 1
+
+!charges are temporary values that are superseded by data in 
+!stream files for the individual molecules that set the charges
+!and polarizabilities
+
+!The following atom types are unique to the new aliphatic atom types and
+!have been added to the protein rtf and parameter files.  In
+!future versions of charmm, if the ability to append MASSes is added
+!these atom types should be removed from the original topology and
+!the following lines uncommented.
+MASS    10 HA1    1.00800 ! alkane, CH, new LJ params
+MASS    11 HA2    1.00800 ! alkane, CH2, new LJ params
+MASS    12 HA3    1.00800 ! alkane, CH3, new LJ params
+MASS    20 CT    12.01100 ! aliphatic sp3 C, new LJ params, no hydrogens
+MASS    21 CT1   12.01100 ! aliphatic sp3 C for CH, new LJ params
+MASS    22 CT2   12.01100 ! aliphatic sp3 C for CH2, new LJ params
+MASS    23 CT3   12.01100 ! aliphatic sp3 C for CH3, new LJ params
+!! Helium and neon
+MASS    30 HE     4.00260 ! helium
+MASS    31 NE    20.17970 ! neon
+!! Dummy calcium ion: 
+MASS    32 CAL   40.08000 ! use only for Drude perturbation ion
+MASS    33 DUM    0.00000 ! dummy atom
+!! SWM4 TIP4P polarizable water model
+!postive Drude
+MASS    40 OWP   15.99940 ! water oxygen
+MASS    41 HWP    1.00800 ! water hydrogen
+MASS    42 LPP    0.00000 ! water M site
+!negative Drude
+MASS    43 OWN   15.99940 ! water oxygen
+MASS    44 HWN    1.00800 ! water hydrogen
+MASS    45 LPN    0.00000 ! water M site
+MASS    46 DOH2   0.00000 ! Drude for oxygen
+MASS    47 DOM    0.00000 ! Drude for M site
+!ions of Lamoureaux and Roux
+MASS    60 LIT    6.94100 ! Lithium Ion
+MASS    61 SOD   22.98977 ! Sodium Ion
+MASS    62 POT   39.10200 ! Potassium Ion
+MASS    63 RUB   85.46780 ! Rubidium Ion
+MASS    64 CES  132.90540 ! Cesium Ion
+MASS    65 FLU   18.99840 ! Fluoride Ion
+MASS    66 CLA   35.45300 ! Chloride Ion
+MASS    67 BRO   79.90400 ! Bromide Ion
+MASS    68 IOD  126.90450 ! Iodine Ion
+MASS   100 DLIT   0.00000 ! Drude oscillator for Lithium Ion
+MASS   101 DSOD   0.00000 ! Drude oscillator for Sodium Ion
+MASS   102 DPOT   0.00000 ! Drude oscillator for Potassium Ion
+MASS   103 DRUB   0.00000 ! Drude oscillator for Rubidium Ion
+MASS   104 DCES   0.00000 ! Drude oscillator for Cesium Ion
+MASS   105 DFLU   0.00000 ! Drude oscillator for Fluoride Ion
+MASS   106 DCLA   0.00000 ! Drude oscillator for Chloride Ion
+MASS   107 DBRO   0.00000 ! Drude oscillator for Bromide Ion
+MASS   108 DIOD   0.00000 ! Drude oscillator for Iodine Ion
+!! Drudes for alkanes
+MASS   350 DC1    0.10000 ! Drude
+MASS   351 DC2    0.10000 ! Drude
+MASS   352 DC3    0.10000 ! Drude
+MASS   353 DC4    0.10000 ! Drude
+MASS   354 DC5    0.10000 ! Drude
+MASS   355 DC6    0.10000 ! Drude
+MASS   356 DC7    0.10000 ! Drude
+MASS   357 DC8    0.10000 ! Drude
+MASS   358 DC9    0.10000 ! Drude
+MASS   359 DC10   0.10000 ! Drude
+MASS   360 DC11   0.10000 ! Drude
+MASS   361 DC12   0.10000 ! Drude
+MASS   362 DC13   0.10000 ! Drude
+MASS   363 DC14   0.10000 ! Drude
+MASS   364 DC15   0.10000 ! Drude
+MASS   365 DC16   0.10000 ! Drude
+MASS   366 DC17   0.10000 ! Drude
+MASS   367 DC18   0.10000 ! Drude
+MASS   368 DC19   0.10000 ! Drude
+MASS   369 DC20   0.10000 ! Drude
+MASS   370 DCT    0.10000 ! Drude
+MASS   371 DCP    0.10000 ! Drude
+MASS   383 DNE0   0.10000 ! Drude for neon
+MASS   384 DHE0   0.10000 ! Drude for helium
+
+DEFA FIRS NONE LAST NONE
+AUTO ANGLES DIHE   
+
+RESI ETHA        0.00 ! ethane
+Group
+ Atom h11 ha3     0.09 !   H1      H4
+ Atom h12 ha3     0.09 !    \      /
+ Atom h13 ha3     0.09 !  H2-C1--C2-H5
+ Atom c1  ct3    -0.27 !    /      \
+Group                 !   H3       H6
+ Atom h21 ha3     0.09
+ Atom h22 ha3     0.09
+ Atom h23 ha3     0.09
+ Atom c2  ct3    -0.27
+Bond c1 h11  c1 h12  c1 h13
+Bond c1 c2   c2 h21  c2 h22  c2 h23
+ic  h11 c1 c2  h21  0.00 0.00  180.0 0.0  0.0
+ic  h11 c1 c2  h22  0.00 0.00   60.0 0.0  0.0
+ic  h11 c1 c2  h23  0.00 0.00  300.0 0.0  0.0
+ic  h12 c1 c2  h23  0.00 0.00   60.0 0.0  0.0
+ic  h13 c1 c2  h23  0.00 0.00  180.0 0.0  0.0
+ic  c1  c2 h21 BLNK 0.00 0.00    0.0 0.0  0.0  
+
+RESI PROP        0.00 ! propane, adm jr.
+Group                 !
+ Atom h11 ha3    0.09 !  H11   H21    H31
+ Atom h12 ha3    0.09 !    \    |     /
+ Atom h13 ha3    0.09 ! H12-C1--C2--C3-H32
+ Atom c1  ct3   -0.27 !    /    |     \
+Group                 !  H13   H22    H33
+ Atom c2  ct2   -0.18 !
+ Atom h21 ha2    0.09 !
+ Atom H22 ha2    0.09
+Group
+ Atom h31 ha3    0.09
+ Atom h32 ha3    0.09
+ Atom h33 ha3    0.09
+ Atom c3  ct3   -0.27
+Bond c1 h11  c1 h12  c1 h13
+Bond c1 c2  c2 h21  c2 h22
+bond c2 c3  c3 h31  c3 h32  c3 h33
+ic  h11 c1 c2 c3   0.00 0.00  180.0 0.0  0.0
+ic  h11 c1 c2 h21  0.00 0.00   60.0 0.0  0.0
+ic  h11 c1 c2 h22  0.00 0.00  300.0 0.0  0.0
+ic  c1  c2 c3 h31  0.00 0.00  180.0 0.0  0.0
+ic  c1  c2 c3 h32  0.00 0.00   60.0 0.0  0.0
+ic  c1  c2 c3 h33  0.00 0.00  300.0 0.0  0.0
+ic  c3  c2 c1 h12  0.00 0.00   60.0 0.0  0.0
+ic  c3  c2 c1 h13  0.00 0.00  300.0 0.0  0.0
+
+RESI BUTA        0.00 ! butane
+Group
+Atom  h11 ha3    0.09 !  H11   H21 H31    H41
+Atom  h12 ha3    0.09 !    \    |   |     /
+Atom  h13 ha3    0.09 ! H12-C1--C2--C3--C4-H42
+Atom  c1  ct3   -0.27 !    /    |   |     \
+Group                 !  H13   H22 H33    H43
+Atom  h21 ha2    0.09
+Atom  h22 ha2    0.09
+Atom  c2  ct2   -0.18
+Group                
+Atom  h31 ha2    0.09
+Atom  h32 ha2    0.09
+atom  c3  ct2   -0.18
+Group
+atom  h41 ha3    0.09
+atom  h42 ha3    0.09
+atom  h43 ha3    0.09
+atom  c4  ct3   -0.27
+Bond h11 c1  h12 c1  h13 c1  c1 c2
+Bond h21 c2  h22 c2  c2  c3
+Bond h31 c3  h32 c3  c3  c4
+Bond h41 c4  h42 c4  h43 c4
+ic  h11 c1 c2 c3  0.00  0.00    0.0  0.00 0.00
+ic  h11 c1 c2 h21 0.00  0.00  120.0  0.00 0.00
+ic  h11 c1 c2 h22 0.00  0.00  240.0  0.00 0.00
+ic  h12 c1 c2 c3  0.00  0.00  120.0  0.00 0.00
+ic  h13 c1 c2 c3  0.00  0.00  240.0  0.00 0.00
+ic  c1  c2 c3 c4  0.00  0.00    0.0  0.00 0.00
+ic  c1  c2 c3 h31 0.00  0.00  120.0  0.00 0.00
+ic  c1  c2 c3 h32 0.00  0.00  240.0  0.00 0.00
+ic  h21 c2 c3 c4  0.00  0.00  120.0  0.00 0.00
+ic  h22 c2 c3 c4  0.00  0.00  240.0  0.00 0.00
+ic  c2  c3 c4 h41 0.00  0.00    0.0  0.00 0.00
+ic  c2  c3 c4 h42 0.00  0.00  120.0  0.00 0.00
+ic  c2  c3 c4 h43 0.00  0.00  240.0  0.00 0.00
+ic  h31 c3 c4 h43 0.00  0.00  120.0  0.00 0.00
+ic  h32 c3 c4 h43 0.00  0.00  240.0  0.00 0.00
+
+RESI IBUT        0.00 ! Iso-butane
+Group
+atom  ct  ct1   -0.09 !          H12
+atom  ht  ha1    0.09 !           | 
+Group                 !       H11-C1-H13
+Atom  c1  ct3   -0.27 !           |
+Atom  h11 ha3    0.09 !           CT-HT
+Atom  h12 ha3    0.09 !          / \
+Atom  h13 ha3    0.09 !         /   \
+Group                 !   H21-C2     C3-H31
+Atom  c2  ct3   -0.27 !      / |     | \
+Atom  h21 ha3    0.09 !   H22 H23   H33 H32
+Atom  h22 ha3    0.09 !
+Atom  h23 ha3    0.09 !
+Group
+atom  c3  ct3   -0.27
+Atom  h31 ha3    0.09
+atom  h32 ha3    0.09
+atom  h33 ha3    0.09
+Bond ct  c1  ct  c2  ct c3 ct  ht
+Bond c1 h11 c1 h12 c1 h13
+Bond c2 h21 c2 h22 c2 h23
+Bond c3 h31 c3 h32 c3 h33
+
+ic  C2   C1 *CT  C3   0.00  0.00  120.0  0.00 0.00
+ic  C2   C1 *CT  HT   0.00  0.00 -120.0  0.00 0.00
+ic  C2   CT  C1  H11  0.00  0.00  180.0  0.00 0.00
+ic  H11  CT *C1  H12  0.00  0.00  120.0  0.00 0.00
+ic  H11  CT *C1  H13  0.00  0.00 -120.0  0.00 0.00
+ic  C1   CT  C2  H21  0.00  0.00  180.0  0.00 0.00
+ic  H21  CT *C2  H22  0.00  0.00  120.0  0.00 0.00
+ic  H21  CT *C2  H23  0.00  0.00 -120.0  0.00 0.00
+ic  C1   CT  C3  H31  0.00  0.00  180.0  0.00 0.00
+ic  H31  CT *C3  H32  0.00  0.00  120.0  0.00 0.00
+ic  H31  CT *C3  H33  0.00  0.00 -120.0  0.00 0.00
+
+RESI PENT        0.00 ! pentane, adm jr.
+Group                
+ Atom C1   CT3  -0.27 !  H11   H21 H31 H41    H51
+ Atom H11  HA3   0.09 !    \    |   |   |     /
+ Atom H12  HA3   0.09 ! H12-C1--C2--C3--C4--C5-H52
+ Atom H13  HA3   0.09 !    /    |   |   |     \
+Group                 !  H13   H22 H33 H42    H53
+ Atom C2   CT2  -0.18
+ Atom H21  HA2   0.09
+ Atom H22  HA2   0.09
+Group                
+ Atom C3   CT2  -0.18
+ Atom H31  HA2   0.09
+ Atom H32  HA2   0.09
+Group
+ Atom C4   CT2  -0.18
+ Atom H41  HA2   0.09
+ Atom H42  HA2   0.09
+Group
+ Atom C5   CT3  -0.27
+ Atom H51  HA3   0.09
+ Atom H52  HA3   0.09
+ Atom H53  HA3   0.09
+
+Bond  C1   C2     C2   C3     C3   C4     C4   C5
+Bond  C1   H11    C1   H12    C1   H13    C2   H21    C2   H22
+Bond  C3   H31    C3   H32    C4   H41    C4   H42    C5   H51
+Bond  C5   H52    C5   H53
+
+Ic   H11  C1   C2   C3   0.0000    0.00  180.00    0.00   0.0000
+Ic   C1   C2   C3   C4   0.0000    0.00  180.00    0.00   0.0000
+Ic   C2   C3   C4   C5   0.0000    0.00  180.00    0.00   0.0000
+Ic   C3   C4   C5   H51  0.0000    0.00  180.00    0.00   0.0000
+Ic   H11  C2  *C1   H12  0.0000    0.00  120.00    0.00   0.0000
+Ic   H11  C2  *C1   H13  0.0000    0.00 -120.00    0.00   0.0000
+Ic   C1   C3  *C2   H21  0.0000    0.00  120.00    0.00   0.0000
+Ic   C1   C3  *C2   H22  0.0000    0.00 -120.00    0.00   0.0000
+Ic   C2   C4  *C3   H31  0.0000    0.00  120.00    0.00   0.0000
+Ic   C2   C4  *C3   H32  0.0000    0.00 -120.00    0.00   0.0000
+Ic   C3   C5  *C4   H41  0.0000    0.00  120.00    0.00   0.0000
+Ic   C3   C5  *C4   H42  0.0000    0.00 -120.00    0.00   0.0000
+Ic   C4   H51 *C5   H52  0.0000    0.00  120.00    0.00   0.0000
+Ic   C4   H51 *C5   H53  0.0000    0.00 -120.00    0.00   0.0000
+patc firs none last none
+
+RESI HEXA        0.00 ! hexane, adm jr.
+Group                
+ Atom C1   CT3  -0.27 !  H11   H21 H31 H41 H51    H61
+ Atom H11  HA3   0.09 !    \    |   |   |   |    /
+ Atom H12  HA3   0.09 ! H12-C1--C2--C3--C4--C5--C6-H62
+ Atom H13  HA3   0.09 !    /    |   |   |   |    \
+Group                 !  H13   H22 H33 H42 H52    H63
+ Atom C2   CT2  -0.18
+ Atom H21  HA2   0.09
+ Atom H22  HA2   0.09
+Group                
+ Atom C3   CT2  -0.18
+ Atom H31  HA2   0.09
+ Atom H32  HA2   0.09
+Group
+ Atom C4   CT2  -0.18
+ Atom H41  HA2   0.09
+ Atom H42  HA2   0.09
+Group
+ Atom C5   CT2  -0.18
+ Atom H51  HA2   0.09
+ Atom H52  HA2   0.09
+Group
+ Atom C6   CT3  -0.27
+ Atom H61  HA3   0.09
+ Atom H62  HA3   0.09
+ Atom H63  HA3   0.09
+
+Bond  C1   C2     C2   C3     C3   C4     C4   C5     C5   C6
+Bond  C1   H11    C1   H12    C1   H13    C2   H21    C2   H22
+Bond  C3   H31    C3   H32    C4   H41    C4   H42    C5   H51
+Bond  C5   H52    C6   H61    C6   H62    C6   H63    
+patc firs none last none
+
+RESI HEPT      0.00 ! heptane, adm jr.
+Group                
+ Atom C1   CT3  -0.27 !  H11   H21 H31 H41      H71
+ Atom H11  HA3   0.09 !    \    |   |   |       /
+ Atom H12  HA3   0.09 ! H12-C1--C2--C3--C4-xx-C7-H72
+ Atom H13  HA3   0.09 !    /    |   |   |       \
+Group                 !  H13   H22 H33 H42      H73
+ Atom C2   CT2  -0.18
+ Atom H21  HA2   0.09
+ Atom H22  HA2   0.09
+Group                
+ Atom C3   CT2  -0.18
+ Atom H31  HA2   0.09
+ Atom H32  HA2   0.09
+Group
+ Atom C4   CT2  -0.18
+ Atom H41  HA2   0.09
+ Atom H42  HA2   0.09
+Group
+ Atom C5   CT2  -0.18
+ Atom H51  HA2   0.09
+ Atom H52  HA2   0.09
+Group
+ Atom C6   CT2  -0.18
+ Atom H61  HA2   0.09
+ Atom H62  HA2   0.09
+Group
+ Atom C7   CT3  -0.27
+ Atom H71  HA3   0.09
+ Atom H72  HA3   0.09
+ Atom H73  HA3   0.09
+Bond  C1   C2     C2   C3     C3   C4     C4   C5     C5   C6
+Bond  C6   C7
+Bond  C1   H11    C1   H12    C1   H13    C2   H21    C2   H22
+Bond  C3   H31    C3   H32    C4   H41    C4   H42    C5   H51
+Bond  C5   H52    C6   H61    C6   H62    C7   H71    C7   H72
+Bond  C7   H73    
+patc firs none last none
+
+RESI DECA        0.00 ! decane, Igor Vorobyov
+Group                
+ Atom C1   CT3  -0.27 !  H11   H21 H31 H41       H101
+ Atom H11  HA3   0.09 !    \    |   |   |        /
+ Atom H12  HA3   0.09 ! H12-C1--C2--C3--C4-xxx-C10-H102
+ Atom H13  HA3   0.09 !    /    |   |   |        \
+Group                 !  H13   H22 H33 H42       H103
+ Atom C2   CT2  -0.18
+ Atom H21  HA2   0.09
+ Atom H22  HA2   0.09
+Group                
+ Atom C3   CT2  -0.18
+ Atom H31  HA2   0.09
+ Atom H32  HA2   0.09
+Group
+ Atom C4   CT2  -0.18
+ Atom H41  HA2   0.09
+ Atom H42  HA2   0.09
+Group
+ Atom C5   CT2  -0.18
+ Atom H51  HA2   0.09
+ Atom H52  HA2   0.09
+Group
+ Atom C6   CT2  -0.18
+ Atom H61  HA2   0.09
+ Atom H62  HA2   0.09
+Group
+ Atom C7   CT2  -0.18
+ Atom H71  HA2   0.09
+ Atom H72  HA2   0.09
+Group
+ Atom C8   CT2  -0.18
+ Atom H81  HA2   0.09
+ Atom H82  HA2   0.09
+Group
+ Atom C9   CT2  -0.18
+ Atom H91  HA2   0.09
+ Atom H92  HA2   0.09
+Group
+ Atom C10  CT3  -0.27
+ Atom H101 HA3   0.09
+ Atom H102 HA3   0.09
+ Atom H103 HA3   0.09
+Bond  C1   C2     C2   C3     C3   C4     C4   C5
+Bond  C5   C6     C6   C7     C7   C8     C8   C9     C9   C10
+Bond  C1   H11    C1   H12    C1   H13    C2   H21    C2   H22
+Bond  C3   H31    C3   H32    C4   H41    C4   H42    
+Bond  C5   H51    C5   H52    C6   H61    C6   H62    
+Bond  C7   H71    C7   H72    C8   H81    C8   H82    
+Bond  C9   H91    C9   H92    C10  H101   C10  H102  C10  H103 
+patch first none last none
+
+RESI PEND        0.00 ! pentadecane, Igor Vorobyov
+Group                
+ Atom C1   CT3  -0.27 !  H11   H21 H31 H41        H151
+ Atom H11  HA3   0.09 !    \    |   |   |        /
+ Atom H12  HA3   0.09 ! H12-C1--C2--C3--C4-xxx-C15-H152
+ Atom H13  HA3   0.09 !    /    |   |   |        \
+Group                 !  H13   H22 H33 H42        H153
+ Atom C2   CT2  -0.18
+ Atom H21  HA2   0.09
+ Atom H22  HA2   0.09
+Group                
+ Atom C3   CT2  -0.18
+ Atom H31  HA2   0.09
+ Atom H32  HA2   0.09
+Group
+ Atom C4   CT2  -0.18
+ Atom H41  HA2   0.09
+ Atom H42  HA2   0.09
+Group
+ Atom C5   CT2  -0.18
+ Atom H51  HA2   0.09
+ Atom H52  HA2   0.09
+Group
+ Atom C6   CT2  -0.18
+ Atom H61  HA2   0.09
+ Atom H62  HA2   0.09
+Group
+ Atom C7   CT2  -0.18
+ Atom H71  HA2   0.09
+ Atom H72  HA2   0.09
+Group
+ Atom C8   CT2  -0.18
+ Atom H81  HA2   0.09
+ Atom H82  HA2   0.09
+Group
+ Atom C9   CT2  -0.18
+ Atom H91  HA2   0.09
+ Atom H92  HA2   0.09
+Group
+ Atom C10   CT2  -0.18
+ Atom H101  HA2   0.09
+ Atom H102  HA2   0.09
+Group
+ Atom C11   CT2  -0.18
+ Atom H111  HA2   0.09
+ Atom H112  HA2   0.09
+Group
+ Atom C12   CT2  -0.18
+ Atom H121  HA2   0.09
+ Atom H122  HA2   0.09
+Group
+ Atom C13   CT2  -0.18
+ Atom H131  HA2   0.09
+ Atom H132  HA2   0.09
+Group
+ Atom C14   CT2  -0.18
+ Atom H141  HA2   0.09
+ Atom H142  HA2   0.09
+Group
+ Atom C15  CT3  -0.27
+ Atom H151 HA3   0.09
+ Atom H152 HA3   0.09
+ Atom H153 HA3   0.09
+Bond  C1   C2     C2   C3     C3   C4     C4   C5
+Bond  C5   C6     C6   C7     C7   C8     C8   C9     C9   C10
+Bond  C10  C11    C11  C12    C12  C13    C13  C14    C14  C15
+Bond  C1   H11    C1   H12    C1   H13    C2   H21    C2   H22
+Bond  C3   H31    C3   H32    C4   H41    C4   H42    
+Bond  C5   H51    C5   H52    C6   H61    C6   H62    
+Bond  C7   H71    C7   H72    C8   H81    C8   H82    
+Bond  C9   H91    C9   H92    C10  H101   C10  H102  
+Bond  C11  H111   C11  H112   C12  H121   C12  H122  
+Bond  C13  H131   C13  H132      
+Bond  C14  H141   C14  H142   C15  H151   C15  H152  C15  H153 
+
+RESI OCTD        0.00 ! octadecane, Igor Vorobyov
+Group                
+ Atom C1   CT3  -0.27 !  H11   H21 H31 H41       H181
+ Atom H11  HA3   0.09 !    \    |   |   |        /
+ Atom H12  HA3   0.09 ! H12-C1--C2--C3--C4-xxx-C18-H182
+ Atom H13  HA3   0.09 !    /    |   |   |        \
+Group                 !  H13   H22 H33 H42       H183
+ Atom C2   CT2  -0.18
+ Atom H21  HA2   0.09
+ Atom H22  HA2   0.09
+Group                
+ Atom C3   CT2  -0.18
+ Atom H31  HA2   0.09
+ Atom H32  HA2   0.09
+Group
+ Atom C4   CT2  -0.18
+ Atom H41  HA2   0.09
+ Atom H42  HA2   0.09
+Group
+ Atom C5   CT2  -0.18
+ Atom H51  HA2   0.09
+ Atom H52  HA2   0.09
+Group
+ Atom C6   CT2  -0.18
+ Atom H61  HA2   0.09
+ Atom H62  HA2   0.09
+Group
+ Atom C7   CT2  -0.18
+ Atom H71  HA2   0.09
+ Atom H72  HA2   0.09
+Group
+ Atom C8   CT2  -0.18
+ Atom H81  HA2   0.09
+ Atom H82  HA2   0.09
+Group
+ Atom C9   CT2  -0.18
+ Atom H91  HA2   0.09
+ Atom H92  HA2   0.09
+Group
+ Atom C10   CT2  -0.18
+ Atom H101  HA2   0.09
+ Atom H102  HA2   0.09
+Group
+ Atom C11   CT2  -0.18
+ Atom H111  HA2   0.09
+ Atom H112  HA2   0.09
+Group
+ Atom C12   CT2  -0.18
+ Atom H121  HA2   0.09
+ Atom H122  HA2   0.09
+Group
+ Atom C13   CT2  -0.18
+ Atom H131  HA2   0.09
+ Atom H132  HA2   0.09
+Group
+ Atom C14   CT2  -0.18
+ Atom H141  HA2   0.09
+ Atom H142  HA2   0.09
+Group
+ Atom C15   CT2  -0.18
+ Atom H151  HA2   0.09
+ Atom H152  HA2   0.09
+Group
+ Atom C16   CT2  -0.18
+ Atom H161  HA2   0.09
+ Atom H162  HA2   0.09
+Group
+ Atom C17   CT2  -0.18
+ Atom H171  HA2   0.09
+ Atom H172  HA2   0.09
+Group
+ Atom C18  CT3  -0.27
+ Atom H181 HA3   0.09
+ Atom H182 HA3   0.09
+ Atom H183 HA3   0.09
+Bond  C1   C2     C2   C3     C3   C4     C4   C5
+Bond  C5   C6     C6   C7     C7   C8     C8   C9     C9   C10
+Bond  C10  C11    C11  C12    C12  C13    C13  C14    C14  C15
+Bond  C15  C16    C16  C17    C17  C18   
+Bond  C1   H11    C1   H12    C1   H13    C2   H21    C2   H22 
+Bond  C3   H31    C3   H32    C4   H41    C4   H42    
+Bond  C5   H51    C5   H52    C6   H61    C6   H62    
+Bond  C7   H71    C7   H72    C8   H81    C8   H82    
+Bond  C9   H91    C9   H92    C10  H101   C10  H102  
+Bond  C11  H111   C11  H112   C12  H121   C12  H122  
+Bond  C13  H131   C13  H132   C14  H141   C14  H142      
+Bond  C15  H151   C15  H152   C16  H161   C16  H162         
+Bond  C17  H171   C17  H172   C18  H181   C18  H182  C18  H183  
+patc first none last none
+
+RESI NEOP        0.00 ! Neo-pentane, I. Vorobyov
+                      !
+Group                 !      H11 H12 H13
+atom  ct  ct     0.00 !         \ | /
+Group                 !           C1    
+Atom  c1  ct3   -0.27 !   H43     |    H21
+Atom  h11 ha3    0.09 !      \    |   /
+Atom  h12 ha3    0.09 !   H42-C4--CT--C2-H22
+Atom  h13 ha3    0.09 !      /    |   \
+Group                 !   H41     |    H23
+Atom  c2  ct3   -0.27 !           C3       
+Atom  h21 ha3    0.09 !         / | \    
+Atom  h22 ha3    0.09 !      H31 H32 H33  
+Atom  h23 ha3    0.09 !
+Group		      !
+atom  c3  ct3   -0.27 !
+Atom  h31 ha3    0.09 !
+atom  h32 ha3    0.09 !
+atom  h33 ha3    0.09 !
+Group		      !
+atom  c4  ct3   -0.27 !
+Atom  h41 ha3    0.09 !
+atom  h42 ha3    0.09 !
+atom  h43 ha3    0.09 !
+Bond ct  c1  ct  c2  ct c3 ct  c4
+Bond c1 h11 c1 h12 c1 h13
+Bond c2 h21 c2 h22 c2 h23
+Bond c3 h31 c3 h32 c3 h33
+Bond c4 h41 c4 h42 c4 h43
+patc firs none last none
+
+RESI CAL       2.00 ! Calcium Ion used as perturbation ion for
+GROUP               ! polarizability determination.  do NOT
+ATOM CAL  CAL  2.00 ! use as the ion
+PATCHING FIRST NONE LAST NONE
+
+RESI HE1       0.00 ! helium 
+GROUP
+ATOM HE01  HE  0.00
+PATCHING FIRST NONE LAST NONE
+
+RESI NE1       0.00 ! neon
+GROUP
+ATOM NE01  NE  0.00
+PATCHING FIRST NONE LAST NONE
+
+RESI DUM       0.00 ! DUMMY ATOM
+GROUP
+ATOM DUM DUM   0.00
+PATCHING FIRST NONE LAST NONE
+
+END

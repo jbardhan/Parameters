@@ -1,0 +1,60 @@
+
+Toppar files for polarizable model based on the classical Drude
+oscillator.
+
+July 2005
+adm jr.
+
+The files in this directory and subdirectories are designed based on
+the implementation of the Drude code in version c32 of charmm.  It is
+expected (essential) that the format of these files will be altered in
+future releases to facilitate use of the polarizable Drude model.  
+
+top_drude_jul05.inp: includes MASS specifications for all atoms
+currently supported by the Drude model along with RESIdues for the
+alkanes rare gases and dummy atoms. Note that the residues in this
+file are not complete.  The additional information along with
+additional residues are in the str directory.
+
+par_drude_jul05.inp: includes parameters for all atoms currently
+supported by the Drude model, including LJ terms.
+
+str subdirectory: stream files required to assign correct charges and
+polarizabilities along with information for additional residues.
+
+buta_setpol_cf1g.str: butane
+deca_setpol_cf1g.str: decane
+etha_setpol_cf1g.str: ethane
+hept_setpol_cf1g.str: heptane
+hexa_setpol_cf1g.str: hexane
+ibut_setpol_cf1g.str: isobutane
+pend_setpol_cf1g.str: pentadecane
+pent_setpol_cf1g.str: pentane
+prop_setpol_cf1g.str: propane
+swm4_dp_setpol_negative.str: SWM4-DP water with negative drude
+swm4_dp_setpol_positive.str: SWM4-DP water with positive drude
+ions_setpol.str: ions, use with swm4_dp_setpol_positive.str
+
+test subdirectory: testcases to generate above residues and calculate
+energies.
+
+References
+
+General: Anisimov, V.M., Lamoureux, G., Vorobyov, I.V., Huang, N.,
+Roux, B. and MacKerell, A.D., Jr. :Determination of Electrostatic
+Parameters for a Polarizable Force Field Based on the Classical Drude
+Oscillator," Journal of Chemical Theory and Computing, 1:153-168,
+2005.
+
+SWM4-DP, positive Drude: Lamoureux, G., MacKerell, A.D., Jr., Roux,
+B. "A simple polarizable model of water based on classical Drude
+oscillators," Journal of Chemical Physics, 119: 5185-5197, 2003
+
+SWM4-DP, negative Drude: Lamoureux, G., Harder, E., Vorobyov, I.V.,
+Deng, Y., Roux, B. MacKerell, A.D., Jr., To be submitted.
+
+Ions:  Lamoureux, G. and Roux, B., To be submitted.
+
+alkanes: Igor V. Vorobyov, Victor M. Anisimov and Alexander
+D. MacKerell, Jr. "Polarizable Empirical Force Field for Alkanes Based
+on the Classical Drude Oscillator Model," Submitted for publication.

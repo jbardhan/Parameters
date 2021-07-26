@@ -1,0 +1,105 @@
+RESI AMP         -2.00  ! adenosine monophosphate, jpb
+                        ! atom names correspond to pdb nomenclature
+                        ! modified from the top_all27 ADP
+GROUP
+ATOM C4'  CN7     0.16  !                       H61  H62
+ATOM H4'  HN7     0.09  !                         \  /
+ATOM O4'  ON6B   -0.50  !                          N6
+ATOM C1'  CN7B    0.16  !                          |
+ATOM H1'  HN7     0.09  !                          C6
+GROUP                   !                        //  \
+ATOM C5   CN5     0.28  !                        N1   C5--N7\\
+ATOM N7   NN4    -0.71  !                        |    ||     C8-H8
+ATOM C8   CN4     0.34  !                        C2   C4--N9/
+ATOM H8   HN3     0.12  !                       / \\ /     \
+ATOM N9   NN2    -0.05  !                     H2   N3       \
+                        !                                    \
+ATOM N1   NN3A   -0.74  !                                     \
+ATOM C2   CN4     0.50  !                                      \
+ATOM H2   HN3     0.13  !                  O1A    H5' H4'  O4'  \
+ATOM N3   NN3A   -0.75  !                   |      |    \ /   \  \
+ATOM C4   CN5     0.43  !              O3A--PA-O5'-C5'---C4'    C1'
+ATOM C6   CN2     0.46  !                   |      |     \     / \
+                        !                  O2A    H5''   C3'--C2' H1'
+ATOM N6   NN1    -0.77  !                               / \   / \
+ATOM H61  HN1     0.38  !                            O3' H3' O2' H2''
+ATOM H62  HN1     0.38  !                             |       |
+GROUP                   !                            H3T     H2'
+ATOM C2'  CN7B    0.14  !
+ATOM H2'' HN7     0.09
+ATOM O2'  ON5    -0.66
+ATOM H2'  HN5     0.43
+GROUP
+ATOM C3'  CN7     0.14
+ATOM H3'  HN7     0.09
+ATOM O3'  ON5    -0.66
+ATOM H3T  HN5     0.43
+GROUP
+ATOM C5'  CN8B   -0.08
+ATOM H5'  HN8     0.09
+ATOM H5'' HN8     0.09
+ATOM O5'  ON2    -0.62
+ATOM PA   P       1.10
+ATOM O1A  ON3    -0.86
+ATOM O2A  ON3    -0.86
+ATOM O3A  ON3    -0.86
+
+BOND O3A  PA
+BOND PA   O1A       PA   O2A       PA    O5'      O3'  H3T
+BOND O5'  C5'       C5'  C4'       C4'  O4'       C4'  C3'       O4'  C1'
+BOND C1'  N9        C1'  C2'       N9   C4        N9   C8        C4   N3
+BOND C2   N1        C6   N6
+BOND N6   H61       N6   H62       C6   C5        C5   N7
+BOND C2'  C3'       C2'  O2'       O2'  H2'       C3'  O3'
+BOND C1'  H1'       C2'  H2''      C3'  H3'       C4'  H4'       C5'  H5'
+BOND C5'  H5''      C8   H8        C2   H2
+DOUBLE N1   C6    N3   C2    C4   C5        N7   C8
+IMPR N6   C6   H61  H62       C6   N1   C5   N6        
+DONO H61  N6
+DONO H62  N6
+DONO H2'  O2'
+ACCE N3
+ACCE N7
+ACCE N1
+ACCE O1A  PA
+ACCE O2A  PA
+ACCE O2'
+ACCE O3'
+ACCE O4'
+ACCE O5'
+ACCE O3A
+IC C5'  O5'  PA   O1A    0.0000  000.00   60.0   000.00   0.0000
+IC C5'  O5'  PA   O2A    0.0000  000.00  -60.0   000.00   0.0000
+IC PA   O5'  C5'  C4'    1.5996  119.00 -151.39  110.04   1.5160
+IC O5'  C5'  C4'  C3'    1.4401  108.83 -179.85  116.10   1.5284
+IC C5'  C4'  C3'  O3'    1.5160  116.10   76.70  115.12   1.4212
+IC H3T  O3'  C3'  C4'    0.9650  105.47   38.18  111.98   1.5386
+IC O4'  C3'  *C4' C5'    1.4572  104.06 -120.04  116.10   1.5160
+IC C2'  C4'  *C3' O3'    1.5284  100.16 -124.08  115.12   1.4212
+IC C4'  C3'  C2'  C1'    1.5284  100.16   39.58  102.04   1.5251
+IC C3'  C2'  C1'  N9     1.5284  101.97  144.39  113.71   1.4896
+IC O4'  C1'  N9   C4     1.5251  113.71  -96.00  125.97   1.3703
+IC C1'  C4   *N9  C8     1.4896  125.97 -179.94  106.0    1.367
+IC C4   N9   C8   N7     1.376   106.0     0.0   113.6    1.312
+IC C8   N9   C4   C5     1.367   106.0     0.0   105.6    1.382
+IC C8   N7   C5   C6     0.0       0.0   180.0     0.0    0.0
+IC N7   C5   C6   N1     0.0       0.0   180.0     0.0    0.0
+IC C5   C6   N1   C2     0.0       0.0     0.0     0.0    0.0
+IC N9   C5   *C4  N3     1.376   105.6  -180.0   126.9    1.342
+IC C5   N1   *C6  N6     1.409   117.6  -180.0   121.2    1.337
+IC N1   C6   N6   H61    1.337   121.2     0.0   119.0    1.01
+IC H61  C6   *N6  H62    1.01    119.0   180.0   119.00   1.01
+IC C5   N1   *C6  N6     1.409   117.6  -180.0   119.0    1.337
+IC N1   C6   N6   H61    1.337   119.0     0.0   119.0    1.01
+IC H61  C6   *N6  H62    1.01    119.0   180.0   121.00   1.01
+IC N9   N7   *C8   H8    0.0       0.0   180.0     0.0    0.0
+IC N1   N3   *C2   H2    0.0       0.0   180.0     0.0    0.0
+IC C1'  C3'  *C2' O2'    1.5284  102.04 -114.67  110.81   1.4212
+IC H2'  O2'  C2'  C3'    0.9600  114.97  148.63  111.92   1.5284
+IC O4'  C2'  *C1' H1'    0.0       0.0  -115.0     0.0    0.0
+IC C1'  C3'  *C2' H2''   0.0       0.0   115.0     0.0    0.0
+IC C2'  C4'  *C3' H3'    0.0       0.0   115.0     0.0    0.0
+IC C3'  O4'  *C4' H4'    0.0       0.0  -115.0     0.0    0.0
+IC C4'  O5'  *C5' H5'    0.0       0.0  -115.0     0.0    0.0
+IC C4'  O5'  *C5' H5''   0.0       0.0   115.0     0.0    0.0
+PATC  FIRS NONE LAST NONE

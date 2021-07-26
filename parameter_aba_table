@@ -1,0 +1,1178 @@
+# Brian Joughin   May 14, 2002
+# This file contains data necessary to interconvert CRD 
+# files for different parameter sets.
+#
+# Patch atoms at the end, with resname XXX.
+# There should be spaces after terminal ':'.
+
+  CHARMM22    : CHARMM19     : PARSE        : PARMESAN     : CHARMm       : PDB          : REDUCE 
+
+#####################################################################################
+# Alanine   0.00
+#
+#     |
+#  HN-N
+#     |     HB1
+#     |    /
+#  HA-CA--CB-HB2
+#     |    \
+#     |     HB3
+#   O=C
+#     |
+#
+# CHARMM22    : CHARMM19     : PARSE        : PARMESAN     : CHARMm       : PDB          : REDUCE 
+ALA    N -0.47:ALA    N -0.35:ALA    N -0.40:ALA    N -0.35:ALA    N -0.40:ALA    N  0.00:ALA    N  0.00
+ALA   HN  0.31:ALA    H  0.25:ALA    H  0.40:ALA    H  0.25:ALA   HN  0.25:              :ALA    H  0.00
+ALA   CA  0.07:ALA   CA  0.10:ALA   CA  0.00:ALA   CA  0.10:ALA   CA  0.05:ALA   CA  0.00:ALA   CA  0.00
+ALA   HA  0.09:              :              :              :ALA   HA  0.05:              :ALA   HA  0.00
+ALA   CB -0.27:ALA   CB  0.00:ALA   CB  0.00:ALA   CB  0.00:ALA   CB -0.15:ALA   CB  0.00:ALA   CB  0.00
+ALA  HB1  0.09:              :              :              :ALA  HB1  0.05:              :ALA  HB1  0.00
+ALA  HB2  0.09:              :              :              :ALA  HB2  0.05:              :ALA  HB2  0.00
+ALA  HB3  0.09:              :              :              :ALA  HB3  0.05:              :ALA  HB3  0.00
+ALA    C  0.51:ALA    C  0.55:ALA    C  0.55:ALA    C  0.55:ALA    C  0.60:ALA    C  0.00:ALA    C  0.00
+ALA    O -0.51:ALA    O -0.55:ALA    O -0.55:ALA    O -0.55:ALA    O -0.55:ALA    O  0.00:ALA    O  0.00
+	       											  	       
+#####################################################################################	
+# Arginine   0.00									
+#	       										
+#     |                      HH11							
+#  HN-N                       |								
+#     |   HB1 HG1 HD1 HE     NH1-HH12							
+#     |   |   |   |   |    //(+)  							
+#  HA-CA--CB--CG--CD--NE--CZ								
+#     |   |   |   |         \								
+#     |   HB2 HG2 HD2        NH2-HH22							
+#   O=C                       |								
+#     |                      HH21								
+#	       											
+# CHARMM22    : CHARMM19     : PARSE        : PARMESAN     : CHARMm       : PDB		 : REDUCE 
+ARG    N -0.47:ARG    N -0.35:ARG    N -0.40:ARG    N -0.35:ARG    N -0.40:ARG    N  0.00:ARG    N  0.00
+ARG   HN  0.31:ARG    H  0.25:ARG    H  0.40:ARG    H  0.25:ARG   HN  0.25:              :ARG    H  0.00
+ARG   CA  0.07:ARG   CA  0.10:ARG   CA  0.00:ARG   CA  0.10:ARG   CA  0.05:ARG   CA  0.00:ARG   CA  0.00
+ARG   HA  0.09:              :              :              :ARG   HA  0.05:              :ARG   HA  0.00
+ARG   CB -0.18:ARG   CB  0.00:ARG   CB  0.00:ARG   CB  0.00:ARG   CB -0.10:ARG   CB  0.00:ARG   CB  0.00
+ARG  HB1  0.09:              :              :              :ARG  HB1  0.05:              :ARG  HB1  0.00
+ARG  HB2  0.09:              :              :              :ARG  HB2  0.05:              :ARG  HB2  0.00
+ARG   CG -0.18:ARG   CG  0.00:ARG   CG  0.00:ARG   CG  0.00:ARG   CG -0.10:ARG   CG  0.00:ARG   CG  0.00
+ARG  HG1  0.09:              :              :              :ARG  HG1  0.05:              :ARG  HG1  0.00
+ARG  HG2  0.09:              :              :              :ARG  HG2  0.05:              :ARG  HG2  0.00
+ARG   CD  0.20:ARG   CD  0.10:ARG   CD  0.35:ARG   CD  0.10:ARG   CD -0.00:ARG   CD  0.00:ARG   CD  0.00
+ARG  HD1  0.09:              :              :              :ARG  HD1  0.05:              :ARG  HD1  0.00
+ARG  HD2  0.09:              :              :              :ARG  HD2  0.05:              :ARG  HD2  0.00
+ARG   NE -0.70:ARG   NE -0.40:ARG   NE -0.35:ARG   NE -0.40:ARG   NE -0.40:ARG   NE  0.00:ARG   NE  0.00
+ARG   HE  0.44:ARG   HE  0.30:ARG   HE  0.45:ARG   HE  0.30:ARG   HE  0.30:              :ARG   HE  0.00
+ARG   CZ  0.64:ARG   CZ  0.50:ARG   CZ  0.35:ARG   CZ  0.50:ARG   CZ  0.50:ARG   CZ  0.00:ARG   CZ  0.00
+ARG  NH1 -0.80:ARG  NH1 -0.45:ARG  NH1 -0.70:ARG  NH1 -0.45:ARG  NH1 -0.45:ARG  NH1  0.00:ARG  NH1  0.00
+ARG HH11  0.46:ARG HH11  0.35:ARG HH11  0.40:ARG HH11  0.35:ARG HH11  0.35:              :ARG HH11  0.00
+ARG HH12  0.46:ARG HH12  0.35:ARG HH12  0.40:ARG HH12  0.35:ARG HH12  0.35:              :ARG HH12  0.00
+ARG  NH2 -0.80:ARG  NH2 -0.45:ARG  NH2 -0.70:ARG  NH2 -0.45:ARG  NH2 -0.45:ARG  NH2  0.00:ARG  NH2  0.00
+ARG HH21  0.46:ARG HH21  0.35:ARG HH21  0.40:ARG HH21  0.35:ARG HH21  0.35:              :ARG HH21  0.00
+ARG HH22  0.46:ARG HH22  0.35:ARG HH22  0.40:ARG HH22  0.35:ARG HH22  0.35:              :ARG HH22  0.00
+ARG    C  0.51:ARG    C  0.55:ARG    C  0.55:ARG    C  0.55:ARG    C  0.60:ARG    C  0.00:ARG    C  0.00
+ARG    O -0.51:ARG    O -0.55:ARG    O -0.55:ARG    O -0.55:ARG    O -0.55:ARG    O  0.00:ARG    O  0.00
+	       											  	       
+#####################################################################################
+# Asparagine   0.00									
+# 	       										
+#     |        										
+#  HN-N        										
+#     |   HB1 OD1    HD21 (cis to OD1)							
+#     |   |   ||    /									
+#  HA-CA--CB--CG--ND2									
+#     |   |         \									
+#     |   HB2        HD22 (trans to OD1)						
+#   O=C           									
+#     |           									
+#	       										
+# CHARMM22    : CHARMM19     : PARSE        : PARMESAN     : CHARMm       : PDB		 : REDUCE 	
+ASN    N -0.47:ASN    N -0.35:ASN    N -0.40:ASN    N -0.35:ASN    N -0.40:ASN    N  0.00:ASN    N  0.00
+ASN   HN  0.31:ASN    H  0.25:ASN    H  0.40:ASN    H  0.25:ASN   HN  0.25:              :ASN    H  0.00
+ASN   CA  0.07:ASN   CA  0.10:ASN   CA  0.00:ASN   CA  0.10:ASN   CA  0.05:ASN   CA  0.00:ASN   CA  0.00
+ASN   HA  0.09:              :              :              :ASN   HA  0.05:              :ASN   HA  0.00
+ASN   CB -0.18:ASN   CB  0.00:ASN   CB  0.00:ASN   CB  0.00:ASN   CB -0.10:ASN   CB  0.00:ASN   CB  0.00
+ASN  HB1  0.09:              :              :              :ASN  HB1  0.05:              :ASN  HB1  0.00
+ASN  HB2  0.09:              :              :              :ASN  HB2  0.05:              :ASN  HB2  0.00
+ASN   CG  0.55:ASN   CG  0.55:ASN   CG  0.55:ASN   CG  0.55:ASN   CG  0.55:ASN   CG  0.00:ASN   CG  0.00
+ASN  OD1 -0.55:ASN  OD1 -0.55:ASN  OD1 -0.55:ASN  OD1 -0.55:ASN  OD1 -0.55:ASN  OD1  0.00:ASN  OD1  0.00
+ASN  ND2 -0.62:ASN  ND2 -0.60:ASN  ND2 -0.78:ASN  ND2 -0.60:ASN  ND2 -0.60:ASN  ND2  0.00:ASN  ND2  0.00
+ASN HD21  0.32:ASN HD21  0.30:ASN HD21  0.39:ASN HD21  0.30:ASN HD21  0.30:              :ASN HD21  0.00
+ASN HD22  0.30:ASN HD22  0.30:ASN HD22  0.39:ASN HD22  0.30:ASN HD22  0.30:              :ASN HD22  0.00
+ASN    C  0.51:ASN    C  0.55:ASN    C  0.55:ASN    C  0.55:ASN    C  0.60:ASN    C  0.00:ASN    C  0.00
+ASN    O -0.51:ASN    O -0.55:ASN    O -0.55:ASN    O -0.55:ASN    O -0.55:ASN    O -0.00:ASN    O  0.00
+	       											  	       
+#####################################################################################	
+# Aspartate/Aspartic Acid  -1.00							
+#	       										
+#     |        										
+#  HN-N        										
+#     |   HB1   OD1									
+#     |   |    //									
+#  HA-CA--CB--CG									
+#     |   |    \									
+#     |   HB2   OD2(-)									
+#   O=C           									
+#     |        										
+#	       										
+# CHARMM22    : CHARMM19     : PARSE        : PARMESAN     : CHARMm       : PDB		 : REDUCE 
+ASP    N -0.47:ASP    N -0.35:ASP    N -0.40:ASP    N -0.35:ASP    N -0.40:ASP    N  0.00:ASP    N  0.00
+ASP   HN  0.31:ASP    H  0.25:ASP    H  0.40:ASP    H  0.25:ASP   HN  0.25:              :ASP    H  0.00
+ASP   CA  0.07:ASP   CA  0.10:ASP   CA  0.00:ASP   CA  0.10:ASP   CA  0.05:ASP   CA  0.00:ASP   CA  0.00
+ASP   HA  0.09:              :              :              :ASP   HA  0.05:              :ASP   HA  0.00
+ASP   CB -0.28:ASP   CB -0.16:ASP   CB  0.00:ASP   CB -0.16:ASP   CB -0.25:ASP   CB  0.00:ASP   CB  0.00
+ASP  HB1  0.09:              :              :              :ASP  HB1  0.05:              :ASP  HB1  0.00
+ASP  HB2  0.09:              :              :              :ASP  HB2  0.05:              :ASP  HB2  0.00
+ASP   CG  0.62:ASP   CG  0.36:ASP   CG  0.10:ASP   CG  0.36:ASP   CG  0.35:ASP   CG  0.00:ASP   CG  0.00
+ASP  OD1 -0.76:ASP  OD1 -0.60:ASP  OD1 -0.55:ASP  OD1 -0.60:ASP  OD1 -0.60:ASP  OD1  0.00:ASP  OD1  0.00
+ASP  OD2 -0.76:ASP  OD2 -0.60:ASP  OD2 -0.55:ASP  OD2 -0.60:ASP  OD2 -0.60:ASP  OD2  0.00:ASP  OD2  0.00
+ASP    C  0.51:ASP    C  0.55:ASP    C  0.55:ASP    C  0.55:ASP    C  0.60:ASP    C  0.00:ASP    C  0.00
+ASP    O -0.51:ASP    O -0.55:ASP    O -0.55:ASP    O -0.55:ASP    O -0.55:ASP    O  0.00:ASP    O  0.00
+	       											  	       
+#####################################################################################	
+# Cysteine   0.00									
+#	       										
+#     |        										
+#  HN-N        										
+#     |   HB1  										
+#     |   |    										
+#  HA-CA--CB--SG									
+#     |   |     \									
+#     |   HB2    HG1									
+#   O=C           									
+#     |        										
+#	       										
+# CHARMM22    : CHARMM19     : PARSE        : PARMESAN     : CHARMm       : PDB		 : REDUCE 
+CYS    N -0.47:CYS    N -0.35:CYS    N -0.40:CYS    N -0.35:CYS    N -0.40:CYS    N  0.00:CYS    N  0.00
+CYS   HN  0.31:CYS    H  0.25:CYS    H  0.40:CYS    H  0.25:CYS   HN  0.25:              :CYS    H  0.00
+CYS   CA  0.07:CYS   CA  0.10:CYS   CA  0.00:CYS   CA  0.10:CYS   CA  0.05:CYS   CA  0.00:CYS   CA  0.00
+CYS   HA  0.09:              :              :              :CYS   HA  0.05:              :CYS   HA  0.00
+CYS   CB -0.11:CYS   CB  0.19:CYS   CB  0.00:CYS   CB  0.00:CYS   CB  0.10:CYS   CB  0.00:CYS   CB  0.00
+CYS  HB1  0.09:              :              :              :CYS  HB1  0.05:              :CYS  HB1  0.00
+CYS  HB2  0.09:              :              :              :CYS  HB2  0.05:              :CYS  HB2  0.00
+CYS   SG -0.23:CYS   SG -0.19:CYS   SG -0.29:CYS   SG -0.29:CYS   SG -0.30:CYS   SG  0.00:CYS   SG  0.00
+CYS  HG1  0.16:              :CYS   HG  0.29:CYS   HG  0.29:CYS   HG  0.10:              :CYS   HG  0.00
+CYS    C  0.51:CYS    C  0.55:CYS    C  0.55:CYS    C  0.55:CYS    C  0.60:CYS    C  0.00:CYS    C  0.00
+CYS    O -0.51:CYS    O -0.55:CYS    O -0.55:CYS    O -0.55:CYS    O -0.55:CYS    O  0.00:CYS    O  0.00
+	       											  	       
+#####################################################################################	
+# Glutamine   0.00									
+#	       										
+#     |          									
+#  HN-N          									
+#     |   HB1 HG1 OE1   HE21 (cis to OE1)						
+#     |   |   |   ||    /								
+#  HA-CA--CB--CG--CD--NE2								
+#     |   |   |         \								
+#     |   HB2 HG2       HE22 (trans to OE1)						
+#   O=C          									
+#     |        										
+#	       										
+# CHARMM22    : CHARMM19     : PARSE        : PARMESAN     : CHARMm       : PDB		 : REDUCE 
+GLN    N -0.47:GLN    N -0.35:GLN    N -0.40:GLN    N -0.35:GLN    N -0.40:GLN    N  0.00:GLN    N  0.00
+GLN   HN  0.31:GLN    H  0.25:GLN    H  0.40:GLN    H  0.25:GLN   HN  0.25:              :GLN    H  0.00
+GLN   CA  0.07:GLN   CA  0.10:GLN   CA  0.00:GLN   CA  0.10:GLN   CA  0.05:GLN   CA  0.00:GLN   CA  0.00
+GLN   HA  0.09:              :              :              :GLN   HA  0.05:              :GLN   HA  0.00
+GLN   CB -0.18:GLN   CB  0.00:GLN   CB  0.00:GLN   CB  0.00:GLN   CB -0.10:GLN   CB  0.00:GLN   CB  0.00
+GLN  HB1  0.09:              :              :              :GLN  HB1  0.05:              :GLN  HB1  0.00
+GLN  HB2  0.09:              :              :              :GLN  HB2  0.05:              :GLN  HB2  0.00
+GLN   CG -0.18:GLN   CG  0.00:GLN   CG  0.00:GLN   CG  0.00:GLN   CG -0.10:GLN   CG  0.00:GLN   CG  0.00
+GLN  HG1  0.09:              :              :              :GLN  HG1  0.05:              :GLN  HG1  0.00
+GLN  HG2  0.09:              :              :              :GLN  HG2  0.05:              :GLN  HG2  0.00
+GLN   CD  0.55:GLN   CD  0.55:GLN   CD  0.55:GLN   CD  0.55:GLN   CD  0.55:GLN   CD  0.00:GLN   CD  0.00
+GLN  OE1 -0.55:GLN  OE1 -0.55:GLN  OE1 -0.55:GLN  OE1 -0.55:GLN  OE1 -0.55:GLN  OE1  0.00:GLN  OE1  0.00
+GLN  NE2 -0.62:GLN  NE2 -0.60:GLN  NE2 -0.78:GLN  NE2 -0.60:GLN  NE2 -0.60:GLN  NE2  0.00:GLN  NE2  0.00
+GLN HE21  0.32:GLN HE21  0.30:GLN HE21  0.39:GLN HE21  0.30:GLN HE21  0.30:              :GLN HE21  0.00
+GLN HE22  0.30:GLN HE22  0.30:GLN HE22  0.39:GLN HE22  0.30:GLN HE22  0.30:              :GLN HE22  0.00
+GLN    C  0.51:GLN    C  0.55:GLN    C  0.55:GLN    C  0.55:GLN    C  0.60:GLN    C  0.00:GLN    C  0.00
+GLN    O -0.51:GLN    O -0.55:GLN    O -0.55:GLN    O -0.55:GLN    O -0.55:GLN    O  0.00:GLN    O  0.00
+	       											  	       
+#####################################################################################	
+# Glutamate/Glutamic Acid  -1.00							
+#	       										
+#     |          									
+#  HN-N          									
+#     |   HB1 HG1   OE1									
+#     |   |   |    //									
+#  HA-CA--CB--CG--CD									
+#     |   |   |    \									
+#     |   HB2 HG2   OE2(-)								
+#   O=C          									
+#     |         									
+#	       										
+# CHARMM22    : CHARMM19     : PARSE        : PARMESAN     : CHARMm       : PDB		 : REDUCE 
+GLU    N -0.47:GLU    N -0.35:GLU    N -0.40:GLU    N -0.35:GLU    N -0.40:GLU    N  0.00:GLU    N  0.00
+GLU   HN  0.31:GLU    H  0.25:GLU    H  0.40:GLU    H  0.25:GLU   HN  0.25:              :GLU    H  0.00
+GLU   CA  0.07:GLU   CA  0.10:GLU   CA  0.00:GLU   CA  0.10:GLU   CA  0.05:GLU   CA  0.00:GLU   CA  0.00
+GLU   HA  0.09:              :              :              :GLU   HA  0.05:              :GLU   HA  0.00
+GLU   CB -0.18:GLU   CB  0.00:GLU   CB  0.00:GLU   CB  0.00:GLU   CB -0.10:GLU   CB  0.00:GLU   CB  0.00
+GLU  HB1  0.09:              :              :              :GLU  HB1  0.05:              :GLU  HB1  0.00
+GLU  HB2  0.09:              :              :              :GLU  HB2  0.05:              :GLU  HB2  0.00
+GLU   CG -0.28:GLU   CG -0.16:GLU   CG  0.00:GLU   CG -0.16:GLU   CG -0.25:GLU   CG  0.00:GLU   CG  0.00
+GLU  HG1  0.09:              :              :              :GLU  HG1  0.05:              :GLU  HG1  0.00
+GLU  HG2  0.09:              :              :              :GLU  HG2  0.05:              :GLU  HG2  0.00
+GLU   CD  0.62:GLU   CD  0.36:GLU   CD  0.10:GLU   CD  0.36:GLU   CD  0.35:GLU   CD  0.00:GLU   CD  0.00
+GLU  OE1 -0.76:GLU  OE1 -0.60:GLU  OE1 -0.55:GLU  OE1 -0.60:GLU  OE1 -0.60:GLU  OE1  0.00:GLU  OE1  0.00
+GLU  OE2 -0.76:GLU  OE2 -0.60:GLU  OE2 -0.55:GLU  OE2 -0.60:GLU  OE2 -0.60:GLU  OE2  0.00:GLU  OE2  0.00
+GLU    C  0.51:GLU    C  0.55:GLU    C  0.55:GLU    C  0.55:GLU    C  0.60:GLU    C  0.00:GLU    C  0.00
+GLU    O -0.51:GLU    O -0.55:GLU    O -0.55:GLU    O -0.55:GLU    O -0.55:GLU    O  0.00:GLU    O  0.00
+	       											  	       
+#####################################################################################	
+# Glycine   0.00									
+#	       										
+#     |	       										
+#     N-H      										
+#     |        										
+#     |        										
+# HA1-CA-HA2   										
+#     |        										
+#     |        										
+#     C=O      										
+#     |	       										
+#	       										
+# CHARMM22    : CHARMM19     : PARSE        : PARMESAN     : CHARMm       : PDB		 : REDUCE	
+GLY    N -0.47:GLY    N -0.35:GLY    N -0.40:GLY    N -0.35:GLY    N -0.40:GLY    N  0.00:GLY    N  0.00
+GLY   HN  0.31:GLY    H  0.25:GLY    H  0.40:GLY    H  0.25:GLY   HN  0.25:              :GLY    H  0.00
+GLY   CA -0.02:GLY   CA  0.10:GLY   CA  0.00:GLY   CA  0.10:GLY   CA -0.00:GLY   CA  0.00:GLY   CA  0.00
+GLY  HA1  0.09:              :              :              :GLY  HA1  0.05:              :GLY  HA1  0.00
+#Gly HA is a surrogate for HA2 in DEE.					                 	    0.00
+GLY  HA   0.09:              :              :              :GLY  HA   0.05:              :GLY   HA  0.00
+GLY  HA2  0.09:              :              :              :GLY  HA2  0.05:              :GLY  HA2  0.00
+GLY    C  0.51:GLY    C  0.55:GLY    C  0.55:GLY    C  0.55:GLY    C  0.60:GLY    C  0.00:GLY    C  0.00
+GLY    O -0.51:GLY    O -0.55:GLY    O -0.55:GLY    O -0.55:GLY    O -0.55:GLY    O  0.00:GLY    O  0.00
+	       											  	       
+#####################################################################################	
+# Neutral Histidine, Protonated on ND   0.00						
+#	       										
+#     |          HD1    HE1								
+#  HN-N           |     /								
+#     |   HB1    ND1--CE1								
+#     |   |     /      ||								
+#  HA-CA--CB--CG       ||								
+#     |   |     \\     ||								
+#     |   HB2    CD2--NE2								
+#   O=C           |									
+#     |          HD2										
+#	       											
+# CHARMM22    : CHARMM19     : PARSE         : PARMESAN      : CHARMm       : PDB	   : REDUCE 
+HSD    N -0.47:HIS    N -0.35:HSD    N -0.40 :HIS    N -0.35 :HIS    N -0.40:HIS    N  0.00:HSD    N  0.00
+HSD   HN  0.31:HIS    H  0.25:HSD    H  0.40 :HIS    H  0.25 :HIS   HN  0.25:              :HSD    H  0.00
+HSD   CA  0.07:HIS   CA  0.10:HSD   CA  0.00 :HIS   CA  0.10 :HIS   CA  0.05:HIS   CA  0.00:HSD   CA  0.00
+HSD   HA  0.09:              :               :               :HIS   HA  0.05:              :HSD   HA  0.00
+HSD  ND1 -0.36:HIS  ND1 -0.40:HSD  ND1 -0.40 :HIS  ND1 -0.40 :HIS  ND1 -0.40:HIS  ND1  0.00:HSD  ND1  0.00
+HSD  HD1  0.32:HIS  HD1  0.30:HSD  HD1  0.40 :HIS  HD1  0.40 :HIS  HD1  0.30:              :HSD  HD1  0.00
+HSD   CG -0.05:HIS   CG  0.10:HSD   CG -0.125:HIS   CG -0.125:HIS   CG  0.10:HIS   CG  0.00:HSD   CG  0.00
+HSD   CB -0.09:HIS   CB  0.00:HSD   CB  0.125:HIS   CB  0.125:HIS   CB -0.10:HIS   CB  0.00:HSD   CB  0.00
+HSD  HB1  0.09:              :               :               :HIS  HB1  0.05:              :HSD  HB1  0.00
+HSD  HB2  0.09:              :               :               :HIS  HB2  0.05:              :HSD  HB2  0.00
+HSD  NE2 -0.70:HIS  NE2 -0.40:HSD  NE2 -0.56 :HIS  NE2 -0.56 :HIS  NE2 -0.40:HIS  NE2  0.00:HSD  NE2  0.00
+HSD  CD2  0.22:HIS  CD2  0.10:HSD  CD2  0.155:HIS  CD2  0.155:HIS  CD2  0.00:HIS  CD2  0.00:HSD  CD2  0.00
+HSD  HD2  0.10:              :HSD  HD2  0.125:HIS  HD2  0.125:HIS  HD2  0.10:              :HSD  HD2  0.00
+HSD  CE1  0.25:HIS  CE1  0.30:HSD  CE1  0.155:HIS  CE1  0.155:HIS  CE1  0.20:HIS  CE1  0.00:HSD  CE1  0.00
+HSD  HE1  0.13:              :HSD  HE1  0.125:HIS  HE1  0.125:HIS  HE1  0.10:              :HSD  HE1  0.00
+HSD    C  0.51:HIS    C  0.55:HSD    C  0.55 :HIS    C  0.55 :HIS    C  0.60:HIS    C  0.00:HSD    C  0.00
+HSD    O -0.51:HIS    O -0.55:HSD    O -0.55 :HIS    O -0.55 :HIS    O -0.55:HIS    O  0.00:HSD    O  0.00
+	       											  	       
+#####################################################################################	
+# Neutral Histidine, Protonated on NE   0.00						
+#	       										
+#     |                 HE1								
+#  HN-N             __  /								
+#     |   HB1    ND1--CE1								
+#     |   |     /      |								
+#  HA-CA--CB--CG       |								
+#     |   |     \\     |								
+#     |   HB2    CD2--NE2								
+#   O=C           |     \								
+#     |          HD2    HE2								
+#	       										
+# CHARMM22    : CHARMM19     : PARSE         : PARMESAN      : CHARMm       : PDB	   : REDUCE 
+HSE    N -0.47:HSD    N -0.35:HSE    N -0.40 :HSD    N -0.35 :HSD    N -0.40:HIS    N  0.00:HSE    N  0.00
+HSE   HN  0.31:HSD    H  0.25:HSE    H  0.40 :HSD    H  0.25 :HSD   HN  0.25:              :HSE    H  0.00
+HSE   CA  0.07:HSD   CA  0.10:HSE   CA  0.00 :HSD   CA  0.10 :HSD   CA  0.05:HIS   CA  0.00:HSE   CA  0.00
+HSE   HA  0.09:              :               :               :HSD   HA  0.05:              :HSE   HA  0.00
+HSE  NE2 -0.36:HSD  NE2 -0.40:HSE  NE2 -0.40 :HSD  NE2 -0.40 :HSD  NE2 -0.40:HIS  NE2  0.00:HSE  NE2  0.00
+HSE  HE2  0.32:HSD  HE2  0.30:HSE  HE2  0.40 :HSD  HE2  0.40 :HSD  HE2  0.30:              :HSE  HE2  0.00
+HSE  CD2 -0.05:HSD  CD2  0.10:HSE  CD2 -0.125:HSD  CD2 -0.125:HSD  CD2  0.00:HIS  CD2  0.00:HSE  CD2  0.00
+HSE  HD2  0.09:              :HSE  HD2  0.125:HSD  HD2  0.125:HSD  HD2  0.10:              :HSE  HD2  0.00
+HSE  ND1 -0.70:HSD  ND1 -0.40:HSE  ND1 -0.56 :HSD  ND1 -0.56 :HSD  ND1 -0.40:HIS  ND1  0.00:HSE  ND1  0.00
+HSE   CG  0.22:HSD   CG  0.10:HSE   CG  0.155:HSD   CG  0.155:HSD   CG  0.10:HIS   CG  0.00:HSE   CG  0.00
+HSE  CE1  0.25:HSD  CE1  0.30:HSE  CE1  0.155:HSD  CE1  0.155:HSD  CE1  0.20:HIS  CE1  0.00:HSE  CE1  0.00
+HSE  HE1  0.13:              :HSE  HE1  0.125:HSD  HE1  0.125:HSD  HE1  0.10:              :HSE  HE1  0.00
+HSE   CB -0.08:HSD   CB  0.00:HSE   CB  0.125:HSD   CB  0.125:HSD   CB -0.10:HIS   CB  0.00:HSE   CB  0.00
+HSE  HB1  0.09:              :               :               :HSD  HB1  0.05:              :HSE  HB1  0.00
+HSE  HB2  0.09:              :               :               :HSD  HB2  0.05:              :HSE  HB2  0.00
+HSE    C  0.51:HSD    C  0.55:HSE    C  0.55 :HSD    C  0.55 :HSD    C  0.60:HIS    C  0.00:HSE    C  0.00
+HSE    O -0.51:HSD    O -0.55:HSE    O -0.55 :HSD    O -0.55 :HSD    O -0.55:HIS    O  0.00:HSE    O  0.00
+	       											  	       
+#####################################################################################	
+# Positive Histidine, Doubly Protonated   1.00						
+#	       										
+#     |          HD1    HE1								
+#  HN-N           |     /								
+#     |   HB1    ND1--CE1								
+#     |   |     /      ||								
+#  HA-CA--CB--CG       ||								
+#     |   |     \\     ||								
+#     |   HB2    CD2--NE2(+)								
+#   O=C           |     \								
+#     |          HD2    HE2								
+#	       										
+# CHARMM22    : CHARMM19     : PARSE          : PARMESAN       : CHARMm       : PDB	     : REDUCE
+HSP    N -0.47:HSC    N -0.35:HSC    N -0.40  :HSC    N -0.35  :HSC    N -0.40:HIS    N  0.00:HSC    N  0.00
+HSP   HN  0.31:HSC    H  0.25:HSC    H  0.40  :HSC    H  0.25  :HSC   HN  0.25:              :HSC    H  0.00
+HSP   CA  0.07:HSC   CA  0.10:HSC   CA  0.00  :HSC   CA  0.10  :HSC   CA  0.05:HIS   CA  0.00:HSC   CA  0.00
+HSP   HA  0.09:              :                :                :HSC   HA  0.05:              :HSC   HA  0.00
+HSP  ND1 -0.51:HSC  ND1 -0.30:HSC  ND1 -0.35  :HSC  ND1 -0.35  :HSC  ND1 -0.30:HIS  ND1  0.00:HSC  ND1  0.00
+HSP  HD1  0.44:HSC  HD1  0.35:HSC  HD1  0.45  :HSC  HD1  0.45  :HSC  HD1  0.35:              :HSC  HD1  0.00
+HSP  NE2 -0.51:HSC  NE2 -0.30:HSC  NE2 -0.35  :HSC  NE2 -0.35  :HSC  NE2 -0.30:HIS  NE2  0.00:HSC  NE2  0.00
+HSP  HE2  0.44:HSC  HE2  0.35:HSC  HE2  0.45  :HSC  HE2  0.45  :HSC  HE2  0.35:              :HSC  HE2  0.00
+HSP  CE1  0.32:HSC  CE1  0.45:HSC  CE1  0.1417:HSC  CE1  0.1417:HSC  CE1  0.25:HIS  CE1  0.00:HSC  CE1  0.00
+HSP  HE1  0.18:              :HSC  HE1  0.125 :HSC  HE1  0.125 :HSC  HE1  0.20:              :HSC  HE1  0.00
+HSP  CD2  0.19:HSC  CD2  0.20:HSC  CD2  0.1417:HSC  CD2  0.1417:HSC  CD2  0.10:HIS  CD2  0.00:HSC  CD2  0.00
+HSP  HD2  0.13:              :HSC  HD2  0.125 :HSC  HD2  0.125 :HSC  HD2  0.10:              :HSC  HD2  0.00
+HSP   CG  0.19:HSC   CG  0.15:HSC   CG  0.1416:HSC   CG  0.1416:HSC   CG  0.10:HIS   CG  0.00:HSC   CG  0.00
+HSP   CB -0.05:HSC   CB  0.10:HSC   CB  0.125 :HSC   CB  0.125 :HSC   CB  0.05:HIS   CB  0.00:HSC   CB  0.00
+HSP  HB1  0.09:              :                :                :HSC  HB1  0.05:              :HSC  HB1  0.00
+HSP  HB2  0.09:              :                :                :HSC  HB2  0.05:              :HSC  HB2  0.00
+HSP    C  0.51:HSC    C  0.55:HSC    C  0.55  :HSC    C  0.55  :HSC    C  0.60:HIS    C  0.00:HSC    C  0.00
+HSP    O -0.51:HSC    O -0.55:HSC    O -0.55  :HSC    O -0.55  :HSC    O -0.55:HIS    O  0.00:HSC    O  0.00
+               											                 
+#####################################################################################	
+# Isoleucine   0.00									
+#	       										
+#     |    HG21 HG22									
+#  HN-N      | / 									
+#     |     CG2--HG23									
+#     |    /   										
+#  HA-CA--CB-HB    HD1									
+#     |    \       /									
+#     |     CG1--CD--HD2								
+#   O=C    / \     \	 								
+#     | HG11 HG12  HD3									
+#	       										
+# CHARMM22    : CHARMM19     : PARSE        : PARMESAN     : CHARMm       : PDB		 : REDUCE 
+ILE    N -0.47:ILE    N -0.35:ILE    N -0.40:ILE    N -0.35:ILE    N -0.40:ILE    N  0.00:ILE    N  0.00
+ILE   HN  0.31:ILE    H  0.25:ILE    H  0.40:ILE    H  0.25:ILE   HN  0.25:              :ILE    H  0.00
+ILE   CA  0.07:ILE   CA  0.10:ILE   CA  0.00:ILE   CA  0.10:ILE   CA  0.05:ILE   CA  0.00:ILE   CA  0.00
+ILE   HA  0.09:              :              :              :ILE   HA  0.05:              :ILE   HA  0.00
+ILE   CB -0.09:ILE   CB  0.00:ILE   CB  0.00:ILE   CB  0.00:ILE   CB -0.05:ILE   CB  0.00:ILE   CB  0.00
+ILE   HB  0.09:              :              :              :ILE   HB  0.05:              :ILE   HB  0.00
+ILE  CG2 -0.27:ILE  CG2  0.00:ILE  CG2  0.00:ILE  CG2  0.00:ILE  CG2 -0.15:ILE  CG2  0.00:ILE  CG2  0.00
+ILE HG21  0.09:              :              :              :ILE HG21  0.05:              :ILE HG21  0.00
+ILE HG22  0.09:              :              :              :ILE HG22  0.05:              :ILE HG22  0.00
+ILE HG23  0.09:              :              :              :ILE HG23  0.05:              :ILE HG23  0.00
+ILE  CG1 -0.18:ILE  CG1  0.00:ILE  CG1  0.00:ILE  CG1  0.00:ILE  CG1 -0.10:ILE  CG1  0.00:ILE  CG1  0.00
+ILE HG11  0.09:              :              :              :ILE HG11  0.05:              :ILE HG11  0.00
+ILE HG12  0.09:              :              :              :ILE HG12  0.05:              :ILE HG12  0.00
+ILE   CD -0.27:ILE   CD  0.00:ILE  CD1  0.00:ILE   CD  0.00:ILE  CD1 -0.15:ILE  CD1  0.00:ILE  CD1  0.00
+ILE  HD1  0.09:              :              :              :ILE HD11  0.05:              :ILE HD11  0.00
+ILE  HD2  0.09:              :              :              :ILE HD12  0.05:              :ILE HD12  0.00
+ILE  HD3  0.09:              :              :              :ILE HD13  0.05:              :ILE HD13  0.00
+ILE    C  0.51:ILE    C  0.55:ILE    C  0.55:ILE    C  0.55:ILE    C  0.60:ILE    C  0.00:ILE    C  0.00
+ILE    O -0.51:ILE    O -0.55:ILE    O -0.55:ILE    O -0.55:ILE    O -0.55:ILE    O  0.00:ILE    O  0.00
+	       											  	       
+#####################################################################################	
+# Leucine   0.00									
+#	       										
+#     |        HD11 HD12								
+#  HN-N          | /									
+#     |   HB1   CD1--HD13								
+#     |   |    /									
+#  HA-CA--CB--CG-HG									
+#     |   |    \ 									
+#     |   HB2   CD2--HD23								
+#   O=C          | \									
+#     |        HD21 HD22								
+#	       										
+# CHARMM22    : CHARMM19     : PARSE        : PARMESAN     : CHARMm       : PDB		 : REDUCE	
+LEU    N -0.47:LEU    N -0.35:LEU    N -0.40:LEU    N -0.35:LEU    N -0.40:LEU    N  0.00:LEU    N  0.00
+LEU   HN  0.31:LEU    H  0.25:LEU    H  0.40:LEU    H  0.25:LEU   HN  0.25:              :LEU    H  0.00
+LEU   CA  0.07:LEU   CA  0.10:LEU   CA  0.00:LEU   CA  0.10:LEU   CA  0.05:LEU   CA  0.00:LEU   CA  0.00
+LEU   HA  0.09:              :              :              :LEU   HA  0.05:              :LEU   HA  0.00
+LEU   CB -0.18:LEU   CB  0.00:LEU   CB  0.00:LEU   CB  0.00:LEU   CB -0.10:LEU   CB  0.00:LEU   CB  0.00
+LEU  HB1  0.09:              :              :              :LEU  HB1  0.05:              :LEU  HB1  0.00
+LEU  HB2  0.09:              :              :              :LEU  HB2  0.05:              :LEU  HB2  0.00
+LEU   CG -0.09:LEU   CG  0.00:LEU   CG  0.00:LEU   CG  0.00:LEU   CG -0.05:LEU   CG  0.00:LEU   CG  0.00
+LEU   HG  0.09:              :              :              :LEU   HG  0.05:              :LEU   HG  0.00
+LEU  CD1 -0.27:LEU  CD1  0.00:LEU  CD1  0.00:LEU  CD1  0.00:LEU  CD1 -0.15:LEU  CD1  0.00:LEU  CD1  0.00
+LEU HD11  0.09:              :              :              :LEU HD11  0.05:              :LEU HD11  0.00
+LEU HD12  0.09:              :              :              :LEU HD12  0.05:              :LEU HD12  0.00
+LEU HD13  0.09:              :              :              :LEU HD13  0.05:              :LEU HD13  0.00
+LEU  CD2 -0.27:LEU  CD2  0.00:LEU  CD2  0.00:LEU  CD2  0.00:LEU  CD2 -0.15:LEU  CD2  0.00:LEU  CD2  0.00
+LEU HD21  0.09:              :              :              :LEU HD21  0.05:              :LEU HD21  0.00
+LEU HD22  0.09:              :              :              :LEU HD22  0.05:              :LEU HD22  0.00
+LEU HD23  0.09:              :              :              :LEU HD23  0.05:              :LEU HD23  0.00
+LEU    C  0.51:LEU    C  0.55:LEU    C  0.55:LEU    C  0.55:LEU    C  0.60:LEU    C  0.00:LEU    C  0.00
+LEU    O -0.51:LEU    O -0.55:LEU    O -0.55:LEU    O -0.55:LEU    O -0.55:LEU    O  0.00:LEU    O  0.00
+	       											  	       
+#####################################################################################	
+# Lysine   1.00										
+#	       										
+#     |                   								
+#  HN-N                   								
+#     |   HB1 HG1 HD1 HE1    HZ1							
+#     |   |   |   |   |     /   							
+#  HA-CA--CB--CG--CD--CE--NZ--HZ2							
+#     |   |   |   |   |     \								
+#     |   HB2 HG2 HD2 HE2    HZ3							
+#   O=C                  								
+#     |        										
+#               									
+# CHARMM22    : CHARMM19     : PARSE        : PARMESAN     : CHARMm       : PDB		 : REDUCE	
+LYS    N -0.47:LYS    N -0.35:LYS    N -0.40:LYS    N -0.35:LYS    N -0.40:LYS    N  0.00:LYS    N  0.00
+LYS   HN  0.31:LYS    H  0.25:LYS    H  0.40:LYS    H  0.25:LYS   HN  0.25:              :LYS    H  0.00
+LYS   CA  0.07:LYS   CA  0.10:LYS   CA  0.00:LYS   CA  0.10:LYS   CA  0.05:LYS   CA  0.00:LYS   CA  0.00
+LYS   HA  0.09:              :              :              :LYS   HA  0.05:              :LYS   HA  0.00
+LYS   CB -0.18:LYS   CB  0.00:LYS   CB  0.00:LYS   CB  0.00:LYS   CB -0.10:LYS   CB  0.00:LYS   CB  0.00
+LYS  HB1  0.09:              :              :              :LYS  HB1  0.05:              :LYS  HB1  0.00
+LYS  HB2  0.09:              :              :              :LYS  HB2  0.05:              :LYS  HB2  0.00
+LYS   CG -0.18:LYS   CG  0.00:LYS   CG  0.00:LYS   CG  0.00:LYS   CG -0.10:LYS   CG  0.00:LYS   CG  0.00
+LYS  HG1  0.09:              :              :              :LYS  HG1  0.05:              :LYS  HG1  0.00
+LYS  HG2  0.09:              :              :              :LYS  HG2  0.05:              :LYS  HG2  0.00
+LYS   CD -0.18:LYS   CD  0.00:LYS   CD  0.00:LYS   CD  0.00:LYS   CD -0.10:LYS   CD  0.00:LYS   CD  0.00
+LYS  HD1  0.09:              :              :              :LYS  HD1  0.05:              :LYS  HD1  0.00
+LYS  HD2  0.09:              :              :              :LYS  HD2  0.05:              :LYS  HD2  0.00
+LYS   CE  0.21:LYS   CE  0.25:LYS   CE  0.33:LYS   CE  0.25:LYS   CE  0.05:LYS   CE  0.00:LYS   CE  0.00
+LYS  HE1  0.05:              :              :              :LYS  HE1  0.10:              :LYS  HE1  0.00
+LYS  HE2  0.05:              :              :              :LYS  HE2  0.10:              :LYS  HE2  0.00
+LYS   NZ -0.30:LYS   NZ -0.30:LYS   NZ -0.32:LYS   NZ -0.30:LYS   NZ -0.30:LYS   NZ  0.00:LYS   NZ  0.00
+LYS  HZ1  0.33:LYS  HZ1  0.35:LYS  HZ1  0.33:LYS  HZ1  0.35:LYS  HZ1  0.35:              :LYS  HZ1  0.00
+LYS  HZ2  0.33:LYS  HZ2  0.35:LYS  HZ2  0.33:LYS  HZ2  0.35:LYS  HZ2  0.35:              :LYS  HZ2  0.00
+LYS  HZ3  0.33:LYS  HZ3  0.35:LYS  HZ3  0.33:LYS  HZ3  0.35:LYS  HZ3  0.35:              :LYS  HZ3  0.00
+LYS    C  0.51:LYS    C  0.55:LYS    C  0.55:LYS    C  0.55:LYS    C  0.60:LYS    C  0.00:LYS    C  0.00
+LYS    O -0.51:LYS    O -0.55:LYS    O -0.55:LYS    O -0.55:LYS    O -0.55:LYS    O  0.00:LYS    O  0.00
+	       											  	       
+#####################################################################################	
+# Methionine   0.00									
+#	       										
+#     |                   								
+#  HN-N                   								
+#     |   HB1 HG1     HE1 								
+#     |   |   |       |   								
+#  HA-CA--CB--CG--SD--CE--HE3								
+#     |   |   |       |   								
+#     |   HB2 HG2     HE2 								
+#   O=C                  								
+#     |                  								
+#	       										
+# CHARMM22    : CHARMM19     : PARSE         : PARMESAN     : CHARMm       : PDB	  : REDUCE
+MET    N -0.47:MET    N -0.35:MET    N -0.40 :MET    N -0.35:MET    N -0.40:MET    N  0.00:MET    N  0.00
+MET   HN  0.31:MET    H  0.25:MET    H  0.40 :MET    H  0.25:MET   HN  0.25:              :MET    H  0.00
+MET   CA  0.07:MET   CA  0.10:MET   CA  0.00 :MET   CA  0.10:MET   CA  0.05:MET   CA  0.00:MET   CA  0.00
+MET   HA  0.09:              :               :              :MET   HA  0.05:              :MET   HA  0.00
+MET   CB -0.18:MET   CB  0.00:MET   CB  0.00 :MET   CB  0.00:MET   CB -0.10:MET   CB  0.00:MET   CB  0.00
+MET  HB1  0.09:              :               :              :MET  HB1  0.05:              :MET  HB1  0.00
+MET  HB2  0.09:              :               :              :MET  HB2  0.05:              :MET  HB2  0.00
+MET   CG -0.14:MET   CG  0.06:MET   CG  0.265:MET   CG  0.06:MET   CG -0.05:MET   CG  0.00:MET   CG  0.00
+MET  HG1  0.09:              :               :              :MET  HG1  0.05:              :MET  HG1  0.00
+MET  HG2  0.09:              :               :              :MET  HG2  0.05:              :MET  HG2  0.00
+MET   SD -0.09:MET   SD -0.12:MET   SD -0.53 :MET   SD -0.12:MET   SD -0.10:MET   SD  0.00:MET   SD  0.00
+MET   CE -0.22:MET   CE  0.06:MET   CE  0.265:MET   CE  0.06:MET   CE -0.10:MET   CE  0.00:MET   CE  0.00
+MET  HE1  0.09:              :               :              :MET  HE1  0.05:              :MET  HE1  0.00
+MET  HE2  0.09:              :               :              :MET  HE2  0.05:              :MET  HE2  0.00
+MET  HE3  0.09:              :               :              :MET  HE3  0.05:              :MET  HE3  0.00
+MET    C  0.51:MET    C  0.55:MET    C  0.55 :MET    C  0.55:MET    C  0.60:MET    C  0.00:MET    C  0.00
+MET    O -0.51:MET    O -0.55:MET    O -0.55 :MET    O -0.55:MET    O -0.55:MET    O  0.00:MET    O  0.00
+	       											  	       
+#####################################################################################	
+# Selenomethionine   0.00									
+#	       										
+#     |                   								
+#  HN-N                   								
+#     |   HB1 HG1     HE1 								
+#     |   |   |       |   								
+#  HA-CA--CB--CG--SE--CE--HE3								
+#     |   |   |       |   								
+#     |   HB2 HG2     HE2 								
+#   O=C                  								
+#     |                  								
+#	       										
+# CHARMM22    : CHARMM19     : PARSE         : PARMESAN     : CHARMm       : PDB	  : REDUCE
+MSE    N -0.47:MSE    N -0.35:MSE    N -0.40 :MSE    N -0.35:MSE    N -0.40:MSE    N  0.00:MSE    N  0.00
+MSE   HN  0.31:MSE    H  0.25:MSE    H  0.40 :MSE    H  0.25:MSE   HN  0.25:              :MSE    H  0.00
+MSE   CA  0.07:MSE   CA  0.10:MSE   CA  0.00 :MSE   CA  0.10:MSE   CA  0.05:MSE   CA  0.00:MSE   CA  0.00
+MSE   HA  0.09:              :               :              :MSE   HA  0.05:              :MSE   HA  0.00
+MSE   CB -0.18:MSE   CB  0.00:MSE   CB  0.00 :MSE   CB  0.00:MSE   CB -0.10:MSE   CB  0.00:MSE   CB  0.00
+MSE  HB1  0.09:              :               :              :MSE  HB1  0.05:              :MSE  HB1  0.00
+MSE  HB2  0.09:              :               :              :MSE  HB2  0.05:              :MSE  HB2  0.00
+MSE   CG -0.14:MSE   CG  0.06:MSE   CG  0.265:MSE   CG  0.06:MSE   CG -0.05:MSE   CG  0.00:MSE   CG  0.00
+MSE  HG1  0.09:              :               :              :MSE  HG1  0.05:              :MSE  HG1  0.00
+MSE  HG2  0.09:              :               :              :MSE  HG2  0.05:              :MSE  HG2  0.00
+MSE   SE -0.09:MSE   SE -0.12:MSE   SE -0.53 :MSE   SE -0.12:MSE   SE -0.10:MSE   SE  0.00:MSE   SE  0.00
+MSE   CE -0.22:MSE   CE  0.06:MSE   CE  0.265:MSE   CE  0.06:MSE   CE -0.10:MSE   CE  0.00:MSE   CE  0.00
+MSE  HE1  0.09:              :               :              :MSE  HE1  0.05:              :MSE  HE1  0.00
+MSE  HE2  0.09:              :               :              :MSE  HE2  0.05:              :MSE  HE2  0.00
+MSE  HE3  0.09:              :               :              :MSE  HE3  0.05:              :MSE  HE3  0.00
+MSE    C  0.51:MSE    C  0.55:MSE    C  0.55 :MSE    C  0.55:MSE    C  0.60:MSE    C  0.00:MSE    C  0.00
+MSE    O -0.51:MSE    O -0.55:MSE    O -0.55 :MSE    O -0.55:MSE    O -0.55:MSE    O  0.00:MSE    O  0.00
+	       											  	       
+#####################################################################################	
+# Phenylalanine   0.00									
+#	       										
+#     |        HD1  HE1    								
+#  HN-N         |    |   								
+#     |   HB1  CD1--CE1									
+#     |   |    //     \\								
+#  HA-CA--CB--CG      CZ--HZ								
+#     |   |    \  __  /									
+#     |   HB2  CD2--CE2									
+#   O=C         |    |  								
+#     |        HD2  HE2   								
+#	       										
+# CHARMM22     : CHARMM19     : PARSE         : PARMESAN      : CHARMm       : PDB	    : REDUCE
+PHE    N -0.47 :PHE    N -0.35:PHE    N -0.40 :PHE    N -0.35 :PHE    N -0.40:PHE    N  0.00:PHE    N  0.00 
+PHE   HN  0.31 :PHE    H  0.25:PHE    H  0.40 :PHE    H  0.25 :PHE   HN	 0.25:              :PHE    H  0.00 
+PHE   CA  0.07 :PHE   CA  0.10:PHE   CA  0.00 :PHE   CA  0.10 :PHE   CA	 0.05:PHE   CA  0.00:PHE   CA  0.00 
+PHE   HA  0.09 :              :               :               :PHE   HA	 0.05:              :PHE   HA  0.00 
+PHE   CB -0.18 :PHE   CB  0.00:PHE   CB  0.125:PHE   CB  0.125:PHE   CB	-0.10:PHE   CB  0.00:PHE   CB  0.00 
+PHE  HB1  0.09 :              :               :               :PHE  HB1	 0.05:              :PHE  HB1  0.00 
+PHE  HB2  0.09 :              :               :               :PHE  HB2	 0.05:              :PHE  HB2  0.00 
+PHE   CG  0.00 :PHE   CG  0.00:PHE   CG -0.125:PHE   CG -0.125:PHE   CG	 0.00:PHE   CG  0.00:PHE   CG  0.00 
+PHE  CD1 -0.115:PHE  CD1  0.00:PHE  CD1 -0.125:PHE  CD1 -0.125:PHE  CD1	-0.13:PHE  CD1  0.00:PHE  CD1  0.00 
+PHE  HD1  0.115:              :PHE  HD1  0.125:PHE  HD1  0.125:PHE  HD1	 0.13:              :PHE  HD1  0.00 
+PHE  CD2 -0.115:PHE  CD2  0.00:PHE  CD2 -0.125:PHE  CD2 -0.125:PHE  CD2	-0.13:PHE  CD2  0.00:PHE  CD2  0.00 
+PHE  HD2  0.115:              :PHE  HD2  0.125:PHE  HD2  0.125:PHE  HD2	 0.13:              :PHE  HD2  0.00 
+PHE  CE1 -0.115:PHE  CE1  0.00:PHE  CE1 -0.125:PHE  CE1 -0.125:PHE  CE1	-0.13:PHE  CE1  0.00:PHE  CE1  0.00 
+PHE  HE1  0.115:              :PHE  HE1  0.125:PHE  HE1  0.125:PHE  HE1	 0.13:              :PHE  HE1  0.00 
+PHE  CE2 -0.115:PHE  CE2  0.00:PHE  CE2 -0.125:PHE  CE2 -0.125:PHE  CE2	-0.13:PHE  CE2  0.00:PHE  CE2  0.00 
+PHE  HE2  0.115:              :PHE  HE2  0.125:PHE  HE2  0.125:PHE  HE2	 0.13:              :PHE  HE2  0.00 
+PHE   CZ -0.115:PHE   CZ  0.00:PHE   CZ -0.125:PHE   CZ -0.125:PHE   CZ	-0.13:PHE   CZ  0.00:PHE   CZ  0.00 
+PHE   HZ  0.115:              :PHE   HZ  0.125:PHE   HZ  0.125:PHE   HZ	 0.13:              :PHE   HZ  0.00 
+PHE    C  0.51 :PHE    C  0.55:PHE    C  0.55 :PHE    C  0.55 :PHE    C	 0.60:PHE    C  0.00:PHE    C  0.00 
+PHE    O -0.51 :PHE    O -0.55:PHE    O -0.55 :PHE    O -0.55 :PHE    O	-0.55:PHE    O  0.00:PHE    O  0.00 
+	       											  	       
+###########################################################				
+# Proline   0.00									
+#	       										
+#       HD1 HD2										
+#     |   \ /              								
+#     N---CD   HG1               							
+#     |     \  /									
+#     |      CG										
+#     |     /  \									
+#  HA-CA--CB   HG2									
+#     |   / \  										
+#     | HB1 HB2										
+#   O=C	       										
+#     |	       										
+#	       										
+# CHARMM22    : CHARMM19     : PARSE        : PARMESAN     : CHARMm       : PDB		 : REDUCE 
+PRO    N -0.29:PRO    N -0.20:PRO    N -0.20:PRO    N -0.20:PRO    N -0.25:PRO    N  0.00:PRO    N  0.00
+PRO   CA  0.02:PRO   CA  0.10:PRO   CA  0.10:PRO   CA  0.10:PRO   CA  0.05:PRO   CA  0.00:PRO   CA  0.00
+PRO   HA  0.09:              :              :              :PRO   HA  0.05:              :PRO   HA  0.00
+PRO   CD  0.00:PRO   CD  0.10:PRO   CD  0.10:PRO   CD  0.10:PRO   CD  0.00:PRO   CD  0.00:PRO   CD  0.00
+PRO  HD1  0.09:              :              :              :PRO  HD1  0.05:              :PRO  HD1  0.00
+PRO  HD2  0.09:              :              :              :PRO  HD2  0.05:              :PRO  HD2  0.00
+PRO   CB -0.18:PRO   CB  0.00:PRO   CB  0.00:PRO   CB  0.00:PRO   CB -0.10:PRO   CB  0.00:PRO   CB  0.00
+PRO  HB1  0.09:              :              :              :PRO  HB1  0.05:              :PRO  HB1  0.00
+PRO  HB2  0.09:              :              :              :PRO  HB2  0.05:              :PRO  HB2  0.00
+PRO   CG -0.18:PRO   CG  0.00:PRO   CG  0.00:PRO   CG  0.00:PRO   CG -0.10:PRO   CG  0.00:PRO   CG  0.00
+PRO  HG1  0.09:              :              :              :PRO  HG1  0.05:              :PRO  HG1  0.00
+PRO  HG2  0.09:              :              :              :PRO  HG2  0.05:              :PRO  HG2  0.00
+PRO    C  0.51:PRO    C  0.55:PRO    C  0.55:PRO    C  0.55:PRO    C  0.60:PRO    C  0.00:PRO    C  0.00
+PRO    O -0.51:PRO    O -0.55:PRO    O -0.55:PRO    O -0.55:PRO    O -0.55:PRO    O  0.00:PRO    O  0.00
+	       											  	       
+#####################################################################################	
+# Serine   0.00										
+#	       										
+#     |        										
+#  HN-N        										
+#     |   HB1  										
+#     |   |    										
+#  HA-CA--CB--OG									
+#     |   |     \									
+#     |   HB2    HG1									
+#   O=C           									
+#     |           									
+#	       										
+# CHARMM22    : CHARMM19     : PARSE        : PARMESAN     : CHARMm       : PDB		 : REDUCE	
+SER    N -0.47:SER    N -0.35:SER    N -0.40:SER    N -0.35:SER    N -0.40:SER    N  0.00:SER    N  0.00
+SER   HN  0.31:SER    H  0.25:SER    H  0.40:SER    H  0.25:SER   HN  0.25:              :SER    H  0.00
+SER   CA  0.07:SER   CA  0.10:SER   CA  0.00:SER   CA  0.10:SER   CA  0.05:SER   CA  0.00:SER   CA  0.00
+SER   HA  0.09:              :              :              :SER   HA  0.05:              :SER   HA  0.00
+SER   CB  0.05:SER   CB  0.25:SER   CB  0.00:SER   CB  0.25:SER   CB  0.05:SER   CB  0.00:SER   CB  0.00
+SER  HB1  0.09:              :              :              :SER  HB1  0.10:              :SER  HB1  0.00
+SER  HB2  0.09:              :              :              :SER  HB2  0.10:              :SER  HB2  0.00
+SER   OG -0.66:SER   OG -0.65:SER   OG -0.49:SER   OG -0.65:SER   OG -0.65:SER   OG  0.00:SER   OG  0.00
+SER  HG1  0.43:SER   HG  0.40:SER   HG  0.49:SER   HG  0.40:SER   HG  0.40:              :SER   HG  0.00
+SER    C  0.51:SER    C  0.55:SER    C  0.55:SER    C  0.55:SER    C  0.60:SER    C  0.00:SER    C  0.00
+SER    O -0.51:SER    O -0.55:SER    O -0.55:SER    O -0.55:SER    O -0.55:SER    O  0.00:SER    O  0.00
+	       											  	       
+###########################################################				
+# Threonine   0.00									
+#	       										
+#     |        										
+#  HN-N        										
+#     |     OG1--HG1									
+#     |    /   										
+#  HA-CA--CB-HB  									
+#     |    \     									
+#     |     CG2--HG21									
+#   O=C    / \    									
+#     | HG21 HG22 									
+#	       										
+# CHARMM22    : CHARMM19     : PARSE        : PARMESAN     : CHARMm       : PDB		 : REDUCE 
+THR    N -0.47:THR    N -0.35:THR    N -0.40:THR    N -0.35:THR    N -0.40:THR    N  0.00:THR    N  0.00
+THR   HN  0.31:THR    H  0.25:THR    H  0.40:THR    H  0.25:THR   HN  0.25:              :THR    H  0.00
+THR   CA  0.07:THR   CA  0.10:THR   CA  0.00:THR   CA  0.10:THR   CA  0.05:THR   CA  0.00:THR   CA  0.00
+THR   HA  0.09:              :              :              :THR   HA  0.05:              :THR   HA  0.00
+THR   CB  0.14:THR   CB  0.25:THR   CB  0.00:THR   CB  0.25:THR   CB  0.15:THR   CB  0.00:THR   CB  0.00
+THR   HB  0.09:              :              :              :THR   HB  0.10:              :THR   HB  0.00
+THR  OG1 -0.66:THR  OG1 -0.65:THR  OG1 -0.49:THR  OG1 -0.65:THR  OG1 -0.65:THR  OG1  0.00:THR  OG1  0.00
+THR  HG1  0.43:THR  HG1  0.40:THR  HG1  0.49:THR  HG1  0.40:THR  HG1  0.40:              :THR  HG1  0.00
+THR  CG2 -0.27:THR  CG2  0.00:THR  CG2  0.00:THR  CG2  0.00:THR  CG2 -0.15:THR  CG2  0.00:THR  CG2  0.00
+THR HG21  0.09:              :              :              :THR HG21  0.05:              :THR HG21  0.00
+THR HG22  0.09:              :              :              :THR HG22  0.05:              :THR HG22  0.00
+THR HG23  0.09:              :              :              :THR HG23  0.05:              :THR HG23  0.00
+THR    C  0.51:THR    C  0.55:THR    C  0.55:THR    C  0.55:THR    C  0.60:THR    C  0.00:THR    C  0.00
+THR    O -0.51:THR    O -0.55:THR    O -0.55:THR    O -0.55:THR    O -0.55:THR    O  0.00:THR    O  0.00
+	       											  	       
+#####################################################################################	
+# Tryptophan   0.00									
+#	       										
+#     |                  HE3								
+#  HN-N                   |								
+#     |   HB1            CE3								
+#     |   |             /  \\								
+#  HA-CA--CB---CG-----CD2   CZ3-HZ3							
+#     |   |    ||     ||     |								
+#     |   HB2  CD1    CE2   CH2-HH2							
+#   O=C       /   \   / \  //								
+#     |     HD1    NE1   CZ2								
+#                   |     |								
+#                  HE1   HZ2								
+#	       										
+# CHARMM22     : CHARMM19     : PARSE         : PARMESAN      : CHARMm       : PDB	    : REDUCE
+TRP    N -0.47 :TRP    N -0.35:TRP    N -0.40 :TRP    N -0.35 :TRP    N -0.40:TRP    N  0.00:TRP    N  0.00 
+TRP   HN  0.31 :TRP    H  0.25:TRP    H  0.40 :TRP    H  0.25 :TRP   HN	 0.25:              :TRP    H  0.00 
+TRP   CA  0.07 :TRP   CA  0.10:TRP   CA  0.00 :TRP   CA  0.10 :TRP   CA	 0.05:TRP   CA  0.00:TRP   CA  0.00 
+TRP   HA  0.09 :              :               :               :TRP   HA	 0.05:              :TRP   HA  0.00 
+TRP   CB -0.18 :TRP   CB  0.00:TRP   CB  0.125:TRP   CB  0.125:TRP   CB	-0.10:TRP   CB  0.00:TRP   CB  0.00 
+TRP  HB1  0.09 :              :               :               :TRP  HB1	 0.05:              :TRP  HB1  0.00 
+TRP  HB2  0.09 :              :               :               :TRP  HB2	 0.05:              :TRP  HB2  0.00 
+TRP   CG -0.03 :TRP   CG -0.03:TRP   CG -0.125:TRP   CG -0.125:TRP   CG	-0.03:TRP   CG  0.00:TRP   CG  0.00 
+TRP  CD2 -0.02 :TRP  CD2  0.10:TRP  CD2  0.00 :TRP  CD2  0.00 :TRP  CD2	 0.10:TRP  CD2  0.00:TRP  CD2  0.00 
+TRP  CD1  0.035:TRP  CD1  0.06:TRP  CD1 -0.125:TRP  CD1 -0.125:TRP  CD1 -0.04:TRP  CD1  0.00:TRP  CD1  0.00 
+TRP  HD1  0.115:              :TRP  HD1  0.125:TRP  HD1  0.125:TRP  HD1	 0.10:              :TRP  HD1  0.00 
+TRP  NE1 -0.61 :TRP  NE1 -0.36:TRP  NE1 -0.40 :TRP  NE1 -0.40 :TRP  NE1	-0.36:TRP  NE1  0.00:TRP  NE1  0.00 
+TRP  HE1  0.38 :TRP  HE1  0.30:TRP  HE1  0.40 :TRP  HE1  0.40 :TRP  HE1	 0.30:              :TRP  HE1  0.00 
+TRP  CE2  0.13 :TRP  CE2 -0.04:TRP  CE2  0.00 :TRP  CE2  0.00 :TRP  CE2 -0.04:TRP  CE2  0.00:TRP  CE2  0.00 
+TRP  CE3 -0.115:TRP  CE3 -0.03:TRP  CE3 -0.125:TRP  CE3 -0.125:TRP  CE3	-0.13:TRP  CE3  0.00:TRP  CE3  0.00 
+TRP  HE3  0.115:              :TRP  HE3  0.125:TRP  HE3  0.125:TRP  HE3	 0.10:              :TRP  HE3  0.00 
+TRP  CZ2 -0.115:TRP  CZ2  0.00:TRP  CZ2 -0.125:TRP  CZ2 -0.125:TRP  CZ2 -0.13:TRP  CZ2  0.00:TRP  CZ2  0.00 
+TRP  HZ2  0.115:              :TRP  HZ2  0.125:TRP  HZ2  0.125:TRP  HZ2	 0.13:              :TRP  HZ2  0.00 
+TRP  CZ3 -0.115:TRP  CZ3  0.00:TRP  CZ3 -0.125:TRP  CZ3 -0.125:TRP  CZ3	-0.13:TRP  CZ3  0.00:TRP  CZ3  0.00 
+TRP  HZ3  0.115:              :TRP  HZ3  0.125:TRP  HZ3  0.125:TRP  HZ3	 0.13:              :TRP  HZ3  0.00 
+TRP  CH2 -0.115:TRP  CH2  0.00:TRP  CH2 -0.125:TRP  CH2 -0.125:TRP  CH2	-0.13:TRP  CH2  0.00:TRP  CH2  0.00 
+TRP  HH2  0.115:              :TRP  HH2  0.125:TRP  HH2  0.125:TRP  HH2	 0.13:              :TRP  HH2  0.00 
+TRP    C  0.51 :TRP    C  0.55:TRP    C  0.55 :TRP    C  0.55 :TRP    C	 0.60:TRP    C  0.00:TRP    C  0.00 
+TRP    O -0.51 :TRP    O -0.55:TRP    O -0.55 :TRP    O -0.55 :TRP    O	-0.55:TRP    O  0.00:TRP    O  0.00 
+	       											  	       
+#####################################################################################		
+# Tyrosine   0.00										
+#	       											
+#     |        HD1  HE1    									
+#  HN-N         |    |   									
+#     |   HB1  CD1--CE1										
+#     |   |   //      \\									
+#  HA-CA--CB--CG      CZ--OH									
+#     |   |    \  __  /     \									
+#     |   HB2  CD2--CE2     HH									
+#   O=C         |    |  									
+#     |        HD2  HE2   									
+#	       											
+# CHARMM22     : CHARMM19     : PARSE         : PARMESAN      : CHARMm       : PDB	    : REDUCE	
+TYR    N -0.47 :TYR    N -0.35:TYR    N -0.40 :TYR    N -0.35 :TYR    N -0.40:TYR    N  0.00:TYR    N  0.00 
+TYR   HN  0.31 :TYR    H  0.25:TYR    H  0.40 :TYR    H  0.25 :TYR   HN	 0.25:              :TYR    H  0.00 
+TYR   CA  0.07 :TYR   CA  0.10:TYR   CA  0.00 :TYR   CA  0.10 :TYR   CA	 0.05:TYR   CA  0.00:TYR   CA  0.00 
+TYR   HA  0.09 :              :               :               :TYR   HA	 0.05:              :TYR   HA  0.00 
+TYR   CB -0.18 :TYR   CB  0.00:TYR   CB  0.125:TYR   CB  0.125:TYR   CB	-0.10:TYR   CB  0.00:TYR   CB  0.00 
+TYR  HB1  0.09 :              :               :               :TYR  HB1	 0.05:              :TYR  HB1  0.00 
+TYR  HB2  0.09 :              :               :               :TYR  HB2	 0.05:              :TYR  HB2  0.00 
+TYR   CG  0.00 :TYR   CG  0.00:TYR   CG -0.125:TYR   CG -0.125:TYR   CG	 0.00:TYR   CG  0.00:TYR   CG  0.00 
+TYR  CD1 -0.115:TYR  CD1  0.00:TYR  CD1 -0.125:TYR  CD1 -0.125:TYR  CD1	-0.13:TYR  CD1  0.00:TYR  CD1  0.00 
+TYR  HD1  0.115:              :TYR  HD1  0.125:TYR  HD1  0.125:TYR  HD1	 0.13:              :TYR  HD1  0.00 
+TYR  CD2 -0.115:TYR  CD2  0.00:TYR  CD2 -0.125:TYR  CD2 -0.125:TYR  CD2	-0.13:TYR  CD2  0.00:TYR  CD2  0.00 
+TYR  HD2  0.115:              :TYR  HD2  0.125:TYR  HD2  0.125:TYR  HD2	 0.13:              :TYR  HD2  0.00 
+TYR  CE1 -0.115:TYR  CE1  0.00:TYR  CE1 -0.125:TYR  CE1 -0.125:TYR  CE1	-0.13:TYR  CE1  0.00:TYR  CE1  0.00 
+TYR  HE1  0.115:              :TYR  HE1  0.125:TYR  HE1  0.125:TYR  HE1	 0.13:              :TYR  HE1  0.00 
+TYR  CE2 -0.115:TYR  CE2  0.00:TYR  CE2 -0.125:TYR  CE2 -0.125:TYR  CE2	-0.13:TYR  CE2  0.00:TYR  CE2  0.00 
+TYR  HE2  0.115:              :TYR  HE2  0.125:TYR  HE2  0.125:TYR  HE2	 0.13:              :TYR  HE2  0.00 
+TYR   CZ  0.11 :TYR   CZ  0.25:TYR   CZ  0.055:TYR   CZ  0.055:TYR   CZ	 0.25:TYR   CZ  0.00:TYR   CZ  0.00 
+TYR   OH -0.54 :TYR   OH -0.65:TYR   OH -0.49 :TYR   OH -0.49 :TYR   OH	-0.65:TYR   OH  0.00:TYR   OH  0.00 
+TYR   HH  0.43 :TYR   HH  0.40:TYR   HH  0.435:TYR   HH  0.435:TYR   HH	 0.40:              :TYR   HH  0.00 
+TYR    C  0.51 :TYR    C  0.55:TYR    C  0.55 :TYR    C  0.55 :TYR    C	 0.60:TYR    C  0.00:TYR    C  0.00 
+TYR    O -0.51 :TYR    O -0.55:TYR    O -0.55 :TYR    O -0.55 :TYR    O	-0.55:TYR    O  0.00:TYR    O  0.00 
+	       											  	       
+#####################################################################################	
+# Valine   0.00										
+#	       										
+#     |    HG11 HG12									
+#  HN-N      | / 									
+#     |     CG1--HG13									
+#     |    /   										
+#  HA-CA--CB-HB  									
+#     |    \     									
+#     |     CG2--HG21									
+#   O=C    / \   									
+#     | HG21 HG22									
+#	       										
+# CHARMM22    : CHARMM19     : PARSE        : PARMESAN     : CHARMm       : PDB		 : REDUCE 
+VAL    N -0.47:VAL    N -0.35:VAL    N -0.40:VAL    N -0.35:VAL    N -0.40:VAL    N  0.00:VAL    N  0.00
+VAL   HN  0.31:VAL    H  0.25:VAL    H  0.40:VAL    H  0.25:VAL   HN  0.25:              :VAL    H  0.00
+VAL   CA  0.07:VAL   CA  0.10:VAL   CA  0.00:VAL   CA  0.10:VAL   CA  0.05:VAL   CA  0.00:VAL   CA  0.00
+VAL   HA  0.09:              :              :              :VAL   HA  0.05:              :VAL   HA  0.00
+VAL   CB -0.09:VAL   CB  0.00:VAL   CB  0.00:VAL   CB  0.00:VAL   CB -0.05:VAL   CB  0.00:VAL   CB  0.00
+VAL   HB  0.09:              :              :              :VAL   HB  0.05:              :VAL   HB  0.00
+VAL  CG1 -0.27:VAL  CG1  0.00:VAL  CG1  0.00:VAL  CG1  0.00:VAL  CG1 -0.15:VAL  CG1  0.00:VAL  CG1  0.00
+VAL HG11  0.09:              :              :              :VAL HG11  0.05:              :VAL HG11  0.00
+VAL HG12  0.09:              :              :              :VAL HG12  0.05:              :VAL HG12  0.00
+VAL HG13  0.09:              :              :              :VAL HG13  0.05:              :VAL HG13  0.00
+VAL  CG2 -0.27:VAL  CG2  0.00:VAL  CG2  0.00:VAL  CG2  0.00:VAL  CG2 -0.15:VAL  CG2  0.00:VAL  CG2  0.00
+VAL HG21  0.09:              :              :              :VAL HG21  0.05:              :VAL HG21  0.00
+VAL HG22  0.09:              :              :              :VAL HG22  0.05:              :VAL HG22  0.00
+VAL HG23  0.09:              :              :              :VAL HG23  0.05:              :VAL HG23  0.00
+VAL    C  0.51:VAL    C  0.55:VAL    C  0.55:VAL    C  0.55:VAL    C  0.60:VAL    C  0.00:VAL    C  0.00
+VAL    O -0.51:VAL    O -0.55:VAL    O -0.55:VAL    O -0.55:VAL    O -0.55:VAL    O  0.00:VAL    O  0.00
+	       											  	       
+#####################################################################################	
+# Dianionic Phosphoserine  -2.00							
+#	       										
+#     |        										
+#  HN-N        										
+#     |   HB1     O1									
+#     |   |       |									
+#  HA-CA--CB--OG--P--O2									
+#     |   |       |									
+#     |   HB2     O3									
+#   O=C           									
+#     |           									
+#	       										
+# CHARMM22    : CHARMM19     : PARSE        : PARMESAN     : CHARMm       : PDB		 : REDUCE 
+SEP    N -0.47:SEP    N -0.35:SEP    N -0.40:SEP    N -0.35:SEP    N -0.40:SEP    N  0.00:SEP    N  0.00
+SEP   HN  0.31:SEP    H  0.25:SEP    H  0.40:SEP    H  0.25:SEP   HN  0.25:              :SEP    H  0.00
+SEP   CA  0.07:SEP   CA  0.10:SEP   CA  0.00:SEP   CA  0.10:SEP   CA  0.05:SEP   CA  0.00:SEP   CA  0.00
+SEP   HA  0.09:              :              :              :SEP   HA  0.05:              :SEP   HA  0.00
+SEP   CB -0.18:SEP   CB  0.00:SEP   CB  0.00:SEP   CB  0.00:SEP   CB -0.10:SEP   CB  0.00:SEP   CB  0.00
+SEP  HB1  0.09:              :              :              :SEP  HB1  0.05:              :SEP  HB1  0.00
+SEP  HB2  0.09:              :              :              :SEP  HB2  0.05:              :SEP  HB2  0.00
+SEP   OG -0.40:SEP   OG -0.40:SEP   OG -0.40:SEP   OG -0.40:SEP   OG -0.40:SEP   OG  0.00:SEP   OG  0.00
+SEP    P  1.10:SEP    P  1.10:SEP    P  1.10:SEP    P  1.10:SEP    P  1.10:SEP    P  0.00:SEP    P  0.00
+SEP   O1 -0.90:SEP   O1 -0.90:SEP   O1 -0.90:SEP   O1 -0.90:SEP   O1 -0.90:SEP   O1  0.00:SEP   O1  0.00
+SEP   O2 -0.90:SEP   O2 -0.90:SEP   O2 -0.90:SEP   O2 -0.90:SEP   O2 -0.90:SEP   O2  0.00:SEP   O2  0.00
+SEP   O3 -0.90:SEP   O3 -0.90:SEP   O3 -0.90:SEP   O3 -0.90:SEP   O3 -0.90:SEP   O3  0.00:SEP   O3  0.00
+SEP  O1P -0.90:SEP  O1P -0.90:SEP  O1P -0.90:SEP  O1P -0.90:SEP  O1P -0.90:SEP  O1P  0.00:SEP  O1P  0.00
+SEP  O2P -0.90:SEP  O2P -0.90:SEP  O2P -0.90:SEP  O2P -0.90:SEP  O2P -0.90:SEP  O2P  0.00:SEP  O2P  0.00
+SEP  O3P -0.90:SEP  O3P -0.90:SEP  O3P -0.90:SEP  O3P -0.90:SEP  O3P -0.90:SEP  O3P  0.00:SEP  O3P  0.00
+SEP    C  0.51:SEP    C  0.55:SEP    C  0.55:SEP    C  0.55:SEP    C  0.60:SEP    C  0.00:SEP    C  0.00
+SEP    O -0.51:SEP    O -0.55:SEP    O -0.55:SEP    O -0.55:SEP    O -0.55:SEP    O  0.00:SEP    O  0.00
+	       											  	       
+#####################################################################################	
+# Neutralized Phosphoserine  -2.00							
+#	       										
+#     |        										
+#  HN-N        										
+#     |   HB1     O1									
+#     |   |       |									
+#  HA-CA--CB--OG--P--O2									
+#     |   |       |									
+#     |   HB2     O3									
+#   O=C           									
+#     |           									
+#	       										
+# CHARMM22    : CHARMM19     : PARSE        : PARMESAN     : CHARMm       : PDB		 : REDUCE 
+SEZ    N -0.47:SEZ    N -0.35:SEZ    N -0.40:SEZ    N -0.35:SEZ    N -0.40:SEZ    N  0.00:SEZ    N  0.00
+SEZ   HN  0.31:SEZ    H  0.25:SEZ    H  0.40:SEZ    H  0.25:SEZ   HN  0.25:              :SEZ    H  0.00
+SEZ   CA  0.07:SEZ   CA  0.10:SEZ   CA  0.00:SEZ   CA  0.10:SEZ   CA  0.05:SEZ   CA  0.00:SEZ   CA  0.00
+SEZ   HA  0.09:              :              :              :SEZ   HA  0.05:              :SEZ   HA  0.00
+SEZ   CB -0.18:SEZ   CB  0.00:SEZ   CB  0.00:SEZ   CB  0.00:SEZ   CB -0.10:SEZ   CB  0.00:SEZ   CB  0.00
+SEZ  HB1  0.09:              :              :              :SEZ  HB1  0.05:              :SEZ  HB1  0.00
+SEZ  HB2  0.09:              :              :              :SEZ  HB2  0.05:              :SEZ  HB2  0.00
+SEZ   OG  0.00:SEZ   OG  0.00:SEZ   OG  0.00:SEZ   OG  0.00:SEZ   OG  0.00:SEZ   OG  0.00:SEZ   OG  0.00
+SEZ    P  0.00:SEZ    P  0.00:SEZ    P  0.00:SEZ    P  0.00:SEZ    P  0.00:SEZ    P  0.00:SEZ    P  0.00
+SEZ   O1  0.00:SEZ   O1  0.00:SEZ   O1  0.00:SEZ   O1  0.00:SEZ   O1  0.00:SEZ   O1  0.00:SEZ   O1  0.00
+SEZ   O2  0.00:SEZ   O2  0.00:SEZ   O2  0.00:SEZ   O2  0.00:SEZ   O2  0.00:SEZ   O2  0.00:SEZ   O2  0.00
+SEZ   O3  0.00:SEZ   O3  0.00:SEZ   O3  0.00:SEZ   O3  0.00:SEZ   O3  0.00:SEZ   O3  0.00:SEZ   O3  0.00
+SEZ  O1P  0.00:SEZ  O1P  0.00:SEZ  O1P  0.00:SEZ  O1P  0.00:SEZ  O1P  0.00:SEZ  O1P  0.00:SEZ  O1P  0.00
+SEZ  O2P  0.00:SEZ  O2P  0.00:SEZ  O2P  0.00:SEZ  O2P  0.00:SEZ  O2P  0.00:SEZ  O2P  0.00:SEZ  O2P  0.00
+SEZ  O3P  0.00:SEZ  O3P  0.00:SEZ  O3P  0.00:SEZ  O3P  0.00:SEZ  O3P  0.00:SEZ  O3P  0.00:SEZ  O3P  0.00
+SEZ    C  0.51:SEZ    C  0.55:SEZ    C  0.55:SEZ    C  0.55:SEZ    C  0.60:SEZ    C  0.00:SEZ    C  0.00
+SEZ    O -0.51:SEZ    O -0.55:SEZ    O -0.55:SEZ    O -0.55:SEZ    O -0.55:SEZ    O  0.00:SEZ    O  0.00
+	       											  	       
+#####################################################################################	
+# Monoanionic Phosphoserine 1  -1.00							
+#	       										
+#     |        										
+#  HN-N        										
+#     |   HB1     O1-HO1								
+#     |   |       |									
+#  HA-CA--CB--OG--P--O2									
+#     |   |       |									
+#     |   HB2     O3									
+#   O=C           									
+#     |           									
+#	       										
+# CHARMM22    : CHARMM19     : PARSE        : PARMESAN     : CHARMm       : PDB		 : REDUCE 
+PS1    N -0.47:PS1    N -0.35:PS1    N -0.40:PS1    N -0.35:PS1    N -0.40:SEP    N  0.00:PS1    N  0.00
+PS1   HN  0.31:PS1    H  0.25:PS1    H  0.40:PS1    H  0.25:PS1   HN  0.25:              :PS1    H  0.00
+PS1   CA  0.07:PS1   CA  0.10:PS1   CA  0.00:PS1   CA  0.10:PS1   CA  0.05:SEP   CA  0.00:PS1   CA  0.00
+PS1   HA  0.09:              :              :              :PS1   HA  0.05:              :PS1   HA  0.00
+PS1   CB -0.18:PS1   CB  0.00:PS1   CB  0.00:PS1   CB  0.00:PS1   CB -0.10:SEP   CB  0.00:PS1   CB  0.00
+PS1  HB1  0.09:              :              :              :PS1  HB1  0.05:              :PS1  HB1  0.00
+PS1  HB2  0.09:              :              :              :PS1  HB2  0.05:              :PS1  HB2  0.00
+PS1   OG -0.62:PS1   OG -0.62:PS1   OG -0.62:PS1   OG -0.62:PS1   OG -0.62:SEP   OG  0.00:PS1   OG  0.00
+PS1    P  1.50:PS1    P  1.50:PS1    P  1.50:PS1    P  1.50:PS1    P  1.50:SEP    P  0.00:PS1    P  0.00
+PS1   O1 -0.68:PS1   O1 -0.68:PS1   O1 -0.68:PS1   O1 -0.68:PS1   O1 -0.68:SEP   O1  0.00:PS1   O1  0.00
+PS1  HO1  0.34:PS1  HO1  0.34:PS1  HO1  0.34:PS1  HO1  0.34:PS1  HO1  0.34:              :PS1  HO1  0.00
+PS1   O2 -0.82:PS1   O2 -0.82:PS1   O2 -0.82:PS1   O2 -0.82:PS1   O2 -0.82:SEP   O2  0.00:PS1   O2  0.00
+PS1   O3 -0.82:PS1   O3 -0.82:PS1   O3 -0.82:PS1   O3 -0.82:PS1   O3 -0.82:SEP   O3  0.00:PS1   O3  0.00
+PS1    C  0.51:PS1    C  0.55:PS1    C  0.55:PS1    C  0.55:PS1    C  0.60:SEP    C  0.00:PS1    C  0.00
+PS1    O -0.51:PS1    O -0.55:PS1    O -0.55:PS1    O -0.55:PS1    O -0.55:SEP    O  0.00:PS1    O  0.00
+	       											  	       
+	       											  	       
+#####################################################################################
+# Monoanionic Phosphoserine 2  -1.00						     
+#	       									     
+#     |        									     
+#  HN-N        									     
+#     |   HB1     O1								     
+#     |   |       |								     
+#  HA-CA--CB--OG--P--O2-HO2							     
+#     |   |       |								     
+#     |   HB2     O3								     
+#   O=C           								     
+#     |           								     
+#	       									     
+# CHARMM22    : CHARMM19     : PARSE        : PARMESAN     : CHARMm       : PDB		 : REDUCE 
+PS2    N -0.47:PS2    N -0.35:PS2    N -0.40:PS2    N -0.35:PS2    N -0.40:SEP    N  0.00:PS2    N  0.00
+PS2   HN  0.31:PS2    H  0.25:PS2    H  0.40:PS2    H  0.25:PS2   HN  0.25:              :PS2    H  0.00
+PS2   CA  0.07:PS2   CA  0.10:PS2   CA  0.00:PS2   CA  0.10:PS2   CA  0.05:SEP   CA  0.00:PS2   CA  0.00
+PS2   HA  0.09:              :              :              :PS2   HA  0.05:              :PS2   HA  0.00
+PS2   CB -0.18:PS2   CB  0.00:PS2   CB  0.00:PS2   CB  0.00:PS2   CB -0.10:SEP   CB  0.00:PS2   CB  0.00
+PS2  HB1  0.09:              :              :              :PS2  HB1  0.05:              :PS2  HB1  0.00
+PS2  HB2  0.09:              :              :              :PS2  HB2  0.05:              :PS2  HB2  0.00
+PS2   OG -0.62:PS2   OG -0.62:PS2   OG -0.62:PS2   OG -0.62:PS2   OG -0.62:SEP   OG  0.00:PS2   OG  0.00
+PS2    P  1.50:PS2    P  1.50:PS2    P  1.50:PS2    P  1.50:PS2    P  1.50:SEP    P  0.00:PS2    P  0.00
+PS2   O1 -0.82:PS2   O1 -0.82:PS2   O1 -0.82:PS2   O1 -0.82:PS2   O1 -0.82:SEP   O1  0.00:PS2   O1  0.00
+PS2  HO2  0.34:PS2  HO2  0.34:PS2  HO2  0.34:PS2  HO2  0.34:PS2  HO2  0.34:              :PS2  HO2  0.00
+PS2   O2 -0.68:PS2   O2 -0.68:PS2   O2 -0.68:PS2   O2 -0.68:PS2   O2 -0.68:SEP   O2  0.00:PS2   O2  0.00
+PS2   O3 -0.82:PS2   O3 -0.82:PS2   O3 -0.82:PS2   O3 -0.82:PS2   O3 -0.82:SEP   O3  0.00:PS2   O3  0.00
+PS2    C  0.51:PS2    C  0.55:PS2    C  0.55:PS2    C  0.55:PS2    C  0.60:SEP    C  0.00:PS2    C  0.00
+PS2    O -0.51:PS2    O -0.55:PS2    O -0.55:PS2    O -0.55:PS2    O -0.55:SEP    O  0.00:PS2    O  0.00
+	       											  	       
+#####################################################################################	
+# Monoanionic Phosphoserine 3  -1.00							
+#	       										
+#     |        										
+#  HN-N        										
+#     |   HB1     O1    								
+#     |   |       |									
+#  HA-CA--CB--OG--P--O2									
+#     |   |       |									
+#     |   HB2     O3-HO3								
+#   O=C           									
+#     |           									
+#	       										
+# CHARMM22    : CHARMM19     : PARSE        : PARMESAN     : CHARMm       : PDB		 : REDUCE 
+PS3    N -0.47:PS3    N -0.35:PS3    N -0.40:PS3    N -0.35:PS3    N -0.40:SEP    N  0.00:PS3    N  0.00
+PS3   HN  0.31:PS3    H  0.25:PS3    H  0.40:PS3    H  0.25:PS3   HN  0.25:              :PS3    H  0.00
+PS3   CA  0.07:PS3   CA  0.10:PS3   CA  0.00:PS3   CA  0.10:PS3   CA  0.05:SEP   CA  0.00:PS3   CA  0.00
+PS3   HA  0.09:              :              :              :PS3   HA  0.05:              :PS3   HA  0.00
+PS3   CB -0.18:PS3   CB  0.00:PS3   CB  0.00:PS3   CB  0.00:PS3   CB -0.10:SEP   CB  0.00:PS3   CB  0.00
+PS3  HB1  0.09:              :              :              :PS3  HB1  0.05:              :PS3  HB1  0.00
+PS3  HB2  0.09:              :              :              :PS3  HB2  0.05:              :PS3  HB2  0.00
+PS3   OG -0.62:PS3   OG -0.62:PS3   OG -0.62:PS3   OG -0.62:PS3   OG -0.62:SEP   OG  0.00:PS3   OG  0.00
+PS3    P  1.50:PS3    P  1.50:PS3    P  1.50:PS3    P  1.50:PS3    P  1.50:SEP    P  0.00:PS3    P  0.00
+PS3   O1 -0.82:PS3   O1 -0.82:PS3   O1 -0.82:PS3   O1 -0.82:PS3   O1 -0.82:SEP   O1  0.00:PS3   O1  0.00
+PS3  HO3  0.34:PS3  HO3  0.34:PS3  HO3  0.34:PS3  HO3  0.34:PS3  HO3  0.34:              :PS3  HO3  0.00
+PS3   O2 -0.82:PS3   O2 -0.82:PS3   O2 -0.82:PS3   O2 -0.82:PS3   O2 -0.82:SEP   O2  0.00:PS3   O2  0.00
+PS3   O3 -0.68:PS3   O3 -0.68:PS3   O3 -0.68:PS3   O3 -0.68:PS3   O3 -0.68:SEP   O3  0.00:PS3   O3  0.00
+PS3    C  0.51:PS3    C  0.55:PS3    C  0.55:PS3    C  0.55:PS3    C  0.60:SEP    C  0.00:PS3    C  0.00
+PS3    O -0.51:PS3    O -0.55:PS3    O -0.55:PS3    O -0.55:PS3    O -0.55:SEP    O  0.00:PS3    O  0.00
+	       											  	       
+#####################################################################################
+# Dianionic Phosphothreonine  -2.00						     
+#	       									     
+#     | HG21 HG22     								     
+#  HN-N   | /    								     
+#     |  CG2-HG23  O1								     
+#     |   |        |								     
+#  HA-CA--CB--OG1--P--O2							     
+#     |   |        |								     
+#     |   HB       O3								     
+#   O=C           								     
+#     |           								     
+#	       										
+# CHARMM22    : CHARMM19     : PARSE        : PARMESAN     : CHARMm       : PDB		 : REDUCE 
+THP    N -0.47:THP    N -0.35:THP    N -0.40:THP    N -0.35:THP    N -0.40:THP    N  0.00:THP    N  0.00
+THP   HN  0.31:THP    H  0.25:THP    H  0.40:THP    H  0.25:THP   HN  0.25:              :THP    H  0.00
+THP   CA  0.07:THP   CA  0.10:THP   CA  0.00:THP   CA  0.10:THP   CA  0.05:THP   CA  0.00:THP   CA  0.00
+THP   HA  0.09:              :              :              :THP   HA  0.05:              :THP   HA  0.00
+THP   CB -0.09:THP   CB  0.00:THP   CB  0.00:THP   CB  0.00:THP   CB -0.05:THP   CB  0.00:THP   CB  0.00
+THP   HB  0.09:              :              :              :THP   HB  0.05:              :THP   HB  0.00
+THP  OG1 -0.40:THP  OG1 -0.40:THP  OG1 -0.40:THP  OG1 -0.40:THP  OG1 -0.40:THP  OG1  0.00:THP  OG1  0.00
+THP    P  1.10:THP    P  1.10:THP    P  1.10:THP    P  1.10:THP    P  1.10:THP    P  0.00:THP    P  0.00
+THP   O1 -0.90:THP   O1 -0.90:THP   O1 -0.90:THP   O1 -0.90:THP   O1 -0.90:THP   O1  0.00:THP   O1  0.00
+THP   O2 -0.90:THP   O2 -0.90:THP   O2 -0.90:THP   O2 -0.90:THP   O2 -0.90:THP   O2  0.00:THP   O2  0.00
+THP   O3 -0.90:THP   O3 -0.90:THP   O3 -0.90:THP   O3 -0.90:THP   O3 -0.90:THP   O3  0.00:THP   O3  0.00
+THP  CG2 -0.27:THP  CG2  0.00:THP  CG2  0.00:THP  CG2  0.00:THP  CG2 -0.15:THP  CG2  0.00:THP  CG2  0.00
+THP HG21  0.09:              :              :              :THP HG21  0.05:              :THP HG21  0.00
+THP HG22  0.09:              :              :              :THP HG22  0.05:              :THP HG22  0.00
+THP HG23  0.09:              :              :              :THP HG23  0.05:              :THP HG23  0.00
+THP    C  0.51:THP    C  0.55:THP    C  0.55:THP    C  0.55:THP    C  0.60:THP    C  0.00:THP    C  0.00
+THP    O -0.51:THP    O -0.55:THP    O -0.55:THP    O -0.55:THP    O -0.55:THP    O  0.00:THP    O  0.00
+	       											  	       
+#####################################################################################	
+# Monoanionic Phosphothreonine 1  -1.00							
+#	       										
+#     | HG21 HG22      									
+#  HN-N   | /          									
+#     |   CG1-HG23 O1-HO1								
+#     |   |        |									
+#  HA-CA--CB--OG1--P--O2								
+#     |   |        |									
+#     |   HB      O3									
+#   O=C           									
+#     |           									
+#	       										
+# CHARMM22    : CHARMM19     : PARSE        : PARMESAN     : CHARMm       : PDB		 : REDUCE 
+PT1    N -0.47:PT1    N -0.35:PT1    N -0.40:PT1    N -0.35:PT1    N -0.40:THP    N  0.00:PT1    N  0.00
+PT1   HN  0.31:PT1    H  0.25:PT1    H  0.40:PT1    H  0.25:PT1   HN  0.25:              :PT1    H  0.00
+PT1   CA  0.07:PT1   CA  0.10:PT1   CA  0.00:PT1   CA  0.10:PT1   CA  0.05:THP   CA  0.00:PT1   CA  0.00
+PT1   HA  0.09:              :              :              :PT1   HA  0.05:              :PT1   HA  0.00
+PT1   CB  0.01:PT1   CB  0.00:PT1   CB  0.00:PT1   CB  0.00:PT1   CB  0.05:THP   CB  0.00:PT1   CB  0.00
+PT1   HB  0.09:              :              :              :PT1   HB  0.05:              :PT1   HB  0.00
+PT1  OG1 -0.62:PT1  OG1 -0.62:PT1  OG1 -0.62:PT1  OG1 -0.62:PT1  OG1 -0.62:THP  OG1  0.00:PT1  OG1  0.00
+PT1    P  1.50:PT1    P  1.50:PT1    P  1.50:PT1    P  1.50:PT1    P  1.50:THP    P  0.00:PT1    P  0.00
+PT1   O1 -0.68:PT1   O1 -0.68:PT1   O1 -0.68:PT1   O1 -0.68:PT1   O1 -0.68:THP   O1  0.00:PT1   O1  0.00
+PT1  HO1  0.34:PT1  HO1  0.34:PT1  HO1  0.34:PT1  HO1  0.34:PT1  HO1  0.34:              :PT1  HO1  0.00
+PT1   O2 -0.82:PT1   O2 -0.82:PT1   O2 -0.82:PT1   O2 -0.82:PT1   O2 -0.82:THP   O2  0.00:PT1   O2  0.00
+PT1   O3 -0.82:PT1   O3 -0.82:PT1   O3 -0.82:PT1   O3 -0.82:PT1   O3 -0.82:THP   O3  0.00:PT1   O3  0.00
+PT1  CG2 -0.27:PT1  CG2  0.00:PT1  CG2  0.00:PT1  CG2  0.00:PT1  CG2 -0.15:THP  CG2  0.00:PT1  CG2  0.00
+PT1 HG21  0.09:              :              :              :PT1 HG21  0.05:              :PT1 HG21  0.00
+PT1 HG22  0.09:              :              :              :PT1 HG22  0.05:              :PT1 HG22  0.00
+PT1 HG23  0.09:              :              :              :PT1 HG23  0.05:              :PT1 HG23  0.00
+PT1    C  0.51:PT1    C  0.55:PT1    C  0.55:PT1    C  0.55:PT1    C  0.60:THP    C  0.00:PT1    C  0.00
+PT1    O -0.51:PT1    O -0.55:PT1    O -0.55:PT1    O -0.55:PT1    O -0.55:THP    O  0.00:PT1    O  0.00
+	       											  	       
+	       											  	       
+#####################################################################################
+# Monoanionic Phosphothreonine 2  -1.00						     
+#	       									     
+#     | HG21 HG22      								     
+#  HN-N   | /          								     
+#     |   CG1-HG23 O1								     
+#     |   |        |								     
+#  HA-CA--CB--OG1--P--O2-HO2							     
+#     |   |        |								     
+#     |   HB2      O3								     
+#   O=C           								     
+#     |           								     
+#	       										
+# CHARMM22    : CHARMM19     : PARSE        : PARMESAN     : CHARMm       : PDB		 : REDUCE 
+PT2    N -0.47:PT2    N -0.35:PT2    N -0.40:PT2    N -0.35:PT2    N -0.40:THP    N  0.00:PT2    N  0.00
+PT2   HN  0.31:PT2    H  0.25:PT2    H  0.40:PT2    H  0.25:PT2   HN  0.25:              :PT2    H  0.00
+PT2   CA  0.07:PT2   CA  0.10:PT2   CA  0.00:PT2   CA  0.10:PT2   CA  0.05:THP   CA  0.00:PT2   CA  0.00
+PT2   HA  0.09:              :              :              :PT2   HA  0.05:              :PT2   HA  0.00
+PT2   CB  0.01:PT2   CB  0.00:PT2   CB  0.00:PT2   CB  0.00:PT2   CB  0.05:THP   CB  0.00:PT2   CB  0.00
+PT2   HB  0.09:              :              :              :PT2   HB  0.05:              :PT2   HB  0.00
+PT2  OG1 -0.62:PT2  OG1 -0.62:PT2  OG1 -0.62:PT2  OG1 -0.62:PT2  OG1 -0.62:THP  OG1  0.00:PT2  OG1  0.00
+PT2    P  1.50:PT2    P  1.50:PT2    P  1.50:PT2    P  1.50:PT2    P  1.50:THP    P  0.00:PT2    P  0.00
+PT2   O1 -0.82:PT2   O1 -0.82:PT2   O1 -0.82:PT2   O1 -0.82:PT2   O1 -0.82:THP   O1  0.00:PT2   O1  0.00
+PT2  HO2  0.34:PT2  HO2  0.34:PT2  HO2  0.34:PT2  HO2  0.34:PT2  HO2  0.34:              :PT2  HO2  0.00
+PT2   O2 -0.68:PT2   O2 -0.68:PT2   O2 -0.68:PT2   O2 -0.68:PT2   O2 -0.68:THP   O2  0.00:PT2   O2  0.00
+PT2   O3 -0.82:PT2   O3 -0.82:PT2   O3 -0.82:PT2   O3 -0.82:PT2   O3 -0.82:THP   O3  0.00:PT2   O3  0.00
+PT2  CG2 -0.27:PT2  CG2  0.00:PT2  CG2  0.00:PT2  CG2  0.00:PT2  CG2 -0.15:THP  CG2  0.00:PT2  CG2  0.00
+PT2 HG21  0.09:              :              :              :PT2 HG21  0.05:              :PT2 HG21  0.00
+PT2 HG22  0.09:              :              :              :PT2 HG22  0.05:              :PT2 HG22  0.00
+PT2 HG23  0.09:              :              :              :PT2 HG23  0.05:              :PT2 HG23  0.00
+PT2    C  0.51:PT2    C  0.55:PT2    C  0.55:PT2    C  0.55:PT2    C  0.60:THP    C  0.00:PT2    C  0.00
+PT2    O -0.51:PT2    O -0.55:PT2    O -0.55:PT2    O -0.55:PT2    O -0.55:THP    O  0.00:PT2    O  0.00
+	       											  	       
+#####################################################################################
+# Monoanionic Phosphothreonine 3  -1.00						     
+#	       									     
+#     | HG21 HG22      								     
+#  HN-N   | /          								     
+#     |   CG1-HG23 O1    							     
+#     |   |        |								     
+#  HA-CA--CB--OG1--P--O2							     
+#     |   |        |								     
+#     |   HB       O3-HO3							     
+#   O=C           								     
+#     |           								     
+#	       									     
+# CHARMM22    : CHARMM19     : PARSE        : PARMESAN     : CHARMm       : PDB		 : REDUCE 
+PT3    N -0.47:PT3    N -0.35:PT3    N -0.40:PT3    N -0.35:PT3    N -0.40:THP    N  0.00:PT3    N  0.00
+PT3   HN  0.31:PT3    H  0.25:PT3    H  0.40:PT3    H  0.25:PT3   HN  0.25:              :PT3    H  0.00
+PT3   CA  0.07:PT3   CA  0.10:PT3   CA  0.00:PT3   CA  0.10:PT3   CA  0.05:THP   CA  0.00:PT3   CA  0.00
+PT3   HA  0.09:              :              :              :PT3   HA  0.05:              :PT3   HA  0.00
+PT3   CB  0.01:PT3   CB  0.00:PT3   CB  0.00:PT3   CB  0.00:PT3   CB  0.05:THP   CB  0.00:PT3   CB  0.00
+PT3   HB  0.09:              :              :              :PT3   HB  0.05:              :PT3   HB  0.00
+PT3  OG1 -0.62:PT3  OG1 -0.62:PT3  OG1 -0.62:PT3  OG1 -0.62:PT3  OG1 -0.62:THP  OG1  0.00:PT3  OG1  0.00
+PT3    P  1.50:PT3    P  1.50:PT3    P  1.50:PT3    P  1.50:PT3    P  1.50:THP    P  0.00:PT3    P  0.00
+PT3   O1 -0.82:PT3   O1 -0.82:PT3   O1 -0.82:PT3   O1 -0.82:PT3   O1 -0.82:THP   O1  0.00:PT3   O1  0.00
+PT3  HO3  0.34:PT3  HO3  0.34:PT3  HO3  0.34:PT3  HO3  0.34:PT3  HO3  0.34:              :PT3  HO3  0.00
+PT3   O2 -0.82:PT3   O2 -0.82:PT3   O2 -0.82:PT3   O2 -0.82:PT3   O2 -0.82:THP   O2  0.00:PT3   O2  0.00
+PT3   O3 -0.68:PT3   O3 -0.68:PT3   O3 -0.68:PT3   O3 -0.68:PT3   O3 -0.68:THP   O3  0.00:PT3   O3  0.00
+PT3  CG2 -0.27:PT3  CG2  0.00:PT3  CG2  0.00:PT3  CG2  0.00:PT3  CG2 -0.15:THP  CG2  0.00:PT3  CG2  0.00
+PT3 HG21  0.09:              :              :              :PT3 HG21  0.05:              :PT3 HG21  0.00
+PT3 HG22  0.09:              :              :              :PT3 HG22  0.05:              :PT3 HG22  0.00
+PT3 HG23  0.09:              :              :              :PT3 HG23  0.05:              :PT3 HG23  0.00
+PT3    C  0.51:PT3    C  0.55:PT3    C  0.55:PT3    C  0.55:PT3    C  0.60:THP    C  0.00:PT3    C  0.00
+PT3    O -0.51:PT3    O -0.55:PT3    O -0.55:PT3    O -0.55:PT3    O -0.55:THP    O  0.00:PT3    O  0.00
+	       											  	       
+#####################################################################################
+# 2,3 Diamino Propanoic Acid   1.00						     
+#	       									     
+#     |        									     
+#  HN-N        									     
+#     |   HB1    HG3								     
+#     |   |  (+)/								     
+#  HA-CA--CB--NG-HG2								     
+#     |   |     \								     
+#     |   HB2    HG1								     
+#   O=C           								     
+#     |        									     
+#              									     
+# CHARMM22    : CHARMM19     : PARSE        : PARMESAN     : CHARMm       : PDB		 : REDUCE 
+DAP    N -0.47:DAP    N -0.35:DAP    N -0.40:DAP    N -0.35:DAP    N -0.40:DAP    N  0.00:DAP    N  0.00
+DAP   HN  0.31:DAP    H  0.25:DAP    H  0.40:DAP    H  0.25:DAP   HN  0.25:              :DAP    H  0.00
+DAP   CA  0.07:DAP   CA  0.10:DAP   CA  0.00:DAP   CA  0.10:DAP   CA  0.05:DAP   CA  0.00:DAP   CA  0.00
+DAP   HA  0.09:              :              :              :DAP   HA  0.05:              :DAP   HA  0.00
+DAP   CB  0.21:DAP   CB  0.25:DAP   CB  0.33:DAP   CB  0.25:DAP   CB  0.21:DAP   CB  0.00:DAP   CB  0.00
+DAP  HB1  0.05:              :              :              :DAP  HB1  0.05:              :DAP  HB1  0.00
+DAP  HB2  0.05:              :              :              :DAP  HB2  0.05:              :DAP  HB2  0.00
+DAP   NG -0.30:DAP   NG -0.30:DAP   NG -0.32:DAP   NG -0.30:DAP   NG -0.30:DAP   NG  0.00:DAP   NG  0.00
+DAP  HG1  0.33:DAP  HG1  0.35:DAP  HG1  0.33:DAP  HG1  0.35:DAP  HG1  0.33:              :DAP  HG1  0.00
+DAP  HG2  0.33:DAP  HG2  0.35:DAP  HG2  0.33:DAP  HG2  0.35:DAP  HG2  0.33:              :DAP  HG2  0.00
+DAP  HG3  0.33:DAP  HG3  0.35:DAP  HG3  0.33:DAP  HG3  0.35:DAP  HG3  0.33:              :DAP  HG3  0.00
+DAP    C  0.51:DAP    C  0.55:DAP    C  0.55:DAP    C  0.55:DAP    C  0.60:DAP    C  0.00:DAP    C  0.00
+DAP    O -0.51:DAP    O -0.55:DAP    O -0.55:DAP    O -0.55:DAP    O -0.55:DAP    O  0.00:DAP    O  0.00
+	       											  	       
+#####################################################################################
+# Dianionic Phosphotyrosine   0.00						     
+#	       									     
+#     |        HD1  HE1    							     
+#  HN-N         |    |   							     
+#     |   HB1  CD1--CE1         O1						     
+#     |   |   //      \\       /						     
+#  HA-CA--CB--CG      CZ--OH--P--O2						     
+#     |   |    \  __  /        \						     
+#     |   HB2  CD2--CE2         O3						     
+#   O=C         |    |  							     
+#     |        HD2  HE2   							     
+#	       									     
+# CHARMM22     : CHARMM19     : PARSE         : PARMESAN      : CHARMm       : PDB	    : REDUCE 
+TYP    N -0.47 :TYP    N -0.35:TYP    N -0.40 :TYP    N -0.35 :TYP    N -0.40:TYP    N  0.00:TYP    N  0.00 
+TYP   HN  0.31 :TYP    H  0.25:TYP    H  0.40 :TYP    H  0.25 :TYP   HN  0.25:              :TYP    H  0.00 
+TYP   CA  0.07 :TYP   CA  0.10:TYP   CA  0.00 :TYP   CA  0.10 :TYP   CA  0.05:TYP   CA  0.00:TYP   CA  0.00 
+TYP   HA  0.09 :              :               :               :TYP   HA  0.05:              :TYP   HA  0.00 
+TYP   CB -0.18 :TYP   CB  0.00:TYP   CB  0.125:TYP   CB  0.125:TYP   CB -0.10:TYP   CB  0.00:TYP   CB  0.00 
+TYP  HB1  0.09 :              :               :               :TYP  HB1  0.05:              :TYP  HB1  0.00 
+TYP  HB2  0.09 :              :               :               :TYP  HB2  0.05:              :TYP  HB2  0.00 
+TYP   CG  0.00 :TYP   CG  0.00:TYP   CG -0.125:TYP   CG -0.125:TYP   CG  0.00:TYP   CG  0.00:TYP   CG  0.00 
+TYP  CD1 -0.115:TYP  CD1  0.00:TYP  CD1 -0.125:TYP  CD1 -0.125:TYP  CD1 -0.13:TYP  CD1  0.00:TYP  CD1  0.00 
+TYP  HD1  0.115:              :TYP  HD1  0.125:TYP  HD1  0.125:TYP  HD1  0.13:              :TYP  HD1  0.00 
+TYP  CD2 -0.115:TYP  CD2  0.00:TYP  CD2 -0.125:TYP  CD2 -0.125:TYP  CD2 -0.13:TYP  CD2  0.00:TYP  CD2  0.00 
+TYP  HD2  0.115:              :TYP  HD2  0.125:TYP  HD2  0.125:TYP  HD2  0.13:              :TYP  HD2  0.00 
+TYP  CE1 -0.21 :TYP  CE1  0.00:TYP  CE1 -0.21 :TYP  CE1 -0.21 :TYP  CE1 -0.21:TYP  CE1  0.00:TYP  CE1  0.00 
+TYP  HE1  0.21 :              :TYP  HE1  0.21 :TYP  HE1  0.21 :TYP  HE1  0.21:              :TYP  HE1  0.00 
+TYP  CE2 -0.21 :TYP  CE2  0.00:TYP  CE2 -0.21 :TYP  CE2 -0.21 :TYP  CE2 -0.21:TYP  CE2  0.00:TYP  CE2  0.00 
+TYP  HE2  0.21 :              :TYP  HE2  0.21 :TYP  HE2  0.21 :TYP  HE2  0.21:              :TYP  HE2  0.00 
+TYP   CZ -0.28 :TYP   CZ -0.28:TYP   CZ -0.28 :TYP   CZ -0.28 :TYP   CZ -0.28:TYP   CZ  0.00:TYP   CZ  0.00 
+TYP   OH -0.28 :TYP   OH -0.28:TYP   OH -0.28 :TYP   OH -0.28 :TYP   OH -0.28:              :TYP   OH  0.00 
+TYP    P  1.44 :TYP    P  1.44:TYP    P  1.44 :TYP    P  1.44 :TYP    P  1.44:TYP    P  0.00:TYP    P  0.00 
+TYP   O1 -0.96 :TYP   O1 -0.96:TYP   O1 -0.96 :TYP   O1 -0.96 :TYP   O1 -0.96:TYP   O1  0.00:TYP   O1  0.00 
+TYP   O2 -0.96 :TYP   O2 -0.96:TYP   O2 -0.96 :TYP   O2 -0.96 :TYP   O2 -0.96:TYP   O2  0.00:TYP   O2  0.00 
+TYP   O3 -0.96 :TYP   O3 -0.96:TYP   O3 -0.96 :TYP   O3 -0.96 :TYP   O3 -0.96:TYP   O3  0.00:TYP   O3  0.00 
+TYP    C  0.51 :TYP    C  0.55:TYP    C  0.55 :TYP    C  0.55 :TYP    C  0.60:TYP    C  0.00:TYP    C  0.00 
+TYP    O -0.51 :TYP    O -0.55:TYP    O -0.55 :TYP    O -0.55 :TYP    O -0.55:TYP    O  0.00:TYP    O  0.00 
+
+#####################################################################################	
+# Arginine   0.00									
+#	       										
+#     |           
+#  HN-N           
+#     |   HB1 HG1 
+#     |   |   |   
+#  HA-CA--CB--CG--HG3
+#     |   |   |  
+#     |   HB2 HG2
+#   O=C          
+#     |          
+#	       											
+# CHARMM22    : CHARMM19     : PARSE        : PARMESAN     : CHARMm       : PDB		 : REDUCE 
+ABA    N -0.47:ABA    N -0.35:ABA    N -0.40:ABA    N -0.35:ABA    N -0.40:ABA    N  0.00:ABA    N  0.00
+ABA   HN  0.31:ABA    H  0.25:ABA    H  0.40:ABA    H  0.25:ABA   HN  0.25:              :ABA    H  0.00
+ABA   CA  0.07:ABA   CA  0.10:ABA   CA  0.00:ABA   CA  0.10:ABA   CA  0.05:ABA   CA  0.00:ABA   CA  0.00
+ABA   HA  0.09:              :              :              :ABA   HA  0.05:              :ABA   HA  0.00
+ABA   CB -0.18:ABA   CB  0.00:ABA   CB  0.00:ABA   CB  0.00:ABA   CB -0.10:ABA   CB  0.00:ABA   CB  0.00
+ABA  HB1  0.09:              :              :              :ABA  HB1  0.05:              :ABA  HB1  0.00
+ABA  HB2  0.09:              :              :              :ABA  HB2  0.05:              :ABA  HB2  0.00
+ABA   CG -0.27:ABA   CG  0.00:ABA   CG  0.00:ABA   CG  0.00:ABA   CG -0.10:ABA   CG  0.00:ABA   CG  0.00
+ABA  HG1  0.09:              :              :              :ABA  HG1  0.05:              :ABA  HG1  0.00
+ABA  HG2  0.09:              :              :              :ABA  HG2  0.05:              :ABA  HG2  0.00
+ABA  HG3  0.09:              :              :              :              :              :ABA  HG3  0.00
+ABA    C  0.51:ABA    C  0.55:ABA    C  0.55:ABA    C  0.55:ABA    C  0.60:ABA    C  0.00:ABA    C  0.00
+ABA    O -0.51:ABA    O -0.55:ABA    O -0.55:ABA    O -0.55:ABA    O -0.55:ABA    O  0.00:ABA    O  0.00
+
+#####################################################################################
+# Assorted Patch Atoms
+#		
+# CHARMM22      : CHARMM19       : PARSE          : PARMESAN      : CHARMm        : PDB           : REDUCE      
+NTER    N -0.30 :NTER    N -0.30 :NTER    N -0.32 :NTER    N -0.30:NTER    N -0.30:NTER    N  0.00:NTER    N  0.00 
+NTER  HT1  0.33 :NTER  HT1  0.35 :NTER  HT1  0.33 :NTER  HT1  0.35:NTER  HT1  0.35:               :NTER   H1  0.00 
+NTER  HT2  0.33 :NTER  HT2  0.35 :NTER  HT2  0.33 :NTER  HT2  0.35:NTER  HT2  0.35:               :NTER   H2  0.00 
+NTER  HT3  0.33 :NTER  HT3  0.35 :NTER  HT3  0.33 :NTER  HT3  0.35:NTER  HT3  0.35:               :NTER   H3  0.00 
+NTER   CA  0.21 :NTER   CA  0.25 :NTER   CA  0.33 :NTER   CA  0.25:NTER   CA  0.15:NTER   CA  0.00:NTER   CA  0.00 
+NTER   HA  0.10 :                :                :               :NTER   HA  0.05:               :NTER   HA  0.00 
+PROP    N -0.30 :PROP    N -0.30 :PROP    N -0.32 :PROP    N -0.30:PROP    N -0.30:PROP    N  0.00:PROP    N  0.00 
+PROP  HT1  0.33 :PROP  HT1  0.35 :PROP  HT1  0.33 :PROP  HT1  0.35:PROP  HT1  0.35:               :PROP   H1  0.00 
+PROP  HT2  0.33 :PROP  HT2  0.35 :PROP  HT2  0.33 :PROP  HT2  0.35:PROP  HT2  0.35:               :PROP   H2  0.00 
+PROP   CD  0.33 :PROP   CD  0.35 :PROP   CD  0.33 :PROP   CD  0.35:PROP   CD  0.35:               :PROP   CD  0.00 
+PROP   CA  0.21 :PROP   CA  0.25 :PROP   CA  0.33 :PROP   CA  0.25:PROP   CA  0.15:PROP   CA  0.00:PROP   CA  0.00 
+PROP   HA  0.10 :                :                :               :PROP   HA  0.05:               :PROP   HA  0.00 
+CTER    C  0.34 :CTER    C  0.14 :CTER    C  0.10 :CTER    C  0.14:CTER    C  0.14:CTER    C  0.00:CTER    C  0.00 
+CTER  OT1 -0.67 :CTER    O -0.57 :CTER    O -0.55 :CTER    O -0.57:CTER OCT1 -0.57:CTER    O  0.00:CTER    O  0.00 
+CTER  OT2 -0.67 :CTER  OXT -0.57 :CTER  OXT -0.55 :CTER  OXT -0.57:CTER OCT2 -0.57:CTER  OXT  0.00:CTER  OXT  0.00 
+CTER   CA  0.07 :CTER   CA  0.10 :CTER   CA  0.00 :CTER   CA  0.10:CTER   CA  0.10:CTER   CA  0.00:CTER   CA  0.00 
+CT2     C  0.55 :CT2     C  0.55 :CTR2    C  0.55 :CT2     C  0.55:CT2     C  XXXX:CT2     C  0.00:CT2     C  0.00 
+CT2     O -0.55 :CT2     O -0.55 :CTR2    O -0.55 :CT2     O -0.55:CT2     O  XXXX:CT2     O  0.00:CT2     O  0.00 
+CT2    NT -0.62 :CT2    NT -0.62 :CTR2  NXT -0.78 :CT2    NT -0.62:CT2    NT  XXXX:CT2    NT  0.00:CT2    NT  0.00 
+CT2   HT1  0.32 :CT2   HT1  0.32 :CTR2  HT1  0.39 :CT2   HT1  0.32:CT2   HT1  XXXX:               :CT2   HT1  0.00 
+CT2   HT2  0.30 :CT2   HT2  0.30 :CTR2  HT2  0.39 :CT2   HT2  0.30:CT2   HT2  XXXX:               :CT2   HT2  0.00 
+CT3     C  0.51 :CT3     C  0.55 :CT3     C  0.55 :CT3     C  0.55:CT3     C  0.60:CT3     C  0.00:CT3     C  0.00 
+CT3     O -0.51 :CT3     O -0.55 :CT3     O -0.55 :CT3     O -0.55:CT3     O -0.55:CT3     O  0.00:CT3     O  0.00 
+CT3    NT -0.47 :CT3    NT -0.35 :CT3    NT -0.35 :CT3    NT -0.35:CT3   NCT -0.40:CT3    NT  0.00:CT3    NT  0.00 
+CT3   HNT  0.31 :CT3   HNT  0.25 :CT3   HNT  0.25 :CT3   HNT  0.25:CT3  HCT1  0.25:               :CT3   HNT  0.00 
+CT3   CAT -0.11 :CT3   CAT  0.10 :CT3   CAT  0.10 :CT3   CAT  0.10:CT3   CTB  0.00:CT3   CAT  0.00:CT3   CAT  0.00 
+CT3   HT1  0.09 :                :                :               :CT3  HTB1  0.05:               :CT3   HT1  0.00 
+CT3   HT2  0.09 :                :                :               :CT3  HTB2  0.05:               :CT3   HT2  0.00 
+CT3   HT3  0.09 :                :                :               :CT3  HTB3  0.05:               :CT3   HT3  0.00 
+ACE   CAY -0.27 :ACE   CAY  0.00 :ACE   CAY  0.00 :ACE   CAY  0.00:ACE   CT2 -0.20:ACE   CAY  0.00:ACE   CAY  0.00 
+ACE   HY1  0.09 :                :                :               :ACE  HT2A  0.05:               :ACE   HY1  0.00 
+ACE   HY2  0.09 :                :                :               :ACE  HT2B  0.05:               :ACE   HY2  0.00 
+ACE   HY3  0.09 :                :                :               :ACE  HT2G  0.05:               :ACE   HY3  0.00 
+ACE    CY  0.51 :ACE    CY  0.55 :ACE    CY  0.55 :ACE    CY  0.55:ACE   CNT  0.60:ACE    CY  0.00:ACE    CY  0.00 
+ACE    OY -0.51 :ACE    OY -0.55 :ACE    OY -0.55 :ACE    OY -0.55:ACE   ONT -0.55:ACE    OY  0.00:ACE    OY  0.00 
+PACE  CAY -0.27 :PACE  CAY  0.00 :PACE  CAY  0.00 :PACE  CAY  0.00:PACE  CT2 -0.20:PACE  CAY  0.00:PACE  CAY  0.00 
+PACE  HY1  0.09 :                :                :               :PACE HT2A  0.05:               :PACE  HY1  0.00 
+PACE  HY2  0.09 :                :                :               :PACE HT2B  0.05:               :PACE  HY2  0.00 
+PACE  HY3  0.09 :                :                :               :PACE HT2G  0.05:               :PACE  HY3  0.00 
+PACE   CY  0.51 :PACE   CY  0.55 :PACE   CY  0.55 :PACE   CY  0.55:PACE  CNT  0.60:PACE   CY  0.00:PACE   CY  0.00 
+PACE   OY -0.51 :PACE   OY -0.55 :PACE   OY -0.55 :PACE   OY -0.55:PACE  ONT -0.55:PACE   OY  0.00:PACE   OY  0.00 
+DISU   CB -0.10 :DISU   CB  0.19 :DISU   CB  0.19 :DISU   CB  0.19:DISU   CB -0.10:DISU   CB  0.00:DISU   CB  0.00 
+DISU   SG -0.08 :DISU   SG -0.19 :DISU   SG -0.19 :DISU   SG -0.19:DISU   SG  0.00:DISU   SG  0.00:DISU   SG  0.00 
+ASPP   CB -0.21 :ASPP   CB  XXXX :ASPP   CB  0.00 :ASPP   CB  XXXX:ASPP   CB  XXXX:ASPP   CB  0.00:ASPP   CB  0.00 
+ASPP   CG  0.75 :ASPP   CG  XXXX :ASPP   CG  0.55 :ASPP   CG  XXXX:ASPP   CG  XXXX:ASPP   CG  0.00:ASPP   CG  0.00 
+ASPP  OD1 -0.55 :ASPP  OD1  XXXX :ASPP  OD1 -0.495:ASPP  OD1  XXXX:ASPP  OD1  XXXX:ASPP  OD1  0.00:ASPP  OD1  0.00 
+ASPP  OD2 -0.61 :ASPP  OD2  XXXX :ASPP  OD2 -0.49 :ASPP  OD2  XXXX:ASPP  OD2  XXXX:ASPP  OD2  0.00:ASPP  OD2  0.00 
+ASPP  HD2  0.44 :ASPP  HD2  XXXX :ASPP  HD2  0.435:ASPP  HD2  XXXX:ASPP  HD2  XXXX:               :ASPP  HD2  0.00 
+GLUP   CG -0.21 :GLUP   CG  XXXX :GLUP   CG  0.00 :GLUP   CG  XXXX:GLUP   CG  XXXX:GLUP   CG  0.00:GLUP   CG  0.00 
+GLUP   CD  0.75 :GLUP   CD  XXXX :GLUP   CD  0.55 :GLUP   CD  XXXX:GLUP   CD  XXXX:GLUP   CD  0.00:GLUP   CD  0.00 
+GLUP  OE1 -0.55 :GLUP  OE1  XXXX :GLUP  OE1 -0.495:GLUP  OE1  XXXX:GLUP  OE1  XXXX:GLUP  OE1  0.00:GLUP  OE1  0.00 
+GLUP  OE2 -0.61 :GLUP  OE2  XXXX :GLUP  OE2 -0.49 :GLUP  OE2  XXXX:GLUP  OE2  XXXX:GLUP  OE2  0.00:GLUP  OE2  0.00 
+GLUP  HE2  0.44 :GLUP  HE2  XXXX :GLUP  HE2  0.435:GLUP  HE2  XXXX:GLUP  HE2  XXXX:               :GLUP  HE2  0.00 
+TIP3  OH2 -0.834:TIP3  OH2 -0.834:TIP3  OH2 -0.834:TIP3  OH2 -0.83:TIP3  OH2 -0.83:TIP3  OH2 -0.83:TIP3  OH2 -0.83
+TIP3   H1  0.417:TIP3   H1  0.417:TIP3   H1  0.417:TIP3   H1  0.41:TIP3   H1  0.41:TIP3   H1  0.41:TIP3   H1  0.41
+TIP3   H2  0.417:TIP3   H2  0.417:TIP3   H2  0.417:TIP3   H2  0.41:TIP3   H2  0.41:TIP3   H2  0.41:TIP3   H2  0.41

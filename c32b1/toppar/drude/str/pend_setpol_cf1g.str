@@ -1,0 +1,119 @@
+* FITTED CHARGES/POLARIZABILITIES FOR THE DECA
+* ESP GRID/PERTURBATION POINTS 04AUG
+* INITIAL GUESS CH27MHA
+* RESP HYPE FLAT 0.0 DFLAT 0.1
+* RESTRAINT FOR HEAVY ATOMS 1E-5
+* RESTRAINT FOR H 1E-5
+* RESTRAINT FOR DRUDE 1E-5
+* FINAL POLARIZABILITY SCALING 1.000
+* REFERENCE DIPOLE FOR CHARGE SCALING 0.000
+* Portable fitting by Victor Anisimov 12/03/04
+* CH2 and CH3 charges/polarizabilities 
+* are taken as average over propane, butane,
+* pentane and all conformers as well
+* fitting was done with the new code
+* to keep CH2 and CH3 groups neutral
+*
+ 
+set qHCH3  0.059  ! charge for H of CH3
+set qCCH3 -0.177  ! charge for C of CH3
+set aCCH3 -2.051
+ 		 				       
+set qHCH2  0.078  ! charge for H of CH2 
+set qCCH2 -0.156  ! charge for C of CH2
+set aCCH2 -1.660
+		 				       
+set qHCH1  0.095  ! charge for H of CH 
+set qCCH1 -0.095  ! charge for C of CH 
+set aCCH1 -1.302
+
+
+! Fitted charges
+scalar charge set   @qHCH3 select resn @residue .and. type H1A  end
+scalar charge set   @qHCH3 select resn @residue .and. type H1B  end
+scalar charge set   @qHCH3 select resn @residue .and. type H1C  end
+scalar charge set   @qCCH3 select resn @residue .and. type C1   end
+
+scalar charge set   @qHCH2 select resn @residue .and. type H2A  end
+scalar charge set   @qHCH2 select resn @residue .and. type H2B  end
+scalar charge set   @qCCH2 select resn @residue .and. type C2   end
+
+scalar charge set   @qHCH2 select resn @residue .and. type H3A  end
+scalar charge set   @qHCH2 select resn @residue .and. type H3B  end
+scalar charge set   @qCCH2 select resn @residue .and. type C3   end
+
+scalar charge set   @qHCH2 select resn @residue .and. type H4A  end
+scalar charge set   @qHCH2 select resn @residue .and. type H4B  end
+scalar charge set   @qCCH2 select resn @residue .and. type C4   end
+
+scalar charge set   @qHCH2 select resn @residue .and. type H5A  end
+scalar charge set   @qHCH2 select resn @residue .and. type H5B  end
+scalar charge set   @qCCH2 select resn @residue .and. type C5   end
+
+scalar charge set   @qHCH2 select resn @residue .and. type H6A  end
+scalar charge set   @qHCH2 select resn @residue .and. type H6B  end
+scalar charge set   @qCCH2 select resn @residue .and. type C6   end
+
+scalar charge set   @qHCH2 select resn @residue .and. type H7A  end
+scalar charge set   @qHCH2 select resn @residue .and. type H7B  end
+scalar charge set   @qCCH2 select resn @residue .and. type C7   end
+
+scalar charge set   @qHCH2 select resn @residue .and. type H8A  end
+scalar charge set   @qHCH2 select resn @residue .and. type H8B  end
+scalar charge set   @qCCH2 select resn @residue .and. type C8   end
+
+scalar charge set   @qHCH2 select resn @residue .and. type H9A  end
+scalar charge set   @qHCH2 select resn @residue .and. type H9B  end
+scalar charge set   @qCCH2 select resn @residue .and. type C9   end
+
+scalar charge set   @qHCH2 select resn @residue .and. type H9A  end
+scalar charge set   @qHCH2 select resn @residue .and. type H9B  end
+scalar charge set   @qCCH2 select resn @residue .and. type C9   end
+
+scalar charge set   @qHCH2 select resn @residue .and. type H10A  end
+scalar charge set   @qHCH2 select resn @residue .and. type H10B  end
+scalar charge set   @qCCH2 select resn @residue .and. type C10   end
+
+scalar charge set   @qHCH2 select resn @residue .and. type H11A  end
+scalar charge set   @qHCH2 select resn @residue .and. type H11B  end
+scalar charge set   @qCCH2 select resn @residue .and. type C11   end
+
+scalar charge set   @qHCH2 select resn @residue .and. type H12A  end
+scalar charge set   @qHCH2 select resn @residue .and. type H12B  end
+scalar charge set   @qCCH2 select resn @residue .and. type C12   end
+
+scalar charge set   @qHCH2 select resn @residue .and. type H13A  end
+scalar charge set   @qHCH2 select resn @residue .and. type H13B  end
+scalar charge set   @qCCH2 select resn @residue .and. type C13   end
+
+scalar charge set   @qHCH2 select resn @residue .and. type H14A  end
+scalar charge set   @qHCH2 select resn @residue .and. type H14B  end
+scalar charge set   @qCCH2 select resn @residue .and. type C14   end
+
+scalar charge set   @qHCH3 select resn @residue .and. type H15A end
+scalar charge set   @qHCH3 select resn @residue .and. type H15B end
+scalar charge set   @qHCH3 select resn @residue .and. type H15C end
+scalar charge set   @qCCH3 select resn @residue .and. type C15  end
+
+! Fitted polarizabilities
+scalar wmain  set  @aCCH3  select resn @residue .and. type C1   end
+scalar wmain  set  @aCCH2  select resn @residue .and. type C2   end
+scalar wmain  set  @aCCH2  select resn @residue .and. type C3   end
+scalar wmain  set  @aCCH2  select resn @residue .and. type C4   end
+scalar wmain  set  @aCCH2  select resn @residue .and. type C5   end
+scalar wmain  set  @aCCH2  select resn @residue .and. type C6   end
+scalar wmain  set  @aCCH2  select resn @residue .and. type C7   end
+scalar wmain  set  @aCCH2  select resn @residue .and. type C8   end
+scalar wmain  set  @aCCH2  select resn @residue .and. type C9   end
+scalar wmain  set  @aCCH2  select resn @residue .and. type C10  end
+scalar wmain  set  @aCCH2  select resn @residue .and. type C11  end
+scalar wmain  set  @aCCH2  select resn @residue .and. type C12  end
+scalar wmain  set  @aCCH2  select resn @residue .and. type C13  end
+scalar wmain  set  @aCCH2  select resn @residue .and. type C14  end
+scalar wmain  set  @aCCH3  select resn @residue .and. type C15  end
+
+!Manual scaling:
+!scalar wmain  mult @ASCALE select segid @residue end
+!scalar charge mult @QSCALE select segid @residue end
+
+return

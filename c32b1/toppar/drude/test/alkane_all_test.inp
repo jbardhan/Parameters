@@ -1,0 +1,172 @@
+* Alkane test case
+*
+
+open unit 20 read form name ../top_drude_jul05.inp
+read rtf card unit 20
+
+open unit 20 read form name ../par_drude_jul05.inp
+read para card unit 20
+
+!ethane
+set residue etha
+
+read sequence card
+* @residue
+*
+1
+@residue
+
+generate @residue first none last none setup warn
+
+read coor card
+* ethane MP2/6-31G(d) optimized geometry
+*
+    8
+    1    1 ETHA H11    1.01939   0.00000  -0.39501 ETHA    1   0.00000
+    2    1 ETHA H12   -1.01939   0.00000   1.92112 ETHA    1   0.00000
+    3    1 ETHA H13   -0.50969   0.88282  -0.39501 ETHA    1   0.00000
+    4    1 ETHA C1     0.00000   0.00000   0.00000 ETHA    1   0.00000
+    5    1 ETHA H21   -0.50969  -0.88282  -0.39501 ETHA    1   0.00000
+    6    1 ETHA H22    0.50969  -0.88282   1.92112 ETHA    1   0.00000
+    7    1 ETHA H23    0.50969   0.88282   1.92112 ETHA    1   0.00000
+    8    1 ETHA C2     0.00000   0.00000   1.52611 ETHA    1   0.00000
+
+!note that the stream file must be after the generate statement
+!and reading of the coordinates
+stream ../str/@residue_setpol_cf1g.str
+
+ ! generate auxialiary Drude particles
+ DRUDE select .not. type H* end
+
+energy
+
+DRUDE reset
+
+delete atom sele all end
+
+!propane
+set residue prop
+
+read sequence card
+* @residue
+*
+1
+@residue
+
+generate @residue first none last none setup warn
+
+read coor card
+* propane MP2/6-31G(d) optimized geometry
+*
+   11
+    1    1 PROP H11    0.51511   0.88398  -0.38897 PROP    1   0.00000
+    2    1 PROP H12    0.51511  -0.88398  -0.38897 PROP    1   0.00000
+    3    1 PROP H13   -1.01770   0.00000  -0.40077 PROP    1   0.00000
+    4    1 PROP C1     0.00000   0.00000   0.00000 PROP    1   0.00000
+    5    1 PROP C2     0.00000   0.00000   1.52598 PROP    1   0.00000
+    6    1 PROP H21   -0.54610   0.87712   1.89153 PROP    1   0.00000
+    7    1 PROP H22   -0.54610  -0.87712   1.89153 PROP    1   0.00000
+    8    1 PROP H31    1.96678   0.88398   1.77923 PROP    1   0.00000
+    9    1 PROP H32    1.39376   0.00000   3.20094 PROP    1   0.00000
+   10    1 PROP H33    1.96678  -0.88398   1.77923 PROP    1   0.00000
+   11    1 PROP C3     1.41091   0.00000   2.10731 PROP    1   0.00000
+
+!note that the stream file must be after the generate statement
+!and reading of the coordinates
+stream ../str/@residue_setpol_cf1g.str
+
+ ! generate auxialiary Drude particles
+ DRUDE select .not. type H* end
+
+energy
+
+ DRUDE reset
+
+delete atom sele all end
+
+!butane
+set residue buta
+
+read sequence card
+* @residue
+*
+1
+@residue
+
+generate @residue first none last none setup warn
+
+read coor card
+* butane g+ conf.  MP2/6-31G(d) optimized geometry
+*
+   14
+    1    1 BUTA H11   -2.27509  -0.72799   0.08586 BUTA    1   0.00000
+    2    1 BUTA H12   -2.36490   0.35896   1.47889 BUTA    1   0.00000
+    3    1 BUTA H13   -2.15640   1.02039  -0.14872 BUTA    1   0.00000
+    4    1 BUTA C1    -1.87518   0.19630   0.51429 BUTA    1   0.00000
+    5    1 BUTA H21    0.01744   1.03710   1.12223 BUTA    1   0.00000
+    6    1 BUTA H22   -0.10042  -0.69909   1.35517 BUTA    1   0.00000
+    7    1 BUTA C2    -0.35852   0.11347   0.66436 BUTA    1   0.00000
+    8    1 BUTA H31    0.10042   0.69909  -1.35517 BUTA    1   0.00000
+    9    1 BUTA H32   -0.01744  -1.03710  -1.12223 BUTA    1   0.00000
+   10    1 BUTA C3     0.35852  -0.11347  -0.66436 BUTA    1   0.00000
+   11    1 BUTA H41    2.27509   0.72799  -0.08586 BUTA    1   0.00000
+   12    1 BUTA H42    2.15640  -1.02039   0.14872 BUTA    1   0.00000
+   13    1 BUTA H43    2.36490  -0.35896  -1.47889 BUTA    1   0.00000
+   14    1 BUTA C4     1.87518  -0.19630  -0.51429 BUTA    1   0.00000
+
+!note that the stream file must be after the generate statement
+!and reading of the coordinates
+stream ../str/@residue_setpol_cf1g.str
+
+ ! generate auxialiary Drude particles
+ DRUDE select .not. type H* end
+
+energy
+
+ DRUDE reset
+
+delete atom sele all end
+
+!isobutane
+set residue ibut
+
+read sequence card
+* @residue
+*
+1
+@residue
+
+generate @residue first none last none setup warn
+
+read coor card
+* isobutane  MP2/6-31G(d) optimized geometry
+*
+   14
+    1    1 IBUT CT     0.00000   0.00000  -0.37710 IBUT    1   0.00000
+    2    1 IBUT HT     0.00000   0.00000  -1.47575 IBUT    1   0.00000
+    3    1 IBUT C1     1.44475  -0.14455   0.09643 IBUT    1   0.00000
+    4    1 IBUT H11    2.06409   0.68377  -0.26192 IBUT    1   0.00000
+    5    1 IBUT H12    1.48862  -0.14894   1.19137 IBUT    1   0.00000
+    6    1 IBUT H13    1.88771  -1.07915  -0.26192 IBUT    1   0.00000
+    7    1 IBUT C2    -0.59719   1.32347   0.09643 IBUT    1   0.00000
+    8    1 IBUT H21   -1.62421   1.44567  -0.26192 IBUT    1   0.00000
+    9    1 IBUT H22   -0.61532   1.36365   1.19137 IBUT    1   0.00000
+   10    1 IBUT H23   -0.00928   2.17438  -0.26192 IBUT    1   0.00000
+   11    1 IBUT C3    -0.84756  -1.17892   0.09643 IBUT    1   0.00000
+   12    1 IBUT H31   -0.43989  -2.12944  -0.26192 IBUT    1   0.00000
+   13    1 IBUT H32   -0.87329  -1.21471   1.19137 IBUT    1   0.00000
+   14    1 IBUT H33   -1.87843  -1.09523  -0.26192 IBUT    1   0.00000
+
+!note that the stream file must be after the generate statement
+!and reading of the coordinates
+stream ../str/@residue_setpol_cf1g.str
+
+ ! generate auxialiary Drude particles
+ DRUDE select .not. type H* end
+
+energy
+
+delete atom sele all end
+
+stop
+

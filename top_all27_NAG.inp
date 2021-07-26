@@ -1,0 +1,144 @@
+*>>>>>> Combined CHARMM All-Hydrogen Topology File for <<<<<<<<<
+*>>>>>>> CHARMM22 Proteins and CHARMM27 Nucleic Acids <<<<<<<<<<
+*from
+*>>>> CHARMM22 All-Hydrogen Topology File for Proteins <<<<<<<<
+*>>>>>>>>>>>>>>>>>>>>>>> August 1999 <<<<<<<<<<<<<<<<<<<<<<<<<<<
+*>>>>>>> Direct comments to Alexander D. MacKerell Jr. <<<<<<<<<
+*>>>>>> 410-706-7442 or email: alex,mmiris.ab.umd.edu  <<<<<<<<<
+*and
+*  \\\\ CHARMM27 All-Hydrogen Nucleic Acid Topology File ////
+*  \\\\\\\\\\\\\\\\\\ Developmental ////////////////////////
+*        Alexander D. MacKerell Jr. and Nicolas Foloppe
+*                        August 1999
+*     All comments to ADM jr.  email: alex,mmiris.ab.umd.edu
+*                 telephone: 410-706-7442
+*
+27 1
+
+
+!!! begin added by jbardhan for NAG
+! MASS    75 OT    15.99940  O ! TIP3P water oxygen
+MASS   201 HAS    1.00800  H ! sugar aliphatic hydrogen
+MASS   202 HOS    1.00800  H ! sugar hydroxyl hydrogen
+MASS   203 CTS   12.01100  C ! sugar aliphatic carbon
+MASS   204 CBS   12.01100  C ! C1 in beta sugars     
+MASS   205 OHS   15.99940  O ! sugar hydroxy oxygen
+MASS   206 OES   15.99940  O ! sugar ring oxygen
+!!! end added by jbardhan for NAG
+
+!!! begin added by jbardhan for NAG
+! sugar section
+DECL -O5
+DECL -C5
+DECL -C4
+DECL -O4
+DECL +C1
+DECL +O5
+DECL +C2
+!!! end added by jbardhan for NAG
+
+DEFA FIRS NTER LAST CTER   
+AUTO ANGLES DIHE   
+
+RESI NAG          0.000  ! n-acetyl L glucosamine for lysozyme study
+GROU                     !                    
+ATOM C1   CTS     0.200  !                  O6-HO6
+ATOM H1   HAS     0.090  !                  |
+ATOM C5   CTS     0.250  !                  C5---O5
+ATOM H5   HAS     0.090  !            H4   /       \    
+ATOM O5   OES    -0.400  !              \ /         \  /------ prev
+GROU                     !               C4          C1
+ATOM C2   CTS     0.070  ! CA           / \ H3   H2 /  \
+ATOM H2   HAS     0.090  !     next ---O4   \|    | /    H1
+ATOM N2   NH2    -0.470  !                  C3---C2
+ATOM HN2  HB      0.310  !                  |    |
+ATOM C7   C       0.510  !              HO3-O3   N2-HN2		
+ATOM O7   O      -0.510  !                       |				
+ATOM C8   CT3    -0.270  !                   O7==C7 -C8 -HA1
+ATOM HA1  HA      0.090  !                           / \		
+ATOM HA2  HA      0.090  !                          /   \	
+ATOM HA3  HA      0.090  !                        HA2   HA3 
+GROU                     !
+ATOM C3   CTS     0.140  ! N2: amide nitrogen, HN2: backbone hydrogen
+ATOM H3   HAS     0.090  ! C7 : carbonyl C, peptide backbone
+ATOM O3   OHS    -0.660  ! O7 carbonyl oxygen, C8 : aliphatic sp3 for CH3
+ATOM HO3  HOS     0.430  ! HA[1-3]: nonpolar H
+GROU                     ! charges C8 , HA? are from Alanine; C7 , O7 are from backbone carbonyl
+ATOM C4   CTS     0.080  ! N2, HN2, are from backbone amide; H2 is aliphatic, C2 neutralizes
+ATOM H4   HAS     0.090
+ATOM O4   OES    -0.400
+GROU
+ATOM C6   CTS     0.050
+ATOM H61  HAS     0.090
+ATOM H62  HAS     0.090
+ATOM O6   OHS    -0.660
+ATOM HO6  HOS     0.430
+BOND -O4 C1      C1   H1        C1   O5        C1   C2
+BOND C2   H2        C2   C3        C3   H3        
+BOND C3   O3        O3   HO3       C3   C4        C4   H4        C4   O4 
+BOND C4   C5        C5   H5        C5   C6        C6   H61 
+BOND C6   H62       C6   O6        O6   HO6       C5   O5 
+BOND C2   N2        N2   HN2       N2   C7        C7    C8 
+BOND C8   HA1       C8   HA2       C8   HA3
+DOUBLE C7  O7  
+DONO BLNK HN2
+DONO BLNK HO3
+DONO BLNK HO6
+ACCE O7
+ACCE O3
+ACCE O4
+ACCE O5
+ACCE O6
+!    I    J    K    L      R(IK)   T(IKJ)    PHI   T(JKL)   R(KL)
+IC   C3 C2 C1 H1  2.52 111.08 -68.78 109.35   1.39  
+IC   C5   C4   C3   C2     2.5100  111.17   53.25  109.86   1.5300
+IC   N2   C3  *C2   H2     1.4154  112.27 -118.21  108.23   1.0919
+IC   N2   C1  *C2   C3     1.4154  110.87 -125.56  111.08   1.5253
+IC   O3   C4  *C3   H3     1.4157  110.61  120.65  108.81   1.1068
+IC   O3   C2  *C3   C4     1.4157  108.09  120.77  109.86   1.5177
+IC   O4   C5  *C4   H4     1.4252  110.90 -120.61  108.35   1.1024 
+IC   O4   C3  *C4   C5     1.4252  108.31 -122.08  111.17   1.5287
+IC   C6   O5  *C5   H5     1.5099  108.10  118.69  109.65   1.1042
+IC   C6   C4  *C5   O5     1.5099  111.57  119.10  108.69   1.4274
+IC   O6   H62 *C6   H61    1.4132  110.47 -120.32  107.85   1.0945
+IC   O6   C5  *C6   H62    1.4132  110.45 -121.53  108.99   1.0959
+IC   O5   C1   C2   C3     1.4254  110.06   54.09  111.08   1.5253
+IC   C1   C2   C3   C4     1.5340  111.08  -51.23  109.86   1.5177
+IC   C2   C3   C4   C5     1.5253  109.86   53.25  111.17   1.5288
+IC   C3   C4   C5   O5     1.5177  111.17  -57.46  108.69   1.4274
+IC   C5   O5   C1   C2     1.4274  113.77  -60.97  110.06   1.5340
+IC   C4   C5   C6   O6     1.5287  111.57 -170.28  110.45   1.4132 
+IC   C1   C2   N2   HN2    1.5340  110.87 -100.51  112.13   0.9638 ! O7->N2, HO7->HN2
+IC   C2   C3   O3   HO3    1.5253  108.09 -165.88  112.08   0.9730
+IC   C5   C6   O6   HO6    1.5099  110.44 -143.88  107.72   0.9641
+IC   C3   C2   N2   C7     2.4600  111.64 -107.27  124.13   1.3600 ! this line starts the nonsense jay made up.
+IC   C2   N2   C7   O7     2.4900  123.73   -2.34  121.84   1.1500  
+IC   C2   N2   C7   C8     2.4900  123.73  177.47  113.72   1.4900 
+IC   N2   C7   C8   HA1    2.4000  114.59    0.00  109.50   1.1110
+IC   N2   C7   C8   HA2    2.4000  114.59  120.00  109.50   1.1110
+IC   N2   C7   C8   HA3    2.4000  114.59 -120.00  109.50   1.1110
+IC  -O4   O5  *C1   C2     1.3889  111.55 -121.57  110.06   1.5340
+IC  -C5  -C4  -O4   C1     2.5400  109.48 -116.99  124.92   1.4800
+IC  -C4  -O4   C1   C2     2.7000  124.92  -90.48  107.68   1.4800
+PATC FIRS NAG1 LAST NAG4
+
+PRES NAG4  +0.23
+ATOM O4  OHS     -0.660
+ATOM C4  CTS      0.140
+ATOM HO4  HOS     0.430
+BOND O4 HO4
+IC   C3   C4   O4   HO4    1.5177  108.31  134.18  106.97   0.9713
+DONO BLNK HO4
+
+PRES NAG1   -0.23
+ATOM O1   OHS    -0.660  !              H61-C6-H62
+ATOM HO1  HOS     0.430  !                  |
+BOND C1 O1 O1 HO1
+IC O5   C2  *C1   O1     1.4300  110.06  114.44  108.98   1.0950
+IC O5   C1   O1   HO1    1.4254  111.55   74.87  107.83   0.9684
+DONOR BLNK HO1
+ACCE O1
+
+END
+
+

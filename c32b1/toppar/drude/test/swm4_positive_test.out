@@ -1,0 +1,525 @@
+1
+                 Chemistry at HARvard Macromolecular Mechanics
+                   (CHARMM) - Developmental Version 32a1     August 15, 2004   
+       Copyright(c) 1984-2001  President and Fellows of Harvard College
+                              All Rights Reserved
+      Current operating system: Linux-2.4.9-e.38smp(i686)@psc-raid1
+                 Created on  7/14/ 5 at 16:56:41 by user: alex        
+
+            Maximum number of ATOMS:     25140, and RESidues:       14000
+            Current HEAP size:         2048000, and STACK size:    500000
+
+ RDTITL> * INITIAL GENERATION AND EQUILIBRATION OF A
+ RDTITL> * CLUSTER OF SWM4-DP POLARIZABLE WATER
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>    bomlev -1
+  
+ CHARMM>    set toppardir = .
+ Parameter: TOPPARDIR <- "."
+  
+ CHARMM>     
+  
+ CHARMM>    set 3 14.0  ! cutim
+ Parameter: 3 <- "14.0"
+  
+ CHARMM>    set 4 14.0  ! cutnb
+ Parameter: 4 <- "14.0"
+  
+ CHARMM>    set 5 10.0  ! ctonnb
+ Parameter: 5 <- "10.0"
+  
+ CHARMM>    set 6 12.0  ! ctofnb
+ Parameter: 6 <- "12.0"
+  
+ CHARMM>    set 7 switch
+ Parameter: 7 <- "SWITCH"
+  
+ CHARMM>    set 8 atom
+ Parameter: 8 <- "ATOM"
+  
+ CHARMM>    set 9 vatom
+ Parameter: 9 <- "VATOM"
+  
+ CHARMM>     
+  
+ CHARMM>    open unit 20 read form name ../top_drude_jul05.inp
+ VOPEN> Attempting to open::../top_drude_jul05.inp::
+ OPNLGU> Unit 20 opened for READONLY access to ../top_drude_jul05.inp
+  
+ CHARMM>    read rtf card unit 20
+ MAINIO> Residue topology file being read from unit  20.
+ TITLE> *>>>>>>>> ALL-HYDROGEN TOPOLOGY FOR ALKANES FOR THE <<<<<<<<<<<<<<
+ TITLE> *>>> DEVELOPMENT OF THE DRUDE POLARIZABLE FORCE FIELD <<<<<<<<<<<<
+ TITLE> *>>>>>>>>>>>>>>>>>>>  ALL-HYDROGEN PARAMETERS <<<<<<<<<<<<<<<<<<<<
+ TITLE> *>>>>>>>>>>>>>>>>>>>>>>> MARCH 2005 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ TITLE> *>>>>>>>> DIRECT COMMENTS TO ALEXANDER D. MACKERELL JR. <<<<<<<<<<
+ TITLE> *>>>>>>>>>>>>>>>  CHARMM FORUM: WWW.CHARMM.ORG <<<<<<<<<<<<<<<<<<<
+ TITLE> *
+  
+ CHARMM>     
+  
+ CHARMM>    open unit 20 read form name ../par_drude_jul05.inp
+ OPNLGU> Unit already open. The old file will be closed first.
+ VCLOSE: Closing unit   20 with status "KEEP"
+ VOPEN> Attempting to open::../par_drude_jul05.inp::
+ OPNLGU> Unit 20 opened for READONLY access to ../par_drude_jul05.inp
+  
+ CHARMM>    read para card unit 20
+
+          PARAMETER FILE BEING READ FROM UNIT 20
+ TITLE> *>>>>>>>> ALL-HYDROGEN PARAMETER FILE FOR ALKANES <<<<<<<<<<<<<<
+ TITLE> *>>>> THE DRUDE PARAMETER CAPABILITY HAS BEEN ADDED <<<<<<<<<<<<
+ TITLE> *>>>>>>>>>>>>>>>>>>>>>> MARCH 2005 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ TITLE> *>>>>>>> DIRECT COMMENTS TO ALEXANDER D. MACKERELL JR. <<<<<<<<<
+ TITLE> *>>>>>>>>>>>>>>>>>>>>>>  <<<<<<<<<
+ TITLE> *
+ PARMIO> NONBOND, HBOND lists and IMAGE atoms cleared.
+  
+ CHARMM>     
+  
+ CHARMM>    stream ../str/swm4_dp_setpol_positive.str
+ VOPEN> Attempting to open::../str/swm4_dp_setpol_positive.str::
+ OPNLGU> Unit 99 opened for READONLY access to ../str/swm4_dp_setpol_positive.str
+
+                    INPUT STREAM SWITCHING TO UNIT    99
+ RDTITL> * STREAM FILE THAT INCLUDES BOTH THE TOPOLOGY
+ RDTITL> * AND PARAMETER INFORMATION FOR THE SWM4-DP
+ RDTITL> * POLARIZABLE WATER MODEL WITH A
+ RDTITL> * POSITIVE DRUDE CHARGE
+ RDTITL> *
+ Parameter: IN1 <- "" <empty>
+  
+ CHARMM>     
+  
+ CHARMM>    set  ALPHAO = 1.04252  ! polarizability (alpha)
+ Parameter: ALPHAO <- "1.04252"
+  
+ CHARMM>    set  DOM    = 0.23808  ! oxygen to M site distance
+ Parameter: DOM <- "0.23808"
+  
+ CHARMM>     
+  
+ CHARMM>    read rtf card append
+ MAINIO> Residue topology file being read from unit  99.
+ RDTITL> * SWM4-DP TOPOLOGY
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>    return
+ VCLOSE: Closing unit   99 with status "KEEP"
+
+                    RETURNING TO INPUT STREAM     5
+  
+ CHARMM>     
+  
+ CHARMM>    !=========================================================
+ CHARMM>    ! RESIDUE GENERATION
+ CHARMM>    !---------------------------------------------------------
+ CHARMM>     
+  
+ CHARMM>    !! Generate water residues
+ CHARMM>     
+  
+ CHARMM>    read sequence SWM4 5
+  
+ CHARMM>    generate BULK setup noangle nodihedral
+ NO PATCHING WILL BE DONE ON THE FIRST RESIDUE
+ NO PATCHING WILL BE DONE ON THE LAST  RESIDUE
+ GENPSF> Segment   1 has been generated. Its identifier is BULK.
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        1   Number of residues   =        5
+         Number of atoms         =       20   Number of groups     =        5
+         Number of bonds         =       20   Number of angles     =        5
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        5   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    0.00000
+  
+ CHARMM>     
+  
+ CHARMM>    read coor card
+          SPATIAL COORDINATES BEING READ FROM UNIT  5
+ RDTITL> * WATER COORDINATED
+ RDTITL> *
+ ** WARNING ** After reading, there are no coordinates for selected atom:     2     1 SWM4 OM  
+ ** WARNING ** After reading, there are no coordinates for selected atom:     6     2 SWM4 OM  
+ ** WARNING ** After reading, there are no coordinates for selected atom:    10     3 SWM4 OM  
+ ** WARNING ** After reading, there are no coordinates for selected atom:    14     4 SWM4 OM  
+ ** WARNING ** After reading, there are no coordinates for selected atom:    18     5 SWM4 OM  
+
+ ** A total of     5 selected atoms have no coordinates
+ *** LEVEL  2 WARNING *** BOMLEV IS   -1
+  
+ CHARMM>     
+  
+ CHARMM>    !=========================================================
+ CHARMM>    ! DRUDE SETUP
+ CHARMM>    !---------------------------------------------------------
+ CHARMM>     
+  
+ CHARMM>    !! Set the polarizability of SWM4-DP
+ CHARMM>    scalar wmain set @{ALPHAO} select type OH2 end
+ Parameter: ALPHAO -> "1.04252"
+ SELRPN>      5 atoms have been selected out of     20
+  
+ CHARMM>     
+  
+ CHARMM>    DRUDE mass 0.8 kdrude 500.0 select .not. type H* .and. .not. type OM end
+ DRUDE> CONSTRUCTION OF DRUDE PARTICLES
+
+ SELRPN>      5 atoms have been selected out of     20
+ DRUDE> The MASS parameter will override the topology file.
+ DRUDE> The KDRUDE parameter will override the parameter file.
+ DRUDE> THOLE-TYPE DIPOLE SCREENING
+        THOLE PARAMETER:  2.600000
+        SLATER-DELTA SHAPE:  S(u) = 1 - (1+u/2)*exp(-u)
+
+Adding Drude particle DOH2 on OH2 BULK 1   SWM4  1.042520
+    Using MASS   =     0.800000
+    Using KDRUDE =   500.000000
+        18  DOH2 - OWP       1075   500.000     0.000
+Adding Drude particle DOH2 on OH2 BULK 2   SWM4  1.042520
+    Using MASS   =     0.800000
+    Using KDRUDE =   500.000000
+        18  DOH2 - OWP       1075   500.000     0.000
+Adding Drude particle DOH2 on OH2 BULK 3   SWM4  1.042520
+    Using MASS   =     0.800000
+    Using KDRUDE =   500.000000
+        18  DOH2 - OWP       1075   500.000     0.000
+Adding Drude particle DOH2 on OH2 BULK 4   SWM4  1.042520
+    Using MASS   =     0.800000
+    Using KDRUDE =   500.000000
+        18  DOH2 - OWP       1075   500.000     0.000
+Adding Drude particle DOH2 on OH2 BULK 5   SWM4  1.042520
+    Using MASS   =     0.800000
+    Using KDRUDE =   500.000000
+        18  DOH2 - OWP       1075   500.000     0.000
+
+ Message from MAPIC: Atom numbers are changed.
+                       5  Drude particles were added.
+
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        1   Number of residues   =        5
+         Number of atoms         =       25   Number of groups     =        5
+         Number of bonds         =       40   Number of angles     =        5
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        5   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    0.00000
+         Number of Drudes        =        5
+         Number of true-bonds    =       25   Number of zero-bonds =       15
+  
+ CHARMM>    scalar mass show
+ ( BULK SWM4 1    OH2  )    15.199    
+ ( BULK SWM4 1    DOH2 )   0.80000    
+ ( BULK SWM4 1    OM   )    0.0000    
+ ( BULK SWM4 1    H1   )    1.0080    
+ ( BULK SWM4 1    H2   )    1.0080    
+ ( BULK SWM4 2    OH2  )    15.199    
+ ( BULK SWM4 2    DOH2 )   0.80000    
+ ( BULK SWM4 2    OM   )    0.0000    
+ ( BULK SWM4 2    H1   )    1.0080    
+ ( BULK SWM4 2    H2   )    1.0080    
+ ( BULK SWM4 3    OH2  )    15.199    
+ ( BULK SWM4 3    DOH2 )   0.80000    
+ ( BULK SWM4 3    OM   )    0.0000    
+ ( BULK SWM4 3    H1   )    1.0080    
+ ( BULK SWM4 3    H2   )    1.0080    
+ ( BULK SWM4 4    OH2  )    15.199    
+ ( BULK SWM4 4    DOH2 )   0.80000    
+ ( BULK SWM4 4    OM   )    0.0000    
+ ( BULK SWM4 4    H1   )    1.0080    
+ ( BULK SWM4 4    H2   )    1.0080    
+ ( BULK SWM4 5    OH2  )    15.199    
+ ( BULK SWM4 5    DOH2 )   0.80000    
+ ( BULK SWM4 5    OM   )    0.0000    
+ ( BULK SWM4 5    H1   )    1.0080    
+ ( BULK SWM4 5    H2   )    1.0080    
+  
+ CHARMM>    scalar charge show
+ ( BULK SWM4 1    OH2  )   -1.7718    
+ ( BULK SWM4 1    DOH2 )    1.7718    
+ ( BULK SWM4 1    OM   )   -1.1074    
+ ( BULK SWM4 1    H1   )   0.55370    
+ ( BULK SWM4 1    H2   )   0.55370    
+ ( BULK SWM4 2    OH2  )   -1.7718    
+ ( BULK SWM4 2    DOH2 )    1.7718    
+ ( BULK SWM4 2    OM   )   -1.1074    
+ ( BULK SWM4 2    H1   )   0.55370    
+ ( BULK SWM4 2    H2   )   0.55370    
+ ( BULK SWM4 3    OH2  )   -1.7718    
+ ( BULK SWM4 3    DOH2 )    1.7718    
+ ( BULK SWM4 3    OM   )   -1.1074    
+ ( BULK SWM4 3    H1   )   0.55370    
+ ( BULK SWM4 3    H2   )   0.55370    
+ ( BULK SWM4 4    OH2  )   -1.7718    
+ ( BULK SWM4 4    DOH2 )    1.7718    
+ ( BULK SWM4 4    OM   )   -1.1074    
+ ( BULK SWM4 4    H1   )   0.55370    
+ ( BULK SWM4 4    H2   )   0.55370    
+ ( BULK SWM4 5    OH2  )   -1.7718    
+ ( BULK SWM4 5    DOH2 )    1.7718    
+ ( BULK SWM4 5    OM   )   -1.1074    
+ ( BULK SWM4 5    H1   )   0.55370    
+ ( BULK SWM4 5    H2   )   0.55370    
+  
+ CHARMM>     
+  
+ CHARMM>    !=========================================================
+ CHARMM>    ! SHAKE and LONEPAIR
+ CHARMM>    !---------------------------------------------------------
+ CHARMM>    coor copy comp
+ SELECTED COORDINATES COPIED TO THE COMPARISON SET.
+
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    5 MISSING COORDINATES
+
+  
+ CHARMM>    coor stat
+ STATISTICS FOR   20 SELECTED ATOMS:
+    XMIN =   -6.686890 XMAX =    7.540890 XAVE =    0.385969
+    YMIN =   -4.714790 YMAX =    6.676730 YAVE =    1.728279
+    ZMIN =   -6.556420 ZMAX =    7.504170 ZAVE =   -0.679335
+    WMIN =   -3.134610 WMAX =    3.258500 WAVE =    0.432416
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    5 MISSING COORDINATES
+
+  
+ CHARMM>     
+  
+ CHARMM>    SHAKE bonh param tolerance 1.0e-9 -
+ CHARMM>          nofast -
+ CHARMM>          select ( .not. type D* ) end -
+ CHARMM>          select ( .not. type D* ) end
+ SELRPN>     20 atoms have been selected out of     25
+ SELRPN>     20 atoms have been selected out of     25
+ SHKCOM> SHAKE parameters: TOL =   0.1000E-08 MXITer =    500
+ There are Drude particles.
+ CODES:  Will skip bonds  25
+
+              15 constraints will held by SHAKE.
+  
+ CHARMM>     
+  
+ CHARMM>    LONEPAIR bisector dist @DOM angle 0.0 dihe 0.0 -
+ CHARMM>             select atom BULK * OM end  select atom BULK * OH2 end -
+ CHARMM>             select atom BULK * H1 end  select atom BULK * H2  end
+ Parameter: DOM -> "0.23808"
+ SELRPN>      5 atoms have been selected out of     25
+ SELRPN>      5 atoms have been selected out of     25
+ SELRPN>      5 atoms have been selected out of     25
+ SELRPN>      5 atoms have been selected out of     25
+  
+ CHARMM>    coor shake
+ SELECTED COORDINATES CONSTRAINED IN THE MAIN SET.
+
+  
+ CHARMM>    coor dupl select type OH2 end select type DOH2 end
+ SELRPN>      5 atoms have been selected out of     25
+ SELRPN>      5 atoms have been selected out of     25
+  
+ CHARMM>     
+  
+ CHARMM>    ! Set up non-bonded interactions
+ CHARMM>    ! inbfrq = -1 frequncy for updating non-bonded list is determined
+ CHARMM>    ! from the heuristic test
+ CHARMM>    ! ihbfrq - frequncy for updating H-bonded list
+ CHARMM>    ! pmewald - PME method for calculating extended electrostatics
+ CHARMM>    ! kappa - width of the Gaussian distribution for PME method
+ CHARMM>    ! usually can be 5/CTOFNB
+ CHARMM>    ! order - order of B-spline interpolation in PME method
+ CHARMM>    ! FFTX, FFTY, FFTZ - number of grid points
+ CHARMM>    ! FFTX, FFTY, FFTZ should be a multiple of powers 2, 3, 5
+ CHARMM>    ! and close to the box dimensions
+ CHARMM>     
+  
+ CHARMM>    update inbfrq -1 ihbfrq 0 -
+ CHARMM>    @7 @8 @9 vfswitch  cutnb @4 ctofnb @6 ctonnb @5 ! bycb
+ Parameter: 7 -> "SWITCH"
+ Parameter: 8 -> "ATOM"
+ Parameter: 9 -> "VATOM"
+ Parameter: 4 -> "14.0"
+ Parameter: 6 -> "12.0"
+ Parameter: 5 -> "10.0"
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  SWITch   VATOm    VFSWIt  
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 14.000 CTEXNB =999.000 CTONNB = 10.000 CTOFNB = 12.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are        0 atom  pairs and        0 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ <MAKINB>: Ran out of space. RESIZING
+ <MAKINB> with mode   5 found     50 exclusions and      0 interactions(1-4)
+ <MAKGRP> found      0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR     1251 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+      169 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        6 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+ There are Drude particles.
+ CODES:  Will skip bonds  25
+  
+ CHARMM>     
+  
+ CHARMM>    ! Minimize positions of Drude particles
+ CHARMM>    ! constrain position of regular atoms
+ CHARMM>    cons fix select .not. type D* end
+ SELRPN>     20 atoms have been selected out of     25
+  
+ CHARMM>    mini SD nstep 10 nprint 1
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  SWITch   VATOm    VFSWIt  
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 14.000 CTEXNB =999.000 CTONNB = 10.000 CTOFNB = 12.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are      169 atom  pairs and       50 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR     1251 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+      109 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        6 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+ There are Drude particles.
+ CODES:  Will skip bonds  25
+
+
+ STEEPD> An energy minimization has been requested.
+
+ NSTEP  =           10   NPRINT =            1
+ STEP   =    0.0200000   TOLFUN =    0.0000000
+ TOLGRD =    0.0000000   TOLSTP =    0.0000000
+
+MINI MIN: Cycle      ENERgy      Delta-E         GRMS    Step-size
+MINI EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>        0    -75.15154      0.00000      2.02029      0.02000
+MINI EXTERN>        0.00000    -75.15154      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>        1    -74.71732     -0.43422      7.81178      0.01000
+MINI INTERN>        0.75000      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        0.00000    -75.46732      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>        2    -75.11871      0.40139      2.89413      0.00500
+MINI INTERN>        0.18784      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        0.00000    -75.30655      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>        3    -75.11391     -0.00480      3.00469      0.00600
+MINI INTERN>        0.00751      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        0.00000    -75.12142      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>        4    -75.18263      0.06872      0.08844      0.00300
+MINI INTERN>        0.03003      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        0.00000    -75.21267      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>        5    -75.09222     -0.09041      3.43866      0.00360
+MINI INTERN>        0.19010      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        0.00000    -75.28232      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>        6    -75.16122      0.06900      1.67356      0.00180
+MINI INTERN>        0.08677      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        0.00000    -75.24800      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>        7    -75.18118      0.01996      0.44547      0.00216
+MINI INTERN>        0.02561      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        0.00000    -75.20679      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>        8    -75.14876     -0.03242      2.11490      0.00259
+MINI INTERN>        0.10056      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        0.00000    -75.24932      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>        9    -75.17741      0.02865      0.83330      0.00130
+MINI INTERN>        0.05159      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        0.00000    -75.22900      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>       10    -75.17895      0.00155      0.70245      0.00156
+MINI INTERN>        0.02433      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        0.00000    -75.20329      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+
+ STEEPD> Minimization exiting with number of steps limit (        10) exceeded.
+
+STPD MIN: Cycle      ENERgy      Delta-E         GRMS    Step-size
+STPD INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+STPD EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+STPD>       10    -75.17895      0.00155      0.70245      0.00187
+STPD INTERN>        0.02433      0.00000      0.00000      0.00000      0.00000
+STPD EXTERN>        0.00000    -75.20329      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>    cons fix select none end
+ SELRPN>      0 atoms have been selected out of     25
+  
+ CHARMM>    energy
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  SWITch   VATOm    VFSWIt  
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 14.000 CTEXNB =999.000 CTONNB = 10.000 CTOFNB = 12.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are      109 atom  pairs and       50 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR     1251 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+      169 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        6 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+ There are Drude particles.
+ CODES:  Will skip bonds  25
+ENER ENR:  Eval#     ENERgy      Delta-E         GRMS
+ENER INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+ENER EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+ENER>        0     -3.23074    -71.94821      0.97755
+ENER INTERN>        0.03003      0.00000      0.00000      0.00000      0.00000
+ENER EXTERN>       -0.17893     -3.08185      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>     
+  
+ CHARMM>    stop
+ VCLOSE: Closing unit   20 with status "KEEP"
+$$$$$$  New timer profile $$$$$
+   Shake Setup             0.00046 Other:    0.00000
+      Shake time              0.00096 Other:    0.00000
+   Dynamics total          0.00096 Other:    0.00000
+         Electrostatic & VDW     0.00014 Other:    0.00000
+      Nonbond force           0.00181 Other:    0.00168
+         Bond energy             0.00096 Other:    0.00000
+         Angle energy            0.00005 Other:    0.00000
+         Dihedral energy         0.00002 Other:    0.00000
+         Restraints energy       0.00001 Other:    0.00000
+      INTRNL energy           0.00114 Other:    0.00011
+   Energy time             0.00342 Other:    0.00046
+ Total time              0.13607 Other:    0.13123
+
+                    NORMAL TERMINATION BY NORMAL STOP
+                    MAXIMUM STACK SPACE USED IS  201458
+                    STACK CURRENTLY IN USE IS         0
+                    MOST SEVERE WARNING WAS AT LEVEL  2
+                    HEAP PRINTOUT-  HEAP SIZE   2048000
+                    SPACE CURRENTLY IN USE IS         0
+                    MAXIMUM SPACE USED IS          5868
+                    FREE LIST
+            PRINHP> ADDRESS:         1 LENGTH:   2048000 NEXT:         0
+
+                    $$$$$ JOB ACCOUNTING INFORMATION $$$$$
+                     ELAPSED TIME:     0.14  SECONDS 
+                         CPU TIME:     0.09  SECONDS 

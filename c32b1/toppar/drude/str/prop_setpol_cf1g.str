@@ -1,0 +1,56 @@
+* FITTED CHARGES/POLARIZABILITIES FOR THE PROP
+* ESP GRID/PERTURBATION POINTS 04AUG
+* INITIAL GUESS CH27MHA
+* RESTRAINTS: RESP HYPE FLAT 0.0 DFLAT 0.1
+* REST. WEIGHT ALL: 1E-5
+* REST. WEIGHT H: 1E-5
+* REST. WEIGHT DRUDE: 1E-5
+* FINAL POLARIZABILITY SCALING 1.000
+* REFERENCE DIPOLE FOR CHARGE SCALING 0.00
+* Portable fitting by Victor Anisimov 12/03/04
+* CH2 and CH3 charges/polarizabilities 
+* are taken as average over propane, butane,
+* pentatne and all conformers as well
+* fitting was done with the new code
+* to keep CH2 and CH3 groups neutral
+*
+ 
+set qHCH3  0.059
+set qCCH3 -0.177
+set aCCH3 -2.051
+ 
+set qHCH2  0.078  
+set qCCH2 -0.156
+set aCCH2 -1.660
+
+set qHCH1  0.095 
+set qCCH1 -0.095
+set aCCH1 -1.302
+
+
+! Fitted charges
+scalar charge set   @qHCH3 select resn @residue .and. type H11  end
+scalar charge set   @qHCH3 select resn @residue .and. type H12  end
+scalar charge set   @qHCH3 select resn @residue .and. type H13  end
+scalar charge set   @qCCH3 select resn @residue .and. type C1   end
+
+scalar charge set   @qHCH2 select resn @residue .and. type H21  end
+scalar charge set   @qHCH2 select resn @residue .and. type H22  end
+scalar charge set   @qCCH2 select resn @residue .and. type C2   end
+
+scalar charge set   @qHCH3 select resn @residue .and. type H31  end
+scalar charge set   @qHCH3 select resn @residue .and. type H32  end
+scalar charge set   @qHCH3 select resn @residue .and. type H33  end
+scalar charge set   @qCCH3 select resn @residue .and. type C3   end
+
+! Fitted polarizabilities
+scalar wmain  set  @aCCH3  select resn @residue .and. type C1   end
+scalar wmain  set  @aCCH2  select resn @residue .and. type C2   end
+scalar wmain  set  @aCCH3  select resn @residue .and. type C3   end
+
+!Manual scaling:
+!scalar wmain  mult @ASCALE select segid @residue end
+!scalar charge mult @QSCALE select segid @residue end
+
+return
+

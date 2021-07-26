@@ -1,0 +1,304 @@
+*>>>>>>>> All-Hydrogen Parameter File for Alkanes <<<<<<<<<<<<<<
+*>>>> The Drude parameter capability has been added <<<<<<<<<<<<
+*>>>>>>>>>>>>>>>>>>>>>> March 2005 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+*>>>>>>> Direct comments to Alexander D. MacKerell Jr. <<<<<<<<<
+*>>>>>>>>>>>>>>>>>>>>>>  <<<<<<<<<
+*
+
+
+BONDS
+!
+!V(bond) = Kb(b - b0)**2
+!
+!Kb: kcal/mole/A**2
+!b0: A
+!
+!atom type Kb          b0
+!
+CT1  HA1  309.00     1.111   ! alkanes, 3/92
+CT2  HA2  309.00     1.111   ! alkanes, 4/98
+CT3  HA3  322.00     1.111   ! alkanes, 4/98
+CT   CT2  222.500    1.538   ! 10/98
+CT   CT3  222.500    1.538   ! 10/98
+CT1  CT1  222.500    1.500   ! alkanes, 3/92
+CT1  CT2  222.500    1.538   ! alkanes, 3/92
+CT1  CT3  222.500    1.538   ! alkanes, 3/92
+CT2  CT2  222.500    1.530   ! alkanes, 3/92
+CT2  CT3  222.500    1.528   ! alkanes, 3/92
+CT3  CT3  222.500    1.530   ! alkanes, 3/92
+!! Nominal bonds between real atoms and Drude particles
+CT3   DC1    500.000     0.000     ! I1 -- I2 BOND for alkanes
+CT3   DC2    500.000     0.000     ! I1 -- I2 BOND for alkanes
+CT3   DC3    500.000     0.000     ! I1 -- I2 BOND for alkanes
+CT3   DC4    500.000     0.000     ! I1 -- I2 BOND for alkanes
+CT3   DC5    500.000     0.000     ! I1 -- I2 BOND for alkanes
+CT3   DC6    500.000     0.000     ! I1 -- I2 BOND for alkanes
+CT3   DC7    500.000     0.000     ! I1 -- I2 BOND for alkanes
+CT3   DC8    500.000     0.000     ! I1 -- I2 BOND for alkanes
+CT3   DC9    500.000     0.000     ! I1 -- I2 BOND for alkanes
+CT3   DC10   500.000     0.000     ! I1 -- I2 BOND for alkanes
+CT3   DC11   500.000     0.000     ! I1 -- I2 BOND for alkanes
+CT3   DC12   500.000     0.000     ! I1 -- I2 BOND for alkanes
+CT3   DC13   500.000     0.000     ! I1 -- I2 BOND for alkanes
+CT3   DC14   500.000     0.000     ! I1 -- I2 BOND for alkanes
+CT3   DC15   500.000     0.000     ! I1 -- I2 BOND for alkanes
+CT3   DC16   500.000     0.000     ! I1 -- I2 BOND for alkanes
+CT3   DC17   500.000     0.000     ! I1 -- I2 BOND for alkanes
+CT3   DC18   500.000     0.000     ! I1 -- I2 BOND for alkanes
+CT3   DC19   500.000     0.000     ! I1 -- I2 BOND for alkanes
+CT3   DC20   500.000     0.000     ! I1 -- I2 BOND for alkanes
+CT2   DC1    500.000     0.000     ! I1 -- I2 BOND for alkanes
+CT2   DC2    500.000     0.000     ! I1 -- I2 BOND for alkanes
+CT2   DC3    500.000     0.000     ! I1 -- I2 BOND for alkanes
+CT2   DC4    500.000     0.000     ! I1 -- I2 BOND for alkanes
+CT2   DC5    500.000     0.000     ! I1 -- I2 BOND for alkanes
+CT2   DC6    500.000     0.000     ! I1 -- I2 BOND for alkanes
+CT2   DC7    500.000     0.000     ! I1 -- I2 BOND for alkanes
+CT2   DC8    500.000     0.000     ! I1 -- I2 BOND for alkanes
+CT2   DC9    500.000     0.000     ! I1 -- I2 BOND for alkanes
+CT2   DC10   500.000     0.000     ! I1 -- I2 BOND for alkanes
+CT2   DC11   500.000     0.000     ! I1 -- I2 BOND for alkanes
+CT2   DC12   500.000     0.000     ! I1 -- I2 BOND for alkanes
+CT2   DC13   500.000     0.000     ! I1 -- I2 BOND for alkanes
+CT2   DC14   500.000     0.000     ! I1 -- I2 BOND for alkanes
+CT2   DC15   500.000     0.000     ! I1 -- I2 BOND for alkanes
+CT2   DC16   500.000     0.000     ! I1 -- I2 BOND for alkanes
+CT2   DC17   500.000     0.000     ! I1 -- I2 BOND for alkanes
+CT2   DC18   500.000     0.000     ! I1 -- I2 BOND for alkanes
+CT2   DC19   500.000     0.000     ! I1 -- I2 BOND for alkanes
+CT2   DC20   500.000     0.000     ! I1 -- I2 BOND for alkanes
+CT    DCT    500.000     0.000     ! I1 -- I2 BOND for alkanes
+CT1   DCT    500.000     0.000     ! I1 -- I2 BOND for alkanes
+CT2   DCP    500.000     0.000     ! I1 -- I2 BOND for alkanes
+NE    DNE0   500.000     0.000
+HE    DHE0   500.000     0.000
+!SWM4-DP parameters (positive and negative Drude models)
+OWP  HWP       450.000   0.9572
+HWP  HWP         0.000   1.5139
+OWP  LPP         0.000   0.238080
+OWP  DOH2      500.000   0.000
+OWN  HWN       450.000   0.9572
+HWN  HWN         0.000   1.5139
+OWN  LPN         0.000   0.238080
+OWN  DOH2      500.000   0.000
+!ion Drude parameters
+DLIT LIT    500.000  0.000
+DSOD SOD    500.000  0.000
+DPOT POT    500.000  0.000
+DRUB RUB    500.000  0.000
+DCES CES    500.000  0.000
+DFLU FLU    500.000  0.000
+DCLA CLA    500.000  0.000
+DBRO BRO    500.000  0.000
+DIOD IOD    500.000  0.000
+
+ANGLES
+!
+!V(angle) = Ktheta(Theta - Theta0)**2
+!
+!V(Urey-Bradley) = Kub(S - S0)**2
+!
+!Ktheta: kcal/mole/rad**2
+!Theta0: degrees
+!Kub: kcal/mole/A**2 (Urey-Bradley)
+!S0: A
+!
+!atom types     Ktheta    Theta0   Kub     S0
+!
+HA2  CT2 HA2   35.500    109.00    5.40   1.80200 ! alkane, 3/92
+HA3  CT3 HA3   35.500    108.40    5.40   1.80200 ! alkane, 3/92
+HA1  CT1 CT1   34.500    110.10   22.53   2.179  ! alkane, 3/92
+HA1  CT1 CT2   34.500    110.10   22.53   2.179  ! alkane, 3/92
+HA1  CT1 CT3   34.500    110.10   22.53   2.179  ! alkane, 3/92
+HA2  CT2 CT1   26.500    110.10   22.53   2.179  ! alkane, 4/98
+HA2  CT2 CT2   26.500    110.10   22.53   2.179  ! alkane, 4/98
+HA2  CT2 CT3   34.600    110.10   22.53   2.179  ! alkane, 4/98
+HA3  CT3 CT1   33.430    110.10   22.53   2.179  ! alkane, 4/98
+HA3  CT3 CT2   34.600    110.10   22.53   2.179  ! alkane, 4/98
+HA3  CT3 CT3   37.500    110.10   22.53   2.179  ! alkane, 4/98
+CT1  CT1 CT1   53.350    111.00    8.00   2.561  ! alkane, 3/92
+CT1  CT1 CT2   58.350    113.50   11.16   2.561  ! glycerol
+CT1  CT1 CT3   53.350    108.50    8.00   2.561  ! alkane, 3/92
+CT1  CT2 CT1   58.350    113.50   11.16   2.561  ! glycerol
+CT1  CT2 CT2   58.350    113.50   11.16   2.561  ! glycerol
+CT1  CT2 CT3   58.350    113.50   11.16   2.561  ! glycerol
+CT2  CT1 CT2   58.350    113.50   11.16   2.561  ! glycerol
+CT2  CT2 CT2   58.350    113.60   11.16   2.561  ! alkane, 3/92
+CT2  CT2 CT3   58.000    115.00    8.00   2.561  ! alkane, 3/92
+CT3  CT1 CT2   53.350    114.00    8.00   2.561  ! alkane 3/2/92
+CT3  CT1 CT3   53.350    114.00    8.00   2.561  ! alkane 3/2/92 
+CT3  CT2 CT3   53.350    114.00    8.00   2.561  ! alkane 3/2/92
+HA2  CT2 CT    26.500    110.10   22.53   2.179  ! alkane, 4/98
+HA3  CT3 CT    33.430    110.10   22.53   2.179  ! alkane, 4/98
+CT   CT2 CT2   58.350    113.50   11.16   2.561  ! glycerol
+! SWM4-DP parameters (positive and negative Drude models)
+HWP  OWP  HWP   55.000    104.52
+HWN  OWN  HWN   55.000    104.52
+
+DIHEDRALS
+!
+!V(dihedral) = Kchi(1 + cos(n(chi) - delta))
+!
+!Kchi: kcal/mole
+!n: multiplicity
+!delta: degrees
+!
+!atom types             Kchi    n   delta
+!
+HA1  CT1 CT1 HA1      0.200   3     0.00 ! alkane, 3/92
+HA1  CT1 CT2 HA2      0.200   3     0.00 ! alkane, 3/92
+HA1  CT1 CT3 HA3      0.200   3     0.00 ! alkane, 3/92
+HA2  CT2 CT2 HA2      0.1900  3     0.00 ! alkane, 4/98, yin and mackerell
+HA2  CT2 CT3 HA3      0.1600  3     0.00 ! alkane, 4/98, yin and mackerell
+HA3  CT3 CT3 HA3      0.1525  3     0.00 ! alkane, 4/98, yin and mackerell
+!
+CT1  CT1 CT1 HA1      0.200   3     0.00 ! alkane, 3/92
+CT2  CT1 CT1 HA1      0.200   3     0.00 ! alkane, 3/92
+CT3  CT1 CT1 HA1      0.200   3     0.00 ! alkane, 3/92
+!
+CT1  CT1 CT2 HA2      0.200   3     0.00 ! alkane, 3/92
+CT2  CT1 CT2 HA2      0.200   3     0.00 ! alkane, 3/92
+CT3  CT1 CT2 HA2      0.200   3     0.00 ! alkane, 3/92
+HA1  CT1 CT2 CT1      0.200   3     0.00 ! alkane, 3/92
+HA1  CT1 CT2 CT2      0.200   3     0.00 ! alkane, 3/92
+HA1  CT1 CT2 CT3      0.200   3     0.00 ! alkane, 3/92
+!
+CT1  CT1 CT3 HA3      0.200   3     0.00 ! alkane, 3/92
+CT2  CT1 CT3 HA3      0.200   3     0.00 ! alkane, 3/92
+CT3  CT1 CT3 HA3      0.200   3     0.00 ! alkane, 3/92
+!
+CT1  CT2 CT2 HA2      0.1900  3     0.00 ! alkane, 4/98, yin and mackerell
+CT2  CT2 CT2 HA2      0.1900  3     0.00 ! alkane, 4/98, yin and mackerell
+CT3  CT2 CT2 HA2      0.1900  3     0.00 ! alkane, 4/98, yin and mackerell
+!
+CT1  CT2 CT3 HA3      0.1600  3     0.00 ! alkane, 4/98, yin and mackerell
+CT2  CT2 CT3 HA3      0.1600  3     0.00 ! alkane, 4/98, yin and mackerell
+CT3  CT2 CT3 HA3      0.1600  3     0.00 ! alkane, 4/98, yin and mackerell
+! No wild cards from now on. Everything should be explicit.
+!X    CT1 CT1 X        0.200   3     0.00 ! alkane, 3/92
+!X    CT1 CT2 X        0.200   3     0.00 ! alkane, 3/92
+!X    CT1 CT3 X        0.200   3     0.00 ! alkane, 3/92
+!X    CT2 CT2 X        0.1900  3     0.00 ! alkane, 4/98, yin and mackerell
+!X    CT2 CT3 X        0.1600  3     0.00 ! alkane, 4/98, yin and mackerell
+!X    CT3 CT3 X        0.1525  3     0.00 ! alkane, 4/98, yin and mackerell
+CT3 CT2 CT2 CT3     0.20000   5     0.00 ! alkane, Igor 3/26/2005
+CT3 CT2 CT2 CT3     0.14400   4     0.00 ! alkane, Igor 3/26/2005
+CT3 CT2 CT2 CT3     0.08400   3     0.00 ! alkane, Igor 3/26/2005
+CT3 CT2 CT2 CT3     0.12600   2     0.00 ! alkane, Igor 3/26/2005
+
+CT3 CT2 CT2 CT2     0.14200   5     0.00 ! alkane, Igor 3/26/2005
+CT3 CT2 CT2 CT2     0.10500   4     0.00 ! alkane, Igor 3/26/2005
+CT3 CT2 CT2 CT2     0.08200   3   180.00 ! alkane, Igor 3/26/2005
+CT3 CT2 CT2 CT2     0.05300   2     0.00 ! alkane, Igor 3/26/2005
+CT2 CT2 CT2 CT2     0.13600   5     0.00 ! alkane, Igor 3/26/2005
+CT2 CT2 CT2 CT2     0.07800   4     0.00 ! alkane, Igor 3/26/2005
+CT2 CT2 CT2 CT2     0.13900   3   180.00 ! alkane, Igor 3/26/2005
+CT2 CT2 CT2 CT2     0.08300   2     0.00 ! alkane, Igor 3/26/2005
+!CT3 CT2 CT2 CT3     0.03179   6   180.00 ! alkane, c27r klauda et al 2004
+!CT3 CT2 CT2 CT3     0.03819   2     0.00 ! alkane, c27r klauda et al 2004
+!CT3 CT2 CT2 CT2     0.20391   5     0.00 ! alkane, c27r klauda et al 2004
+!CT3 CT2 CT2 CT2     0.10824   4     0.00 ! alkane, c27r klauda et al 2004
+!CT3 CT2 CT2 CT2     0.08133   3   180.00 ! alkane, c27r klauda et al 2004
+!CT3 CT2 CT2 CT2     0.15051   2     0.00 ! alkane, c27r klauda et al 2004
+!CT2 CT2 CT2 CT2     0.11251   5     0.00 ! alkane, c27r klauda et al 2004
+!CT2 CT2 CT2 CT2     0.09458   4     0.00 ! alkane, c27r klauda et al.2004
+!CT2 CT2 CT2 CT2     0.14975   3   180.00 ! alkane, c27r klauda et al 2004
+!CT2 CT2 CT2 CT2     0.00645   2     0.00 ! alkane, c27r klauda et al 2004
+!CT3 CT2 CT2 CT3     0.10    2   180.00 ! alkane, 4/98, adm jr., lower butane gauche conformer
+!CT3 CT2 CT2 CT3     0.15    4     0.00 ! alkane, 4/98, adm jr.
+!CT3 CT2 CT2 CT3     0.10    6   180.00 ! alkane, 4/98, adm jr.
+!CT2 CT2 CT2 CT3     0.10    2   180.00 ! alkane, 4/98, adm jr.
+!CT2 CT2 CT2 CT3     0.15    4     0.00 ! alkane, 4/98, adm jr.
+!CT2 CT2 CT2 CT3     0.10    6   180.00 ! alkane, 4/98, adm jr.
+!CT2 CT2 CT2 CT2     0.10    2   180.00 ! alkane, 4/98, adm jr.
+!CT2 CT2 CT2 CT2     0.15    4     0.00 ! alkane, 4/98, adm jr.
+!CT2 CT2 CT2 CT2     0.10    6   180.00 ! alkane, 4/98, adm jr.
+
+NONBONDED nbxmod  5 atom cdiel shift vatom vdistance vswitch -
+cutnb 14.0 ctofnb 12.0 ctonnb 10.0 eps 1.0 e14fac 1.0 wmin 1.5 
+                !adm jr., 5/08/91, suggested cutoff scheme
+!
+!V(Lennard-Jones) = Eps,i,j[(Rmin,i,j/ri,j)**12 - 2(Rmin,i,j/ri,j)**6]
+!
+!epsilon: kcal/mole, Eps,i,j = sqrt(eps,i * eps,j)
+!Rmin/2: A, Rmin,i,j = Rmin/2,i + Rmin/2,j
+!
+!atom  ignored    epsilon      Rmin/2   ignored   eps,1-4       Rmin/2,1-4
+!
+!alkanes
+CT      0.0       -0.0320    2.000 0.0 -0.01 1.9 ! from CT1 needs work
+CT1     0.0       -0.0320    2.000 0.0 -0.01 1.9 ! alkane,isobutane 1/5/05 Igor
+CT2     0.0       -0.0560    2.010 0.0 -0.01 1.9 ! alkane, 4/98, yin, adm jr.
+CT3     0.0       -0.0780    2.040 0.0 -0.01 1.9 ! alkane, 4/98, yin, adm jr.
+HA1     0.0       -0.045     1.3400 ! alkane,isobutane 1/5/05 Igor
+HA2     0.0       -0.035     1.3400 ! alkane,propane 11/16/04 Igor
+HA3     0.0       -0.024     1.3400 ! alkane, yin and mackerell, 4/98
+! SWM4-DP, positive Drude
+OWP     0.000000  -0.205684    1.784884
+HWP     0.000000  -0.000       0.000
+LPP     0.000000  -0.000       0.000
+! SWM4-DP, negative Drude
+OWN     0.000000  -0.21094325  1.78692899
+HWN     0.000000  -0.000       0.000
+LPN     0.000000  -0.000       0.000
+
+!! Rare gas parameters
+HE     0.000000  -0.021270     1.4800   !
+                ! helium, experimental pot. energy surface, adm jr., 12/95
+NE     0.000000  -0.086000     1.5300
+                ! neon, semiempirical pot. energy surface, adm jr., 12/95
+CAL    0.000000  -0.001000     1.0000   !DO NOT USE as CA++
+                ! Dummy parameter for calcium; this atom is ONLY used for
+                ! as the perturbing ion for determination of charges and
+                ! polarizabilites and is NOT Ca++
+!ions of Lamoureux and Roux
+LIT      0.0       -0.003000  1.370000 ! lithium
+SOD      0.0       -0.031510  1.450000 ! sodium
+POT      0.0       -0.182900  1.645000 ! potassium
+RUB      0.0       -0.351900  1.750000 ! rubidium
+CES      0.0       -0.357600  1.980000 ! cesium
+FLU      0.0       -0.010000  2.260000 ! fluoride
+CLA      0.0       -0.076580  2.460000 ! chloride
+BRO      0.0       -0.108200  2.570000 ! bromide
+IOD      0.0       -0.159100  2.760000 ! iodine
+DLIT     0.0       -0.00      0.00
+DSOD     0.0       -0.00      0.00
+DPOT     0.0       -0.00      0.00
+DRUB     0.0       -0.00      0.00
+DCES     0.0       -0.00      0.00
+DFLU     0.0       -0.00      0.00
+DCLA     0.0       -0.00      0.00
+DBRO     0.0       -0.00      0.00
+DIOD     0.0       -0.00      0.00
+
+!! Drude nominal LJ parameters
+DC1    0.0  -0.0  0.00000 ! Drude
+DC2    0.0  -0.0  0.00000 ! Drude
+DC3    0.0  -0.0  0.00000 ! Drude
+DC4    0.0  -0.0  0.00000 ! Drude
+DC5    0.0  -0.0  0.00000 ! Drude
+DC6    0.0  -0.0  0.00000 ! Drude
+DC7    0.0  -0.0  0.00000 ! Drude
+DC8    0.0  -0.0  0.00000 ! Drude
+DC9    0.0  -0.0  0.00000 ! Drude
+DC10   0.0  -0.0  0.00000 ! Drude
+DC11   0.0  -0.0  0.00000 ! Drude
+DC12   0.0  -0.0  0.00000 ! Drude
+DC13   0.0  -0.0  0.00000 ! Drude
+DC14   0.0  -0.0  0.00000 ! Drude
+DC15   0.0  -0.0  0.00000 ! Drude
+DC16   0.0  -0.0  0.00000 ! Drude
+DC17   0.0  -0.0  0.00000 ! Drude
+DC18   0.0  -0.0  0.00000 ! Drude
+DC19   0.0  -0.0  0.00000 ! Drude
+DC20   0.0  -0.0  0.00000 ! Drude
+DCT    0.0  -0.0  0.00000 ! Drude
+DCP    0.0  -0.0  0.00000 ! Drude
+DHE0   0.0  -0.0  0.00000 ! Drude
+DNE0   0.0  -0.0  0.00000 ! Drude
+DOM    0.0  -0.0  0.00000 ! Drude
+DOH2   0.0  -0.0  0.00000 ! Drude
+DUM    0.0  -0.0  0.00000 ! dummy atom
+end
+
+

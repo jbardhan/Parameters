@@ -1,0 +1,61 @@
+* CHARMM27 Custom Topology File
+* Heme for Cytochrome c
+* Felix Autenrieth, Emad Tajkhorshid, Jerome Baudry, Zan Luthey-Schulten; last update 12/19/2005
+* Classical force field parameters for the heme prosthetic group of cytochrome c. 
+* Journal of Computational Chemistry, 25, 1613-1622 (2004)
+* Journal of Physical Chemistry B, 108, 20376-20387 (2004)
+*
+31  1
+
+RESI IMD          0.00  ! imidazole
+!GROUP   
+!ATOM N    NH1    -0.47  !               HN1     H2
+!ATOM HN   H       0.31  !                 |    /
+!ATOM CA   CT1     0.07  !                N1---C2
+!ATOM HA   HB      0.09  !               /     ||
+GROUP                  ! !         H5--C5      ||
+ATOM H5   HR3    -0.09 ! !               \\     ||
+!ATOM HB1  HA      0.09  !               C4----N3
+!ATOM HB2  HA      0.09  !                |
+ATOM N1   NR1    -0.36 ! !               H4
+ATOM HN1  H       0.13
+ATOM C5   CPH1   -0.05  ! maybe should be CPH1, but shouldn't kill us...
+GROUP   
+ATOM C2   CPH2    0.25
+ATOM H2   HR1     0.13
+ATOM N3   NR2    -0.70
+ATOM C4   CPH1    0.22
+ATOM H4   HR3     0.10
+!GROUP   
+!ATOM C    C       0.51
+!ATOM O    O      -0.51
+BOND C5  H5   N1 C5   C2 N1   
+BOND N3 C4 
+BOND N1 HN1  C4 H4  C2 H2  
+DOUBLE   C5  C4   C2  N3 
+IMPR N1 C5 C2 HN1  C4 C5  N3 H4  C2 N1 N3 H2   
+IMPR N1 C2 C5 HN1  C4 N3 C5  H4  C2 N3 N1 H2   
+!IMPR N   -C  CA HN   C   CA  +N  O   
+!CMAP -C  N  CA  C   N  CA  C  +N
+!DONOR HN N   
+DONOR HN1 N1   
+ACCEPTOR N3   
+!ACCEPTOR O C   
+!IC -C   CA   *N   HN    1.3475 123.2700  180.0000 115.2100  0.9988
+!IC -C   N    CA   C     1.3475 123.2700  180.0000 107.7000  1.5166
+!IC N    CA   C    +N    1.4521 107.7000  180.0000 117.5700  1.3509
+!IC +N   CA   *C   O     1.3509 117.5700  180.0000 120.2400  1.2273
+!IC CA   C    +N   +CA   1.5166 117.5700  180.0000 123.7200  1.4545
+!IC N    C    *CA  H5    1.4521 107.7000  122.4600 109.9900  1.5519
+!IC N    C    *CA  HA    1.4521 107.7000 -117.4900 107.3700  1.0830
+!IC N    CA   H5   C5    1.4521 112.1200  180.0000 114.0500  1.5041
+!IC C5   CA   *H5  HB1   1.5041 114.0500  121.1700 109.0100  1.1118
+!IC C5   CA   *H5  HB2   1.5041 114.0500 -122.3600 109.5300  1.1121
+!IC CA   H5   C5   N1   1.5519 114.0500   90.0000 124.1000  1.3783
+!IC N1  H5   *C5  C4   1.3783 124.1000 -171.2900 129.6000  1.3597
+!IC H5   C5   N1  C2   1.5041 124.1000 -173.2100 107.0300  1.3549
+!IC H5   C5   C4  N3   1.5041 129.6000  171.9900 110.0300  1.3817
+IC N3  N1  *C2 H2   1.3166 111.6300 -179.6300 123.8900  1.0932
+IC C2  C5   *N1 HN1   1.3549 107.0300 -174.6500 126.2600  1.0005
+IC N3  C5   *C4 H4   1.3817 110.0300 -177.8500 129.6300  1.0834
+

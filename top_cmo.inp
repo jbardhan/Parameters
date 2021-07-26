@@ -1,0 +1,5 @@
+resi   CMO       0.00
+group
+atom   C  CST      +0.5
+atom   O  OST      -0.5
+BOND C O

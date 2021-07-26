@@ -1,0 +1,33 @@
+* Stream file that includes both the topology
+* and parameter information for the SWM4-DP
+* polarizable water model with a
+* positive Drude charge
+*
+
+set  ALPHAO = 1.04252  ! polarizability (alpha)
+set  DOM    = 0.23808  ! oxygen to M site distance
+
+read rtf card append
+* SWM4-DP topology
+*
+32    1
+
+RESI SWM4   0.000
+GROUP
+ATOM OH2  OWP     0.00000    
+ATOM OM   LPP    -1.10740
+ATOM H1   HWP     0.55370
+ATOM H2   HWP     0.55370
+BOND OH2 H1
+BOND OH2 H2
+BOND OH2 OM
+BOND H1  H2 ! for SHAKE
+ANGLE H1 OH2 H2
+ACCEPTOR OH2
+IC   H1   OM   *OH2   H2    0.9572  52.26   180.00   52.26   0.9572
+IC   H2   H1    OH2   OM    0.0000   0.00     0.00   52.26   @DOM
+PATCH FIRST NONE LAST NONE
+
+END
+
+return

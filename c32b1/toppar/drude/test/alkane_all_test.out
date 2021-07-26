@@ -1,0 +1,1431 @@
+1
+                 Chemistry at HARvard Macromolecular Mechanics
+                   (CHARMM) - Developmental Version 32a1     August 15, 2004   
+       Copyright(c) 1984-2001  President and Fellows of Harvard College
+                              All Rights Reserved
+      Current operating system: Linux-2.4.9-e.38smp(i686)@psc-raid1
+                 Created on  7/13/ 5 at  9:56: 1 by user: alex        
+
+            Maximum number of ATOMS:     25140, and RESidues:       14000
+            Current HEAP size:         2048000, and STACK size:    500000
+
+ RDTITL> * ALKANE TEST CASE
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>    open unit 20 read form name ../top_drude_jul05.inp
+ VOPEN> Attempting to open::../top_drude_jul05.inp::
+ OPNLGU> Unit 20 opened for READONLY access to ../top_drude_jul05.inp
+  
+ CHARMM>    read rtf card unit 20
+ MAINIO> Residue topology file being read from unit  20.
+ TITLE> *>>>>>>>> ALL-HYDROGEN TOPOLOGY FOR ALKANES FOR THE <<<<<<<<<<<<<<
+ TITLE> *>>> DEVELOPMENT OF THE DRUDE POLARIZABLE FORCE FIELD <<<<<<<<<<<<
+ TITLE> *>>>>>>>>>>>>>>>>>>>  ALL-HYDROGEN PARAMETERS <<<<<<<<<<<<<<<<<<<<
+ TITLE> *>>>>>>>>>>>>>>>>>>>>>>> MARCH 2005 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ TITLE> *>>>>>>>> DIRECT COMMENTS TO ALEXANDER D. MACKERELL JR. <<<<<<<<<<
+ TITLE> *>>>>>>>>>>>>>>>  CHARMM FORUM: WWW.CHARMM.ORG <<<<<<<<<<<<<<<<<<<
+ TITLE> *
+  
+ CHARMM>     
+  
+ CHARMM>    open unit 20 read form name ../par_drude_jul05.inp
+ OPNLGU> Unit already open. The old file will be closed first.
+ VCLOSE: Closing unit   20 with status "KEEP"
+ VOPEN> Attempting to open::../par_drude_jul05.inp::
+ OPNLGU> Unit 20 opened for READONLY access to ../par_drude_jul05.inp
+  
+ CHARMM>    read para card unit 20
+
+          PARAMETER FILE BEING READ FROM UNIT 20
+ TITLE> *>>>>>>>> ALL-HYDROGEN PARAMETER FILE FOR ALKANES <<<<<<<<<<<<<<
+ TITLE> *>>>> THE DRUDE PARAMETER CAPABILITY HAS BEEN ADDED <<<<<<<<<<<<
+ TITLE> *>>>>>>>>>>>>>>>>>>>>>> MARCH 2005 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ TITLE> *>>>>>>> DIRECT COMMENTS TO ALEXANDER D. MACKERELL JR. <<<<<<<<<
+ TITLE> *>>>>>>>>>>>>>>>>>>>>>>  <<<<<<<<<
+ TITLE> *
+ PARMIO> NONBOND, HBOND lists and IMAGE atoms cleared.
+  
+ CHARMM>     
+  
+ CHARMM>    !ethane
+ CHARMM>    set residue etha
+ Parameter: RESIDUE <- "ETHA"
+  
+ CHARMM>     
+  
+ CHARMM>    read sequence card
+ MAINIO> Sequence information being read from unit   5.
+ RDTITL> * ETHA
+ RDTITL> *
+  
+ SEQRDR>    1
+  
+ SEQRDR>    @residue
+ Parameter: RESIDUE -> "ETHA"
+
+          RESIDUE SEQUENCE --     1 RESIDUES
+          ETHA
+  
+ CHARMM>     
+  
+ CHARMM>    generate @residue first none last none setup warn
+ Parameter: RESIDUE -> "ETHA"
+ NO PATCHING WILL BE DONE ON THE FIRST RESIDUE
+ NO PATCHING WILL BE DONE ON THE LAST  RESIDUE
+ GENPSF> Segment   1 has been generated. Its identifier is ETHA.
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        1   Number of residues   =        1
+         Number of atoms         =        8   Number of groups     =        2
+         Number of bonds         =        7   Number of angles     =       12
+         Number of dihedrals     =        9   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        0   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    0.00000
+  
+ CHARMM>     
+  
+ CHARMM>    read coor card
+          SPATIAL COORDINATES BEING READ FROM UNIT  5
+ RDTITL> * ETHANE MP2/6-31G(D) OPTIMIZED GEOMETRY
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>    !note that the stream file must be after the generate statement
+ CHARMM>    !and reading of the coordinates
+ CHARMM>    stream ../str/@residue_setpol_cf1g.str
+ Parameter: RESIDUE -> "ETHA"
+ VOPEN> Attempting to open::../str/etha_setpol_cf1g.str::
+ OPNLGU> Unit 99 opened for READONLY access to ../str/etha_setpol_cf1g.str
+
+                    INPUT STREAM SWITCHING TO UNIT    99
+ RDTITL> * FITTED CHARGES/POLARIZABILITIES FOR THE ETHA
+ RDTITL> * ESP GRID/PERTURBATION POINTS 04AUG
+ RDTITL> * INITIAL GUESS CH27MHA
+ RDTITL> * RESP HYPE FLAT 0.0 DFLAT 0.1
+ RDTITL> * RESTRAINT FOR HEAVY ATOMS 1E-5
+ RDTITL> * RESTRAINT FOR H 1E-5
+ RDTITL> * RESTRAINT FOR DRUDE 1E-5
+ RDTITL> * FINAL POLARIZABILITY SCALING 1.000
+ RDTITL> * REFERENCE DIPOLE FOR CHARGE SCALING 0.000
+ RDTITL> * PORTABLE FITTING BY VICTOR ANISIMOV 12/03/04
+ RDTITL> * CH2 AND CH3 CHARGES/POLARIZABILITIES
+ RDTITL> * ARE TAKEN AS AVERAGE OVER PROPANE, BUTANE,
+ RDTITL> * PENTATNE AND ALL CONFORMERS AS WELL
+ RDTITL> * FITTING WAS DONE WITH THE NEW CODE
+ RDTITL> * TO KEEP CH2 AND CH3 GROUPS NEUTRAL
+ RDTITL> *
+ Parameter: IN1 <- "" <empty>
+  
+ CHARMM>    set qHCH3  0.059  ! charge for H of CH3
+ Parameter: QHCH3 <- "0.059"
+  
+ CHARMM>    set qCCH3 -0.177  ! charge for C of CH3
+ Parameter: QCCH3 <- "-0.177"
+  
+ CHARMM>    set aCCH3 -2.051
+ Parameter: ACCH3 <- "-2.051"
+  
+ CHARMM>     
+  
+ CHARMM>    set qHCH2  0.078  ! charge for H of CH2
+ Parameter: QHCH2 <- "0.078"
+  
+ CHARMM>    set qCCH2 -0.156  ! charge for C of CH2
+ Parameter: QCCH2 <- "-0.156"
+  
+ CHARMM>    set aCCH2 -1.660
+ Parameter: ACCH2 <- "-1.660"
+  
+ CHARMM>     
+  
+ CHARMM>    set qHCH1  0.095  ! charge for H of CH
+ Parameter: QHCH1 <- "0.095"
+  
+ CHARMM>    set qCCH1 -0.095  ! charge for C of CH
+ Parameter: QCCH1 <- "-0.095"
+  
+ CHARMM>    set aCCH1 -1.302
+ Parameter: ACCH1 <- "-1.302"
+  
+ CHARMM>     
+  
+ CHARMM>     
+  
+ CHARMM>    ! Fitted charges
+ CHARMM>    scalar charge set   @qHCH3 select resn @residue .and. type H11  end
+ Parameter: QHCH3 -> "0.059"
+ Parameter: RESIDUE -> "ETHA"
+ SELRPN>      1 atoms have been selected out of      8
+
+ Warning from SCALAR: The sum of charges (   -0.031000) is not an integer
+
+  
+ CHARMM>    scalar charge set   @qHCH3 select resn @residue .and. type H12  end
+ Parameter: QHCH3 -> "0.059"
+ Parameter: RESIDUE -> "ETHA"
+ SELRPN>      1 atoms have been selected out of      8
+
+ Warning from SCALAR: The sum of charges (   -0.062000) is not an integer
+
+  
+ CHARMM>    scalar charge set   @qHCH3 select resn @residue .and. type H13  end
+ Parameter: QHCH3 -> "0.059"
+ Parameter: RESIDUE -> "ETHA"
+ SELRPN>      1 atoms have been selected out of      8
+
+ Warning from SCALAR: The sum of charges (   -0.093000) is not an integer
+
+  
+ CHARMM>    scalar charge set   @qCCH3 select resn @residue .and. type C1   end
+ Parameter: QCCH3 -> "-0.177"
+ Parameter: RESIDUE -> "ETHA"
+ SELRPN>      1 atoms have been selected out of      8
+  
+ CHARMM>     
+  
+ CHARMM>    scalar charge set   @qHCH3 select resn @residue .and. type H21  end
+ Parameter: QHCH3 -> "0.059"
+ Parameter: RESIDUE -> "ETHA"
+ SELRPN>      1 atoms have been selected out of      8
+
+ Warning from SCALAR: The sum of charges (   -0.031000) is not an integer
+
+  
+ CHARMM>    scalar charge set   @qHCH3 select resn @residue .and. type H22  end
+ Parameter: QHCH3 -> "0.059"
+ Parameter: RESIDUE -> "ETHA"
+ SELRPN>      1 atoms have been selected out of      8
+
+ Warning from SCALAR: The sum of charges (   -0.062000) is not an integer
+
+  
+ CHARMM>    scalar charge set   @qHCH3 select resn @residue .and. type H23  end
+ Parameter: QHCH3 -> "0.059"
+ Parameter: RESIDUE -> "ETHA"
+ SELRPN>      1 atoms have been selected out of      8
+
+ Warning from SCALAR: The sum of charges (   -0.093000) is not an integer
+
+  
+ CHARMM>    scalar charge set   @qCCH3 select resn @residue .and. type C2   end
+ Parameter: QCCH3 -> "-0.177"
+ Parameter: RESIDUE -> "ETHA"
+ SELRPN>      1 atoms have been selected out of      8
+  
+ CHARMM>     
+  
+ CHARMM>    ! Fitted polarizabilities
+ CHARMM>    scalar wmain  set  @aCCH3  select resn @residue .and. type C1   end
+ Parameter: ACCH3 -> "-2.051"
+ Parameter: RESIDUE -> "ETHA"
+ SELRPN>      1 atoms have been selected out of      8
+  
+ CHARMM>    scalar wmain  set  @aCCH3  select resn @residue .and. type C2   end
+ Parameter: ACCH3 -> "-2.051"
+ Parameter: RESIDUE -> "ETHA"
+ SELRPN>      1 atoms have been selected out of      8
+  
+ CHARMM>     
+  
+ CHARMM>    !Manual scaling:
+ CHARMM>    !scalar wmain  mult @ASCALE select segid @residue end
+ CHARMM>    !scalar charge mult @QSCALE select segid @residue end
+ CHARMM>     
+  
+ CHARMM>    return
+ VCLOSE: Closing unit   99 with status "KEEP"
+
+                    RETURNING TO INPUT STREAM     5
+  
+ CHARMM>     
+  
+ CHARMM>     ! generate auxialiary Drude particles
+  
+ CHARMM>     DRUDE select .not. type H* end
+ DRUDE> CONSTRUCTION OF DRUDE PARTICLES
+
+ SELRPN>      2 atoms have been selected out of      8
+ DRUDE> THOLE-TYPE DIPOLE SCREENING
+        THOLE PARAMETER:  2.600000
+        SLATER-DELTA SHAPE:  S(u) = 1 - (1+u/2)*exp(-u)
+
+Adding Drude particle DC1  on C1  ETHA 1   ETHA -2.051000
+    Using MASS   =     0.100000
+    Using KDRUDE =   500.000000
+        30  DC1  - CT3      61098   500.000     0.000
+Adding Drude particle DC2  on C2  ETHA 1   ETHA -2.051000
+    Using MASS   =     0.100000
+    Using KDRUDE =   500.000000
+        32  DC2  - CT3      61448   500.000     0.000
+
+ Message from MAPIC: Atom numbers are changed.
+                       2  Drude particles were added.
+
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        1   Number of residues   =        1
+         Number of atoms         =       10   Number of groups     =        2
+         Number of bonds         =       18   Number of angles     =       12
+         Number of dihedrals     =        9   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        0   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    0.00000
+         Number of Drudes        =        2
+         Number of true-bonds    =        9   Number of zero-bonds =        9
+  
+ CHARMM>     
+  
+ CHARMM>    energy
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  SHIFt    VATOm    VSWItch 
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 14.000 CTEXNB =999.000 CTONNB = 10.000 CTOFNB = 12.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are        0 atom  pairs and        0 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ <MAKINB>: Ran out of space. RESIZING
+ <MAKINB> with mode   5 found     36 exclusions and      9 interactions(1-4)
+ <MAKGRP> found      1 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR      201 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+        9 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        0 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+ There are Drude particles.
+ CODES:  Will skip bonds  9
+ENER ENR:  Eval#     ENERgy      Delta-E         GRMS
+ENER INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+ENER EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+ENER>        0   1001.64871      0.00000    250.14131
+ENER INTERN>      729.23738    178.11356     76.66262      1.22000      0.00000
+ENER EXTERN>       11.91354      4.50161      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>     
+  
+ CHARMM>    DRUDE reset
+ DRUDE> Drude particles ready to be deleted
+
+        Call: DELETE ATOMS SELECT TYPE D* END
+
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        1   Number of residues   =        1
+         Number of atoms         =       10   Number of groups     =        2
+         Number of bonds         =       18   Number of angles     =       12
+         Number of dihedrals     =        9   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        0   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    0.00000
+  
+ CHARMM>     
+  
+ CHARMM>    delete atom sele all end
+ SELRPN>     10 atoms have been selected out of     10
+
+ Message from MAPIC: Atom numbers are changed.
+
+ Message from MAPIC:          1 residues deleted.
+
+ Message from MAPIC:          1 segments deleted.
+ DELTIC:        18 bonds deleted
+ DELTIC:        12 angles deleted
+ DELTIC:         9 dihedrals deleted
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        0   Number of residues   =        0
+         Number of atoms         =        0   Number of groups     =        0
+         Number of bonds         =        0   Number of angles     =        0
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        0   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    0.00000
+  
+ CHARMM>     
+  
+ CHARMM>    !propane
+ CHARMM>    set residue prop
+ Parameter: RESIDUE <- "PROP"
+  
+ CHARMM>     
+  
+ CHARMM>    read sequence card
+ MAINIO> Sequence information being read from unit   5.
+ RDTITL> * PROP
+ RDTITL> *
+  
+ SEQRDR>    1
+  
+ SEQRDR>    @residue
+ Parameter: RESIDUE -> "PROP"
+
+          RESIDUE SEQUENCE --     1 RESIDUES
+          PROP
+  
+ CHARMM>     
+  
+ CHARMM>    generate @residue first none last none setup warn
+ Parameter: RESIDUE -> "PROP"
+ NO PATCHING WILL BE DONE ON THE FIRST RESIDUE
+ NO PATCHING WILL BE DONE ON THE LAST  RESIDUE
+ GENPSF> Segment   1 has been generated. Its identifier is PROP.
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        1   Number of residues   =        1
+         Number of atoms         =       11   Number of groups     =        3
+         Number of bonds         =       10   Number of angles     =       18
+         Number of dihedrals     =       18   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        0   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    0.00000
+  
+ CHARMM>     
+  
+ CHARMM>    read coor card
+          SPATIAL COORDINATES BEING READ FROM UNIT  5
+ RDTITL> * PROPANE MP2/6-31G(D) OPTIMIZED GEOMETRY
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>    !note that the stream file must be after the generate statement
+ CHARMM>    !and reading of the coordinates
+ CHARMM>    stream ../str/@residue_setpol_cf1g.str
+ Parameter: RESIDUE -> "PROP"
+ VOPEN> Attempting to open::../str/prop_setpol_cf1g.str::
+ OPNLGU> Unit 99 opened for READONLY access to ../str/prop_setpol_cf1g.str
+
+                    INPUT STREAM SWITCHING TO UNIT    99
+ RDTITL> * FITTED CHARGES/POLARIZABILITIES FOR THE PROP
+ RDTITL> * ESP GRID/PERTURBATION POINTS 04AUG
+ RDTITL> * INITIAL GUESS CH27MHA
+ RDTITL> * RESTRAINTS: RESP HYPE FLAT 0.0 DFLAT 0.1
+ RDTITL> * REST. WEIGHT ALL: 1E-5
+ RDTITL> * REST. WEIGHT H: 1E-5
+ RDTITL> * REST. WEIGHT DRUDE: 1E-5
+ RDTITL> * FINAL POLARIZABILITY SCALING 1.000
+ RDTITL> * REFERENCE DIPOLE FOR CHARGE SCALING 0.00
+ RDTITL> * PORTABLE FITTING BY VICTOR ANISIMOV 12/03/04
+ RDTITL> * CH2 AND CH3 CHARGES/POLARIZABILITIES
+ RDTITL> * ARE TAKEN AS AVERAGE OVER PROPANE, BUTANE,
+ RDTITL> * PENTATNE AND ALL CONFORMERS AS WELL
+ RDTITL> * FITTING WAS DONE WITH THE NEW CODE
+ RDTITL> * TO KEEP CH2 AND CH3 GROUPS NEUTRAL
+ RDTITL> *
+ Parameter: IN1 <- "" <empty>
+  
+ CHARMM>     
+  
+ CHARMM>    set qHCH3  0.059
+ Parameter: QHCH3 <- "0.059"
+  
+ CHARMM>    set qCCH3 -0.177
+ Parameter: QCCH3 <- "-0.177"
+  
+ CHARMM>    set aCCH3 -2.051
+ Parameter: ACCH3 <- "-2.051"
+  
+ CHARMM>     
+  
+ CHARMM>    set qHCH2  0.078
+ Parameter: QHCH2 <- "0.078"
+  
+ CHARMM>    set qCCH2 -0.156
+ Parameter: QCCH2 <- "-0.156"
+  
+ CHARMM>    set aCCH2 -1.660
+ Parameter: ACCH2 <- "-1.660"
+  
+ CHARMM>     
+  
+ CHARMM>    set qHCH1  0.095
+ Parameter: QHCH1 <- "0.095"
+  
+ CHARMM>    set qCCH1 -0.095
+ Parameter: QCCH1 <- "-0.095"
+  
+ CHARMM>    set aCCH1 -1.302
+ Parameter: ACCH1 <- "-1.302"
+  
+ CHARMM>     
+  
+ CHARMM>     
+  
+ CHARMM>    ! Fitted charges
+ CHARMM>    scalar charge set   @qHCH3 select resn @residue .and. type H11  end
+ Parameter: QHCH3 -> "0.059"
+ Parameter: RESIDUE -> "PROP"
+ SELRPN>      1 atoms have been selected out of     11
+
+ Warning from SCALAR: The sum of charges (   -0.031000) is not an integer
+
+  
+ CHARMM>    scalar charge set   @qHCH3 select resn @residue .and. type H12  end
+ Parameter: QHCH3 -> "0.059"
+ Parameter: RESIDUE -> "PROP"
+ SELRPN>      1 atoms have been selected out of     11
+
+ Warning from SCALAR: The sum of charges (   -0.062000) is not an integer
+
+  
+ CHARMM>    scalar charge set   @qHCH3 select resn @residue .and. type H13  end
+ Parameter: QHCH3 -> "0.059"
+ Parameter: RESIDUE -> "PROP"
+ SELRPN>      1 atoms have been selected out of     11
+
+ Warning from SCALAR: The sum of charges (   -0.093000) is not an integer
+
+  
+ CHARMM>    scalar charge set   @qCCH3 select resn @residue .and. type C1   end
+ Parameter: QCCH3 -> "-0.177"
+ Parameter: RESIDUE -> "PROP"
+ SELRPN>      1 atoms have been selected out of     11
+  
+ CHARMM>     
+  
+ CHARMM>    scalar charge set   @qHCH2 select resn @residue .and. type H21  end
+ Parameter: QHCH2 -> "0.078"
+ Parameter: RESIDUE -> "PROP"
+ SELRPN>      1 atoms have been selected out of     11
+
+ Warning from SCALAR: The sum of charges (   -0.012000) is not an integer
+
+  
+ CHARMM>    scalar charge set   @qHCH2 select resn @residue .and. type H22  end
+ Parameter: QHCH2 -> "0.078"
+ Parameter: RESIDUE -> "PROP"
+ SELRPN>      1 atoms have been selected out of     11
+
+ Warning from SCALAR: The sum of charges (   -0.024000) is not an integer
+
+  
+ CHARMM>    scalar charge set   @qCCH2 select resn @residue .and. type C2   end
+ Parameter: QCCH2 -> "-0.156"
+ Parameter: RESIDUE -> "PROP"
+ SELRPN>      1 atoms have been selected out of     11
+  
+ CHARMM>     
+  
+ CHARMM>    scalar charge set   @qHCH3 select resn @residue .and. type H31  end
+ Parameter: QHCH3 -> "0.059"
+ Parameter: RESIDUE -> "PROP"
+ SELRPN>      1 atoms have been selected out of     11
+
+ Warning from SCALAR: The sum of charges (   -0.031000) is not an integer
+
+  
+ CHARMM>    scalar charge set   @qHCH3 select resn @residue .and. type H32  end
+ Parameter: QHCH3 -> "0.059"
+ Parameter: RESIDUE -> "PROP"
+ SELRPN>      1 atoms have been selected out of     11
+
+ Warning from SCALAR: The sum of charges (   -0.062000) is not an integer
+
+  
+ CHARMM>    scalar charge set   @qHCH3 select resn @residue .and. type H33  end
+ Parameter: QHCH3 -> "0.059"
+ Parameter: RESIDUE -> "PROP"
+ SELRPN>      1 atoms have been selected out of     11
+
+ Warning from SCALAR: The sum of charges (   -0.093000) is not an integer
+
+  
+ CHARMM>    scalar charge set   @qCCH3 select resn @residue .and. type C3   end
+ Parameter: QCCH3 -> "-0.177"
+ Parameter: RESIDUE -> "PROP"
+ SELRPN>      1 atoms have been selected out of     11
+  
+ CHARMM>     
+  
+ CHARMM>    ! Fitted polarizabilities
+ CHARMM>    scalar wmain  set  @aCCH3  select resn @residue .and. type C1   end
+ Parameter: ACCH3 -> "-2.051"
+ Parameter: RESIDUE -> "PROP"
+ SELRPN>      1 atoms have been selected out of     11
+  
+ CHARMM>    scalar wmain  set  @aCCH2  select resn @residue .and. type C2   end
+ Parameter: ACCH2 -> "-1.660"
+ Parameter: RESIDUE -> "PROP"
+ SELRPN>      1 atoms have been selected out of     11
+  
+ CHARMM>    scalar wmain  set  @aCCH3  select resn @residue .and. type C3   end
+ Parameter: ACCH3 -> "-2.051"
+ Parameter: RESIDUE -> "PROP"
+ SELRPN>      1 atoms have been selected out of     11
+  
+ CHARMM>     
+  
+ CHARMM>    !Manual scaling:
+ CHARMM>    !scalar wmain  mult @ASCALE select segid @residue end
+ CHARMM>    !scalar charge mult @QSCALE select segid @residue end
+ CHARMM>     
+  
+ CHARMM>    return
+ VCLOSE: Closing unit   99 with status "KEEP"
+
+                    RETURNING TO INPUT STREAM     5
+  
+ CHARMM>     
+  
+ CHARMM>     ! generate auxialiary Drude particles
+  
+ CHARMM>     DRUDE select .not. type H* end
+ DRUDE> CONSTRUCTION OF DRUDE PARTICLES
+
+ SELRPN>      3 atoms have been selected out of     11
+ DRUDE> THOLE-TYPE DIPOLE SCREENING
+        THOLE PARAMETER:  2.600000
+        SLATER-DELTA SHAPE:  S(u) = 1 - (1+u/2)*exp(-u)
+
+Adding Drude particle DC1  on C1  PROP 1   PROP -2.051000
+    Using MASS   =     0.100000
+    Using KDRUDE =   500.000000
+        30  DC1  - CT3      61098   500.000     0.000
+Adding Drude particle DC2  on C2  PROP 1   PROP -1.660000
+    Using MASS   =     0.100000
+    Using KDRUDE =   500.000000
+        31  DC2  - CT2      61447   500.000     0.000
+Adding Drude particle DC3  on C3  PROP 1   PROP -2.051000
+    Using MASS   =     0.100000
+    Using KDRUDE =   500.000000
+        34  DC3  - CT3      61799   500.000     0.000
+
+ Message from MAPIC: Atom numbers are changed.
+                       3  Drude particles were added.
+
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        1   Number of residues   =        1
+         Number of atoms         =       14   Number of groups     =        3
+         Number of bonds         =       27   Number of angles     =       18
+         Number of dihedrals     =       18   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        0   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    0.00000
+         Number of Drudes        =        3
+         Number of true-bonds    =       13   Number of zero-bonds =       14
+  
+ CHARMM>     
+  
+ CHARMM>    energy
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  SHIFt    VATOm    VSWItch 
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 14.000 CTEXNB =999.000 CTONNB = 10.000 CTOFNB = 12.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are        0 atom  pairs and        0 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ <MAKINB>: Ran out of space. RESIZING
+ <MAKINB>: Ran out of space. RESIZING
+ <MAKINB>: Ran out of space. RESIZING
+ <MAKINB> with mode   5 found     58 exclusions and     24 interactions(1-4)
+ <MAKGRP> found      3 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR      393 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+       33 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        0 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+ There are Drude particles.
+ CODES:  Will skip bonds  13
+ENER ENR:  Eval#     ENERgy      Delta-E         GRMS
+ENER INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+ENER EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+ENER>        0      3.41958    998.22912      7.17279
+ENER INTERN>        0.68062      0.21807      0.10858      0.00968      0.00000
+ENER EXTERN>       -0.31961      2.72225      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>     
+  
+ CHARMM>     DRUDE reset
+ DRUDE> Drude particles ready to be deleted
+
+        Call: DELETE ATOMS SELECT TYPE D* END
+
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        1   Number of residues   =        1
+         Number of atoms         =       14   Number of groups     =        3
+         Number of bonds         =       27   Number of angles     =       18
+         Number of dihedrals     =       18   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        0   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    0.00000
+  
+ CHARMM>     
+  
+ CHARMM>    delete atom sele all end
+ SELRPN>     14 atoms have been selected out of     14
+
+ Message from MAPIC: Atom numbers are changed.
+
+ Message from MAPIC:          1 residues deleted.
+
+ Message from MAPIC:          1 segments deleted.
+ DELTIC:        27 bonds deleted
+ DELTIC:        18 angles deleted
+ DELTIC:        18 dihedrals deleted
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        0   Number of residues   =        0
+         Number of atoms         =        0   Number of groups     =        0
+         Number of bonds         =        0   Number of angles     =        0
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        0   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    0.00000
+  
+ CHARMM>     
+  
+ CHARMM>    !butane
+ CHARMM>    set residue buta
+ Parameter: RESIDUE <- "BUTA"
+  
+ CHARMM>     
+  
+ CHARMM>    read sequence card
+ MAINIO> Sequence information being read from unit   5.
+ RDTITL> * BUTA
+ RDTITL> *
+  
+ SEQRDR>    1
+  
+ SEQRDR>    @residue
+ Parameter: RESIDUE -> "BUTA"
+
+          RESIDUE SEQUENCE --     1 RESIDUES
+          BUTA
+  
+ CHARMM>     
+  
+ CHARMM>    generate @residue first none last none setup warn
+ Parameter: RESIDUE -> "BUTA"
+ NO PATCHING WILL BE DONE ON THE FIRST RESIDUE
+ NO PATCHING WILL BE DONE ON THE LAST  RESIDUE
+ GENPSF> Segment   1 has been generated. Its identifier is BUTA.
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        1   Number of residues   =        1
+         Number of atoms         =       14   Number of groups     =        4
+         Number of bonds         =       13   Number of angles     =       24
+         Number of dihedrals     =       27   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        0   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    0.00000
+  
+ CHARMM>     
+  
+ CHARMM>    read coor card
+          SPATIAL COORDINATES BEING READ FROM UNIT  5
+ RDTITL> * BUTANE G+ CONF.  MP2/6-31G(D) OPTIMIZED GEOMETRY
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>    !note that the stream file must be after the generate statement
+ CHARMM>    !and reading of the coordinates
+ CHARMM>    stream ../str/@residue_setpol_cf1g.str
+ Parameter: RESIDUE -> "BUTA"
+ VOPEN> Attempting to open::../str/buta_setpol_cf1g.str::
+ OPNLGU> Unit 99 opened for READONLY access to ../str/buta_setpol_cf1g.str
+
+                    INPUT STREAM SWITCHING TO UNIT    99
+ RDTITL> * FITTED CHARGES/POLARIZABILITIES FOR THE BUTA
+ RDTITL> * ESP GRID/PERTURBATION POINTS 04AUG
+ RDTITL> * INITIAL GUESS CH27MHA
+ RDTITL> * RESP HYPE FLAT 0.0 DFLAT 0.1
+ RDTITL> * RESTRAINT FOR HEAVY ATOMS 1E-5
+ RDTITL> * RESTRAINT FOR H 1E-5
+ RDTITL> * RESTRAINT FOR DRUDE 1E-5
+ RDTITL> * FINAL POLARIZABILITY SCALING 1.000
+ RDTITL> * REFERENCE DIPOLE FOR CHARGE SCALING 0.000
+ RDTITL> * PORTABLE FITTING BY VICTOR ANISIMOV 12/03/04
+ RDTITL> * CH2 AND CH3 CHARGES/POLARIZABILITIES
+ RDTITL> * ARE TAKEN AS AVERAGE OVER PROPANE, BUTANE,
+ RDTITL> * PENTATNE AND ALL CONFORMERS AS WELL
+ RDTITL> * FITTING WAS DONE WITH THE NEW CODE
+ RDTITL> * TO KEEP CH2 AND CH3 GROUPS NEUTRAL
+ RDTITL> *
+ Parameter: IN1 <- "" <empty>
+  
+ CHARMM>     
+  
+ CHARMM>    set qHCH3  0.059  ! charge for H of CH3
+ Parameter: QHCH3 <- "0.059"
+  
+ CHARMM>    set qCCH3 -0.177  ! charge for C of CH3
+ Parameter: QCCH3 <- "-0.177"
+  
+ CHARMM>    set aCCH3 -2.051
+ Parameter: ACCH3 <- "-2.051"
+  
+ CHARMM>     		 				
+  
+ CHARMM>    set qHCH2  0.078  ! charge for H of CH2
+ Parameter: QHCH2 <- "0.078"
+  
+ CHARMM>    set qCCH2 -0.156  ! charge for C of CH2
+ Parameter: QCCH2 <- "-0.156"
+  
+ CHARMM>    set aCCH2 -1.660
+ Parameter: ACCH2 <- "-1.660"
+  
+ CHARMM>    		 				
+  
+ CHARMM>    set qHCH1  0.095  ! charge for H of CH
+ Parameter: QHCH1 <- "0.095"
+  
+ CHARMM>    set qCCH1 -0.095  ! charge for C of CH
+ Parameter: QCCH1 <- "-0.095"
+  
+ CHARMM>    set aCCH1 -1.302
+ Parameter: ACCH1 <- "-1.302"
+  
+ CHARMM>     
+  
+ CHARMM>    ! Fitted charges
+ CHARMM>    scalar charge set   @qHCH3 select resn @residue .and. type H11  end
+ Parameter: QHCH3 -> "0.059"
+ Parameter: RESIDUE -> "BUTA"
+ SELRPN>      1 atoms have been selected out of     14
+
+ Warning from SCALAR: The sum of charges (   -0.031000) is not an integer
+
+  
+ CHARMM>    scalar charge set   @qHCH3 select resn @residue .and. type H12  end
+ Parameter: QHCH3 -> "0.059"
+ Parameter: RESIDUE -> "BUTA"
+ SELRPN>      1 atoms have been selected out of     14
+
+ Warning from SCALAR: The sum of charges (   -0.062000) is not an integer
+
+  
+ CHARMM>    scalar charge set   @qHCH3 select resn @residue .and. type H13  end
+ Parameter: QHCH3 -> "0.059"
+ Parameter: RESIDUE -> "BUTA"
+ SELRPN>      1 atoms have been selected out of     14
+
+ Warning from SCALAR: The sum of charges (   -0.093000) is not an integer
+
+  
+ CHARMM>    scalar charge set   @qCCH3 select resn @residue .and. type C1   end
+ Parameter: QCCH3 -> "-0.177"
+ Parameter: RESIDUE -> "BUTA"
+ SELRPN>      1 atoms have been selected out of     14
+  
+ CHARMM>     
+  
+ CHARMM>    scalar charge set   @qHCH2 select resn @residue .and. type H21  end
+ Parameter: QHCH2 -> "0.078"
+ Parameter: RESIDUE -> "BUTA"
+ SELRPN>      1 atoms have been selected out of     14
+
+ Warning from SCALAR: The sum of charges (   -0.012000) is not an integer
+
+  
+ CHARMM>    scalar charge set   @qHCH2 select resn @residue .and. type H22  end
+ Parameter: QHCH2 -> "0.078"
+ Parameter: RESIDUE -> "BUTA"
+ SELRPN>      1 atoms have been selected out of     14
+
+ Warning from SCALAR: The sum of charges (   -0.024000) is not an integer
+
+  
+ CHARMM>    scalar charge set   @qCCH2 select resn @residue .and. type C2   end
+ Parameter: QCCH2 -> "-0.156"
+ Parameter: RESIDUE -> "BUTA"
+ SELRPN>      1 atoms have been selected out of     14
+  
+ CHARMM>     
+  
+ CHARMM>    scalar charge set   @qHCH2 select resn @residue .and. type H31  end
+ Parameter: QHCH2 -> "0.078"
+ Parameter: RESIDUE -> "BUTA"
+ SELRPN>      1 atoms have been selected out of     14
+
+ Warning from SCALAR: The sum of charges (   -0.012000) is not an integer
+
+  
+ CHARMM>    scalar charge set   @qHCH2 select resn @residue .and. type H32  end
+ Parameter: QHCH2 -> "0.078"
+ Parameter: RESIDUE -> "BUTA"
+ SELRPN>      1 atoms have been selected out of     14
+
+ Warning from SCALAR: The sum of charges (   -0.024000) is not an integer
+
+  
+ CHARMM>    scalar charge set   @qCCH2 select resn @residue .and. type C3   end
+ Parameter: QCCH2 -> "-0.156"
+ Parameter: RESIDUE -> "BUTA"
+ SELRPN>      1 atoms have been selected out of     14
+  
+ CHARMM>     
+  
+ CHARMM>    scalar charge set   @qHCH3 select resn @residue .and. type H41  end
+ Parameter: QHCH3 -> "0.059"
+ Parameter: RESIDUE -> "BUTA"
+ SELRPN>      1 atoms have been selected out of     14
+
+ Warning from SCALAR: The sum of charges (   -0.031000) is not an integer
+
+  
+ CHARMM>    scalar charge set   @qHCH3 select resn @residue .and. type H42  end
+ Parameter: QHCH3 -> "0.059"
+ Parameter: RESIDUE -> "BUTA"
+ SELRPN>      1 atoms have been selected out of     14
+
+ Warning from SCALAR: The sum of charges (   -0.062000) is not an integer
+
+  
+ CHARMM>    scalar charge set   @qHCH3 select resn @residue .and. type H43  end
+ Parameter: QHCH3 -> "0.059"
+ Parameter: RESIDUE -> "BUTA"
+ SELRPN>      1 atoms have been selected out of     14
+
+ Warning from SCALAR: The sum of charges (   -0.093000) is not an integer
+
+  
+ CHARMM>    scalar charge set   @qCCH3 select resn @residue .and. type C4   end
+ Parameter: QCCH3 -> "-0.177"
+ Parameter: RESIDUE -> "BUTA"
+ SELRPN>      1 atoms have been selected out of     14
+  
+ CHARMM>     
+  
+ CHARMM>    ! Fitted polarizabilities
+ CHARMM>    scalar wmain  set  @aCCH3   select resn @residue .and. type C1   end
+ Parameter: ACCH3 -> "-2.051"
+ Parameter: RESIDUE -> "BUTA"
+ SELRPN>      1 atoms have been selected out of     14
+  
+ CHARMM>    scalar wmain  set  @aCCH2  select resn @residue .and. type C2   end
+ Parameter: ACCH2 -> "-1.660"
+ Parameter: RESIDUE -> "BUTA"
+ SELRPN>      1 atoms have been selected out of     14
+  
+ CHARMM>    scalar wmain  set  @aCCH2  select resn @residue .and. type C3   end
+ Parameter: ACCH2 -> "-1.660"
+ Parameter: RESIDUE -> "BUTA"
+ SELRPN>      1 atoms have been selected out of     14
+  
+ CHARMM>    scalar wmain  set  @aCCH3  select resn @residue .and. type C4   end
+ Parameter: ACCH3 -> "-2.051"
+ Parameter: RESIDUE -> "BUTA"
+ SELRPN>      1 atoms have been selected out of     14
+  
+ CHARMM>     
+  
+ CHARMM>    !Manual scaling:
+ CHARMM>    !scalar wmain  mult @ASCALE select segid @residue end
+ CHARMM>    !scalar charge mult @QSCALE select segid @residue end
+ CHARMM>     
+  
+ CHARMM>    return
+ VCLOSE: Closing unit   99 with status "KEEP"
+
+                    RETURNING TO INPUT STREAM     5
+  
+ CHARMM>     
+  
+ CHARMM>     ! generate auxialiary Drude particles
+  
+ CHARMM>     DRUDE select .not. type H* end
+ DRUDE> CONSTRUCTION OF DRUDE PARTICLES
+
+ SELRPN>      4 atoms have been selected out of     14
+ DRUDE> THOLE-TYPE DIPOLE SCREENING
+        THOLE PARAMETER:  2.600000
+        SLATER-DELTA SHAPE:  S(u) = 1 - (1+u/2)*exp(-u)
+
+Adding Drude particle DC1  on C1  BUTA 1   BUTA -2.051000
+    Using MASS   =     0.100000
+    Using KDRUDE =   500.000000
+        30  DC1  - CT3      61098   500.000     0.000
+Adding Drude particle DC2  on C2  BUTA 1   BUTA -1.660000
+    Using MASS   =     0.100000
+    Using KDRUDE =   500.000000
+        31  DC2  - CT2      61447   500.000     0.000
+Adding Drude particle DC3  on C3  BUTA 1   BUTA -1.660000
+    Using MASS   =     0.100000
+    Using KDRUDE =   500.000000
+        33  DC3  - CT2      61798   500.000     0.000
+Adding Drude particle DC4  on C4  BUTA 1   BUTA -2.051000
+    Using MASS   =     0.100000
+    Using KDRUDE =   500.000000
+        36  DC4  - CT3      62151   500.000     0.000
+
+ Message from MAPIC: Atom numbers are changed.
+                       4  Drude particles were added.
+
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        1   Number of residues   =        1
+         Number of atoms         =       18   Number of groups     =        4
+         Number of bonds         =       36   Number of angles     =       24
+         Number of dihedrals     =       27   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        0   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    0.00000
+         Number of Drudes        =        4
+         Number of true-bonds    =       17   Number of zero-bonds =       19
+  
+ CHARMM>     
+  
+ CHARMM>    energy
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  SHIFt    VATOm    VSWItch 
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 14.000 CTEXNB =999.000 CTONNB = 10.000 CTOFNB = 12.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are        0 atom  pairs and        0 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ <MAKINB>: Ran out of space. RESIZING
+ <MAKINB>: Ran out of space. RESIZING
+ <MAKINB>: Ran out of space. RESIZING
+ <MAKINB> with mode   5 found     80 exclusions and     40 interactions(1-4)
+ <MAKGRP> found      6 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR      649 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+       73 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        0 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+ There are Drude particles.
+ CODES:  Will skip bonds  17
+ENER ENR:  Eval#     ENERgy      Delta-E         GRMS
+ENER INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+ENER EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+ENER>        0      4.16422     -0.74463      7.98364
+ENER INTERN>        0.77569      0.44284      0.17106      0.56363      0.00000
+ENER EXTERN>       -0.55200      2.76299      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>     
+  
+ CHARMM>     DRUDE reset
+ DRUDE> Drude particles ready to be deleted
+
+        Call: DELETE ATOMS SELECT TYPE D* END
+
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        1   Number of residues   =        1
+         Number of atoms         =       18   Number of groups     =        4
+         Number of bonds         =       36   Number of angles     =       24
+         Number of dihedrals     =       27   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        0   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    0.00000
+  
+ CHARMM>     
+  
+ CHARMM>    delete atom sele all end
+ SELRPN>     18 atoms have been selected out of     18
+
+ Message from MAPIC: Atom numbers are changed.
+
+ Message from MAPIC:          1 residues deleted.
+
+ Message from MAPIC:          1 segments deleted.
+ DELTIC:        36 bonds deleted
+ DELTIC:        24 angles deleted
+ DELTIC:        27 dihedrals deleted
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        0   Number of residues   =        0
+         Number of atoms         =        0   Number of groups     =        0
+         Number of bonds         =        0   Number of angles     =        0
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        0   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    0.00000
+  
+ CHARMM>     
+  
+ CHARMM>    !isobutane
+ CHARMM>    set residue ibut
+ Parameter: RESIDUE <- "IBUT"
+  
+ CHARMM>     
+  
+ CHARMM>    read sequence card
+ MAINIO> Sequence information being read from unit   5.
+ RDTITL> * IBUT
+ RDTITL> *
+  
+ SEQRDR>    1
+  
+ SEQRDR>    @residue
+ Parameter: RESIDUE -> "IBUT"
+
+          RESIDUE SEQUENCE --     1 RESIDUES
+          IBUT
+  
+ CHARMM>     
+  
+ CHARMM>    generate @residue first none last none setup warn
+ Parameter: RESIDUE -> "IBUT"
+ NO PATCHING WILL BE DONE ON THE FIRST RESIDUE
+ NO PATCHING WILL BE DONE ON THE LAST  RESIDUE
+ GENPSF> Segment   1 has been generated. Its identifier is IBUT.
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        1   Number of residues   =        1
+         Number of atoms         =       14   Number of groups     =        4
+         Number of bonds         =       13   Number of angles     =       24
+         Number of dihedrals     =       27   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        0   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    0.00000
+  
+ CHARMM>     
+  
+ CHARMM>    read coor card
+          SPATIAL COORDINATES BEING READ FROM UNIT  5
+ RDTITL> * ISOBUTANE  MP2/6-31G(D) OPTIMIZED GEOMETRY
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>    !note that the stream file must be after the generate statement
+ CHARMM>    !and reading of the coordinates
+ CHARMM>    stream ../str/@residue_setpol_cf1g.str
+ Parameter: RESIDUE -> "IBUT"
+ VOPEN> Attempting to open::../str/ibut_setpol_cf1g.str::
+ OPNLGU> Unit 99 opened for READONLY access to ../str/ibut_setpol_cf1g.str
+
+                    INPUT STREAM SWITCHING TO UNIT    99
+ RDTITL> * FITTED CHARGES/POLARIZABILITIES FOR THE IBUT
+ RDTITL> * ESP GRID/PERTURBATION POINTS 04AUG
+ RDTITL> * INITIAL GUESS CH27MHA
+ RDTITL> * RESP HYPE FLAT 0.0 DFLAT 0.1
+ RDTITL> * RESTRAINT FOR HEAVY ATOMS 1E-5
+ RDTITL> * RESTRAINT FOR H 1E-5
+ RDTITL> * RESTRAINT FOR DRUDE 1E-5
+ RDTITL> * FINAL POLARIZABILITY SCALING 1.000
+ RDTITL> * REFERENCE DIPOLE FOR CHARGE SCALING 0.000
+ RDTITL> * PORTABLE FITTING BY VICTOR ANISIMOV 12/03/04
+ RDTITL> * CH2 AND CH3 CHARGES/POLARIZABILITIES
+ RDTITL> * ARE TAKEN AS AVERAGE OVER PROPANE, BUTANE,
+ RDTITL> * PENTATNE AND ALL CONFORMERS AS WELL
+ RDTITL> * FITTING WAS DONE WITH THE NEW CODE
+ RDTITL> * TO KEEP CH2 AND CH3 GROUPS NEUTRAL
+ RDTITL> *
+ Parameter: IN1 <- "" <empty>
+  
+ CHARMM>     
+  
+ CHARMM>    set qHCH3  0.059  ! charge for H of CH3
+ Parameter: QHCH3 <- "0.059"
+  
+ CHARMM>    set qCCH3 -0.177  ! charge for C of CH3
+ Parameter: QCCH3 <- "-0.177"
+  
+ CHARMM>    set aCCH3 -2.051
+ Parameter: ACCH3 <- "-2.051"
+  
+ CHARMM>     		 				
+  
+ CHARMM>    set qHCH2  0.078  ! charge for H of CH2
+ Parameter: QHCH2 <- "0.078"
+  
+ CHARMM>    set qCCH2 -0.156  ! charge for C of CH2
+ Parameter: QCCH2 <- "-0.156"
+  
+ CHARMM>    set aCCH2 -1.660
+ Parameter: ACCH2 <- "-1.660"
+  
+ CHARMM>    		 				
+  
+ CHARMM>    set qHCH1  0.095  ! charge for H of CH
+ Parameter: QHCH1 <- "0.095"
+  
+ CHARMM>    set qCCH1 -0.095  ! charge for C of CH
+ Parameter: QCCH1 <- "-0.095"
+  
+ CHARMM>    set aCCH1 -1.302
+ Parameter: ACCH1 <- "-1.302"
+  
+ CHARMM>     
+  
+ CHARMM>    ! Fitted charges
+ CHARMM>    scalar charge set   @qHCH1 select resn @residue .and. type HT   end
+ Parameter: QHCH1 -> "0.095"
+ Parameter: RESIDUE -> "IBUT"
+ SELRPN>      1 atoms have been selected out of     14
+
+ Warning from SCALAR: The sum of charges (    0.005000) is not an integer
+
+  
+ CHARMM>    scalar charge set   @qCCH1 select resn @residue .and. type CT   end
+ Parameter: QCCH1 -> "-0.095"
+ Parameter: RESIDUE -> "IBUT"
+ SELRPN>      1 atoms have been selected out of     14
+  
+ CHARMM>    scalar charge set   @qHCH3 select resn @residue .and. type H11  end
+ Parameter: QHCH3 -> "0.059"
+ Parameter: RESIDUE -> "IBUT"
+ SELRPN>      1 atoms have been selected out of     14
+
+ Warning from SCALAR: The sum of charges (   -0.031000) is not an integer
+
+  
+ CHARMM>    scalar charge set   @qHCH3 select resn @residue .and. type H12  end
+ Parameter: QHCH3 -> "0.059"
+ Parameter: RESIDUE -> "IBUT"
+ SELRPN>      1 atoms have been selected out of     14
+
+ Warning from SCALAR: The sum of charges (   -0.062000) is not an integer
+
+  
+ CHARMM>    scalar charge set   @qHCH3 select resn @residue .and. type H13  end
+ Parameter: QHCH3 -> "0.059"
+ Parameter: RESIDUE -> "IBUT"
+ SELRPN>      1 atoms have been selected out of     14
+
+ Warning from SCALAR: The sum of charges (   -0.093000) is not an integer
+
+  
+ CHARMM>    scalar charge set   @qCCH3 select resn @residue .and. type C1   end
+ Parameter: QCCH3 -> "-0.177"
+ Parameter: RESIDUE -> "IBUT"
+ SELRPN>      1 atoms have been selected out of     14
+  
+ CHARMM>    scalar charge set   @qHCH3 select resn @residue .and. type H21  end
+ Parameter: QHCH3 -> "0.059"
+ Parameter: RESIDUE -> "IBUT"
+ SELRPN>      1 atoms have been selected out of     14
+
+ Warning from SCALAR: The sum of charges (   -0.031000) is not an integer
+
+  
+ CHARMM>    scalar charge set   @qHCH3 select resn @residue .and. type H22  end
+ Parameter: QHCH3 -> "0.059"
+ Parameter: RESIDUE -> "IBUT"
+ SELRPN>      1 atoms have been selected out of     14
+
+ Warning from SCALAR: The sum of charges (   -0.062000) is not an integer
+
+  
+ CHARMM>    scalar charge set   @qHCH3 select resn @residue .and. type H23  end
+ Parameter: QHCH3 -> "0.059"
+ Parameter: RESIDUE -> "IBUT"
+ SELRPN>      1 atoms have been selected out of     14
+
+ Warning from SCALAR: The sum of charges (   -0.093000) is not an integer
+
+  
+ CHARMM>    scalar charge set   @qCCH3 select resn @residue .and. type C2   end
+ Parameter: QCCH3 -> "-0.177"
+ Parameter: RESIDUE -> "IBUT"
+ SELRPN>      1 atoms have been selected out of     14
+  
+ CHARMM>    scalar charge set   @qHCH3 select resn @residue .and. type H31  end
+ Parameter: QHCH3 -> "0.059"
+ Parameter: RESIDUE -> "IBUT"
+ SELRPN>      1 atoms have been selected out of     14
+
+ Warning from SCALAR: The sum of charges (   -0.031000) is not an integer
+
+  
+ CHARMM>    scalar charge set   @qHCH3 select resn @residue .and. type H32  end
+ Parameter: QHCH3 -> "0.059"
+ Parameter: RESIDUE -> "IBUT"
+ SELRPN>      1 atoms have been selected out of     14
+
+ Warning from SCALAR: The sum of charges (   -0.062000) is not an integer
+
+  
+ CHARMM>    scalar charge set   @qHCH3 select resn @residue .and. type H33  end
+ Parameter: QHCH3 -> "0.059"
+ Parameter: RESIDUE -> "IBUT"
+ SELRPN>      1 atoms have been selected out of     14
+
+ Warning from SCALAR: The sum of charges (   -0.093000) is not an integer
+
+  
+ CHARMM>    scalar charge set   @qCCH3 select resn @residue .and. type C3   end
+ Parameter: QCCH3 -> "-0.177"
+ Parameter: RESIDUE -> "IBUT"
+ SELRPN>      1 atoms have been selected out of     14
+  
+ CHARMM>     
+  
+ CHARMM>    ! Fitted polarizabilities
+ CHARMM>    scalar wmain  set  @aCCH1  select resn @residue .and. type CT   end
+ Parameter: ACCH1 -> "-1.302"
+ Parameter: RESIDUE -> "IBUT"
+ SELRPN>      1 atoms have been selected out of     14
+  
+ CHARMM>    scalar wmain  set  @aCCH3  select resn @residue .and. type C1   end
+ Parameter: ACCH3 -> "-2.051"
+ Parameter: RESIDUE -> "IBUT"
+ SELRPN>      1 atoms have been selected out of     14
+  
+ CHARMM>    scalar wmain  set  @aCCH3  select resn @residue .and. type C2   end
+ Parameter: ACCH3 -> "-2.051"
+ Parameter: RESIDUE -> "IBUT"
+ SELRPN>      1 atoms have been selected out of     14
+  
+ CHARMM>    scalar wmain  set  @aCCH3  select resn @residue .and. type C3   end
+ Parameter: ACCH3 -> "-2.051"
+ Parameter: RESIDUE -> "IBUT"
+ SELRPN>      1 atoms have been selected out of     14
+  
+ CHARMM>     
+  
+ CHARMM>    return
+ VCLOSE: Closing unit   99 with status "KEEP"
+
+                    RETURNING TO INPUT STREAM     5
+  
+ CHARMM>     
+  
+ CHARMM>     ! generate auxialiary Drude particles
+  
+ CHARMM>     DRUDE select .not. type H* end
+ DRUDE> CONSTRUCTION OF DRUDE PARTICLES
+
+ SELRPN>      4 atoms have been selected out of     14
+ DRUDE> THOLE-TYPE DIPOLE SCREENING
+        THOLE PARAMETER:  2.600000
+        SLATER-DELTA SHAPE:  S(u) = 1 - (1+u/2)*exp(-u)
+
+Adding Drude particle DCT  on CT  IBUT 1   IBUT -1.302000
+    Using MASS   =     0.100000
+    Using KDRUDE =   500.000000
+        70  DCT  - CT1      68286   500.000     0.000
+Adding Drude particle DC1  on C1  IBUT 1   IBUT -2.051000
+    Using MASS   =     0.100000
+    Using KDRUDE =   500.000000
+        30  DC1  - CT3      61098   500.000     0.000
+Adding Drude particle DC2  on C2  IBUT 1   IBUT -2.051000
+    Using MASS   =     0.100000
+    Using KDRUDE =   500.000000
+        32  DC2  - CT3      61448   500.000     0.000
+Adding Drude particle DC3  on C3  IBUT 1   IBUT -2.051000
+    Using MASS   =     0.100000
+    Using KDRUDE =   500.000000
+        34  DC3  - CT3      61799   500.000     0.000
+
+ Message from MAPIC: Atom numbers are changed.
+                       4  Drude particles were added.
+
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        1   Number of residues   =        1
+         Number of atoms         =       18   Number of groups     =        4
+         Number of bonds         =       36   Number of angles     =       24
+         Number of dihedrals     =       27   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        0   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    0.00000
+         Number of Drudes        =        4
+         Number of true-bonds    =       17   Number of zero-bonds =       19
+  
+ CHARMM>     
+  
+ CHARMM>    energy
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  SHIFt    VATOm    VSWItch 
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 14.000 CTEXNB =999.000 CTONNB = 10.000 CTOFNB = 12.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are        0 atom  pairs and        0 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ <MAKINB>: Ran out of space. RESIZING
+ <MAKINB>: Ran out of space. RESIZING
+ <MAKINB>: Ran out of space. RESIZING
+ <MAKINB> with mode   5 found     81 exclusions and     45 interactions(1-4)
+ <MAKGRP> found      6 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR      649 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+       72 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        0 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+ There are Drude particles.
+ CODES:  Will skip bonds  17
+ENER ENR:  Eval#     ENERgy      Delta-E         GRMS
+ENER INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+ENER EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+ENER>        0     -3.32927      7.49348     10.47432
+ENER INTERN>        0.86777      0.71684      0.20849      0.01564      0.00000
+ENER EXTERN>       -0.31867     -4.81933      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>     
+  
+ CHARMM>    delete atom sele all end
+ SELRPN>     18 atoms have been selected out of     18
+
+ Message from MAPIC: Atom numbers are changed.
+
+ Message from MAPIC:          1 residues deleted.
+
+ Message from MAPIC:          1 segments deleted.
+ DELTIC:        36 bonds deleted
+ DELTIC:        24 angles deleted
+ DELTIC:        27 dihedrals deleted
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        0   Number of residues   =        0
+         Number of atoms         =        0   Number of groups     =        0
+         Number of bonds         =        0   Number of angles     =        0
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        0   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    0.00000
+         Number of Drudes        =        4
+         Number of true-bonds    =       17   Number of zero-bonds =      -17
+  
+ CHARMM>     
+  
+ CHARMM>    stop
+ VCLOSE: Closing unit   20 with status "KEEP"
+$$$$$$  New timer profile $$$$$
+         Electrostatic & VDW     0.00005 Other:    0.00000
+      Nonbond force           0.00235 Other:    0.00230
+         Bond energy             0.00172 Other:    0.00000
+         Angle energy            0.00007 Other:    0.00000
+         Dihedral energy         0.00006 Other:    0.00000
+         Restraints energy       0.00001 Other:    0.00000
+      INTRNL energy           0.00193 Other:    0.00007
+   Energy time             0.00469 Other:    0.00041
+ Total time              0.16544 Other:    0.16075
+
+                    NORMAL TERMINATION BY NORMAL STOP
+                    MAXIMUM STACK SPACE USED IS  201354
+                    STACK CURRENTLY IN USE IS         0
+                    NO WARNINGS WERE ISSUED
+                    HEAP PRINTOUT-  HEAP SIZE   2048000
+                    SPACE CURRENTLY IN USE IS         0
+                    MAXIMUM SPACE USED IS          8416
+                    FREE LIST
+            PRINHP> ADDRESS:         1 LENGTH:   2048000 NEXT:         0
+
+                    $$$$$ JOB ACCOUNTING INFORMATION $$$$$
+                     ELAPSED TIME:     0.17  SECONDS 
+                         CPU TIME:     0.12  SECONDS 

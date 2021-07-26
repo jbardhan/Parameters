@@ -1,0 +1,96 @@
+* test ions with swm4 water
+*
+
+open unit 20 read form name ../top_drude_jul05.inp
+read rtf card unit 20
+
+open unit 20 read form name ../par_drude_jul05.inp
+read para card unit 20
+
+stream ../str/swm4_dp_setpol_positive.str
+stream ../str/ions_setpol.str
+
+open unit 33 write form name swm4_ion.dat
+
+!!  Monomer + ion
+
+set count 1
+
+label ion_loop
+
+if count eq 1 set iontype LIT
+if count eq 2 set iontype SOD
+if count eq 3 set iontype POT
+if count eq 4 set iontype RUB
+if count eq 5 set iontype CES
+if count eq 6 set iontype FLU
+if count eq 7 set iontype CLA
+if count eq 8 set iontype BRO
+if count eq 9 set iontype IOD
+
+read sequence SWM4 1
+generate SOLV setup noangle nodihedral
+read sequence @IONTYPE 1
+generate ION setup first none last none
+
+read coor card
+* SWM4
+*
+    4
+    1    1 SWM4 OH2    1.25163  -0.00023   0.27019
+    2    1 SWM4 OM     1.37619  -0.00008   0.06798
+    3    1 SWM4 H1     1.55899   0.75708  -0.22804
+    4    1 SWM4 H2     1.55883  -0.75682  -0.22925
+
+coor orient select type O* end
+coor set zdir -3.0 select type @IONTYPE end
+
+scalar wmain set @ALPHAO select type OH2 end
+scalar wmain set @ALPHA@@IONTYPE select type @IONTYPE end
+DRUDE mass 0.4 kdrude 500.0 select type OH2 .or. type @IONTYPE end
+scalar mass show
+scalar charge show
+
+coor copy comp
+coor stat
+
+SHAKE bonh param tolerance 1.0e-9 -
+      nofast -
+      select ( segid SOLV .and. .not. type D* ) end -
+      select ( segid SOLV .and. .not. type D* ) end
+
+LONEPAIR bisector dist @DOM angle 0.0 dihe 0.0 -
+         select atom SOLV * OM end  select atom SOLV * OH2 end - 
+         select atom SOLV * H1 end  select atom SOLV * H2  end
+coor shake
+coor dupl select type OH2 end select type DOH2 end
+
+ENERGY atom switch vatom vswitch -
+       ctofnb 97.0 cutnb 99.0 wmin 1.0
+
+
+!==================================================
+! Water-ion interaction
+!--------------------------------------------------
+
+mini SD step 0.01 nstep 5000 nprint 1000
+coor orient select type O* .or. type @IONTYPE end
+
+energy                             ! ?ENER
+quick 1 6                          ! ?DIST
+coor dipole select segid SOLV end  ! ?RDIP
+
+write title unit 33
+* @IONTYPE
+* Umin = ?ENER
+* Dmin = ?DIST
+* mu   = ?RDIP
+*
+
+drude reset
+delete atom select all end
+
+calc count = @count + 1
+
+if count le 9 goto ion_loop
+stop

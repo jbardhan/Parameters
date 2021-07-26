@@ -1,0 +1,136 @@
+* Toplogy and parameter information for non TIP3P waters and ions.
+* This is a standalone stream file.
+*
+
+!This toppar file has been converted to be a stand alone file
+!as the topology and parameter information is self contained.
+
+!Testcase
+!test_water_ions.inp
+
+!The toppar information in this file is also included in the
+!proteins, nucleic acid and lipid topology and parameter files
+
+!references 
+!
+
+read rtf card !append
+* Topology information
+*
+31  1
+
+!be careful that masses don't overlap with previously
+!assigned values
+!
+MASS     1 HSP    1.00800 H ! SPC(/E) WATER HYDROGEN
+MASS     2 OP    15.99940 O ! SPC(/E) WATER OXYGEN
+
+!MASS  1   H     1.00800  H ! polar H
+!MASS  4   HT    1.008000 H ! TIPS3P WATER HYDROGEN
+!MASS 72   OC   15.99900  O ! carboxylate oxygen
+!MASS 75   OT   15.999400 O ! TIPS3P WATER OXYGEN
+!MASS 90   SOD  22.989770 NA ! Sodium Ion
+!MASS 91   MG   24.305000 MG ! Magnesium Ion
+!MASS 92   POT  39.102000 K  ! Potassium Ion! check masses
+!MASS 93   CES 132.900000 CS ! Cesium Ion
+!MASS 94   CAL  40.080000 CA ! Calcium Ion
+!MASS 95   CLA  35.450000 CL ! Chloride Ion
+!MASS 96   ZN   65.370000 ZN ! zinc (II) cation
+
+default first none last none
+
+
+RESI SPCE         0.0000 ! SPC/E water model, generate using noangle nodihedral
+GROUP
+ATOM OH2  OP     -0.8476
+ATOM H1   HSP     0.4238
+ATOM H2   HSP     0.4238
+BOND OH2 H1 OH2 H2 H1 H2    ! the last bond is needed for shake
+ANGLE H1 OH2 H2             ! required
+DONOR H1 OH2
+DONOR H2 OH2
+ACCEPTOR OH2
+PATCHING FIRS NONE LAST NONE
+
+RESI SPC          0.0000 ! SPC water model, generate using noangle nodihedral
+GROUP
+ATOM OH2  OP     -0.8068
+ATOM H1   HSP     0.4034
+ATOM H2   HSP     0.4034
+BOND OH2 H1 OH2 H2 H1 H2    ! the last bond is needed for shake
+ANGLE H1 OH2 H2             ! required
+DONOR H1 OH2
+DONOR H2 OH2
+ACCEPTOR OH2
+PATCHING FIRS NONE LAST NONE
+
+end
+
+read para card !append
+* Parameter information
+*
+
+BONDS
+!
+!V(bond) = Kb(b - b0)**2
+!
+!Kb: kcal/mole/A**2
+!b0: A
+!
+!atom type Kb          b0
+!
+OP    HSP  450.000     1.0   ! SPC/(E)
+HSP   HSP    0.000     1.633 ! SPC/(E)
+
+ANGLES
+!
+!V(angle) = Ktheta(Theta - Theta0)**2
+!
+!V(Urey-Bradley) = Kub(S - S0)**2
+!
+!Ktheta: kcal/mole/rad**2
+!Theta0: degrees
+!Kub: kcal/mole/A**2 (Urey-Bradley)
+!S0: A
+!
+!atom types     Ktheta    Theta0   Kub     S0
+!
+HSP  OP   HSP    55.000   109.47   ! SPC(/E)
+
+
+DIHEDRALS
+!
+!V(dihedral) = Kchi(1 + cos(n(chi) - delta))
+!
+!Kchi: kcal/mole
+!n: multiplicity
+!delta: degrees
+!
+!atom types             Kchi    n   delta
+!
+
+
+!
+IMPROPER
+!
+!V(improper) = Kpsi(psi - psi0)**2
+!
+!Kpsi: kcal/mole/rad**2
+!psi0: degrees
+!note that the second column of numbers (0) is ignored
+!
+!atom types           Kpsi                   psi0
+!
+
+NONBONDED nbxmod  5 atom cdiel shift vatom vdistance vswitch -
+cutnb 14.0 ctofnb 12.0 ctonnb 10.0 eps 1.0 e14fac 1.0 wmin 1.5
+
+!SPC(E)
+HSP    0.000000  -0.000001     0.0001   !SPC(/E) HYDROGEN PARAMETERS
+OP     0.000000  -0.15529      1.762827 !SPC(/E) OXYGEN PARAMETERS
+
+end
+
+return
+
+

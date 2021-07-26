@@ -1,0 +1,44 @@
+*>>>>>> Combined CHARMM All-Hydrogen Topology File for <<<<<<<<<
+*>>>>>>> CHARMM22 Proteins and CHARMM27 Nucleic Acids <<<<<<<<<<
+*from
+*>>>> CHARMM22 All-Hydrogen Topology File for Proteins <<<<<<<<
+*>>>>>>>>>>>>>>>>>>>>>>> August 1999 <<<<<<<<<<<<<<<<<<<<<<<<<<<
+*>>>>>>> Direct comments to Alexander D. MacKerell Jr. <<<<<<<<<
+*>>>>>> 410-706-7442 or email: alex,mmiris.ab.umd.edu  <<<<<<<<<
+*and
+*  \\\\ CHARMM27 All-Hydrogen Nucleic Acid Topology File ////
+*  \\\\\\\\\\\\\\\\\\ Developmental ////////////////////////
+*        Alexander D. MacKerell Jr. and Nicolas Foloppe
+*                        August 1999
+*     All comments to ADM jr.  email: alex,mmiris.ab.umd.edu
+*                 telephone: 410-706-7442
+*
+31 1
+
+PRES AP5     0.000
+DELE ATOM 2O3B
+ATOM 1O1G ON2  -0.84 ! so that AP5 has total -5 charge
+ATOM 1O3G ON3  -0.84 ! so that AP5 has total -5 charge
+ATOM 1O2G ON3  -0.84 ! so that AP5 has total -5 charge
+ATOM 1PG  P2    1.50
+ATOM 2PB  P2    1.50 
+ATOM 2O2B ON3  -0.82
+ATOM 2O3B ON3  -0.86 ! to match 1O3B
+BOND 1O3G 2PB
+END
+
+
+! FROM ADP
+!GROUP
+!ATOM C5'  CN8B   -0.08
+!ATOM H5'  HN8     0.09
+!ATOM H5'' HN8     0.09
+!ATOM O5'  ON2    -0.62
+!ATOM PA   P       1.50
+!ATOM O1A  ON3    -0.82
+!ATOM O2A  ON3    -0.82
+!ATOM O3A  ON2    -0.74
+!ATOM PB   P2      1.10
+!ATOM O1B  ON3    -0.90
+!ATOM O2B  ON3    -0.90
+!ATOM O3B  ON3    -0.90

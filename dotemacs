@@ -1,0 +1,52 @@
+(if (featurep 'ns)
+    (progn
+      (defun ns-raise-emacs ()
+        "Raise Emacs."
+        (ns-do-applescript "tell application \"Emacs\" to activate"))
+
+      (if (display-graphic-p)
+          (progn
+            (add-hook 'server-visit-hook 'ns-raise-emacs)
+            (add-hook 'before-make-frame-hook 'ns-raise-emacs)
+            (ns-raise-emacs)))))
+	    
+(global-font-lock-mode t)
+(setq auto-mode-alist
+      (append '(("\\.m$" . matlab-mode))
+				  auto-mode-alist))
+(setq auto-mode-alist
+		(append '(("\\.h$" . c++-mode))
+				  auto-mode-alist))
+
+(setq font-lock-maximum-decoration t)
+
+(global-set-key [?\C-j] 'kill-word)
+(global-set-key [?\M-l] 'goto-line)
+(global-set-key [?\M-s] 'isearch-forward-regexp)
+(global-set-key [?\M-r] 'isearch-backward-regexp)
+(global-set-key [?\C-m] 'newline-and-indent)
+(global-set-key [f9]  'toggle-read-only)
+(global-set-key [f12] 'rename-buffer)
+(global-set-key [f1] 'font-lock-fontify-buffer)
+(setq mac-command-modifier 'meta)
+
+(custom-set-variables
+  ;; custom-set-variables was added by Custom -- don't edit or cut/paste it!
+  ;; Your init file should contain only one such instance.
+ '(auto-compression-mode t nil (jka-compr))
+ '(case-fold-search t)
+ '(column-number-mode t)
+ '(current-language-environment "UTF-8")
+ '(default-input-method "rfc1345")
+ '(global-font-lock-mode t nil (font-lock))
+ '(next-line-add-newlines nil)
+ '(show-paren-mode t nil (paren))
+ '(window-min-height 1))
+
+(put 'narrow-to-region 'disabled nil)
+;; Backspace should delete, not convert tabs to spaces
+(setq c-backspace-function 'backward-delete-char)
+
+(setq tab-width 4)
+(setq tab-stop-list '(4 8 12 16 20 24 28 32 36 40 44 48 52 56 60 64 68 72 76 80))
+(setq indent-tabs-mode nil)

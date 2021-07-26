@@ -1,0 +1,103 @@
+* Initial generation and equilibration of a
+* cluster of SWM4-DP polarizable water
+*
+
+bomlev -1
+set toppardir = .
+
+set 3 14.0  ! cutim
+set 4 14.0  ! cutnb
+set 5 10.0  ! ctonnb
+set 6 12.0  ! ctofnb
+set 7 switch
+set 8 atom
+set 9 vatom
+
+open unit 20 read form name ../top_drude_jul05.inp
+read rtf card unit 20
+
+open unit 20 read form name ../par_drude_jul05.inp
+read para card unit 20
+
+stream ../str/swm4_dp_setpol_positive.str
+
+!=========================================================
+! RESIDUE GENERATION
+!---------------------------------------------------------
+
+!! Generate water residues 
+
+read sequence SWM4 5
+generate BULK setup noangle nodihedral
+
+read coor card
+* water coordinated
+*
+   15
+    1    1 SWM4 OH2    7.38263   0.89233  -4.71643 BULK 1     -2.47655
+    2    1 SWM4 H1     7.30586   0.03258  -4.30272 BULK 1     -2.60884
+    3    1 SWM4 H2     7.54089   1.49503  -3.98984 BULK 1     -3.13461
+    4    2 SWM4 OH2   -6.20797   4.45953   0.73205 BULK 2      0.94227
+    5    2 SWM4 H1    -5.29193   4.71233   0.84693 BULK 2      1.64723
+    6    2 SWM4 H2    -6.68689   5.00122   1.35929 BULK 2      0.17114
+    7    3 SWM4 OH2    6.06969   6.29872   6.92235 BULK 3      2.53526
+    8    3 SWM4 H1     6.72984   6.67673   7.50333 BULK 3      3.25850
+    9    3 SWM4 H2     5.35053   6.05270   7.50417 BULK 3      2.71730
+   10    4 SWM4 OH2    0.22109  -4.53529  -5.63924 BULK 4     -0.75622
+   11    4 SWM4 H1     0.41942  -4.34638  -6.55642 BULK 4     -0.30566
+   12    4 SWM4 H2    -0.71907  -4.71479  -5.62906 BULK 4     -0.12645
+   13    5 SWM4 OH2   -5.19509   1.26039  -1.16892 BULK 5      1.07017
+   14    5 SWM4 H1    -5.93523   1.34878  -0.56841 BULK 5      0.70060
+   15    5 SWM4 H2    -5.53474   1.55603  -2.01359 BULK 5      1.11651
+
+!=========================================================
+! DRUDE SETUP
+!---------------------------------------------------------
+
+!! Set the polarizability of SWM4-DP
+scalar wmain set @{ALPHAO} select type OH2 end
+
+DRUDE mass 0.8 kdrude 500.0 select .not. type H* .and. .not. type OM end
+scalar mass show
+scalar charge show
+
+!=========================================================
+! SHAKE and LONEPAIR
+!---------------------------------------------------------
+coor copy comp
+coor stat
+
+SHAKE bonh param tolerance 1.0e-9 -
+      nofast -
+      select ( .not. type D* ) end -
+      select ( .not. type D* ) end
+
+LONEPAIR bisector dist @DOM angle 0.0 dihe 0.0 -
+         select atom BULK * OM end  select atom BULK * OH2 end - 
+         select atom BULK * H1 end  select atom BULK * H2  end
+coor shake
+coor dupl select type OH2 end select type DOH2 end
+
+! Set up non-bonded interactions
+! inbfrq = -1 frequncy for updating non-bonded list is determined 
+! from the heuristic test
+! ihbfrq - frequncy for updating H-bonded list 
+! pmewald - PME method for calculating extended electrostatics  
+! kappa - width of the Gaussian distribution for PME method
+! usually can be 5/CTOFNB
+! order - order of B-spline interpolation in PME method
+! FFTX, FFTY, FFTZ - number of grid points
+! FFTX, FFTY, FFTZ should be a multiple of powers 2, 3, 5
+! and close to the box dimensions
+
+update inbfrq -1 ihbfrq 0 -
+@7 @8 @9 vfswitch  cutnb @4 ctofnb @6 ctonnb @5 ! bycb
+
+! Minimize positions of Drude particles
+! constrain position of regular atoms
+cons fix select .not. type D* end
+mini SD nstep 10 nprint 1
+cons fix select none end
+energy
+
+stop

@@ -1,0 +1,4247 @@
+1
+                 Chemistry at HARvard Macromolecular Mechanics
+                   (CHARMM) - Developmental Version 32a1     August 15, 2004   
+       Copyright(c) 1984-2001  President and Fellows of Harvard College
+                              All Rights Reserved
+      Current operating system: Linux-2.4.9-e.38smp(i686)@psc-raid1
+                 Created on  7/14/ 5 at 16:56:17 by user: alex        
+
+            Maximum number of ATOMS:     25140, and RESidues:       14000
+            Current HEAP size:         2048000, and STACK size:    500000
+
+ RDTITL> * TEST IONS WITH SWM4 WATER
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>    open unit 20 read form name ../top_drude_jul05.inp
+ VOPEN> Attempting to open::../top_drude_jul05.inp::
+ OPNLGU> Unit 20 opened for READONLY access to ../top_drude_jul05.inp
+  
+ CHARMM>    read rtf card unit 20
+ MAINIO> Residue topology file being read from unit  20.
+ TITLE> *>>>>>>>> ALL-HYDROGEN TOPOLOGY FOR ALKANES FOR THE <<<<<<<<<<<<<<
+ TITLE> *>>> DEVELOPMENT OF THE DRUDE POLARIZABLE FORCE FIELD <<<<<<<<<<<<
+ TITLE> *>>>>>>>>>>>>>>>>>>>  ALL-HYDROGEN PARAMETERS <<<<<<<<<<<<<<<<<<<<
+ TITLE> *>>>>>>>>>>>>>>>>>>>>>>> MARCH 2005 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ TITLE> *>>>>>>>> DIRECT COMMENTS TO ALEXANDER D. MACKERELL JR. <<<<<<<<<<
+ TITLE> *>>>>>>>>>>>>>>>  CHARMM FORUM: WWW.CHARMM.ORG <<<<<<<<<<<<<<<<<<<
+ TITLE> *
+  
+ CHARMM>     
+  
+ CHARMM>    open unit 20 read form name ../par_drude_jul05.inp
+ OPNLGU> Unit already open. The old file will be closed first.
+ VCLOSE: Closing unit   20 with status "KEEP"
+ VOPEN> Attempting to open::../par_drude_jul05.inp::
+ OPNLGU> Unit 20 opened for READONLY access to ../par_drude_jul05.inp
+  
+ CHARMM>    read para card unit 20
+
+          PARAMETER FILE BEING READ FROM UNIT 20
+ TITLE> *>>>>>>>> ALL-HYDROGEN PARAMETER FILE FOR ALKANES <<<<<<<<<<<<<<
+ TITLE> *>>>> THE DRUDE PARAMETER CAPABILITY HAS BEEN ADDED <<<<<<<<<<<<
+ TITLE> *>>>>>>>>>>>>>>>>>>>>>> MARCH 2005 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ TITLE> *>>>>>>> DIRECT COMMENTS TO ALEXANDER D. MACKERELL JR. <<<<<<<<<
+ TITLE> *>>>>>>>>>>>>>>>>>>>>>>  <<<<<<<<<
+ TITLE> *
+ PARMIO> NONBOND, HBOND lists and IMAGE atoms cleared.
+  
+ CHARMM>     
+  
+ CHARMM>    stream ../str/swm4_dp_setpol_positive.str
+ VOPEN> Attempting to open::../str/swm4_dp_setpol_positive.str::
+ OPNLGU> Unit 99 opened for READONLY access to ../str/swm4_dp_setpol_positive.str
+
+                    INPUT STREAM SWITCHING TO UNIT    99
+ RDTITL> * STREAM FILE THAT INCLUDES BOTH THE TOPOLOGY
+ RDTITL> * AND PARAMETER INFORMATION FOR THE SWM4-DP
+ RDTITL> * POLARIZABLE WATER MODEL WITH A
+ RDTITL> * POSITIVE DRUDE CHARGE
+ RDTITL> *
+ Parameter: IN1 <- "" <empty>
+  
+ CHARMM>     
+  
+ CHARMM>    set  ALPHAO = 1.04252  ! polarizability (alpha)
+ Parameter: ALPHAO <- "1.04252"
+  
+ CHARMM>    set  DOM    = 0.23808  ! oxygen to M site distance
+ Parameter: DOM <- "0.23808"
+  
+ CHARMM>     
+  
+ CHARMM>    read rtf card append
+ MAINIO> Residue topology file being read from unit  99.
+ RDTITL> * SWM4-DP TOPOLOGY
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>    return
+ VCLOSE: Closing unit   99 with status "KEEP"
+
+                    RETURNING TO INPUT STREAM     5
+  
+ CHARMM>    stream ../str/ions_setpol.str
+ VOPEN> Attempting to open::../str/ions_setpol.str::
+ OPNLGU> Unit 99 opened for READONLY access to ../str/ions_setpol.str
+
+                    INPUT STREAM SWITCHING TO UNIT    99
+ RDTITL> * IONS OF LAMOUREUX AND ROUX.  TO BE USED WITH
+ RDTITL> * SWM4-DP MODEL WITH POSITIVE DRUDE
+ RDTITL> *
+ Parameter: IN1 <- "" <empty>
+  
+ CHARMM>     
+  
+ CHARMM>    !! Polarizabilities
+ CHARMM>    calc AlphaLIT = 0.0320 ! from Mahan80
+Evaluating: 0.0320
+ Parameter: ALPHALIT <- "3.2E-02"
+  
+ CHARMM>    calc AlphaSOD = 0.1570 ! from Mahan80
+Evaluating: 0.1570
+ Parameter: ALPHASOD <- "0.157"
+  
+ CHARMM>    calc AlphaPOT = 0.8300 ! from Mahan80
+Evaluating: 0.8300
+ Parameter: ALPHAPOT <- "0.83"
+  
+ CHARMM>    calc AlphaRUB = 1.3700 ! from Mahan80
+Evaluating: 1.3700
+ Parameter: ALPHARUB <- "1.37"
+  
+ CHARMM>    calc AlphaCES = 2.3600 ! from Mahan80
+Evaluating: 2.3600
+ Parameter: ALPHACES <- "2.36"
+  
+ CHARMM>    calc AlphaFLU =  2.467 * 0.724 ! from Hattig98
+Evaluating: 2.467*0.724
+ Parameter: ALPHAFLU <- "1.78611"
+  
+ CHARMM>    calc AlphaCLA =  5.482 * 0.724 ! from Hattig98
+Evaluating: 5.482*0.724
+ Parameter: ALPHACLA <- "3.96897"
+  
+ CHARMM>    calc AlphaBRO =  7.268 * 0.724 ! from Hattig98
+Evaluating: 7.268*0.724
+ Parameter: ALPHABRO <- "5.26203"
+  
+ CHARMM>    calc AlphaIOD = 10.275 * 0.724 ! from Hattig98
+Evaluating: 10.275*0.724
+ Parameter: ALPHAIOD <- "7.4391"
+  
+ CHARMM>     
+  
+ CHARMM>    read rtf card append
+ MAINIO> Residue topology file being read from unit  99.
+ RDTITL> * IONS
+ RDTITL> *
+ WARNING from DECODI -- Zero length string being converted to 0
+ RTFRDR> WARNING: Version number is NOT specified.
+  
+ CHARMM>     
+  
+ CHARMM>    return
+ VCLOSE: Closing unit   99 with status "KEEP"
+
+                    RETURNING TO INPUT STREAM     5
+  
+ CHARMM>     
+  
+ CHARMM>    open unit 33 write form name swm4_ion.dat
+ VOPEN> Attempting to open::swm4_ion.dat::
+ OPNLGU> Unit 33 opened for WRITE access to swm4_ion.dat
+  
+ CHARMM>     
+  
+ CHARMM>    !!  Monomer + ion
+ CHARMM>     
+  
+ CHARMM>    set count 1
+ Parameter: COUNT <- "1"
+  
+ CHARMM>     
+  
+ CHARMM>    label ion_loop
+  
+ CHARMM>     
+  
+ CHARMM>    if count eq 1 set iontype LIT
+ Comparing "1" and "1".
+ IF test evaluated as true.  Performing command
+ Parameter: IONTYPE <- "LIT"
+  
+ CHARMM>    if count eq 2 set iontype SOD
+ Comparing "1" and "2".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 3 set iontype POT
+ Comparing "1" and "3".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 4 set iontype RUB
+ Comparing "1" and "4".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 5 set iontype CES
+ Comparing "1" and "5".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 6 set iontype FLU
+ Comparing "1" and "6".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 7 set iontype CLA
+ Comparing "1" and "7".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 8 set iontype BRO
+ Comparing "1" and "8".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 9 set iontype IOD
+ Comparing "1" and "9".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>     
+  
+ CHARMM>    read sequence SWM4 1
+  
+ CHARMM>    generate SOLV setup noangle nodihedral
+ NO PATCHING WILL BE DONE ON THE FIRST RESIDUE
+ NO PATCHING WILL BE DONE ON THE LAST  RESIDUE
+ GENPSF> Segment   1 has been generated. Its identifier is SOLV.
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        1   Number of residues   =        1
+         Number of atoms         =        4   Number of groups     =        1
+         Number of bonds         =        4   Number of angles     =        1
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        1   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    0.00000
+  
+ CHARMM>    read sequence @IONTYPE 1
+ Parameter: IONTYPE -> "LIT"
+  
+ CHARMM>    generate ION setup first none last none
+ NO PATCHING WILL BE DONE ON THE FIRST RESIDUE
+ NO PATCHING WILL BE DONE ON THE LAST  RESIDUE
+ GENPSF> Segment   2 has been generated. Its identifier is ION.
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        2   Number of residues   =        2
+         Number of atoms         =        5   Number of groups     =        2
+         Number of bonds         =        4   Number of angles     =        1
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        1   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    1.00000
+  
+ CHARMM>     
+  
+ CHARMM>    read coor card
+          SPATIAL COORDINATES BEING READ FROM UNIT  5
+ RDTITL> * SWM4
+ RDTITL> *
+ ** WARNING ** After reading, there are no coordinates for selected atom:     5     2 LIT  LIT 
+
+ ** A total of     1 selected atoms have no coordinates
+ *** LEVEL  2 WARNING *** BOMLEV IS    0
+  
+ CHARMM>     
+  
+ CHARMM>    coor orient select type O* end
+ SELRPN>      2 atoms have been selected out of      5
+
+ ORIENT THE COORDINATES TO ALIGN WITH AXIS
+
+ MOMENTS
+      0.02044444     -0.00001517     -0.01259364
+                      0.00000001      0.00000934
+                                      0.00775760
+
+ Transpose of the rotation matrix
+     0.524473    0.000632   -0.851427
+     0.741461    0.491220    0.457099
+     0.418526   -0.871036    0.257163
+ CENTER OF ATOMS BEFORE TRANSLATION     1.31391    -0.00015     0.16908
+ AXIS OF ROTATION IS  0.670335  0.640970 -0.373911  ANGLE IS   82.16
+
+ ALL COORDINATES ORIENTED IN THE MAIN SET BASED ON SELECTED ATOMS.
+
+  
+ CHARMM>    coor set zdir -3.0 select type @IONTYPE end
+ Parameter: IONTYPE -> "LIT"
+ SELRPN>      1 atoms have been selected out of      5
+ SELECTED COORDINATES SET IN THE MAIN SET.
+
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain set @ALPHAO select type OH2 end
+ Parameter: ALPHAO -> "1.04252"
+ SELRPN>      1 atoms have been selected out of      5
+  
+ CHARMM>    scalar wmain set @ALPHA@@IONTYPE select type @IONTYPE end
+ Parameter: IONTYPE -> "LIT"
+ Parameter: IONTYPE -> "LIT"
+ Parameter: ALPHALIT -> "3.2E-02"
+ SELRPN>      1 atoms have been selected out of      5
+  
+ CHARMM>    DRUDE mass 0.4 kdrude 500.0 select type OH2 .or. type @IONTYPE end
+ Parameter: IONTYPE -> "LIT"
+ DRUDE> CONSTRUCTION OF DRUDE PARTICLES
+
+ SELRPN>      2 atoms have been selected out of      5
+ DRUDE> The MASS parameter will override the topology file.
+ DRUDE> The KDRUDE parameter will override the parameter file.
+ DRUDE> THOLE-TYPE DIPOLE SCREENING
+        THOLE PARAMETER:  2.600000
+        SLATER-DELTA SHAPE:  S(u) = 1 - (1+u/2)*exp(-u)
+
+Adding Drude particle DOH2 on OH2 SOLV 1   SWM4  1.042520
+    Using MASS   =     0.400000
+    Using KDRUDE =   500.000000
+        18  DOH2 - OWP       1075   500.000     0.000
+Adding Drude particle DLIT on LIT ION  1   LIT   0.032000
+    Using MASS   =     0.400000
+    Using KDRUDE =   500.000000
+        20  DLIT - LIT       5010   500.000     0.000
+
+ Message from MAPIC: Atom numbers are changed.
+                       2  Drude particles were added.
+
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        2   Number of residues   =        2
+         Number of atoms         =        7   Number of groups     =        2
+         Number of bonds         =        9   Number of angles     =        1
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        1   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    1.00000
+         Number of Drudes        =        2
+         Number of true-bonds    =        6   Number of zero-bonds =        3
+  
+ CHARMM>    scalar mass show
+ ( SOLV SWM4 1    OH2  )    15.599    
+ ( SOLV SWM4 1    DOH2 )   0.40000    
+ ( SOLV SWM4 1    OM   )    0.0000    
+ ( SOLV SWM4 1    H1   )    1.0080    
+ ( SOLV SWM4 1    H2   )    1.0080    
+ ( ION  LIT  1    LIT  )    6.5410    
+ ( ION  LIT  1    DLIT )   0.40000    
+  
+ CHARMM>    scalar charge show
+ ( SOLV SWM4 1    OH2  )   -1.7718    
+ ( SOLV SWM4 1    DOH2 )    1.7718    
+ ( SOLV SWM4 1    OM   )   -1.1074    
+ ( SOLV SWM4 1    H1   )   0.55370    
+ ( SOLV SWM4 1    H2   )   0.55370    
+ ( ION  LIT  1    LIT  )   0.68957    
+ ( ION  LIT  1    DLIT )   0.31043    
+  
+ CHARMM>     
+  
+ CHARMM>    coor copy comp
+ SELECTED COORDINATES COPIED TO THE COMPARISON SET.
+
+  
+ CHARMM>    coor stat
+ STATISTICS FOR    7 SELECTED ATOMS:
+    XMIN =   -0.118748 XMAX =    0.467139 XAVE =    0.116503
+    YMIN =   -0.372169 YMAX =    0.372160 YAVE =   -0.000001
+    ZMIN =   -3.000000 ZMAX =    0.659150 ZAVE =   -0.857140
+    WMIN =    0.000000 WMAX =    1.042520 WAVE =    0.153503
+  
+ CHARMM>     
+  
+ CHARMM>    SHAKE bonh param tolerance 1.0e-9 -
+ CHARMM>          nofast -
+ CHARMM>          select ( segid SOLV .and. .not. type D* ) end -
+ CHARMM>          select ( segid SOLV .and. .not. type D* ) end
+ SELRPN>      4 atoms have been selected out of      7
+ SELRPN>      4 atoms have been selected out of      7
+ SHKCOM> SHAKE parameters: TOL =   0.1000E-08 MXITer =    500
+ There are Drude particles.
+ CODES:  Will skip bonds  6
+
+               3 constraints will held by SHAKE.
+  
+ CHARMM>     
+  
+ CHARMM>    LONEPAIR bisector dist @DOM angle 0.0 dihe 0.0 -
+ CHARMM>             select atom SOLV * OM end  select atom SOLV * OH2 end -
+ CHARMM>             select atom SOLV * H1 end  select atom SOLV * H2  end
+ Parameter: DOM -> "0.23808"
+ SELRPN>      1 atoms have been selected out of      7
+ SELRPN>      1 atoms have been selected out of      7
+ SELRPN>      1 atoms have been selected out of      7
+ SELRPN>      1 atoms have been selected out of      7
+  
+ CHARMM>    coor shake
+ SELECTED COORDINATES CONSTRAINED IN THE MAIN SET.
+
+  
+ CHARMM>    coor dupl select type OH2 end select type DOH2 end
+ SELRPN>      1 atoms have been selected out of      7
+ SELRPN>      1 atoms have been selected out of      7
+  
+ CHARMM>     
+  
+ CHARMM>    ENERGY atom switch vatom vswitch -
+ CHARMM>           ctofnb 97.0 cutnb 99.0 wmin 1.0
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  SWITch   VATOm    VSWItch 
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 99.000 CTEXNB =999.000 CTONNB = 95.000 CTOFNB = 97.000
+ WMIN   =  1.000 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are        0 atom  pairs and        0 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ <MAKINB> with mode   5 found     11 exclusions and      0 interactions(1-4)
+ <MAKGRP> found      0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR       99 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+       10 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        0 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+ There are Drude particles.
+ CODES:  Will skip bonds  6
+ENER ENR:  Eval#     ENERgy      Delta-E         GRMS
+ENER EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+ENER>        0      3.19781      0.00000     21.82641
+ENER EXTERN>       -0.02186      3.21967      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>     
+  
+ CHARMM>     
+  
+ CHARMM>    !==================================================
+ CHARMM>    ! Water-ion interaction
+ CHARMM>    !--------------------------------------------------
+ CHARMM>     
+  
+ CHARMM>    mini SD step 0.01 nstep 5000 nprint 1000
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  SWITch   VATOm    VSWItch 
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 99.000 CTEXNB =999.000 CTONNB = 95.000 CTOFNB = 97.000
+ WMIN   =  1.000 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are       10 atom  pairs and       11 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR       99 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+       10 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        0 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+
+
+ STEEPD> An energy minimization has been requested.
+
+ NSTEP  =         5000   NPRINT =         1000
+ STEP   =    0.0100000   TOLFUN =    0.0000000
+ TOLGRD =    0.0000000   TOLSTP =    0.0000000
+
+MINI MIN: Cycle      ENERgy      Delta-E         GRMS    Step-size
+MINI EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>        0      3.19781      0.00000     21.82641      0.01000
+MINI EXTERN>       -0.02186      3.21967      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     1000    -32.53783     35.73564      0.00009      0.00000
+MINI INTERN>        9.32171      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        7.07169    -48.93123      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     2000    -32.53783      0.00000      0.00006      0.00000
+MINI INTERN>        9.32171      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        7.07169    -48.93123      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     3000    -32.53783      0.00000      0.00004      0.00000
+MINI INTERN>        9.32171      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        7.07169    -48.93123      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     4000    -32.53783      0.00000      0.00003      0.00000
+MINI INTERN>        9.32171      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        7.07169    -48.93123      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     5000    -32.53783      0.00000      0.00002      0.00000
+MINI INTERN>        9.32171      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        7.07169    -48.93123      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+
+ STEEPD> Minimization exiting with number of steps limit (      5000) exceeded.
+
+STPD MIN: Cycle      ENERgy      Delta-E         GRMS    Step-size
+STPD INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+STPD EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+STPD>     5000    -32.53783      0.00000      0.00002      0.00000
+STPD INTERN>        9.32171      0.00000      0.00000      0.00000      0.00000
+STPD EXTERN>        7.07169    -48.93123      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>    coor orient select type O* .or. type @IONTYPE end
+ Parameter: IONTYPE -> "LIT"
+ SELRPN>      3 atoms have been selected out of      7
+
+ ORIENT THE COORDINATES TO ALIGN WITH AXIS
+
+ MOMENTS
+      2.77861701      0.30846286      0.44434100
+                      0.03424342      0.04932767
+                                      0.07105654
+
+ Transpose of the rotation matrix
+     0.156968    0.108968    0.981574
+     0.879464    0.436776   -0.189127
+    -0.449337    0.892946   -0.027273
+ CENTER OF ATOMS BEFORE TRANSLATION     0.09400    -0.01536    -1.13839
+ AXIS OF ROTATION IS -0.554213 -0.732880 -0.394631  ANGLE IS  102.52
+
+ ALL COORDINATES ORIENTED IN THE MAIN SET BASED ON SELECTED ATOMS.
+
+  
+ CHARMM>     
+  
+ CHARMM>    energy                             ! ?ENER
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  SWITch   VATOm    VSWItch 
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 99.000 CTEXNB =999.000 CTONNB = 95.000 CTOFNB = 97.000
+ WMIN   =  1.000 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are       10 atom  pairs and       11 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR       99 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+       10 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        0 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+ENER ENR:  Eval#     ENERgy      Delta-E         GRMS
+ENER INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+ENER EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+ENER>        0    -32.53783      0.00000      0.00002
+ENER INTERN>        9.32171      0.00000      0.00000      0.00000      0.00000
+ENER EXTERN>        7.07169    -48.93123      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>    quick 1 6                          ! ?DIST
+ QUICKA: Atom       1 SOLV 1    SWM4 OH2  is at:   0.57084   0.00000   0.00000      
+ QUICKA: Atom       6 ION  1    LIT  LIT  is at:  -1.37975   0.00000   0.00000      
+ QUICKA: The distance is:     1.95059
+
+
+  
+ CHARMM>    coor dipole select segid SOLV end  ! ?RDIP
+ SELRPN>      5 atoms have been selected out of      7
+ THE TOTAL CHARGE OF SELECTED ATOMS IS:    0.000000
+ DIPOLE MOMENT ABOUT CENTER OF GEOMETRY  (DEBYES) :    3.005423    0.000006    0.000000         3.005423
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 33
+ RDTITL> * LIT
+ RDTITL> * UMIN = -32.5378
+ RDTITL> * DMIN = 1.95059
+ RDTITL> * MU   = 3.00542
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>    drude reset
+ DRUDE> Drude particles ready to be deleted
+
+        Call: DELETE ATOMS SELECT TYPE D* END
+
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        2   Number of residues   =        2
+         Number of atoms         =        7   Number of groups     =        2
+         Number of bonds         =        9   Number of angles     =        1
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        1   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    1.00000
+  
+ CHARMM>    delete atom select all end
+ SELRPN>      7 atoms have been selected out of      7
+
+ Message from MAPIC: Atom numbers are changed.
+ LONEPRD:    1 lonepair atoms deleted
+
+ Message from MAPIC:          2 residues deleted.
+
+ Message from MAPIC:          2 segments deleted.
+ DELTIC:         9 bonds deleted
+ DELTIC:         1 angles deleted
+ DELTIC:         1 acceptors deleted
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        0   Number of residues   =        0
+         Number of atoms         =        0   Number of groups     =        0
+         Number of bonds         =        0   Number of angles     =        0
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        0   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    0.00000
+  
+ CHARMM>     
+  
+ CHARMM>    calc count = @count + 1
+ Parameter: COUNT -> "1"
+Evaluating: 1+1
+ Parameter: COUNT <- "2"
+  
+ CHARMM>     
+  
+ CHARMM>    if count le 9 goto ion_loop
+ Comparing "2" and "9".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    if count eq 1 set iontype LIT
+ Comparing "2" and "1".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 2 set iontype SOD
+ Comparing "2" and "2".
+ IF test evaluated as true.  Performing command
+ Parameter: IONTYPE <- "SOD"
+  
+ CHARMM>    if count eq 3 set iontype POT
+ Comparing "2" and "3".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 4 set iontype RUB
+ Comparing "2" and "4".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 5 set iontype CES
+ Comparing "2" and "5".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 6 set iontype FLU
+ Comparing "2" and "6".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 7 set iontype CLA
+ Comparing "2" and "7".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 8 set iontype BRO
+ Comparing "2" and "8".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 9 set iontype IOD
+ Comparing "2" and "9".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>     
+  
+ CHARMM>    read sequence SWM4 1
+  
+ CHARMM>    generate SOLV setup noangle nodihedral
+ NO PATCHING WILL BE DONE ON THE FIRST RESIDUE
+ NO PATCHING WILL BE DONE ON THE LAST  RESIDUE
+ GENPSF> Segment   1 has been generated. Its identifier is SOLV.
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        1   Number of residues   =        1
+         Number of atoms         =        4   Number of groups     =        1
+         Number of bonds         =        4   Number of angles     =        1
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        1   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    0.00000
+  
+ CHARMM>    read sequence @IONTYPE 1
+ Parameter: IONTYPE -> "SOD"
+  
+ CHARMM>    generate ION setup first none last none
+ NO PATCHING WILL BE DONE ON THE FIRST RESIDUE
+ NO PATCHING WILL BE DONE ON THE LAST  RESIDUE
+ GENPSF> Segment   2 has been generated. Its identifier is ION.
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        2   Number of residues   =        2
+         Number of atoms         =        5   Number of groups     =        2
+         Number of bonds         =        4   Number of angles     =        1
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        1   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    1.00000
+  
+ CHARMM>     
+  
+ CHARMM>    read coor card
+          SPATIAL COORDINATES BEING READ FROM UNIT  5
+ RDTITL> * SWM4
+ RDTITL> *
+ ** WARNING ** After reading, there are no coordinates for selected atom:     5     2 SOD  SOD 
+
+ ** A total of     1 selected atoms have no coordinates
+ *** LEVEL  2 WARNING *** BOMLEV IS    0
+  
+ CHARMM>     
+  
+ CHARMM>    coor orient select type O* end
+ SELRPN>      2 atoms have been selected out of      5
+
+ ORIENT THE COORDINATES TO ALIGN WITH AXIS
+
+ MOMENTS
+      0.02044444     -0.00001517     -0.01259364
+                      0.00000001      0.00000934
+                                      0.00775760
+
+ Transpose of the rotation matrix
+     0.524473    0.000632   -0.851427
+     0.741461    0.491220    0.457099
+     0.418526   -0.871036    0.257163
+ CENTER OF ATOMS BEFORE TRANSLATION     1.31391    -0.00015     0.16908
+ AXIS OF ROTATION IS  0.670335  0.640970 -0.373911  ANGLE IS   82.16
+
+ ALL COORDINATES ORIENTED IN THE MAIN SET BASED ON SELECTED ATOMS.
+
+  
+ CHARMM>    coor set zdir -3.0 select type @IONTYPE end
+ Parameter: IONTYPE -> "SOD"
+ SELRPN>      1 atoms have been selected out of      5
+ SELECTED COORDINATES SET IN THE MAIN SET.
+
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain set @ALPHAO select type OH2 end
+ Parameter: ALPHAO -> "1.04252"
+ SELRPN>      1 atoms have been selected out of      5
+  
+ CHARMM>    scalar wmain set @ALPHA@@IONTYPE select type @IONTYPE end
+ Parameter: IONTYPE -> "SOD"
+ Parameter: IONTYPE -> "SOD"
+ Parameter: ALPHASOD -> "0.157"
+ SELRPN>      1 atoms have been selected out of      5
+  
+ CHARMM>    DRUDE mass 0.4 kdrude 500.0 select type OH2 .or. type @IONTYPE end
+ Parameter: IONTYPE -> "SOD"
+ DRUDE> CONSTRUCTION OF DRUDE PARTICLES
+
+ SELRPN>      2 atoms have been selected out of      5
+ DRUDE> The MASS parameter will override the topology file.
+ DRUDE> The KDRUDE parameter will override the parameter file.
+ DRUDE> THOLE-TYPE DIPOLE SCREENING
+        THOLE PARAMETER:  2.600000
+        SLATER-DELTA SHAPE:  S(u) = 1 - (1+u/2)*exp(-u)
+
+Adding Drude particle DOH2 on OH2 SOLV 1   SWM4  1.042520
+    Using MASS   =     0.400000
+    Using KDRUDE =   500.000000
+        18  DOH2 - OWP       1075   500.000     0.000
+Adding Drude particle DSOD on SOD ION  1   SOD   0.157000
+    Using MASS   =     0.400000
+    Using KDRUDE =   500.000000
+        21  DSOD - SOD       5111   500.000     0.000
+
+ Message from MAPIC: Atom numbers are changed.
+                       2  Drude particles were added.
+
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        2   Number of residues   =        2
+         Number of atoms         =        7   Number of groups     =        2
+         Number of bonds         =        9   Number of angles     =        1
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        1   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    1.00000
+         Number of Drudes        =        2
+         Number of true-bonds    =        6   Number of zero-bonds =        3
+  
+ CHARMM>    scalar mass show
+ ( SOLV SWM4 1    OH2  )    15.599    
+ ( SOLV SWM4 1    DOH2 )   0.40000    
+ ( SOLV SWM4 1    OM   )    0.0000    
+ ( SOLV SWM4 1    H1   )    1.0080    
+ ( SOLV SWM4 1    H2   )    1.0080    
+ ( ION  SOD  1    SOD  )    22.590    
+ ( ION  SOD  1    DSOD )   0.40000    
+  
+ CHARMM>    scalar charge show
+ ( SOLV SWM4 1    OH2  )   -1.7718    
+ ( SOLV SWM4 1    DOH2 )    1.7718    
+ ( SOLV SWM4 1    OM   )   -1.1074    
+ ( SOLV SWM4 1    H1   )   0.55370    
+ ( SOLV SWM4 1    H2   )   0.55370    
+ ( ION  SOD  1    SOD  )   0.31240    
+ ( ION  SOD  1    DSOD )   0.68760    
+  
+ CHARMM>     
+  
+ CHARMM>    coor copy comp
+ SELECTED COORDINATES COPIED TO THE COMPARISON SET.
+
+  
+ CHARMM>    coor stat
+ STATISTICS FOR    7 SELECTED ATOMS:
+    XMIN =   -0.118748 XMAX =    0.467139 XAVE =    0.116503
+    YMIN =   -0.372169 YMAX =    0.372160 YAVE =   -0.000001
+    ZMIN =   -3.000000 ZMAX =    0.659150 ZAVE =   -0.857140
+    WMIN =    0.000000 WMAX =    1.042520 WAVE =    0.175931
+  
+ CHARMM>     
+  
+ CHARMM>    SHAKE bonh param tolerance 1.0e-9 -
+ CHARMM>          nofast -
+ CHARMM>          select ( segid SOLV .and. .not. type D* ) end -
+ CHARMM>          select ( segid SOLV .and. .not. type D* ) end
+ SELRPN>      4 atoms have been selected out of      7
+ SELRPN>      4 atoms have been selected out of      7
+ SHKCOM> SHAKE parameters: TOL =   0.1000E-08 MXITer =    500
+ There are Drude particles.
+ CODES:  Will skip bonds  6
+
+               3 constraints will held by SHAKE.
+  
+ CHARMM>     
+  
+ CHARMM>    LONEPAIR bisector dist @DOM angle 0.0 dihe 0.0 -
+ CHARMM>             select atom SOLV * OM end  select atom SOLV * OH2 end -
+ CHARMM>             select atom SOLV * H1 end  select atom SOLV * H2  end
+ Parameter: DOM -> "0.23808"
+ SELRPN>      1 atoms have been selected out of      7
+ SELRPN>      1 atoms have been selected out of      7
+ SELRPN>      1 atoms have been selected out of      7
+ SELRPN>      1 atoms have been selected out of      7
+  
+ CHARMM>    coor shake
+ SELECTED COORDINATES CONSTRAINED IN THE MAIN SET.
+
+  
+ CHARMM>    coor dupl select type OH2 end select type DOH2 end
+ SELRPN>      1 atoms have been selected out of      7
+ SELRPN>      1 atoms have been selected out of      7
+  
+ CHARMM>     
+  
+ CHARMM>    ENERGY atom switch vatom vswitch -
+ CHARMM>           ctofnb 97.0 cutnb 99.0 wmin 1.0
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  SWITch   VATOm    VSWItch 
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 99.000 CTEXNB =999.000 CTONNB = 95.000 CTOFNB = 97.000
+ WMIN   =  1.000 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are        0 atom  pairs and        0 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ <MAKINB> with mode   5 found     11 exclusions and      0 interactions(1-4)
+ <MAKGRP> found      0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR       99 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+       10 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        0 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+ There are Drude particles.
+ CODES:  Will skip bonds  6
+ENER ENR:  Eval#     ENERgy      Delta-E         GRMS
+ENER EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+ENER>        0      3.16482    -35.70265     21.79816
+ENER EXTERN>       -0.05485      3.21967      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>     
+  
+ CHARMM>     
+  
+ CHARMM>    !==================================================
+ CHARMM>    ! Water-ion interaction
+ CHARMM>    !--------------------------------------------------
+ CHARMM>     
+  
+ CHARMM>    mini SD step 0.01 nstep 5000 nprint 1000
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  SWITch   VATOm    VSWItch 
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 99.000 CTEXNB =999.000 CTONNB = 95.000 CTOFNB = 97.000
+ WMIN   =  1.000 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are       10 atom  pairs and       11 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR       99 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+       10 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        0 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+
+
+ STEEPD> An energy minimization has been requested.
+
+ NSTEP  =         5000   NPRINT =         1000
+ STEP   =    0.0100000   TOLFUN =    0.0000000
+ TOLGRD =    0.0000000   TOLSTP =    0.0000000
+
+MINI MIN: Cycle      ENERgy      Delta-E         GRMS    Step-size
+MINI EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>        0      3.16482    -35.70265     21.79816      0.01000
+MINI EXTERN>       -0.05485      3.21967      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     1000    -24.00043     27.16526      0.00013      0.00000
+MINI INTERN>        5.89041      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        4.70135    -34.59219      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     2000    -24.00043      0.00000      0.00009      0.00000
+MINI INTERN>        5.89041      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        4.70135    -34.59219      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     3000    -24.00043      0.00000      0.00006      0.00000
+MINI INTERN>        5.89041      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        4.70135    -34.59219      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     4000    -24.00043      0.00000      0.00004      0.00000
+MINI INTERN>        5.89041      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        4.70135    -34.59219      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     5000    -24.00043      0.00000      0.00003      0.00000
+MINI INTERN>        5.89041      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        4.70135    -34.59219      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+
+ STEEPD> Minimization exiting with number of steps limit (      5000) exceeded.
+
+STPD MIN: Cycle      ENERgy      Delta-E         GRMS    Step-size
+STPD INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+STPD EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+STPD>     5000    -24.00043      0.00000      0.00003      0.00000
+STPD INTERN>        5.89041      0.00000      0.00000      0.00000      0.00000
+STPD EXTERN>        4.70135    -34.59219      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>    coor orient select type O* .or. type @IONTYPE end
+ Parameter: IONTYPE -> "SOD"
+ SELRPN>      3 atoms have been selected out of      7
+
+ ORIENT THE COORDINATES TO ALIGN WITH AXIS
+
+ MOMENTS
+      3.66186350      0.37466263      0.56322388
+                      0.03833351      0.05762611
+                                      0.08662834
+
+ Transpose of the rotation matrix
+     0.151249    0.100612    0.983362
+     0.514170    0.841629   -0.165195
+    -0.844247    0.530601    0.075564
+ CENTER OF ATOMS BEFORE TRANSLATION     0.09540    -0.01379    -1.13475
+ AXIS OF ROTATION IS -0.348102 -0.914340 -0.206900  ANGLE IS   88.04
+
+ ALL COORDINATES ORIENTED IN THE MAIN SET BASED ON SELECTED ATOMS.
+
+  
+ CHARMM>     
+  
+ CHARMM>    energy                             ! ?ENER
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  SWITch   VATOm    VSWItch 
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 99.000 CTEXNB =999.000 CTONNB = 95.000 CTOFNB = 97.000
+ WMIN   =  1.000 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are       10 atom  pairs and       11 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR       99 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+       10 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        0 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+ENER ENR:  Eval#     ENERgy      Delta-E         GRMS
+ENER INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+ENER EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+ENER>        0    -24.00043      0.00000      0.00003
+ENER INTERN>        5.89041      0.00000      0.00000      0.00000      0.00000
+ENER EXTERN>        4.70135    -34.59219      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>    quick 1 6                          ! ?DIST
+ QUICKA: Atom       1 SOLV 1    SWM4 OH2  is at:   0.67242   0.00000   0.00000      
+ QUICKA: Atom       6 ION  1    SOD  SOD  is at:  -1.58293   0.00000   0.00000      
+ QUICKA: The distance is:     2.25535
+
+
+  
+ CHARMM>    coor dipole select segid SOLV end  ! ?RDIP
+ SELRPN>      5 atoms have been selected out of      7
+ THE TOTAL CHARGE OF SELECTED ATOMS IS:    0.000000
+ DIPOLE MOMENT ABOUT CENTER OF GEOMETRY  (DEBYES) :    2.758055    0.000010    0.000000         2.758055
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 33
+ RDTITL> * SOD
+ RDTITL> * UMIN = -24.0004
+ RDTITL> * DMIN = 2.25535
+ RDTITL> * MU   = 2.75806
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>    drude reset
+ DRUDE> Drude particles ready to be deleted
+
+        Call: DELETE ATOMS SELECT TYPE D* END
+
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        2   Number of residues   =        2
+         Number of atoms         =        7   Number of groups     =        2
+         Number of bonds         =        9   Number of angles     =        1
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        1   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    1.00000
+  
+ CHARMM>    delete atom select all end
+ SELRPN>      7 atoms have been selected out of      7
+
+ Message from MAPIC: Atom numbers are changed.
+ LONEPRD:    1 lonepair atoms deleted
+
+ Message from MAPIC:          2 residues deleted.
+
+ Message from MAPIC:          2 segments deleted.
+ DELTIC:         9 bonds deleted
+ DELTIC:         1 angles deleted
+ DELTIC:         1 acceptors deleted
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        0   Number of residues   =        0
+         Number of atoms         =        0   Number of groups     =        0
+         Number of bonds         =        0   Number of angles     =        0
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        0   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    0.00000
+  
+ CHARMM>     
+  
+ CHARMM>    calc count = @count + 1
+ Parameter: COUNT -> "2"
+Evaluating: 2+1
+ Parameter: COUNT <- "3"
+  
+ CHARMM>     
+  
+ CHARMM>    if count le 9 goto ion_loop
+ Comparing "3" and "9".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    if count eq 1 set iontype LIT
+ Comparing "3" and "1".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 2 set iontype SOD
+ Comparing "3" and "2".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 3 set iontype POT
+ Comparing "3" and "3".
+ IF test evaluated as true.  Performing command
+ Parameter: IONTYPE <- "POT"
+  
+ CHARMM>    if count eq 4 set iontype RUB
+ Comparing "3" and "4".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 5 set iontype CES
+ Comparing "3" and "5".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 6 set iontype FLU
+ Comparing "3" and "6".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 7 set iontype CLA
+ Comparing "3" and "7".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 8 set iontype BRO
+ Comparing "3" and "8".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 9 set iontype IOD
+ Comparing "3" and "9".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>     
+  
+ CHARMM>    read sequence SWM4 1
+  
+ CHARMM>    generate SOLV setup noangle nodihedral
+ NO PATCHING WILL BE DONE ON THE FIRST RESIDUE
+ NO PATCHING WILL BE DONE ON THE LAST  RESIDUE
+ GENPSF> Segment   1 has been generated. Its identifier is SOLV.
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        1   Number of residues   =        1
+         Number of atoms         =        4   Number of groups     =        1
+         Number of bonds         =        4   Number of angles     =        1
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        1   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    0.00000
+  
+ CHARMM>    read sequence @IONTYPE 1
+ Parameter: IONTYPE -> "POT"
+  
+ CHARMM>    generate ION setup first none last none
+ NO PATCHING WILL BE DONE ON THE FIRST RESIDUE
+ NO PATCHING WILL BE DONE ON THE LAST  RESIDUE
+ GENPSF> Segment   2 has been generated. Its identifier is ION.
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        2   Number of residues   =        2
+         Number of atoms         =        5   Number of groups     =        2
+         Number of bonds         =        4   Number of angles     =        1
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        1   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    1.00000
+  
+ CHARMM>     
+  
+ CHARMM>    read coor card
+          SPATIAL COORDINATES BEING READ FROM UNIT  5
+ RDTITL> * SWM4
+ RDTITL> *
+ ** WARNING ** After reading, there are no coordinates for selected atom:     5     2 POT  POT 
+
+ ** A total of     1 selected atoms have no coordinates
+ *** LEVEL  2 WARNING *** BOMLEV IS    0
+  
+ CHARMM>     
+  
+ CHARMM>    coor orient select type O* end
+ SELRPN>      2 atoms have been selected out of      5
+
+ ORIENT THE COORDINATES TO ALIGN WITH AXIS
+
+ MOMENTS
+      0.02044444     -0.00001517     -0.01259364
+                      0.00000001      0.00000934
+                                      0.00775760
+
+ Transpose of the rotation matrix
+     0.524473    0.000632   -0.851427
+     0.741461    0.491220    0.457099
+     0.418526   -0.871036    0.257163
+ CENTER OF ATOMS BEFORE TRANSLATION     1.31391    -0.00015     0.16908
+ AXIS OF ROTATION IS  0.670335  0.640970 -0.373911  ANGLE IS   82.16
+
+ ALL COORDINATES ORIENTED IN THE MAIN SET BASED ON SELECTED ATOMS.
+
+  
+ CHARMM>    coor set zdir -3.0 select type @IONTYPE end
+ Parameter: IONTYPE -> "POT"
+ SELRPN>      1 atoms have been selected out of      5
+ SELECTED COORDINATES SET IN THE MAIN SET.
+
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain set @ALPHAO select type OH2 end
+ Parameter: ALPHAO -> "1.04252"
+ SELRPN>      1 atoms have been selected out of      5
+  
+ CHARMM>    scalar wmain set @ALPHA@@IONTYPE select type @IONTYPE end
+ Parameter: IONTYPE -> "POT"
+ Parameter: IONTYPE -> "POT"
+ Parameter: ALPHAPOT -> "0.83"
+ SELRPN>      1 atoms have been selected out of      5
+  
+ CHARMM>    DRUDE mass 0.4 kdrude 500.0 select type OH2 .or. type @IONTYPE end
+ Parameter: IONTYPE -> "POT"
+ DRUDE> CONSTRUCTION OF DRUDE PARTICLES
+
+ SELRPN>      2 atoms have been selected out of      5
+ DRUDE> The MASS parameter will override the topology file.
+ DRUDE> The KDRUDE parameter will override the parameter file.
+ DRUDE> THOLE-TYPE DIPOLE SCREENING
+        THOLE PARAMETER:  2.600000
+        SLATER-DELTA SHAPE:  S(u) = 1 - (1+u/2)*exp(-u)
+
+Adding Drude particle DOH2 on OH2 SOLV 1   SWM4  1.042520
+    Using MASS   =     0.400000
+    Using KDRUDE =   500.000000
+        18  DOH2 - OWP       1075   500.000     0.000
+Adding Drude particle DPOT on POT ION  1   POT   0.830000
+    Using MASS   =     0.400000
+    Using KDRUDE =   500.000000
+        22  DPOT - POT       5213   500.000     0.000
+
+ Message from MAPIC: Atom numbers are changed.
+                       2  Drude particles were added.
+
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        2   Number of residues   =        2
+         Number of atoms         =        7   Number of groups     =        2
+         Number of bonds         =        9   Number of angles     =        1
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        1   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    1.00000
+         Number of Drudes        =        2
+         Number of true-bonds    =        6   Number of zero-bonds =        3
+  
+ CHARMM>    scalar mass show
+ ( SOLV SWM4 1    OH2  )    15.599    
+ ( SOLV SWM4 1    DOH2 )   0.40000    
+ ( SOLV SWM4 1    OM   )    0.0000    
+ ( SOLV SWM4 1    H1   )    1.0080    
+ ( SOLV SWM4 1    H2   )    1.0080    
+ ( ION  POT  1    POT  )    38.702    
+ ( ION  POT  1    DPOT )   0.40000    
+  
+ CHARMM>    scalar charge show
+ ( SOLV SWM4 1    OH2  )   -1.7718    
+ ( SOLV SWM4 1    DOH2 )    1.7718    
+ ( SOLV SWM4 1    OM   )   -1.1074    
+ ( SOLV SWM4 1    H1   )   0.55370    
+ ( SOLV SWM4 1    H2   )   0.55370    
+ ( ION  POT  1    POT  )  -0.58097    
+ ( ION  POT  1    DPOT )    1.5810    
+  
+ CHARMM>     
+  
+ CHARMM>    coor copy comp
+ SELECTED COORDINATES COPIED TO THE COMPARISON SET.
+
+  
+ CHARMM>    coor stat
+ STATISTICS FOR    7 SELECTED ATOMS:
+    XMIN =   -0.118748 XMAX =    0.467139 XAVE =    0.116503
+    YMIN =   -0.372169 YMAX =    0.372160 YAVE =   -0.000001
+    ZMIN =   -3.000000 ZMAX =    0.659150 ZAVE =   -0.857140
+    WMIN =    0.000000 WMAX =    1.042520 WAVE =    0.289931
+  
+ CHARMM>     
+  
+ CHARMM>    SHAKE bonh param tolerance 1.0e-9 -
+ CHARMM>          nofast -
+ CHARMM>          select ( segid SOLV .and. .not. type D* ) end -
+ CHARMM>          select ( segid SOLV .and. .not. type D* ) end
+ SELRPN>      4 atoms have been selected out of      7
+ SELRPN>      4 atoms have been selected out of      7
+ SHKCOM> SHAKE parameters: TOL =   0.1000E-08 MXITer =    500
+ There are Drude particles.
+ CODES:  Will skip bonds  6
+
+               3 constraints will held by SHAKE.
+  
+ CHARMM>     
+  
+ CHARMM>    LONEPAIR bisector dist @DOM angle 0.0 dihe 0.0 -
+ CHARMM>             select atom SOLV * OM end  select atom SOLV * OH2 end -
+ CHARMM>             select atom SOLV * H1 end  select atom SOLV * H2  end
+ Parameter: DOM -> "0.23808"
+ SELRPN>      1 atoms have been selected out of      7
+ SELRPN>      1 atoms have been selected out of      7
+ SELRPN>      1 atoms have been selected out of      7
+ SELRPN>      1 atoms have been selected out of      7
+  
+ CHARMM>    coor shake
+ SELECTED COORDINATES CONSTRAINED IN THE MAIN SET.
+
+  
+ CHARMM>    coor dupl select type OH2 end select type DOH2 end
+ SELRPN>      1 atoms have been selected out of      7
+ SELRPN>      1 atoms have been selected out of      7
+  
+ CHARMM>     
+  
+ CHARMM>    ENERGY atom switch vatom vswitch -
+ CHARMM>           ctofnb 97.0 cutnb 99.0 wmin 1.0
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  SWITch   VATOm    VSWItch 
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 99.000 CTEXNB =999.000 CTONNB = 95.000 CTOFNB = 97.000
+ WMIN   =  1.000 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are        0 atom  pairs and        0 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ <MAKINB> with mode   5 found     11 exclusions and      0 interactions(1-4)
+ <MAKGRP> found      0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR       99 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+       10 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        0 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+ There are Drude particles.
+ CODES:  Will skip bonds  6
+ENER ENR:  Eval#     ENERgy      Delta-E         GRMS
+ENER EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+ENER>        0      3.31574    -27.31618     21.74825
+ENER EXTERN>        0.09607      3.21967      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>     
+  
+ CHARMM>     
+  
+ CHARMM>    !==================================================
+ CHARMM>    ! Water-ion interaction
+ CHARMM>    !--------------------------------------------------
+ CHARMM>     
+  
+ CHARMM>    mini SD step 0.01 nstep 5000 nprint 1000
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  SWITch   VATOm    VSWItch 
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 99.000 CTEXNB =999.000 CTONNB = 95.000 CTOFNB = 97.000
+ WMIN   =  1.000 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are       10 atom  pairs and       11 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR       99 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+       10 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        0 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+
+
+ STEEPD> An energy minimization has been requested.
+
+ NSTEP  =         5000   NPRINT =         1000
+ STEP   =    0.0100000   TOLFUN =    0.0000000
+ TOLGRD =    0.0000000   TOLSTP =    0.0000000
+
+MINI MIN: Cycle      ENERgy      Delta-E         GRMS    Step-size
+MINI EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>        0      3.31574    -27.31618     21.74825      0.01000
+MINI EXTERN>        0.09607      3.21967      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     1000    -17.89999     21.21573      0.00038      0.00000
+MINI INTERN>        3.85791      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        2.96820    -24.72610      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     2000    -17.89999      0.00000      0.00023      0.00000
+MINI INTERN>        3.85791      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        2.96820    -24.72610      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     3000    -17.89999      0.00000      0.00015      0.00000
+MINI INTERN>        3.85791      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        2.96820    -24.72610      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     4000    -17.89999      0.00000      0.00009      0.00000
+MINI INTERN>        3.85791      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        2.96820    -24.72610      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     5000    -17.89999      0.00000      0.00006      0.00000
+MINI INTERN>        3.85791      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        2.96820    -24.72610      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+
+ STEEPD> Minimization exiting with number of steps limit (      5000) exceeded.
+
+STPD MIN: Cycle      ENERgy      Delta-E         GRMS    Step-size
+STPD INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+STPD EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+STPD>     5000    -17.89999      0.00000      0.00006      0.00000
+STPD INTERN>        3.85791      0.00000      0.00000      0.00000      0.00000
+STPD EXTERN>        2.96820    -24.72610      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>    coor orient select type O* .or. type @IONTYPE end
+ Parameter: IONTYPE -> "POT"
+ SELRPN>      3 atoms have been selected out of      7
+
+ ORIENT THE COORDINATES TO ALIGN WITH AXIS
+
+ MOMENTS
+      4.88610088      0.44629575      0.70488786
+                      0.04076459      0.06438436
+                                      0.10168985
+
+ Transpose of the rotation matrix
+     0.142206    0.090037    0.985734
+     0.441383    0.885597   -0.144566
+    -0.885979    0.455644    0.086196
+ CENTER OF ATOMS BEFORE TRANSLATION     0.09700    -0.01211    -1.13256
+ AXIS OF ROTATION IS -0.300594 -0.937380 -0.175959  ANGLE IS   86.73
+
+ ALL COORDINATES ORIENTED IN THE MAIN SET BASED ON SELECTED ATOMS.
+
+  
+ CHARMM>     
+  
+ CHARMM>    energy                             ! ?ENER
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  SWITch   VATOm    VSWItch 
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 99.000 CTEXNB =999.000 CTONNB = 95.000 CTOFNB = 97.000
+ WMIN   =  1.000 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are       10 atom  pairs and       11 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR       99 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+       10 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        0 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+ENER ENR:  Eval#     ENERgy      Delta-E         GRMS
+ENER INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+ENER EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+ENER>        0    -17.89999      0.00000      0.00006
+ENER INTERN>        3.85791      0.00000      0.00000      0.00000      0.00000
+ENER EXTERN>        2.96820    -24.72610      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>    quick 1 6                          ! ?DIST
+ QUICKA: Atom       1 SOLV 1    SWM4 OH2  is at:   0.79385   0.00000   0.00000      
+ QUICKA: Atom       6 ION  1    POT  POT  is at:  -1.82578   0.00000   0.00000      
+ QUICKA: The distance is:     2.61963
+
+
+  
+ CHARMM>    coor dipole select segid SOLV end  ! ?RDIP
+ SELRPN>      5 atoms have been selected out of      7
+ THE TOTAL CHARGE OF SELECTED ATOMS IS:    0.000000
+ DIPOLE MOMENT ABOUT CENTER OF GEOMETRY  (DEBYES) :    2.558323    0.000025    0.000000         2.558323
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 33
+ RDTITL> * POT
+ RDTITL> * UMIN = -17.9
+ RDTITL> * DMIN = 2.61963
+ RDTITL> * MU   = 2.55832
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>    drude reset
+ DRUDE> Drude particles ready to be deleted
+
+        Call: DELETE ATOMS SELECT TYPE D* END
+
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        2   Number of residues   =        2
+         Number of atoms         =        7   Number of groups     =        2
+         Number of bonds         =        9   Number of angles     =        1
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        1   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    1.00000
+  
+ CHARMM>    delete atom select all end
+ SELRPN>      7 atoms have been selected out of      7
+
+ Message from MAPIC: Atom numbers are changed.
+ LONEPRD:    1 lonepair atoms deleted
+
+ Message from MAPIC:          2 residues deleted.
+
+ Message from MAPIC:          2 segments deleted.
+ DELTIC:         9 bonds deleted
+ DELTIC:         1 angles deleted
+ DELTIC:         1 acceptors deleted
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        0   Number of residues   =        0
+         Number of atoms         =        0   Number of groups     =        0
+         Number of bonds         =        0   Number of angles     =        0
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        0   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    0.00000
+  
+ CHARMM>     
+  
+ CHARMM>    calc count = @count + 1
+ Parameter: COUNT -> "3"
+Evaluating: 3+1
+ Parameter: COUNT <- "4"
+  
+ CHARMM>     
+  
+ CHARMM>    if count le 9 goto ion_loop
+ Comparing "4" and "9".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    if count eq 1 set iontype LIT
+ Comparing "4" and "1".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 2 set iontype SOD
+ Comparing "4" and "2".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 3 set iontype POT
+ Comparing "4" and "3".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 4 set iontype RUB
+ Comparing "4" and "4".
+ IF test evaluated as true.  Performing command
+ Parameter: IONTYPE <- "RUB"
+  
+ CHARMM>    if count eq 5 set iontype CES
+ Comparing "4" and "5".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 6 set iontype FLU
+ Comparing "4" and "6".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 7 set iontype CLA
+ Comparing "4" and "7".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 8 set iontype BRO
+ Comparing "4" and "8".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 9 set iontype IOD
+ Comparing "4" and "9".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>     
+  
+ CHARMM>    read sequence SWM4 1
+  
+ CHARMM>    generate SOLV setup noangle nodihedral
+ NO PATCHING WILL BE DONE ON THE FIRST RESIDUE
+ NO PATCHING WILL BE DONE ON THE LAST  RESIDUE
+ GENPSF> Segment   1 has been generated. Its identifier is SOLV.
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        1   Number of residues   =        1
+         Number of atoms         =        4   Number of groups     =        1
+         Number of bonds         =        4   Number of angles     =        1
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        1   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    0.00000
+  
+ CHARMM>    read sequence @IONTYPE 1
+ Parameter: IONTYPE -> "RUB"
+  
+ CHARMM>    generate ION setup first none last none
+ NO PATCHING WILL BE DONE ON THE FIRST RESIDUE
+ NO PATCHING WILL BE DONE ON THE LAST  RESIDUE
+ GENPSF> Segment   2 has been generated. Its identifier is ION.
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        2   Number of residues   =        2
+         Number of atoms         =        5   Number of groups     =        2
+         Number of bonds         =        4   Number of angles     =        1
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        1   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    1.00000
+  
+ CHARMM>     
+  
+ CHARMM>    read coor card
+          SPATIAL COORDINATES BEING READ FROM UNIT  5
+ RDTITL> * SWM4
+ RDTITL> *
+ ** WARNING ** After reading, there are no coordinates for selected atom:     5     2 RUB  RUB 
+
+ ** A total of     1 selected atoms have no coordinates
+ *** LEVEL  2 WARNING *** BOMLEV IS    0
+  
+ CHARMM>     
+  
+ CHARMM>    coor orient select type O* end
+ SELRPN>      2 atoms have been selected out of      5
+
+ ORIENT THE COORDINATES TO ALIGN WITH AXIS
+
+ MOMENTS
+      0.02044444     -0.00001517     -0.01259364
+                      0.00000001      0.00000934
+                                      0.00775760
+
+ Transpose of the rotation matrix
+     0.524473    0.000632   -0.851427
+     0.741461    0.491220    0.457099
+     0.418526   -0.871036    0.257163
+ CENTER OF ATOMS BEFORE TRANSLATION     1.31391    -0.00015     0.16908
+ AXIS OF ROTATION IS  0.670335  0.640970 -0.373911  ANGLE IS   82.16
+
+ ALL COORDINATES ORIENTED IN THE MAIN SET BASED ON SELECTED ATOMS.
+
+  
+ CHARMM>    coor set zdir -3.0 select type @IONTYPE end
+ Parameter: IONTYPE -> "RUB"
+ SELRPN>      1 atoms have been selected out of      5
+ SELECTED COORDINATES SET IN THE MAIN SET.
+
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain set @ALPHAO select type OH2 end
+ Parameter: ALPHAO -> "1.04252"
+ SELRPN>      1 atoms have been selected out of      5
+  
+ CHARMM>    scalar wmain set @ALPHA@@IONTYPE select type @IONTYPE end
+ Parameter: IONTYPE -> "RUB"
+ Parameter: IONTYPE -> "RUB"
+ Parameter: ALPHARUB -> "1.37"
+ SELRPN>      1 atoms have been selected out of      5
+  
+ CHARMM>    DRUDE mass 0.4 kdrude 500.0 select type OH2 .or. type @IONTYPE end
+ Parameter: IONTYPE -> "RUB"
+ DRUDE> CONSTRUCTION OF DRUDE PARTICLES
+
+ SELRPN>      2 atoms have been selected out of      5
+ DRUDE> The MASS parameter will override the topology file.
+ DRUDE> The KDRUDE parameter will override the parameter file.
+ DRUDE> THOLE-TYPE DIPOLE SCREENING
+        THOLE PARAMETER:  2.600000
+        SLATER-DELTA SHAPE:  S(u) = 1 - (1+u/2)*exp(-u)
+
+Adding Drude particle DOH2 on OH2 SOLV 1   SWM4  1.042520
+    Using MASS   =     0.400000
+    Using KDRUDE =   500.000000
+        18  DOH2 - OWP       1075   500.000     0.000
+Adding Drude particle DRUB on RUB ION  1   RUB   1.370000
+    Using MASS   =     0.400000
+    Using KDRUDE =   500.000000
+        23  DRUB - RUB       5316   500.000     0.000
+
+ Message from MAPIC: Atom numbers are changed.
+                       2  Drude particles were added.
+
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        2   Number of residues   =        2
+         Number of atoms         =        7   Number of groups     =        2
+         Number of bonds         =        9   Number of angles     =        1
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        1   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    1.00000
+         Number of Drudes        =        2
+         Number of true-bonds    =        6   Number of zero-bonds =        3
+  
+ CHARMM>    scalar mass show
+ ( SOLV SWM4 1    OH2  )    15.599    
+ ( SOLV SWM4 1    DOH2 )   0.40000    
+ ( SOLV SWM4 1    OM   )    0.0000    
+ ( SOLV SWM4 1    H1   )    1.0080    
+ ( SOLV SWM4 1    H2   )    1.0080    
+ ( ION  RUB  1    RUB  )    85.068    
+ ( ION  RUB  1    DRUB )   0.40000    
+  
+ CHARMM>    scalar charge show
+ ( SOLV SWM4 1    OH2  )   -1.7718    
+ ( SOLV SWM4 1    DOH2 )    1.7718    
+ ( SOLV SWM4 1    OM   )   -1.1074    
+ ( SOLV SWM4 1    H1   )   0.55370    
+ ( SOLV SWM4 1    H2   )   0.55370    
+ ( ION  RUB  1    RUB  )   -1.0312    
+ ( ION  RUB  1    DRUB )    2.0312    
+  
+ CHARMM>     
+  
+ CHARMM>    coor copy comp
+ SELECTED COORDINATES COPIED TO THE COMPARISON SET.
+
+  
+ CHARMM>    coor stat
+ STATISTICS FOR    7 SELECTED ATOMS:
+    XMIN =   -0.118748 XMAX =    0.467139 XAVE =    0.116503
+    YMIN =   -0.372169 YMAX =    0.372160 YAVE =   -0.000001
+    ZMIN =   -3.000000 ZMAX =    0.659150 ZAVE =   -0.857140
+    WMIN =    0.000000 WMAX =    1.370000 WAVE =    0.463217
+  
+ CHARMM>     
+  
+ CHARMM>    SHAKE bonh param tolerance 1.0e-9 -
+ CHARMM>          nofast -
+ CHARMM>          select ( segid SOLV .and. .not. type D* ) end -
+ CHARMM>          select ( segid SOLV .and. .not. type D* ) end
+ SELRPN>      4 atoms have been selected out of      7
+ SELRPN>      4 atoms have been selected out of      7
+ SHKCOM> SHAKE parameters: TOL =   0.1000E-08 MXITer =    500
+ There are Drude particles.
+ CODES:  Will skip bonds  6
+
+               3 constraints will held by SHAKE.
+  
+ CHARMM>     
+  
+ CHARMM>    LONEPAIR bisector dist @DOM angle 0.0 dihe 0.0 -
+ CHARMM>             select atom SOLV * OM end  select atom SOLV * OH2 end -
+ CHARMM>             select atom SOLV * H1 end  select atom SOLV * H2  end
+ Parameter: DOM -> "0.23808"
+ SELRPN>      1 atoms have been selected out of      7
+ SELRPN>      1 atoms have been selected out of      7
+ SELRPN>      1 atoms have been selected out of      7
+ SELRPN>      1 atoms have been selected out of      7
+  
+ CHARMM>    coor shake
+ SELECTED COORDINATES CONSTRAINED IN THE MAIN SET.
+
+  
+ CHARMM>    coor dupl select type OH2 end select type DOH2 end
+ SELRPN>      1 atoms have been selected out of      7
+ SELRPN>      1 atoms have been selected out of      7
+  
+ CHARMM>     
+  
+ CHARMM>    ENERGY atom switch vatom vswitch -
+ CHARMM>           ctofnb 97.0 cutnb 99.0 wmin 1.0
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  SWITch   VATOm    VSWItch 
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 99.000 CTEXNB =999.000 CTONNB = 95.000 CTOFNB = 97.000
+ WMIN   =  1.000 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are        0 atom  pairs and        0 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ <MAKINB> with mode   5 found     11 exclusions and      0 interactions(1-4)
+ <MAKGRP> found      0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR       99 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+       10 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        0 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+ There are Drude particles.
+ CODES:  Will skip bonds  6
+ENER ENR:  Eval#     ENERgy      Delta-E         GRMS
+ENER EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+ENER>        0      3.69528    -21.59527     21.61485
+ENER EXTERN>        0.47560      3.21967      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>     
+  
+ CHARMM>     
+  
+ CHARMM>    !==================================================
+ CHARMM>    ! Water-ion interaction
+ CHARMM>    !--------------------------------------------------
+ CHARMM>     
+  
+ CHARMM>    mini SD step 0.01 nstep 5000 nprint 1000
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  SWITch   VATOm    VSWItch 
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 99.000 CTEXNB =999.000 CTONNB = 95.000 CTOFNB = 97.000
+ WMIN   =  1.000 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are       10 atom  pairs and       11 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR       99 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+       10 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        0 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+
+
+ STEEPD> An energy minimization has been requested.
+
+ NSTEP  =         5000   NPRINT =         1000
+ STEP   =    0.0100000   TOLFUN =    0.0000000
+ TOLGRD =    0.0000000   TOLSTP =    0.0000000
+
+MINI MIN: Cycle      ENERgy      Delta-E         GRMS    Step-size
+MINI EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>        0      3.69528    -21.59527     21.61485      0.01000
+MINI EXTERN>        0.47560      3.21967      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     1000    -15.90003     19.59530      0.00046      0.00000
+MINI INTERN>        3.21072      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        2.34435    -21.45510      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     2000    -15.90003      0.00000      0.00037      0.00000
+MINI INTERN>        3.21072      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        2.34435    -21.45510      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     3000    -15.90003      0.00000      0.00030      0.00000
+MINI INTERN>        3.21072      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        2.34435    -21.45510      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     4000    -15.90003      0.00000      0.00025      0.00000
+MINI INTERN>        3.21072      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        2.34435    -21.45510      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     5000    -15.90003      0.00000      0.00020      0.00000
+MINI INTERN>        3.21072      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        2.34435    -21.45510      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+
+ STEEPD> Minimization exiting with number of steps limit (      5000) exceeded.
+
+STPD MIN: Cycle      ENERgy      Delta-E         GRMS    Step-size
+STPD INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+STPD EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+STPD>     5000    -15.90003      0.00000      0.00020      0.00000
+STPD INTERN>        3.21072      0.00000      0.00000      0.00000      0.00000
+STPD EXTERN>        2.34435    -21.45510      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>    coor orient select type O* .or. type @IONTYPE end
+ Parameter: IONTYPE -> "RUB"
+ SELRPN>      3 atoms have been selected out of      7
+
+ ORIENT THE COORDINATES TO ALIGN WITH AXIS
+
+ MOMENTS
+      5.53131003      0.47572559      0.76721645
+                      0.04091523      0.06598518
+                                      0.10641622
+
+ Transpose of the rotation matrix
+     0.136893    0.084883    0.986942
+     0.430096    0.892418   -0.136409
+    -0.892344    0.443154    0.085658
+ CENTER OF ATOMS BEFORE TRANSLATION     0.09789    -0.01132    -1.13150
+ AXIS OF ROTATION IS -0.290262 -0.941199 -0.172893  ANGLE IS   86.70
+
+ ALL COORDINATES ORIENTED IN THE MAIN SET BASED ON SELECTED ATOMS.
+
+  
+ CHARMM>     
+  
+ CHARMM>    energy                             ! ?ENER
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  SWITch   VATOm    VSWItch 
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 99.000 CTEXNB =999.000 CTONNB = 95.000 CTOFNB = 97.000
+ WMIN   =  1.000 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are       10 atom  pairs and       11 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR       99 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+       10 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        0 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+ENER ENR:  Eval#     ENERgy      Delta-E         GRMS
+ENER INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+ENER EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+ENER>        0    -15.90003      0.00000      0.00020
+ENER INTERN>        3.21072      0.00000      0.00000      0.00000      0.00000
+ENER EXTERN>        2.34435    -21.45510      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>    quick 1 6                          ! ?DIST
+ QUICKA: Atom       1 SOLV 1    SWM4 OH2  is at:   0.85138  -0.00001   0.00000      
+ QUICKA: Atom       6 ION  1    RUB  RUB  is at:  -1.94084   0.00000   0.00000      
+ QUICKA: The distance is:     2.79222
+
+
+  
+ CHARMM>    coor dipole select segid SOLV end  ! ?RDIP
+ SELRPN>      5 atoms have been selected out of      7
+ THE TOTAL CHARGE OF SELECTED ATOMS IS:    0.000000
+ DIPOLE MOMENT ABOUT CENTER OF GEOMETRY  (DEBYES) :    2.484926    0.000094    0.000000         2.484926
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 33
+ RDTITL> * RUB
+ RDTITL> * UMIN = -15.9
+ RDTITL> * DMIN = 2.79222
+ RDTITL> * MU   = 2.48493
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>    drude reset
+ DRUDE> Drude particles ready to be deleted
+
+        Call: DELETE ATOMS SELECT TYPE D* END
+
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        2   Number of residues   =        2
+         Number of atoms         =        7   Number of groups     =        2
+         Number of bonds         =        9   Number of angles     =        1
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        1   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    1.00000
+  
+ CHARMM>    delete atom select all end
+ SELRPN>      7 atoms have been selected out of      7
+
+ Message from MAPIC: Atom numbers are changed.
+ LONEPRD:    1 lonepair atoms deleted
+
+ Message from MAPIC:          2 residues deleted.
+
+ Message from MAPIC:          2 segments deleted.
+ DELTIC:         9 bonds deleted
+ DELTIC:         1 angles deleted
+ DELTIC:         1 acceptors deleted
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        0   Number of residues   =        0
+         Number of atoms         =        0   Number of groups     =        0
+         Number of bonds         =        0   Number of angles     =        0
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        0   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    0.00000
+  
+ CHARMM>     
+  
+ CHARMM>    calc count = @count + 1
+ Parameter: COUNT -> "4"
+Evaluating: 4+1
+ Parameter: COUNT <- "5"
+  
+ CHARMM>     
+  
+ CHARMM>    if count le 9 goto ion_loop
+ Comparing "5" and "9".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    if count eq 1 set iontype LIT
+ Comparing "5" and "1".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 2 set iontype SOD
+ Comparing "5" and "2".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 3 set iontype POT
+ Comparing "5" and "3".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 4 set iontype RUB
+ Comparing "5" and "4".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 5 set iontype CES
+ Comparing "5" and "5".
+ IF test evaluated as true.  Performing command
+ Parameter: IONTYPE <- "CES"
+  
+ CHARMM>    if count eq 6 set iontype FLU
+ Comparing "5" and "6".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 7 set iontype CLA
+ Comparing "5" and "7".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 8 set iontype BRO
+ Comparing "5" and "8".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 9 set iontype IOD
+ Comparing "5" and "9".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>     
+  
+ CHARMM>    read sequence SWM4 1
+  
+ CHARMM>    generate SOLV setup noangle nodihedral
+ NO PATCHING WILL BE DONE ON THE FIRST RESIDUE
+ NO PATCHING WILL BE DONE ON THE LAST  RESIDUE
+ GENPSF> Segment   1 has been generated. Its identifier is SOLV.
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        1   Number of residues   =        1
+         Number of atoms         =        4   Number of groups     =        1
+         Number of bonds         =        4   Number of angles     =        1
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        1   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    0.00000
+  
+ CHARMM>    read sequence @IONTYPE 1
+ Parameter: IONTYPE -> "CES"
+  
+ CHARMM>    generate ION setup first none last none
+ NO PATCHING WILL BE DONE ON THE FIRST RESIDUE
+ NO PATCHING WILL BE DONE ON THE LAST  RESIDUE
+ GENPSF> Segment   2 has been generated. Its identifier is ION.
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        2   Number of residues   =        2
+         Number of atoms         =        5   Number of groups     =        2
+         Number of bonds         =        4   Number of angles     =        1
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        1   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    1.00000
+  
+ CHARMM>     
+  
+ CHARMM>    read coor card
+          SPATIAL COORDINATES BEING READ FROM UNIT  5
+ RDTITL> * SWM4
+ RDTITL> *
+ ** WARNING ** After reading, there are no coordinates for selected atom:     5     2 CES  CES 
+
+ ** A total of     1 selected atoms have no coordinates
+ *** LEVEL  2 WARNING *** BOMLEV IS    0
+  
+ CHARMM>     
+  
+ CHARMM>    coor orient select type O* end
+ SELRPN>      2 atoms have been selected out of      5
+
+ ORIENT THE COORDINATES TO ALIGN WITH AXIS
+
+ MOMENTS
+      0.02044444     -0.00001517     -0.01259364
+                      0.00000001      0.00000934
+                                      0.00775760
+
+ Transpose of the rotation matrix
+     0.524473    0.000632   -0.851427
+     0.741461    0.491220    0.457099
+     0.418526   -0.871036    0.257163
+ CENTER OF ATOMS BEFORE TRANSLATION     1.31391    -0.00015     0.16908
+ AXIS OF ROTATION IS  0.670335  0.640970 -0.373911  ANGLE IS   82.16
+
+ ALL COORDINATES ORIENTED IN THE MAIN SET BASED ON SELECTED ATOMS.
+
+  
+ CHARMM>    coor set zdir -3.0 select type @IONTYPE end
+ Parameter: IONTYPE -> "CES"
+ SELRPN>      1 atoms have been selected out of      5
+ SELECTED COORDINATES SET IN THE MAIN SET.
+
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain set @ALPHAO select type OH2 end
+ Parameter: ALPHAO -> "1.04252"
+ SELRPN>      1 atoms have been selected out of      5
+  
+ CHARMM>    scalar wmain set @ALPHA@@IONTYPE select type @IONTYPE end
+ Parameter: IONTYPE -> "CES"
+ Parameter: IONTYPE -> "CES"
+ Parameter: ALPHACES -> "2.36"
+ SELRPN>      1 atoms have been selected out of      5
+  
+ CHARMM>    DRUDE mass 0.4 kdrude 500.0 select type OH2 .or. type @IONTYPE end
+ Parameter: IONTYPE -> "CES"
+ DRUDE> CONSTRUCTION OF DRUDE PARTICLES
+
+ SELRPN>      2 atoms have been selected out of      5
+ DRUDE> The MASS parameter will override the topology file.
+ DRUDE> The KDRUDE parameter will override the parameter file.
+ DRUDE> THOLE-TYPE DIPOLE SCREENING
+        THOLE PARAMETER:  2.600000
+        SLATER-DELTA SHAPE:  S(u) = 1 - (1+u/2)*exp(-u)
+
+Adding Drude particle DOH2 on OH2 SOLV 1   SWM4  1.042520
+    Using MASS   =     0.400000
+    Using KDRUDE =   500.000000
+        18  DOH2 - OWP       1075   500.000     0.000
+Adding Drude particle DCES on CES ION  1   CES   2.360000
+    Using MASS   =     0.400000
+    Using KDRUDE =   500.000000
+        24  DCES - CES       5420   500.000     0.000
+
+ Message from MAPIC: Atom numbers are changed.
+                       2  Drude particles were added.
+
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        2   Number of residues   =        2
+         Number of atoms         =        7   Number of groups     =        2
+         Number of bonds         =        9   Number of angles     =        1
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        1   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    1.00000
+         Number of Drudes        =        2
+         Number of true-bonds    =        6   Number of zero-bonds =        3
+  
+ CHARMM>    scalar mass show
+ ( SOLV SWM4 1    OH2  )    15.599    
+ ( SOLV SWM4 1    DOH2 )   0.40000    
+ ( SOLV SWM4 1    OM   )    0.0000    
+ ( SOLV SWM4 1    H1   )    1.0080    
+ ( SOLV SWM4 1    H2   )    1.0080    
+ ( ION  CES  1    CES  )    132.51    
+ ( ION  CES  1    DCES )   0.40000    
+  
+ CHARMM>    scalar charge show
+ ( SOLV SWM4 1    OH2  )   -1.7718    
+ ( SOLV SWM4 1    DOH2 )    1.7718    
+ ( SOLV SWM4 1    OM   )   -1.1074    
+ ( SOLV SWM4 1    H1   )   0.55370    
+ ( SOLV SWM4 1    H2   )   0.55370    
+ ( ION  CES  1    CES  )   -1.6659    
+ ( ION  CES  1    DCES )    2.6659    
+  
+ CHARMM>     
+  
+ CHARMM>    coor copy comp
+ SELECTED COORDINATES COPIED TO THE COMPARISON SET.
+
+  
+ CHARMM>    coor stat
+ STATISTICS FOR    7 SELECTED ATOMS:
+    XMIN =   -0.118748 XMAX =    0.467139 XAVE =    0.116503
+    YMIN =   -0.372169 YMAX =    0.372160 YAVE =   -0.000001
+    ZMIN =   -3.000000 ZMAX =    0.659150 ZAVE =   -0.857140
+    WMIN =    0.000000 WMAX =    2.360000 WAVE =    0.681789
+  
+ CHARMM>     
+  
+ CHARMM>    SHAKE bonh param tolerance 1.0e-9 -
+ CHARMM>          nofast -
+ CHARMM>          select ( segid SOLV .and. .not. type D* ) end -
+ CHARMM>          select ( segid SOLV .and. .not. type D* ) end
+ SELRPN>      4 atoms have been selected out of      7
+ SELRPN>      4 atoms have been selected out of      7
+ SHKCOM> SHAKE parameters: TOL =   0.1000E-08 MXITer =    500
+ There are Drude particles.
+ CODES:  Will skip bonds  6
+
+               3 constraints will held by SHAKE.
+  
+ CHARMM>     
+  
+ CHARMM>    LONEPAIR bisector dist @DOM angle 0.0 dihe 0.0 -
+ CHARMM>             select atom SOLV * OM end  select atom SOLV * OH2 end -
+ CHARMM>             select atom SOLV * H1 end  select atom SOLV * H2  end
+ Parameter: DOM -> "0.23808"
+ SELRPN>      1 atoms have been selected out of      7
+ SELRPN>      1 atoms have been selected out of      7
+ SELRPN>      1 atoms have been selected out of      7
+ SELRPN>      1 atoms have been selected out of      7
+  
+ CHARMM>    coor shake
+ SELECTED COORDINATES CONSTRAINED IN THE MAIN SET.
+
+  
+ CHARMM>    coor dupl select type OH2 end select type DOH2 end
+ SELRPN>      1 atoms have been selected out of      7
+ SELRPN>      1 atoms have been selected out of      7
+  
+ CHARMM>     
+  
+ CHARMM>    ENERGY atom switch vatom vswitch -
+ CHARMM>           ctofnb 97.0 cutnb 99.0 wmin 1.0
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  SWITch   VATOm    VSWItch 
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 99.000 CTEXNB =999.000 CTONNB = 95.000 CTOFNB = 97.000
+ WMIN   =  1.000 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are        0 atom  pairs and        0 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ <MAKINB> with mode   5 found     11 exclusions and      0 interactions(1-4)
+ <MAKGRP> found      0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR       99 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+       10 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        0 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+ There are Drude particles.
+ CODES:  Will skip bonds  6
+ENER ENR:  Eval#     ENERgy      Delta-E         GRMS
+ENER EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+ENER>        0      5.21066    -21.11068     21.21281
+ENER EXTERN>        1.99099      3.21967      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>     
+  
+ CHARMM>     
+  
+ CHARMM>    !==================================================
+ CHARMM>    ! Water-ion interaction
+ CHARMM>    !--------------------------------------------------
+ CHARMM>     
+  
+ CHARMM>    mini SD step 0.01 nstep 5000 nprint 1000
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  SWITch   VATOm    VSWItch 
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 99.000 CTEXNB =999.000 CTONNB = 95.000 CTOFNB = 97.000
+ WMIN   =  1.000 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are       10 atom  pairs and       11 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR       99 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+       10 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        0 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+
+
+ STEEPD> An energy minimization has been requested.
+
+ NSTEP  =         5000   NPRINT =         1000
+ STEP   =    0.0100000   TOLFUN =    0.0000000
+ TOLGRD =    0.0000000   TOLSTP =    0.0000000
+
+MINI MIN: Cycle      ENERgy      Delta-E         GRMS    Step-size
+MINI EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>        0      5.21066    -21.11068     21.21281      0.01000
+MINI EXTERN>        1.99099      3.21967      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+ UPDECI: Nonbond update at step       182
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR       99 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+       10 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        0 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+MINI>     1000    -13.69990     18.91056      0.00052      0.00000
+MINI INTERN>        2.60104      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        1.91767    -18.21861      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     2000    -13.69990      0.00000      0.00046      0.00000
+MINI INTERN>        2.60104      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        1.91767    -18.21861      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     3000    -13.69990      0.00000      0.00040      0.00000
+MINI INTERN>        2.60104      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        1.91767    -18.21861      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     4000    -13.69990      0.00000      0.00036      0.00000
+MINI INTERN>        2.60104      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        1.91767    -18.21861      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     5000    -13.69990      0.00000      0.00031      0.00000
+MINI INTERN>        2.60104      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        1.91767    -18.21861      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+
+ STEEPD> Minimization exiting with number of steps limit (      5000) exceeded.
+
+STPD MIN: Cycle      ENERgy      Delta-E         GRMS    Step-size
+STPD INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+STPD EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+STPD>     5000    -13.69990      0.00000      0.00031      0.00000
+STPD INTERN>        2.60104      0.00000      0.00000      0.00000      0.00000
+STPD EXTERN>        1.91767    -18.21861      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>    coor orient select type O* .or. type @IONTYPE end
+ Parameter: IONTYPE -> "CES"
+ SELRPN>      3 atoms have been selected out of      7
+
+ ORIENT THE COORDINATES TO ALIGN WITH AXIS
+
+ MOMENTS
+      6.39918455      0.50855174      0.83752720
+                      0.04041529      0.06655941
+                                      0.10961581
+
+ Transpose of the rotation matrix
+     0.129372    0.078556    0.988480
+     0.410583    0.903144   -0.125511
+    -0.902599    0.422091    0.084588
+ CENTER OF ATOMS BEFORE TRANSLATION     0.09906    -0.01037    -1.13035
+ AXIS OF ROTATION IS -0.274271 -0.947164 -0.166299  ANGLE IS   86.64
+
+ ALL COORDINATES ORIENTED IN THE MAIN SET BASED ON SELECTED ATOMS.
+
+  
+ CHARMM>     
+  
+ CHARMM>    energy                             ! ?ENER
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  SWITch   VATOm    VSWItch 
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 99.000 CTEXNB =999.000 CTONNB = 95.000 CTOFNB = 97.000
+ WMIN   =  1.000 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are       10 atom  pairs and       11 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR       99 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+       10 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        0 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+ENER ENR:  Eval#     ENERgy      Delta-E         GRMS
+ENER INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+ENER EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+ENER>        0    -13.69990      0.00000      0.00032
+ENER INTERN>        2.60104      0.00000      0.00000      0.00000      0.00000
+ENER EXTERN>        1.91767    -18.21861      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>    quick 1 6                          ! ?DIST
+ QUICKA: Atom       1 SOLV 1    SWM4 OH2  is at:   0.92346  -0.00001   0.00000      
+ QUICKA: Atom       6 ION  1    CES  CES  is at:  -2.08501   0.00000   0.00000      
+ QUICKA: The distance is:     3.00847
+
+
+  
+ CHARMM>    coor dipole select segid SOLV end  ! ?RDIP
+ SELRPN>      5 atoms have been selected out of      7
+ THE TOTAL CHARGE OF SELECTED ATOMS IS:    0.000000
+ DIPOLE MOMENT ABOUT CENTER OF GEOMETRY  (DEBYES) :    2.407956    0.000169    0.000000         2.407956
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 33
+ RDTITL> * CES
+ RDTITL> * UMIN = -13.6999
+ RDTITL> * DMIN = 3.00847
+ RDTITL> * MU   = 2.40796
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>    drude reset
+ DRUDE> Drude particles ready to be deleted
+
+        Call: DELETE ATOMS SELECT TYPE D* END
+
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        2   Number of residues   =        2
+         Number of atoms         =        7   Number of groups     =        2
+         Number of bonds         =        9   Number of angles     =        1
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        1   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    1.00000
+  
+ CHARMM>    delete atom select all end
+ SELRPN>      7 atoms have been selected out of      7
+
+ Message from MAPIC: Atom numbers are changed.
+ LONEPRD:    1 lonepair atoms deleted
+
+ Message from MAPIC:          2 residues deleted.
+
+ Message from MAPIC:          2 segments deleted.
+ DELTIC:         9 bonds deleted
+ DELTIC:         1 angles deleted
+ DELTIC:         1 acceptors deleted
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        0   Number of residues   =        0
+         Number of atoms         =        0   Number of groups     =        0
+         Number of bonds         =        0   Number of angles     =        0
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        0   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    0.00000
+  
+ CHARMM>     
+  
+ CHARMM>    calc count = @count + 1
+ Parameter: COUNT -> "5"
+Evaluating: 5+1
+ Parameter: COUNT <- "6"
+  
+ CHARMM>     
+  
+ CHARMM>    if count le 9 goto ion_loop
+ Comparing "6" and "9".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    if count eq 1 set iontype LIT
+ Comparing "6" and "1".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 2 set iontype SOD
+ Comparing "6" and "2".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 3 set iontype POT
+ Comparing "6" and "3".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 4 set iontype RUB
+ Comparing "6" and "4".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 5 set iontype CES
+ Comparing "6" and "5".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 6 set iontype FLU
+ Comparing "6" and "6".
+ IF test evaluated as true.  Performing command
+ Parameter: IONTYPE <- "FLU"
+  
+ CHARMM>    if count eq 7 set iontype CLA
+ Comparing "6" and "7".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 8 set iontype BRO
+ Comparing "6" and "8".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 9 set iontype IOD
+ Comparing "6" and "9".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>     
+  
+ CHARMM>    read sequence SWM4 1
+  
+ CHARMM>    generate SOLV setup noangle nodihedral
+ NO PATCHING WILL BE DONE ON THE FIRST RESIDUE
+ NO PATCHING WILL BE DONE ON THE LAST  RESIDUE
+ GENPSF> Segment   1 has been generated. Its identifier is SOLV.
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        1   Number of residues   =        1
+         Number of atoms         =        4   Number of groups     =        1
+         Number of bonds         =        4   Number of angles     =        1
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        1   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    0.00000
+  
+ CHARMM>    read sequence @IONTYPE 1
+ Parameter: IONTYPE -> "FLU"
+  
+ CHARMM>    generate ION setup first none last none
+ NO PATCHING WILL BE DONE ON THE FIRST RESIDUE
+ NO PATCHING WILL BE DONE ON THE LAST  RESIDUE
+ GENPSF> Segment   2 has been generated. Its identifier is ION.
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        2   Number of residues   =        2
+         Number of atoms         =        5   Number of groups     =        2
+         Number of bonds         =        4   Number of angles     =        1
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        1   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =   -1.00000
+  
+ CHARMM>     
+  
+ CHARMM>    read coor card
+          SPATIAL COORDINATES BEING READ FROM UNIT  5
+ RDTITL> * SWM4
+ RDTITL> *
+ ** WARNING ** After reading, there are no coordinates for selected atom:     5     2 FLU  FLU 
+
+ ** A total of     1 selected atoms have no coordinates
+ *** LEVEL  2 WARNING *** BOMLEV IS    0
+  
+ CHARMM>     
+  
+ CHARMM>    coor orient select type O* end
+ SELRPN>      2 atoms have been selected out of      5
+
+ ORIENT THE COORDINATES TO ALIGN WITH AXIS
+
+ MOMENTS
+      0.02044444     -0.00001517     -0.01259364
+                      0.00000001      0.00000934
+                                      0.00775760
+
+ Transpose of the rotation matrix
+     0.524473    0.000632   -0.851427
+     0.741461    0.491220    0.457099
+     0.418526   -0.871036    0.257163
+ CENTER OF ATOMS BEFORE TRANSLATION     1.31391    -0.00015     0.16908
+ AXIS OF ROTATION IS  0.670335  0.640970 -0.373911  ANGLE IS   82.16
+
+ ALL COORDINATES ORIENTED IN THE MAIN SET BASED ON SELECTED ATOMS.
+
+  
+ CHARMM>    coor set zdir -3.0 select type @IONTYPE end
+ Parameter: IONTYPE -> "FLU"
+ SELRPN>      1 atoms have been selected out of      5
+ SELECTED COORDINATES SET IN THE MAIN SET.
+
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain set @ALPHAO select type OH2 end
+ Parameter: ALPHAO -> "1.04252"
+ SELRPN>      1 atoms have been selected out of      5
+  
+ CHARMM>    scalar wmain set @ALPHA@@IONTYPE select type @IONTYPE end
+ Parameter: IONTYPE -> "FLU"
+ Parameter: IONTYPE -> "FLU"
+ Parameter: ALPHAFLU -> "1.78611"
+ SELRPN>      1 atoms have been selected out of      5
+  
+ CHARMM>    DRUDE mass 0.4 kdrude 500.0 select type OH2 .or. type @IONTYPE end
+ Parameter: IONTYPE -> "FLU"
+ DRUDE> CONSTRUCTION OF DRUDE PARTICLES
+
+ SELRPN>      2 atoms have been selected out of      5
+ DRUDE> The MASS parameter will override the topology file.
+ DRUDE> The KDRUDE parameter will override the parameter file.
+ DRUDE> THOLE-TYPE DIPOLE SCREENING
+        THOLE PARAMETER:  2.600000
+        SLATER-DELTA SHAPE:  S(u) = 1 - (1+u/2)*exp(-u)
+
+Adding Drude particle DOH2 on OH2 SOLV 1   SWM4  1.042520
+    Using MASS   =     0.400000
+    Using KDRUDE =   500.000000
+        18  DOH2 - OWP       1075   500.000     0.000
+Adding Drude particle DFLU on FLU ION  1   FLU   1.786110
+    Using MASS   =     0.400000
+    Using KDRUDE =   500.000000
+        25  DFLU - FLU       5525   500.000     0.000
+
+ Message from MAPIC: Atom numbers are changed.
+                       2  Drude particles were added.
+
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        2   Number of residues   =        2
+         Number of atoms         =        7   Number of groups     =        2
+         Number of bonds         =        9   Number of angles     =        1
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        1   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =   -1.00000
+         Number of Drudes        =        2
+         Number of true-bonds    =        6   Number of zero-bonds =        3
+  
+ CHARMM>    scalar mass show
+ ( SOLV SWM4 1    OH2  )    15.599    
+ ( SOLV SWM4 1    DOH2 )   0.40000    
+ ( SOLV SWM4 1    OM   )    0.0000    
+ ( SOLV SWM4 1    H1   )    1.0080    
+ ( SOLV SWM4 1    H2   )    1.0080    
+ ( ION  FLU  1    FLU  )    18.598    
+ ( ION  FLU  1    DFLU )   0.40000    
+  
+ CHARMM>    scalar charge show
+ ( SOLV SWM4 1    OH2  )   -1.7718    
+ ( SOLV SWM4 1    DOH2 )    1.7718    
+ ( SOLV SWM4 1    OM   )   -1.1074    
+ ( SOLV SWM4 1    H1   )   0.55370    
+ ( SOLV SWM4 1    H2   )   0.55370    
+ ( ION  FLU  1    FLU  )   -3.3192    
+ ( ION  FLU  1    DFLU )    2.3192    
+  
+ CHARMM>     
+  
+ CHARMM>    coor copy comp
+ SELECTED COORDINATES COPIED TO THE COMPARISON SET.
+
+  
+ CHARMM>    coor stat
+ STATISTICS FOR    7 SELECTED ATOMS:
+    XMIN =   -0.118748 XMAX =    0.467139 XAVE =    0.116503
+    YMIN =   -0.372169 YMAX =    0.372160 YAVE =   -0.000001
+    ZMIN =   -3.000000 ZMAX =    0.659150 ZAVE =   -0.857140
+    WMIN =    0.000000 WMAX =    2.360000 WAVE =    0.741233
+  
+ CHARMM>     
+  
+ CHARMM>    SHAKE bonh param tolerance 1.0e-9 -
+ CHARMM>          nofast -
+ CHARMM>          select ( segid SOLV .and. .not. type D* ) end -
+ CHARMM>          select ( segid SOLV .and. .not. type D* ) end
+ SELRPN>      4 atoms have been selected out of      7
+ SELRPN>      4 atoms have been selected out of      7
+ SHKCOM> SHAKE parameters: TOL =   0.1000E-08 MXITer =    500
+ There are Drude particles.
+ CODES:  Will skip bonds  6
+
+               3 constraints will held by SHAKE.
+  
+ CHARMM>     
+  
+ CHARMM>    LONEPAIR bisector dist @DOM angle 0.0 dihe 0.0 -
+ CHARMM>             select atom SOLV * OM end  select atom SOLV * OH2 end -
+ CHARMM>             select atom SOLV * H1 end  select atom SOLV * H2  end
+ Parameter: DOM -> "0.23808"
+ SELRPN>      1 atoms have been selected out of      7
+ SELRPN>      1 atoms have been selected out of      7
+ SELRPN>      1 atoms have been selected out of      7
+ SELRPN>      1 atoms have been selected out of      7
+  
+ CHARMM>    coor shake
+ SELECTED COORDINATES CONSTRAINED IN THE MAIN SET.
+
+  
+ CHARMM>    coor dupl select type OH2 end select type DOH2 end
+ SELRPN>      1 atoms have been selected out of      7
+ SELRPN>      1 atoms have been selected out of      7
+  
+ CHARMM>     
+  
+ CHARMM>    ENERGY atom switch vatom vswitch -
+ CHARMM>           ctofnb 97.0 cutnb 99.0 wmin 1.0
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  SWITch   VATOm    VSWItch 
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 99.000 CTEXNB =999.000 CTONNB = 95.000 CTOFNB = 97.000
+ WMIN   =  1.000 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are        0 atom  pairs and        0 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ <MAKINB> with mode   5 found     11 exclusions and      0 interactions(1-4)
+ <MAKGRP> found      0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR       99 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+       10 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        0 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+ There are Drude particles.
+ CODES:  Will skip bonds  6
+ENER ENR:  Eval#     ENERgy      Delta-E         GRMS
+ENER EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+ENER>        0     -2.14048    -11.55942     23.53778
+ENER EXTERN>        1.07919     -3.21967      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>     
+  
+ CHARMM>     
+  
+ CHARMM>    !==================================================
+ CHARMM>    ! Water-ion interaction
+ CHARMM>    !--------------------------------------------------
+ CHARMM>     
+  
+ CHARMM>    mini SD step 0.01 nstep 5000 nprint 1000
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  SWITch   VATOm    VSWItch 
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 99.000 CTEXNB =999.000 CTONNB = 95.000 CTOFNB = 97.000
+ WMIN   =  1.000 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are       10 atom  pairs and       11 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR       99 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+       10 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        0 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+
+
+ STEEPD> An energy minimization has been requested.
+
+ NSTEP  =         5000   NPRINT =         1000
+ STEP   =    0.0100000   TOLFUN =    0.0000000
+ TOLGRD =    0.0000000   TOLSTP =    0.0000000
+
+MINI MIN: Cycle      ENERgy      Delta-E         GRMS    Step-size
+MINI EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>        0     -2.14048    -11.55942     23.53778      0.01000
+MINI EXTERN>        1.07919     -3.21967      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     1000    -23.31710     21.17662      0.00000      0.00000
+MINI INTERN>        9.03434      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        9.23533    -41.58677      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     2000    -23.31710      0.00000      0.00000      0.00000
+MINI INTERN>        9.03434      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        9.23533    -41.58677      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     3000    -23.31710      0.00000      0.00000      0.00000
+MINI INTERN>        9.03434      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        9.23533    -41.58677      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     4000    -23.31710      0.00000      0.00000      0.00000
+MINI INTERN>        9.03434      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        9.23533    -41.58677      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     5000    -23.31710      0.00000      0.00000      0.00000
+MINI INTERN>        9.03434      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        9.23533    -41.58677      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+
+ STEEPD> Minimization exiting with number of steps limit (      5000) exceeded.
+
+STPD MIN: Cycle      ENERgy      Delta-E         GRMS    Step-size
+STPD INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+STPD EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+STPD>     5000    -23.31710      0.00000      0.00000      0.00000
+STPD INTERN>        9.03434      0.00000      0.00000      0.00000      0.00000
+STPD EXTERN>        9.23533    -41.58677      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>    coor orient select type O* .or. type @IONTYPE end
+ Parameter: IONTYPE -> "FLU"
+ SELRPN>      3 atoms have been selected out of      7
+
+ ORIENT THE COORDINATES TO ALIGN WITH AXIS
+
+ MOMENTS
+      4.13573770      0.11738956     -0.22088681
+                      0.00977944     -0.01475378
+                                      0.02296150
+
+ Transpose of the rotation matrix
+     0.053513   -0.028486   -0.998161
+    -0.794405    0.604434   -0.059839
+     0.605027    0.796146    0.009716
+ CENTER OF ATOMS BEFORE TRANSLATION     0.03761     0.05849    -0.90286
+ AXIS OF ROTATION IS -0.434026  0.812895  0.388359  ANGLE IS   99.57
+
+ ALL COORDINATES ORIENTED IN THE MAIN SET BASED ON SELECTED ATOMS.
+
+  
+ CHARMM>     
+  
+ CHARMM>    energy                             ! ?ENER
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  SWITch   VATOm    VSWItch 
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 99.000 CTEXNB =999.000 CTONNB = 95.000 CTOFNB = 97.000
+ WMIN   =  1.000 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are       10 atom  pairs and       11 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR       99 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+       10 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        0 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+ENER ENR:  Eval#     ENERgy      Delta-E         GRMS
+ENER INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+ENER EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+ENER>        0    -23.31710      0.00000      0.00000
+ENER INTERN>        9.03434      0.00000      0.00000      0.00000      0.00000
+ENER EXTERN>        9.23533    -41.58677      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>    quick 1 6                          ! ?DIST
+ QUICKA: Atom       1 SOLV 1    SWM4 OH2  is at:  -0.90429   0.09079   0.00000      
+ QUICKA: Atom       6 ION  1    FLU  FLU  is at:   1.66134   0.00553   0.00000      
+ QUICKA: The distance is:     2.56705
+
+
+  
+ CHARMM>    coor dipole select segid SOLV end  ! ?RDIP
+ SELRPN>      5 atoms have been selected out of      7
+ THE TOTAL CHARGE OF SELECTED ATOMS IS:    0.000000
+ DIPOLE MOMENT ABOUT CENTER OF GEOMETRY  (DEBYES) :    2.087299   -1.486193    0.000000         2.562340
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 33
+ RDTITL> * FLU
+ RDTITL> * UMIN = -23.3171
+ RDTITL> * DMIN = 2.56705
+ RDTITL> * MU   = 2.56234
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>    drude reset
+ DRUDE> Drude particles ready to be deleted
+
+        Call: DELETE ATOMS SELECT TYPE D* END
+
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        2   Number of residues   =        2
+         Number of atoms         =        7   Number of groups     =        2
+         Number of bonds         =        9   Number of angles     =        1
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        1   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =   -1.00000
+  
+ CHARMM>    delete atom select all end
+ SELRPN>      7 atoms have been selected out of      7
+
+ Message from MAPIC: Atom numbers are changed.
+ LONEPRD:    1 lonepair atoms deleted
+
+ Message from MAPIC:          2 residues deleted.
+
+ Message from MAPIC:          2 segments deleted.
+ DELTIC:         9 bonds deleted
+ DELTIC:         1 angles deleted
+ DELTIC:         1 acceptors deleted
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        0   Number of residues   =        0
+         Number of atoms         =        0   Number of groups     =        0
+         Number of bonds         =        0   Number of angles     =        0
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        0   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    0.00000
+  
+ CHARMM>     
+  
+ CHARMM>    calc count = @count + 1
+ Parameter: COUNT -> "6"
+Evaluating: 6+1
+ Parameter: COUNT <- "7"
+  
+ CHARMM>     
+  
+ CHARMM>    if count le 9 goto ion_loop
+ Comparing "7" and "9".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    if count eq 1 set iontype LIT
+ Comparing "7" and "1".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 2 set iontype SOD
+ Comparing "7" and "2".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 3 set iontype POT
+ Comparing "7" and "3".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 4 set iontype RUB
+ Comparing "7" and "4".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 5 set iontype CES
+ Comparing "7" and "5".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 6 set iontype FLU
+ Comparing "7" and "6".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 7 set iontype CLA
+ Comparing "7" and "7".
+ IF test evaluated as true.  Performing command
+ Parameter: IONTYPE <- "CLA"
+  
+ CHARMM>    if count eq 8 set iontype BRO
+ Comparing "7" and "8".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 9 set iontype IOD
+ Comparing "7" and "9".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>     
+  
+ CHARMM>    read sequence SWM4 1
+  
+ CHARMM>    generate SOLV setup noangle nodihedral
+ NO PATCHING WILL BE DONE ON THE FIRST RESIDUE
+ NO PATCHING WILL BE DONE ON THE LAST  RESIDUE
+ GENPSF> Segment   1 has been generated. Its identifier is SOLV.
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        1   Number of residues   =        1
+         Number of atoms         =        4   Number of groups     =        1
+         Number of bonds         =        4   Number of angles     =        1
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        1   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    0.00000
+  
+ CHARMM>    read sequence @IONTYPE 1
+ Parameter: IONTYPE -> "CLA"
+  
+ CHARMM>    generate ION setup first none last none
+ NO PATCHING WILL BE DONE ON THE FIRST RESIDUE
+ NO PATCHING WILL BE DONE ON THE LAST  RESIDUE
+ GENPSF> Segment   2 has been generated. Its identifier is ION.
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        2   Number of residues   =        2
+         Number of atoms         =        5   Number of groups     =        2
+         Number of bonds         =        4   Number of angles     =        1
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        1   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =   -1.00000
+  
+ CHARMM>     
+  
+ CHARMM>    read coor card
+          SPATIAL COORDINATES BEING READ FROM UNIT  5
+ RDTITL> * SWM4
+ RDTITL> *
+ ** WARNING ** After reading, there are no coordinates for selected atom:     5     2 CLA  CLA 
+
+ ** A total of     1 selected atoms have no coordinates
+ *** LEVEL  2 WARNING *** BOMLEV IS    0
+  
+ CHARMM>     
+  
+ CHARMM>    coor orient select type O* end
+ SELRPN>      2 atoms have been selected out of      5
+
+ ORIENT THE COORDINATES TO ALIGN WITH AXIS
+
+ MOMENTS
+      0.02044444     -0.00001517     -0.01259364
+                      0.00000001      0.00000934
+                                      0.00775760
+
+ Transpose of the rotation matrix
+     0.524473    0.000632   -0.851427
+     0.741461    0.491220    0.457099
+     0.418526   -0.871036    0.257163
+ CENTER OF ATOMS BEFORE TRANSLATION     1.31391    -0.00015     0.16908
+ AXIS OF ROTATION IS  0.670335  0.640970 -0.373911  ANGLE IS   82.16
+
+ ALL COORDINATES ORIENTED IN THE MAIN SET BASED ON SELECTED ATOMS.
+
+  
+ CHARMM>    coor set zdir -3.0 select type @IONTYPE end
+ Parameter: IONTYPE -> "CLA"
+ SELRPN>      1 atoms have been selected out of      5
+ SELECTED COORDINATES SET IN THE MAIN SET.
+
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain set @ALPHAO select type OH2 end
+ Parameter: ALPHAO -> "1.04252"
+ SELRPN>      1 atoms have been selected out of      5
+  
+ CHARMM>    scalar wmain set @ALPHA@@IONTYPE select type @IONTYPE end
+ Parameter: IONTYPE -> "CLA"
+ Parameter: IONTYPE -> "CLA"
+ Parameter: ALPHACLA -> "3.96897"
+ SELRPN>      1 atoms have been selected out of      5
+  
+ CHARMM>    DRUDE mass 0.4 kdrude 500.0 select type OH2 .or. type @IONTYPE end
+ Parameter: IONTYPE -> "CLA"
+ DRUDE> CONSTRUCTION OF DRUDE PARTICLES
+
+ SELRPN>      2 atoms have been selected out of      5
+ DRUDE> The MASS parameter will override the topology file.
+ DRUDE> The KDRUDE parameter will override the parameter file.
+ DRUDE> THOLE-TYPE DIPOLE SCREENING
+        THOLE PARAMETER:  2.600000
+        SLATER-DELTA SHAPE:  S(u) = 1 - (1+u/2)*exp(-u)
+
+Adding Drude particle DOH2 on OH2 SOLV 1   SWM4  1.042520
+    Using MASS   =     0.400000
+    Using KDRUDE =   500.000000
+        18  DOH2 - OWP       1075   500.000     0.000
+Adding Drude particle DCLA on CLA ION  1   CLA   3.968970
+    Using MASS   =     0.400000
+    Using KDRUDE =   500.000000
+        26  DCLA - CLA       5631   500.000     0.000
+
+ Message from MAPIC: Atom numbers are changed.
+                       2  Drude particles were added.
+
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        2   Number of residues   =        2
+         Number of atoms         =        7   Number of groups     =        2
+         Number of bonds         =        9   Number of angles     =        1
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        1   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =   -1.00000
+         Number of Drudes        =        2
+         Number of true-bonds    =        6   Number of zero-bonds =        3
+  
+ CHARMM>    scalar mass show
+ ( SOLV SWM4 1    OH2  )    15.599    
+ ( SOLV SWM4 1    DOH2 )   0.40000    
+ ( SOLV SWM4 1    OM   )    0.0000    
+ ( SOLV SWM4 1    H1   )    1.0080    
+ ( SOLV SWM4 1    H2   )    1.0080    
+ ( ION  CLA  1    CLA  )    35.053    
+ ( ION  CLA  1    DCLA )   0.40000    
+  
+ CHARMM>    scalar charge show
+ ( SOLV SWM4 1    OH2  )   -1.7718    
+ ( SOLV SWM4 1    DOH2 )    1.7718    
+ ( SOLV SWM4 1    OM   )   -1.1074    
+ ( SOLV SWM4 1    H1   )   0.55370    
+ ( SOLV SWM4 1    H2   )   0.55370    
+ ( ION  CLA  1    CLA  )   -4.4572    
+ ( ION  CLA  1    DCLA )    3.4572    
+  
+ CHARMM>     
+  
+ CHARMM>    coor copy comp
+ SELECTED COORDINATES COPIED TO THE COMPARISON SET.
+
+  
+ CHARMM>    coor stat
+ STATISTICS FOR    7 SELECTED ATOMS:
+    XMIN =   -0.118748 XMAX =    0.467139 XAVE =    0.116503
+    YMIN =   -0.372169 YMAX =    0.372160 YAVE =   -0.000001
+    ZMIN =   -3.000000 ZMAX =    0.659150 ZAVE =   -0.857140
+    WMIN =    0.000000 WMAX =    3.968970 WAVE =    0.971086
+  
+ CHARMM>     
+  
+ CHARMM>    SHAKE bonh param tolerance 1.0e-9 -
+ CHARMM>          nofast -
+ CHARMM>          select ( segid SOLV .and. .not. type D* ) end -
+ CHARMM>          select ( segid SOLV .and. .not. type D* ) end
+ SELRPN>      4 atoms have been selected out of      7
+ SELRPN>      4 atoms have been selected out of      7
+ SHKCOM> SHAKE parameters: TOL =   0.1000E-08 MXITer =    500
+ There are Drude particles.
+ CODES:  Will skip bonds  6
+
+               3 constraints will held by SHAKE.
+  
+ CHARMM>     
+  
+ CHARMM>    LONEPAIR bisector dist @DOM angle 0.0 dihe 0.0 -
+ CHARMM>             select atom SOLV * OM end  select atom SOLV * OH2 end -
+ CHARMM>             select atom SOLV * H1 end  select atom SOLV * H2  end
+ Parameter: DOM -> "0.23808"
+ SELRPN>      1 atoms have been selected out of      7
+ SELRPN>      1 atoms have been selected out of      7
+ SELRPN>      1 atoms have been selected out of      7
+ SELRPN>      1 atoms have been selected out of      7
+  
+ CHARMM>    coor shake
+ SELECTED COORDINATES CONSTRAINED IN THE MAIN SET.
+
+  
+ CHARMM>    coor dupl select type OH2 end select type DOH2 end
+ SELRPN>      1 atoms have been selected out of      7
+ SELRPN>      1 atoms have been selected out of      7
+  
+ CHARMM>     
+  
+ CHARMM>    ENERGY atom switch vatom vswitch -
+ CHARMM>           ctofnb 97.0 cutnb 99.0 wmin 1.0
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  SWITch   VATOm    VSWItch 
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 99.000 CTEXNB =999.000 CTONNB = 95.000 CTOFNB = 97.000
+ WMIN   =  1.000 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are        0 atom  pairs and        0 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ <MAKINB> with mode   5 found     11 exclusions and      0 interactions(1-4)
+ <MAKGRP> found      0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR       99 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+       10 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        0 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+ There are Drude particles.
+ CODES:  Will skip bonds  6
+ENER ENR:  Eval#     ENERgy      Delta-E         GRMS
+ENER EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+ENER>        0      2.78304    -26.10014     27.52020
+ENER EXTERN>        6.00271     -3.21967      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>     
+  
+ CHARMM>     
+  
+ CHARMM>    !==================================================
+ CHARMM>    ! Water-ion interaction
+ CHARMM>    !--------------------------------------------------
+ CHARMM>     
+  
+ CHARMM>    mini SD step 0.01 nstep 5000 nprint 1000
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  SWITch   VATOm    VSWItch 
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 99.000 CTEXNB =999.000 CTONNB = 95.000 CTOFNB = 97.000
+ WMIN   =  1.000 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are       10 atom  pairs and       11 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR       99 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+       10 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        0 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+
+
+ STEEPD> An energy minimization has been requested.
+
+ NSTEP  =         5000   NPRINT =         1000
+ STEP   =    0.0100000   TOLFUN =    0.0000000
+ TOLGRD =    0.0000000   TOLSTP =    0.0000000
+
+MINI MIN: Cycle      ENERgy      Delta-E         GRMS    Step-size
+MINI EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>        0      2.78304    -26.10014     27.52020      0.01000
+MINI EXTERN>        6.00271     -3.21967      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     1000    -14.40007     17.18311      0.00000      0.00000
+MINI INTERN>        4.00942      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        4.17519    -22.58467      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     2000    -14.40007      0.00000      0.00000      0.00000
+MINI INTERN>        4.00942      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        4.17519    -22.58467      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     3000    -14.40007      0.00000      0.00000      0.00000
+MINI INTERN>        4.00942      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        4.17519    -22.58467      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     4000    -14.40007      0.00000      0.00000      0.00000
+MINI INTERN>        4.00942      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        4.17519    -22.58467      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     5000    -14.40007      0.00000      0.00000      0.00000
+MINI INTERN>        4.00942      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        4.17519    -22.58467      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+
+ STEEPD> Minimization exiting with number of steps limit (      5000) exceeded.
+
+STPD MIN: Cycle      ENERgy      Delta-E         GRMS    Step-size
+STPD INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+STPD EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+STPD>     5000    -14.40007      0.00000      0.00000      0.00000
+STPD INTERN>        4.00942      0.00000      0.00000      0.00000      0.00000
+STPD EXTERN>        4.17519    -22.58467      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>    coor orient select type O* .or. type @IONTYPE end
+ Parameter: IONTYPE -> "CLA"
+ SELRPN>      3 atoms have been selected out of      7
+
+ ORIENT THE COORDINATES TO ALIGN WITH AXIS
+
+ MOMENTS
+      5.99632778      0.17411813     -0.23295495
+                      0.01163967     -0.01455478
+                                      0.01826835
+
+ Transpose of the rotation matrix
+     0.038901   -0.029085   -0.998820
+    -0.762790    0.644826   -0.048486
+     0.645476    0.763775    0.002898
+ CENTER OF ATOMS BEFORE TRANSLATION     0.04613     0.05880    -0.90616
+ AXIS OF ROTATION IS -0.411210  0.832430  0.371440  ANGLE IS   99.01
+
+ ALL COORDINATES ORIENTED IN THE MAIN SET BASED ON SELECTED ATOMS.
+
+  
+ CHARMM>     
+  
+ CHARMM>    energy                             ! ?ENER
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  SWITch   VATOm    VSWItch 
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 99.000 CTEXNB =999.000 CTONNB = 95.000 CTOFNB = 97.000
+ WMIN   =  1.000 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are       10 atom  pairs and       11 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR       99 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+       10 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        0 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+ENER ENR:  Eval#     ENERgy      Delta-E         GRMS
+ENER INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+ENER EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+ENER>        0    -14.40007      0.00000      0.00000
+ENER INTERN>        4.00942      0.00000      0.00000      0.00000      0.00000
+ENER EXTERN>        4.17519    -22.58467      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>    quick 1 6                          ! ?DIST
+ QUICKA: Atom       1 SOLV 1    SWM4 OH2  is at:  -1.07922   0.08634   0.00000      
+ QUICKA: Atom       6 ION  1    CLA  CLA  is at:   1.99964   0.00470   0.00000      
+ QUICKA: The distance is:     3.07995
+
+
+  
+ CHARMM>    coor dipole select segid SOLV end  ! ?RDIP
+ SELRPN>      5 atoms have been selected out of      7
+ THE TOTAL CHARGE OF SELECTED ATOMS IS:    0.000000
+ DIPOLE MOMENT ABOUT CENTER OF GEOMETRY  (DEBYES) :    1.852331   -1.395339    0.000000         2.319073
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 33
+ RDTITL> * CLA
+ RDTITL> * UMIN = -14.4001
+ RDTITL> * DMIN = 3.07995
+ RDTITL> * MU   = 2.31907
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>    drude reset
+ DRUDE> Drude particles ready to be deleted
+
+        Call: DELETE ATOMS SELECT TYPE D* END
+
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        2   Number of residues   =        2
+         Number of atoms         =        7   Number of groups     =        2
+         Number of bonds         =        9   Number of angles     =        1
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        1   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =   -1.00000
+  
+ CHARMM>    delete atom select all end
+ SELRPN>      7 atoms have been selected out of      7
+
+ Message from MAPIC: Atom numbers are changed.
+ LONEPRD:    1 lonepair atoms deleted
+
+ Message from MAPIC:          2 residues deleted.
+
+ Message from MAPIC:          2 segments deleted.
+ DELTIC:         9 bonds deleted
+ DELTIC:         1 angles deleted
+ DELTIC:         1 acceptors deleted
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        0   Number of residues   =        0
+         Number of atoms         =        0   Number of groups     =        0
+         Number of bonds         =        0   Number of angles     =        0
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        0   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    0.00000
+  
+ CHARMM>     
+  
+ CHARMM>    calc count = @count + 1
+ Parameter: COUNT -> "7"
+Evaluating: 7+1
+ Parameter: COUNT <- "8"
+  
+ CHARMM>     
+  
+ CHARMM>    if count le 9 goto ion_loop
+ Comparing "8" and "9".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    if count eq 1 set iontype LIT
+ Comparing "8" and "1".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 2 set iontype SOD
+ Comparing "8" and "2".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 3 set iontype POT
+ Comparing "8" and "3".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 4 set iontype RUB
+ Comparing "8" and "4".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 5 set iontype CES
+ Comparing "8" and "5".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 6 set iontype FLU
+ Comparing "8" and "6".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 7 set iontype CLA
+ Comparing "8" and "7".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 8 set iontype BRO
+ Comparing "8" and "8".
+ IF test evaluated as true.  Performing command
+ Parameter: IONTYPE <- "BRO"
+  
+ CHARMM>    if count eq 9 set iontype IOD
+ Comparing "8" and "9".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>     
+  
+ CHARMM>    read sequence SWM4 1
+  
+ CHARMM>    generate SOLV setup noangle nodihedral
+ NO PATCHING WILL BE DONE ON THE FIRST RESIDUE
+ NO PATCHING WILL BE DONE ON THE LAST  RESIDUE
+ GENPSF> Segment   1 has been generated. Its identifier is SOLV.
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        1   Number of residues   =        1
+         Number of atoms         =        4   Number of groups     =        1
+         Number of bonds         =        4   Number of angles     =        1
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        1   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    0.00000
+  
+ CHARMM>    read sequence @IONTYPE 1
+ Parameter: IONTYPE -> "BRO"
+  
+ CHARMM>    generate ION setup first none last none
+ NO PATCHING WILL BE DONE ON THE FIRST RESIDUE
+ NO PATCHING WILL BE DONE ON THE LAST  RESIDUE
+ GENPSF> Segment   2 has been generated. Its identifier is ION.
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        2   Number of residues   =        2
+         Number of atoms         =        5   Number of groups     =        2
+         Number of bonds         =        4   Number of angles     =        1
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        1   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =   -1.00000
+  
+ CHARMM>     
+  
+ CHARMM>    read coor card
+          SPATIAL COORDINATES BEING READ FROM UNIT  5
+ RDTITL> * SWM4
+ RDTITL> *
+ ** WARNING ** After reading, there are no coordinates for selected atom:     5     2 BRO  BRO 
+
+ ** A total of     1 selected atoms have no coordinates
+ *** LEVEL  2 WARNING *** BOMLEV IS    0
+  
+ CHARMM>     
+  
+ CHARMM>    coor orient select type O* end
+ SELRPN>      2 atoms have been selected out of      5
+
+ ORIENT THE COORDINATES TO ALIGN WITH AXIS
+
+ MOMENTS
+      0.02044444     -0.00001517     -0.01259364
+                      0.00000001      0.00000934
+                                      0.00775760
+
+ Transpose of the rotation matrix
+     0.524473    0.000632   -0.851427
+     0.741461    0.491220    0.457099
+     0.418526   -0.871036    0.257163
+ CENTER OF ATOMS BEFORE TRANSLATION     1.31391    -0.00015     0.16908
+ AXIS OF ROTATION IS  0.670335  0.640970 -0.373911  ANGLE IS   82.16
+
+ ALL COORDINATES ORIENTED IN THE MAIN SET BASED ON SELECTED ATOMS.
+
+  
+ CHARMM>    coor set zdir -3.0 select type @IONTYPE end
+ Parameter: IONTYPE -> "BRO"
+ SELRPN>      1 atoms have been selected out of      5
+ SELECTED COORDINATES SET IN THE MAIN SET.
+
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain set @ALPHAO select type OH2 end
+ Parameter: ALPHAO -> "1.04252"
+ SELRPN>      1 atoms have been selected out of      5
+  
+ CHARMM>    scalar wmain set @ALPHA@@IONTYPE select type @IONTYPE end
+ Parameter: IONTYPE -> "BRO"
+ Parameter: IONTYPE -> "BRO"
+ Parameter: ALPHABRO -> "5.26203"
+ SELRPN>      1 atoms have been selected out of      5
+  
+ CHARMM>    DRUDE mass 0.4 kdrude 500.0 select type OH2 .or. type @IONTYPE end
+ Parameter: IONTYPE -> "BRO"
+ DRUDE> CONSTRUCTION OF DRUDE PARTICLES
+
+ SELRPN>      2 atoms have been selected out of      5
+ DRUDE> The MASS parameter will override the topology file.
+ DRUDE> The KDRUDE parameter will override the parameter file.
+ DRUDE> THOLE-TYPE DIPOLE SCREENING
+        THOLE PARAMETER:  2.600000
+        SLATER-DELTA SHAPE:  S(u) = 1 - (1+u/2)*exp(-u)
+
+Adding Drude particle DOH2 on OH2 SOLV 1   SWM4  1.042520
+    Using MASS   =     0.400000
+    Using KDRUDE =   500.000000
+        18  DOH2 - OWP       1075   500.000     0.000
+Adding Drude particle DBRO on BRO ION  1   BRO   5.262030
+    Using MASS   =     0.400000
+    Using KDRUDE =   500.000000
+        27  DBRO - BRO       5738   500.000     0.000
+
+ Message from MAPIC: Atom numbers are changed.
+                       2  Drude particles were added.
+
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        2   Number of residues   =        2
+         Number of atoms         =        7   Number of groups     =        2
+         Number of bonds         =        9   Number of angles     =        1
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        1   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =   -1.00000
+         Number of Drudes        =        2
+         Number of true-bonds    =        6   Number of zero-bonds =        3
+  
+ CHARMM>    scalar mass show
+ ( SOLV SWM4 1    OH2  )    15.599    
+ ( SOLV SWM4 1    DOH2 )   0.40000    
+ ( SOLV SWM4 1    OM   )    0.0000    
+ ( SOLV SWM4 1    H1   )    1.0080    
+ ( SOLV SWM4 1    H2   )    1.0080    
+ ( ION  BRO  1    BRO  )    79.504    
+ ( ION  BRO  1    DBRO )   0.40000    
+  
+ CHARMM>    scalar charge show
+ ( SOLV SWM4 1    OH2  )   -1.7718    
+ ( SOLV SWM4 1    DOH2 )    1.7718    
+ ( SOLV SWM4 1    OM   )   -1.1074    
+ ( SOLV SWM4 1    H1   )   0.55370    
+ ( SOLV SWM4 1    H2   )   0.55370    
+ ( ION  BRO  1    BRO  )   -4.9807    
+ ( ION  BRO  1    DBRO )    3.9807    
+  
+ CHARMM>     
+  
+ CHARMM>    coor copy comp
+ SELECTED COORDINATES COPIED TO THE COMPARISON SET.
+
+  
+ CHARMM>    coor stat
+ STATISTICS FOR    7 SELECTED ATOMS:
+    XMIN =   -0.118748 XMAX =    0.467139 XAVE =    0.116503
+    YMIN =   -0.372169 YMAX =    0.372160 YAVE =   -0.000001
+    ZMIN =   -3.000000 ZMAX =    0.659150 ZAVE =   -0.857140
+    WMIN =    0.000000 WMAX =    5.262030 WAVE =    1.467646
+  
+ CHARMM>     
+  
+ CHARMM>    SHAKE bonh param tolerance 1.0e-9 -
+ CHARMM>          nofast -
+ CHARMM>          select ( segid SOLV .and. .not. type D* ) end -
+ CHARMM>          select ( segid SOLV .and. .not. type D* ) end
+ SELRPN>      4 atoms have been selected out of      7
+ SELRPN>      4 atoms have been selected out of      7
+ SHKCOM> SHAKE parameters: TOL =   0.1000E-08 MXITer =    500
+ There are Drude particles.
+ CODES:  Will skip bonds  6
+
+               3 constraints will held by SHAKE.
+  
+ CHARMM>     
+  
+ CHARMM>    LONEPAIR bisector dist @DOM angle 0.0 dihe 0.0 -
+ CHARMM>             select atom SOLV * OM end  select atom SOLV * OH2 end -
+ CHARMM>             select atom SOLV * H1 end  select atom SOLV * H2  end
+ Parameter: DOM -> "0.23808"
+ SELRPN>      1 atoms have been selected out of      7
+ SELRPN>      1 atoms have been selected out of      7
+ SELRPN>      1 atoms have been selected out of      7
+ SELRPN>      1 atoms have been selected out of      7
+  
+ CHARMM>    coor shake
+ SELECTED COORDINATES CONSTRAINED IN THE MAIN SET.
+
+  
+ CHARMM>    coor dupl select type OH2 end select type DOH2 end
+ SELRPN>      1 atoms have been selected out of      7
+ SELRPN>      1 atoms have been selected out of      7
+  
+ CHARMM>     
+  
+ CHARMM>    ENERGY atom switch vatom vswitch -
+ CHARMM>           ctofnb 97.0 cutnb 99.0 wmin 1.0
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  SWITch   VATOm    VSWItch 
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 99.000 CTEXNB =999.000 CTONNB = 95.000 CTOFNB = 97.000
+ WMIN   =  1.000 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are        0 atom  pairs and        0 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ <MAKINB> with mode   5 found     11 exclusions and      0 interactions(1-4)
+ <MAKGRP> found      0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR       99 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+       10 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        0 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+ There are Drude particles.
+ CODES:  Will skip bonds  6
+ENER ENR:  Eval#     ENERgy      Delta-E         GRMS
+ENER EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+ENER>        0      6.94046    -21.34053     31.11597
+ENER EXTERN>       10.16013     -3.21967      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>     
+  
+ CHARMM>     
+  
+ CHARMM>    !==================================================
+ CHARMM>    ! Water-ion interaction
+ CHARMM>    !--------------------------------------------------
+ CHARMM>     
+  
+ CHARMM>    mini SD step 0.01 nstep 5000 nprint 1000
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  SWITch   VATOm    VSWItch 
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 99.000 CTEXNB =999.000 CTONNB = 95.000 CTOFNB = 97.000
+ WMIN   =  1.000 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are       10 atom  pairs and       11 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR       99 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+       10 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        0 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+
+
+ STEEPD> An energy minimization has been requested.
+
+ NSTEP  =         5000   NPRINT =         1000
+ STEP   =    0.0100000   TOLFUN =    0.0000000
+ TOLGRD =    0.0000000   TOLSTP =    0.0000000
+
+MINI MIN: Cycle      ENERgy      Delta-E         GRMS    Step-size
+MINI EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>        0      6.94046    -21.34053     31.11597      0.01000
+MINI EXTERN>       10.16013     -3.21967      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     1000    -12.70002     19.64047      0.00000      0.00000
+MINI INTERN>        3.30343      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        3.36954    -19.37299      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     2000    -12.70002      0.00000      0.00000      0.00000
+MINI INTERN>        3.30343      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        3.36954    -19.37299      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     3000    -12.70002      0.00000      0.00000      0.00000
+MINI INTERN>        3.30343      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        3.36954    -19.37299      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     4000    -12.70002      0.00000      0.00000      0.00000
+MINI INTERN>        3.30343      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        3.36954    -19.37299      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     5000    -12.70002      0.00000      0.00000      0.00000
+MINI INTERN>        3.30343      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        3.36954    -19.37299      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+
+ STEEPD> Minimization exiting with number of steps limit (      5000) exceeded.
+
+STPD MIN: Cycle      ENERgy      Delta-E         GRMS    Step-size
+STPD INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+STPD EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+STPD>     5000    -12.70002      0.00000      0.00000      0.00000
+STPD INTERN>        3.30343      0.00000      0.00000      0.00000      0.00000
+STPD EXTERN>        3.36954    -19.37299      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>    coor orient select type O* .or. type @IONTYPE end
+ Parameter: IONTYPE -> "BRO"
+ SELRPN>      3 atoms have been selected out of      7
+
+ ORIENT THE COORDINATES TO ALIGN WITH AXIS
+
+ MOMENTS
+      6.66208133      0.19843702     -0.22611019
+                      0.01255874     -0.01425420
+                                      0.01617877
+
+ Transpose of the rotation matrix
+     0.033982   -0.029824   -0.998977
+    -0.748402    0.661702   -0.045213
+     0.662374    0.749173    0.000166
+ CENTER OF ATOMS BEFORE TRANSLATION     0.04924     0.05911    -0.90571
+ AXIS OF ROTATION IS -0.401867  0.840451  0.363517  ANGLE IS   98.75
+
+ ALL COORDINATES ORIENTED IN THE MAIN SET BASED ON SELECTED ATOMS.
+
+  
+ CHARMM>     
+  
+ CHARMM>    energy                             ! ?ENER
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  SWITch   VATOm    VSWItch 
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 99.000 CTEXNB =999.000 CTONNB = 95.000 CTOFNB = 97.000
+ WMIN   =  1.000 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are       10 atom  pairs and       11 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR       99 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+       10 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        0 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+ENER ENR:  Eval#     ENERgy      Delta-E         GRMS
+ENER INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+ENER EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+ENER>        0    -12.70002      0.00000      0.00000
+ENER INTERN>        3.30343      0.00000      0.00000      0.00000      0.00000
+ENER EXTERN>        3.36954    -19.37299      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>    quick 1 6                          ! ?DIST
+ QUICKA: Atom       1 SOLV 1    SWM4 OH2  is at:  -1.13515   0.08463   0.00000      
+ QUICKA: Atom       6 ION  1    BRO  BRO  is at:   2.10752   0.00447   0.00000      
+ QUICKA: The distance is:     3.24366
+
+
+  
+ CHARMM>    coor dipole select segid SOLV end  ! ?RDIP
+ SELRPN>      5 atoms have been selected out of      7
+ THE TOTAL CHARGE OF SELECTED ATOMS IS:    0.000000
+ DIPOLE MOMENT ABOUT CENTER OF GEOMETRY  (DEBYES) :    1.819326   -1.364290    0.000000         2.274035
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 33
+ RDTITL> * BRO
+ RDTITL> * UMIN = -12.7
+ RDTITL> * DMIN = 3.24366
+ RDTITL> * MU   = 2.27403
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>    drude reset
+ DRUDE> Drude particles ready to be deleted
+
+        Call: DELETE ATOMS SELECT TYPE D* END
+
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        2   Number of residues   =        2
+         Number of atoms         =        7   Number of groups     =        2
+         Number of bonds         =        9   Number of angles     =        1
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        1   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =   -1.00000
+  
+ CHARMM>    delete atom select all end
+ SELRPN>      7 atoms have been selected out of      7
+
+ Message from MAPIC: Atom numbers are changed.
+ LONEPRD:    1 lonepair atoms deleted
+
+ Message from MAPIC:          2 residues deleted.
+
+ Message from MAPIC:          2 segments deleted.
+ DELTIC:         9 bonds deleted
+ DELTIC:         1 angles deleted
+ DELTIC:         1 acceptors deleted
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        0   Number of residues   =        0
+         Number of atoms         =        0   Number of groups     =        0
+         Number of bonds         =        0   Number of angles     =        0
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        0   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    0.00000
+  
+ CHARMM>     
+  
+ CHARMM>    calc count = @count + 1
+ Parameter: COUNT -> "8"
+Evaluating: 8+1
+ Parameter: COUNT <- "9"
+  
+ CHARMM>     
+  
+ CHARMM>    if count le 9 goto ion_loop
+ Comparing "9" and "9".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    if count eq 1 set iontype LIT
+ Comparing "9" and "1".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 2 set iontype SOD
+ Comparing "9" and "2".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 3 set iontype POT
+ Comparing "9" and "3".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 4 set iontype RUB
+ Comparing "9" and "4".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 5 set iontype CES
+ Comparing "9" and "5".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 6 set iontype FLU
+ Comparing "9" and "6".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 7 set iontype CLA
+ Comparing "9" and "7".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 8 set iontype BRO
+ Comparing "9" and "8".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    if count eq 9 set iontype IOD
+ Comparing "9" and "9".
+ IF test evaluated as true.  Performing command
+ Parameter: IONTYPE <- "IOD"
+  
+ CHARMM>     
+  
+ CHARMM>    read sequence SWM4 1
+  
+ CHARMM>    generate SOLV setup noangle nodihedral
+ NO PATCHING WILL BE DONE ON THE FIRST RESIDUE
+ NO PATCHING WILL BE DONE ON THE LAST  RESIDUE
+ GENPSF> Segment   1 has been generated. Its identifier is SOLV.
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        1   Number of residues   =        1
+         Number of atoms         =        4   Number of groups     =        1
+         Number of bonds         =        4   Number of angles     =        1
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        1   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    0.00000
+  
+ CHARMM>    read sequence @IONTYPE 1
+ Parameter: IONTYPE -> "IOD"
+  
+ CHARMM>    generate ION setup first none last none
+ NO PATCHING WILL BE DONE ON THE FIRST RESIDUE
+ NO PATCHING WILL BE DONE ON THE LAST  RESIDUE
+ GENPSF> Segment   2 has been generated. Its identifier is ION.
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        2   Number of residues   =        2
+         Number of atoms         =        5   Number of groups     =        2
+         Number of bonds         =        4   Number of angles     =        1
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        1   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =   -1.00000
+  
+ CHARMM>     
+  
+ CHARMM>    read coor card
+          SPATIAL COORDINATES BEING READ FROM UNIT  5
+ RDTITL> * SWM4
+ RDTITL> *
+ ** WARNING ** After reading, there are no coordinates for selected atom:     5     2 IOD  IOD 
+
+ ** A total of     1 selected atoms have no coordinates
+ *** LEVEL  2 WARNING *** BOMLEV IS    0
+  
+ CHARMM>     
+  
+ CHARMM>    coor orient select type O* end
+ SELRPN>      2 atoms have been selected out of      5
+
+ ORIENT THE COORDINATES TO ALIGN WITH AXIS
+
+ MOMENTS
+      0.02044444     -0.00001517     -0.01259364
+                      0.00000001      0.00000934
+                                      0.00775760
+
+ Transpose of the rotation matrix
+     0.524473    0.000632   -0.851427
+     0.741461    0.491220    0.457099
+     0.418526   -0.871036    0.257163
+ CENTER OF ATOMS BEFORE TRANSLATION     1.31391    -0.00015     0.16908
+ AXIS OF ROTATION IS  0.670335  0.640970 -0.373911  ANGLE IS   82.16
+
+ ALL COORDINATES ORIENTED IN THE MAIN SET BASED ON SELECTED ATOMS.
+
+  
+ CHARMM>    coor set zdir -3.0 select type @IONTYPE end
+ Parameter: IONTYPE -> "IOD"
+ SELRPN>      1 atoms have been selected out of      5
+ SELECTED COORDINATES SET IN THE MAIN SET.
+
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain set @ALPHAO select type OH2 end
+ Parameter: ALPHAO -> "1.04252"
+ SELRPN>      1 atoms have been selected out of      5
+  
+ CHARMM>    scalar wmain set @ALPHA@@IONTYPE select type @IONTYPE end
+ Parameter: IONTYPE -> "IOD"
+ Parameter: IONTYPE -> "IOD"
+ Parameter: ALPHAIOD -> "7.4391"
+ SELRPN>      1 atoms have been selected out of      5
+  
+ CHARMM>    DRUDE mass 0.4 kdrude 500.0 select type OH2 .or. type @IONTYPE end
+ Parameter: IONTYPE -> "IOD"
+ DRUDE> CONSTRUCTION OF DRUDE PARTICLES
+
+ SELRPN>      2 atoms have been selected out of      5
+ DRUDE> The MASS parameter will override the topology file.
+ DRUDE> The KDRUDE parameter will override the parameter file.
+ DRUDE> THOLE-TYPE DIPOLE SCREENING
+        THOLE PARAMETER:  2.600000
+        SLATER-DELTA SHAPE:  S(u) = 1 - (1+u/2)*exp(-u)
+
+Adding Drude particle DOH2 on OH2 SOLV 1   SWM4  1.042520
+    Using MASS   =     0.400000
+    Using KDRUDE =   500.000000
+        18  DOH2 - OWP       1075   500.000     0.000
+Adding Drude particle DIOD on IOD ION  1   IOD   7.439100
+    Using MASS   =     0.400000
+    Using KDRUDE =   500.000000
+        28  DIOD - IOD       5846   500.000     0.000
+
+ Message from MAPIC: Atom numbers are changed.
+                       2  Drude particles were added.
+
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        2   Number of residues   =        2
+         Number of atoms         =        7   Number of groups     =        2
+         Number of bonds         =        9   Number of angles     =        1
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        1   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =   -1.00000
+         Number of Drudes        =        2
+         Number of true-bonds    =        6   Number of zero-bonds =        3
+  
+ CHARMM>    scalar mass show
+ ( SOLV SWM4 1    OH2  )    15.599    
+ ( SOLV SWM4 1    DOH2 )   0.40000    
+ ( SOLV SWM4 1    OM   )    0.0000    
+ ( SOLV SWM4 1    H1   )    1.0080    
+ ( SOLV SWM4 1    H2   )    1.0080    
+ ( ION  IOD  1    IOD  )    126.50    
+ ( ION  IOD  1    DIOD )   0.40000    
+  
+ CHARMM>    scalar charge show
+ ( SOLV SWM4 1    OH2  )   -1.7718    
+ ( SOLV SWM4 1    DOH2 )    1.7718    
+ ( SOLV SWM4 1    OM   )   -1.1074    
+ ( SOLV SWM4 1    H1   )   0.55370    
+ ( SOLV SWM4 1    H2   )   0.55370    
+ ( ION  IOD  1    IOD  )   -5.7331    
+ ( ION  IOD  1    DIOD )    4.7331    
+  
+ CHARMM>     
+  
+ CHARMM>    coor copy comp
+ SELECTED COORDINATES COPIED TO THE COMPARISON SET.
+
+  
+ CHARMM>    coor stat
+ STATISTICS FOR    7 SELECTED ATOMS:
+    XMIN =   -0.118748 XMAX =    0.467139 XAVE =    0.116503
+    YMIN =   -0.372169 YMAX =    0.372160 YAVE =   -0.000001
+    ZMIN =   -3.000000 ZMAX =    0.659150 ZAVE =   -0.857140
+    WMIN =    0.000000 WMAX =    7.439100 WAVE =    1.963379
+  
+ CHARMM>     
+  
+ CHARMM>    SHAKE bonh param tolerance 1.0e-9 -
+ CHARMM>          nofast -
+ CHARMM>          select ( segid SOLV .and. .not. type D* ) end -
+ CHARMM>          select ( segid SOLV .and. .not. type D* ) end
+ SELRPN>      4 atoms have been selected out of      7
+ SELRPN>      4 atoms have been selected out of      7
+ SHKCOM> SHAKE parameters: TOL =   0.1000E-08 MXITer =    500
+ There are Drude particles.
+ CODES:  Will skip bonds  6
+
+               3 constraints will held by SHAKE.
+  
+ CHARMM>     
+  
+ CHARMM>    LONEPAIR bisector dist @DOM angle 0.0 dihe 0.0 -
+ CHARMM>             select atom SOLV * OM end  select atom SOLV * OH2 end -
+ CHARMM>             select atom SOLV * H1 end  select atom SOLV * H2  end
+ Parameter: DOM -> "0.23808"
+ SELRPN>      1 atoms have been selected out of      7
+ SELRPN>      1 atoms have been selected out of      7
+ SELRPN>      1 atoms have been selected out of      7
+ SELRPN>      1 atoms have been selected out of      7
+  
+ CHARMM>    coor shake
+ SELECTED COORDINATES CONSTRAINED IN THE MAIN SET.
+
+  
+ CHARMM>    coor dupl select type OH2 end select type DOH2 end
+ SELRPN>      1 atoms have been selected out of      7
+ SELRPN>      1 atoms have been selected out of      7
+  
+ CHARMM>     
+  
+ CHARMM>    ENERGY atom switch vatom vswitch -
+ CHARMM>           ctofnb 97.0 cutnb 99.0 wmin 1.0
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  SWITch   VATOm    VSWItch 
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 99.000 CTEXNB =999.000 CTONNB = 95.000 CTOFNB = 97.000
+ WMIN   =  1.000 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are        0 atom  pairs and        0 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ <MAKINB> with mode   5 found     11 exclusions and      0 interactions(1-4)
+ <MAKGRP> found      0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR       99 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+       10 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        0 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+ There are Drude particles.
+ CODES:  Will skip bonds  6
+ENER ENR:  Eval#     ENERgy      Delta-E         GRMS
+ENER EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+ENER>        0     18.61892    -31.31894     42.45470
+ENER EXTERN>       21.83859     -3.21967      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>     
+  
+ CHARMM>     
+  
+ CHARMM>    !==================================================
+ CHARMM>    ! Water-ion interaction
+ CHARMM>    !--------------------------------------------------
+ CHARMM>     
+  
+ CHARMM>    mini SD step 0.01 nstep 5000 nprint 1000
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  SWITch   VATOm    VSWItch 
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 99.000 CTEXNB =999.000 CTONNB = 95.000 CTOFNB = 97.000
+ WMIN   =  1.000 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are       10 atom  pairs and       11 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR       99 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+       10 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        0 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+
+
+ STEEPD> An energy minimization has been requested.
+
+ NSTEP  =         5000   NPRINT =         1000
+ STEP   =    0.0100000   TOLFUN =    0.0000000
+ TOLGRD =    0.0000000   TOLSTP =    0.0000000
+
+MINI MIN: Cycle      ENERgy      Delta-E         GRMS    Step-size
+MINI EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>        0     18.61892    -31.31894     42.45470      0.01000
+MINI EXTERN>       21.83859     -3.21967      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     1000    -10.59973     29.21865      0.00001      0.00000
+MINI INTERN>        2.41693      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        2.41041    -15.42706      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     2000    -10.59973      0.00000      0.00000      0.00000
+MINI INTERN>        2.41693      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        2.41040    -15.42706      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     3000    -10.59973      0.00000      0.00000      0.00000
+MINI INTERN>        2.41693      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        2.41040    -15.42706      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     4000    -10.59973      0.00000      0.00000      0.00000
+MINI INTERN>        2.41693      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        2.41040    -15.42706      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+MINI>     5000    -10.59973      0.00000      0.00000      0.00000
+MINI INTERN>        2.41693      0.00000      0.00000      0.00000      0.00000
+MINI EXTERN>        2.41040    -15.42706      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+
+ STEEPD> Minimization exiting with number of steps limit (      5000) exceeded.
+
+STPD MIN: Cycle      ENERgy      Delta-E         GRMS    Step-size
+STPD INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+STPD EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+STPD>     5000    -10.59973      0.00000      0.00000      0.00000
+STPD INTERN>        2.41693      0.00000      0.00000      0.00000      0.00000
+STPD EXTERN>        2.41040    -15.42706      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>    coor orient select type O* .or. type @IONTYPE end
+ Parameter: IONTYPE -> "IOD"
+ SELRPN>      3 atoms have been selected out of      7
+
+ ORIENT THE COORDINATES TO ALIGN WITH AXIS
+
+ MOMENTS
+      7.77837734      0.24217097     -0.20749030
+                      0.01419856     -0.01345380
+                                      0.01288052
+
+ Transpose of the rotation matrix
+     0.026706   -0.031158   -0.999158
+    -0.723752    0.688852   -0.040826
+     0.689544    0.724232   -0.004154
+ CENTER OF ATOMS BEFORE TRANSLATION     0.05445     0.05927    -0.90457
+ AXIS OF ROTATION IS -0.386575  0.853281  0.349959  ANGLE IS   98.30
+
+ ALL COORDINATES ORIENTED IN THE MAIN SET BASED ON SELECTED ATOMS.
+
+  
+ CHARMM>     
+  
+ CHARMM>    energy                             ! ?ENER
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  SWITch   VATOm    VSWItch 
+     BYGRoup  NOEXtnd  NOEWald 
+ CUTNB  = 99.000 CTEXNB =999.000 CTONNB = 95.000 CTOFNB = 97.000
+ WMIN   =  1.000 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ There are       10 atom  pairs and       11 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR       99 ATOM PAIRS AND        0 GROUP PAIRS
+
+ General atom nonbond list generation found:
+       10 ATOM PAIRS WERE FOUND FOR ATOM LIST
+        0 GROUP PAIRS REQUIRED ATOM SEARCHES
+
+ENER ENR:  Eval#     ENERgy      Delta-E         GRMS
+ENER INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+ENER EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ ----------       ---------    ---------    ---------    ---------    ---------
+ENER>        0    -10.59973      0.00000      0.00000
+ENER INTERN>        2.41693      0.00000      0.00000      0.00000      0.00000
+ENER EXTERN>        2.41040    -15.42706      0.00000      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>    quick 1 6                          ! ?DIST
+ QUICKA: Atom       1 SOLV 1    SWM4 OH2  is at:  -1.22331   0.08146   0.00000      
+ QUICKA: Atom       6 ION  1    IOD  IOD  is at:   2.27700   0.00415   0.00000      
+ QUICKA: The distance is:     3.50116
+
+
+  
+ CHARMM>    coor dipole select segid SOLV end  ! ?RDIP
+ SELRPN>      5 atoms have been selected out of      7
+ THE TOTAL CHARGE OF SELECTED ATOMS IS:    0.000000
+ DIPOLE MOMENT ABOUT CENTER OF GEOMETRY  (DEBYES) :    1.787682   -1.309031    0.000000         2.215710
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 33
+ RDTITL> * IOD
+ RDTITL> * UMIN = -10.5997
+ RDTITL> * DMIN = 3.50116
+ RDTITL> * MU   = 2.21571
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>    drude reset
+ DRUDE> Drude particles ready to be deleted
+
+        Call: DELETE ATOMS SELECT TYPE D* END
+
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        2   Number of residues   =        2
+         Number of atoms         =        7   Number of groups     =        2
+         Number of bonds         =        9   Number of angles     =        1
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        1   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =   -1.00000
+  
+ CHARMM>    delete atom select all end
+ SELRPN>      7 atoms have been selected out of      7
+
+ Message from MAPIC: Atom numbers are changed.
+ LONEPRD:    1 lonepair atoms deleted
+
+ Message from MAPIC:          2 residues deleted.
+
+ Message from MAPIC:          2 segments deleted.
+ DELTIC:         9 bonds deleted
+ DELTIC:         1 angles deleted
+ DELTIC:         1 acceptors deleted
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        0   Number of residues   =        0
+         Number of atoms         =        0   Number of groups     =        0
+         Number of bonds         =        0   Number of angles     =        0
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0
+         Number of HB acceptors  =        0   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    0.00000
+  
+ CHARMM>     
+  
+ CHARMM>    calc count = @count + 1
+ Parameter: COUNT -> "9"
+Evaluating: 9+1
+ Parameter: COUNT <- "10"
+  
+ CHARMM>     
+  
+ CHARMM>    if count le 9 goto ion_loop
+ Comparing "10" and "9".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>    stop
+ VCLOSE: Closing unit   20 with status "KEEP"
+ VCLOSE: Closing unit   33 with status "KEEP"
+$$$$$$  New timer profile $$$$$
+   Shake Setup             0.00442 Other:    0.00000
+      Shake time              0.10778 Other:    0.00000
+   Dynamics total          0.10778 Other:    0.00000
+         Electrostatic & VDW     0.11891 Other:    0.00000
+      Nonbond force           0.31685 Other:    0.19795
+         Bond energy             0.07310 Other:    0.00000
+         Angle energy            0.07482 Other:    0.00000
+         Dihedral energy         0.05280 Other:    0.00000
+         Restraints energy       0.04915 Other:    0.00000
+      INTRNL energy           0.46736 Other:    0.21749
+   Energy time             0.95891 Other:    0.17470
+ Total time              1.88854 Other:    0.81742
+
+                    NORMAL TERMINATION BY NORMAL STOP
+                    MAXIMUM STACK SPACE USED IS  201224
+                    STACK CURRENTLY IN USE IS         0
+                    MOST SEVERE WARNING WAS AT LEVEL  2
+                    HEAP PRINTOUT-  HEAP SIZE   2048000
+                    SPACE CURRENTLY IN USE IS         0
+                    MAXIMUM SPACE USED IS          4708
+                    FREE LIST
+            PRINHP> ADDRESS:         1 LENGTH:   2048000 NEXT:         0
+
+                    $$$$$ JOB ACCOUNTING INFORMATION $$$$$
+                     ELAPSED TIME:     1.89  SECONDS 
+                         CPU TIME:     1.81  SECONDS 

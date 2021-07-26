@@ -1,0 +1,69 @@
+* Ions of Lamoureux and Roux.  To be used with
+* SWM4-DP model with POSITIVE Drude
+*
+
+!! Polarizabilities
+calc AlphaLIT = 0.0320 ! from Mahan80
+calc AlphaSOD = 0.1570 ! from Mahan80
+calc AlphaPOT = 0.8300 ! from Mahan80
+calc AlphaRUB = 1.3700 ! from Mahan80
+calc AlphaCES = 2.3600 ! from Mahan80
+calc AlphaFLU =  2.467 * 0.724 ! from Hattig98
+calc AlphaCLA =  5.482 * 0.724 ! from Hattig98
+calc AlphaBRO =  7.268 * 0.724 ! from Hattig98
+calc AlphaIOD = 10.275 * 0.724 ! from Hattig98
+
+read rtf card append
+* ions
+*
+
+RESI LIT          1.00 ! Lithium Ion
+GROUP
+ATOM LIT  LIT     1.00
+PATCHING FIRST NONE LAST NONE
+
+RESI SOD          1.00 ! Sodium Ion
+GROUP
+ATOM SOD  SOD     1.00
+PATCHING FIRST NONE LAST NONE
+
+RESI POT          1.00 ! Potassium Ion
+GROUP
+ATOM POT  POT     1.00
+PATCHING FIRST NONE LAST NONE
+
+RESI RUB          1.00 ! Rubidium Ion
+GROUP
+ATOM RUB  RUB     1.00
+PATCHING FIRST NONE LAST NONE
+
+RESI CES          1.00 ! Cesium Ion
+GROUP
+ATOM CES  CES     1.00
+PATCHING FIRST NONE LAST NONE
+
+RESI FLU         -1.00 ! Fluoride Ion
+GROUP
+ATOM FLU  FLU    -1.00
+PATCHING FIRST NONE LAST NONE
+
+RESI CLA         -1.00 ! Chloride Ion
+GROUP
+ATOM CLA  CLA    -1.00
+PATCHING FIRST NONE LAST NONE
+
+RESI BRO         -1.00 ! Bromide Ion
+GROUP
+ATOM BRO  BRO    -1.00
+PATCHING FIRST NONE LAST NONE
+
+RESI IOD         -1.00 ! Iodine Ion
+GROUP
+ATOM IOD  IOD    -1.00
+PATCHING FIRST NONE LAST NONE
+
+end
+
+return
+
+
